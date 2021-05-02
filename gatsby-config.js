@@ -24,7 +24,7 @@ module.exports = {
         background_color: `#87CEFA`,
         theme_color: `#87CEFA`,
         display: `browser`,
-        icon: `assets/logo.png`
+        icon: `assets/icon.png`
       }
     }
   ]

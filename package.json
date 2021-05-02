@@ -10,7 +10,9 @@
     "gatsby-source-filesystem": "3.4.x",
     "react": "17.0.x",
     "react-dom": "17.0.x",
-    "react-helmet": "6.1.x"
+    "react-helmet": "6.1.x",
+    "reseter.css": "1.1.x",
+    "styled-components": "5.2.x"
   },
   "license": "MIT",
   "private": true,
