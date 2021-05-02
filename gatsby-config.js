@@ -5,16 +5,6 @@ module.exports = {
     author: `神戸市立工業高等専門学校 電子計算機部`
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `assets`,
-        path: `${__dirname}/assets`
-      }
-    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -24,7 +14,17 @@ module.exports = {
         background_color: `#87CEFA`,
         theme_color: `#87CEFA`,
         display: `browser`,
-        icon: `assets/icon.png`
+        icon: `static/assets/icon.png`
+      }
+    },
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-styled-components-dark-mode`,
+      options: {
+        light: require(`${__dirname}/src/theme`).lightTheme,
+        dark: require(`${__dirname}/src/theme`).darkTheme
       }
     }
   ]

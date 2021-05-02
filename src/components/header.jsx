@@ -1,14 +1,26 @@
 import React from 'react'
+import styled from 'styled-components'
 import { Link } from 'gatsby'
 
-export default function Header({ siteTitle=`` }) {
-  return (
-    <header>
+const Header = styled.header`
+  background: purple;
+`
+
+const LogoLink = styled(Link)`
+  
+`
+
+export default ({ siteTitle=`` }) => (
+  <Header>
+    <div>
       <h1>
         <Link to="/">
           {siteTitle}
         </Link>
       </h1>
-    </header>
-  )
-}
+    </div>
+    <div>
+      <img src="assets/logo.png" />
+    </div>
+  </Header>
+)
