@@ -1,17 +1,32 @@
 import React from "react"
 import { graphql } from "gatsby"
+import styled from "styled-components"
 
-import Layout from "../components/layout"
+import Header from "../components/header"
+import Footer from "../components/footer"
+import Seo from '../components/seo'
 
 export default function MarkdownPage({ data }) {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
 
+  const FullHeight = styled.div`
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  `
+  const Container = styled.main`
+    width: 70%;
+    margin: 42px auto auto;
+  `
+
   return (
-    <Layout>
-      <h1>{frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-    </Layout>
+    <FullHeight>
+      <Header />
+      <Seo title={frontmatter.title} />
+      <Container dangerouslySetInnerHTML={{ __html: html }} />
+      <Footer />
+    </FullHeight>
   )
 }
 
