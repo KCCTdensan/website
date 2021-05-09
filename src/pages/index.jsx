@@ -59,7 +59,7 @@ export default function Home() {
         <img src="assets/images/index_slider2.jpg" alt="slide_3" />
         <img src="assets/images/index_slider3.jpg" alt="slide_4" />
       </PicsSlide>
-      <WelcomeText class="gaming">
+      <WelcomeText>
         パソコンを利用し、ゲーム、音楽、映像、VRソフトの制作、Pepperの開発などを行っています。<br />
         皆さんもぜひ、PCを使った活動をやってみませんか?兼部の方も大歓迎です!
       </WelcomeText>
