@@ -4,11 +4,13 @@ import styled from "styled-components"
 export default function Footer(props) {
   const StyledFooter = styled.footer`
     height: 42px;
+    margin-top: 42px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background: lightgray;
+    background: #ddd;
+    box-shadow: 0 -11px 24px #f8f8f8;
   `
   const CopyRight = styled.small`
     display: inline-block;
