@@ -1,32 +1,28 @@
-import React, { useContext } from "react"
-import styled, { ThemeContext } from "styled-components"
-import { useStyledDarkMode } from "gatsby-styled-components-dark-mode";
-import 'reseter.css/css/reseter.min.css'
+import React from "react"
+import styled from "styled-components"
 
-import { GlobalStyle } from '../theme'
+import "reseter.css/css/reseter.min.css"
 
-import Header from './header'
-import Footer from './footer'
+import Header from "./header"
+import Footer from "./footer"
 
-const MainHeading = styled.h2`
-  color: rgb(${(props) => props.theme.palette.mainBrand});
-`;
+export default function Layout(props) {
 
-export default props => (
-  <>
-    <GlobalStyle theme={theme} />
-    <Header />
-      <div>
-        <label>
-          <input
-            type="checkbox"
-            onChange={() => toggleDark()}
-            checked={!!isDark}
-          />{" "}
-          Dark mode
-        </label>
-      </div>
-    <main>{props.children}</main>
-    <Footer />
-  </>
-)
+  const FullHeight = styled.div`
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  `
+  const Container = styled.main`
+    width: 70%;
+    margin: 42px auto auto;
+  `
+
+  return (
+    <FullHeight>
+      <Header />
+      <Container>{props.children}</Container>
+      <Footer />
+    </FullHeight>
+  )
+}

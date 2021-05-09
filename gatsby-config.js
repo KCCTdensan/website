@@ -1,31 +1,33 @@
+const color = require("./src/components/color")
+
 module.exports = {
   siteMetadata: {
-    title: `電算部.net`,
-    description: `神戸高専電算部の公式ウェブサイト`,
-    author: `神戸市立工業高等専門学校 電子計算機部`
+    title: "電算部.net",
+    description: "神戸高専電算部の公式ウェブサイト",
+    author: "神戸市立工業高等専門学校 電子計算機部"
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: "gatsby-plugin-manifest",
       options: {
-        name: `電算部.net`,
-        short_name: `d3bu`,
-        start_url: `/`,
-        background_color: `#87CEFA`,
-        theme_color: `#87CEFA`,
-        display: `browser`,
-        icon: `static/assets/icon.png`
+        name: "電算部.net",
+        short_name: "d3bu",
+        start_url: "/",
+        background_color: color.light.bg,
+        theme_color: color.light.main,
+        display: "browser",
+        icon: "static/assets/icon.png"
       }
     },
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-styled-components`,
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-styled-components",
     {
-      resolve: `gatsby-styled-components-dark-mode`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        light: require(`${__dirname}/src/theme`).lightTheme,
-        dark: require(`${__dirname}/src/theme`).darkTheme
-      }
-    }
+        name: "markdown-pages",
+        path: `${__dirname}/src/markdown-pages`
+      },
+    },
+    "gatsby-transformer-remark"
   ]
 }

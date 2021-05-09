@@ -2,21 +2,21 @@
   "name": "d3bu.net",
   "version": "0.1.0",
   "dependencies": {
-    "babel-plugin-styled-components": "^1.12.0",
     "gatsby": "3.4.x",
     "gatsby-plugin-manifest": "3.4.x",
     "gatsby-plugin-react-helmet": "4.4.x",
     "gatsby-plugin-sass": "4.4.x",
     "gatsby-plugin-styled-components": "4.4.x",
+    "gatsby-source-filesystem": "3.4.x",
     "gatsby-styled-components-dark-mode": "2.0.x",
+    "gatsby-transformer-remark": "4.1.x",
     "react": "17.0.x",
     "react-dom": "17.0.x",
     "react-helmet": "6.1.x",
     "reseter.css": "1.1.x",
     "sass": "1.32.x",
-    "styled-components": "5.2.x"
+    "styled-components": "5.3.x"
   },
-  "devDependencies": {},
   "license": "MIT",
   "private": true,
   "scripts": {

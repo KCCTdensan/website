@@ -1,10 +1,26 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 
-const Footer = styled.footer``
+export default function Footer(props) {
+  const StyledFooter = styled.footer`
+    height: 42px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: lightgray;
+  `
+  const CopyRight = styled.small`
+    display: inline-block;
+    color: #666;
+    font-weight: bold;
+  `
 
-export default () => (
-  <Footer>
-    <small>&copy; 1974-{new Date().getFullYear()} 電子計算機部</small>
-  </Footer>
-)
+  return (
+    <StyledFooter>
+      <div />
+      <CopyRight>&copy; 1974-{new Date().getFullYear()} KCCT 電算部</CopyRight>
+      <div />
+    </StyledFooter>
+  )
+}
