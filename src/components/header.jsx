@@ -16,7 +16,7 @@ export default function Header(props) {
     justify-content: space-between;
     background: ${color.light.bg};
     border-bottom: 4px solid lightblue;
-    box-shadow: 0 11px 24px #f0f0f0;
+    box-shadow: 0 11px 24px #f4f4f4;
 
     a {
       outline: none;
