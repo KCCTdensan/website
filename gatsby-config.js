@@ -3,7 +3,7 @@ const color = require("./src/components/color")
 module.exports = {
   siteMetadata: {
     title: "電算部.net",
-    description: "神戸高専電算部の公式ウェブサイト",
+    description: "神戸高専電算部公式ウェブサイト",
     author: "神戸市立工業高等専門学校 電子計算機部"
   },
   plugins: [

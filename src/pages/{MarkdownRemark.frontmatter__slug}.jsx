@@ -2,6 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 
+import "reseter.css/css/reseter.min.css"
+
 import Header from "../components/header"
 import Footer from "../components/footer"
 import Seo from '../components/seo'
