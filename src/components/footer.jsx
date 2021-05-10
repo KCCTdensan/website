@@ -6,26 +6,44 @@ export default function Footer(props) {
   const breakpoints = useBreakpoint()
 
   const StyledFooter = styled.footer`
-    height: 42px;
     margin-top: ${breakpoints.sm ? "11px" : "42px"};
+    padding: 8px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     background: #ddd;
-    box-shadow: 0 -11px 24px #f8f8f8;
+
+    a {
+      outline: none;
+    }
+  `
+  const IconLinks = styled.div`
+    margin-top: 4px;
+    img {
+      height: 24px;
+      margin: 8px;
+    }
   `
   const CopyRight = styled.small`
+    margin-bottom: 4px;
     display: inline-block;
-    color: #666;
+    color: #444;
     font-weight: bold;
   `
 
   return (
     <StyledFooter>
-      <div />
+      <IconLinks>
+        <a href="https://twitter.com/kcct_densan" target="_blank">
+          <img src="/assets/icons/twitter.png" />
+        </a>
+        |
+        <a href="https://github.com/KCCTdensan" target="_blank">
+          <img src="/assets/icons/github.png" />
+        </a>
+      </IconLinks>
       <CopyRight>&copy; 1974-{new Date().getFullYear()} KCCT 電算部</CopyRight>
-      <div />
     </StyledFooter>
   )
 }
