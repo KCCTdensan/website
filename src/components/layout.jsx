@@ -14,10 +14,9 @@ export default function Layout(props) {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background: ${breakpoints.sm ? "red" : (breakpoints.md ? "yellow" : "green")};
   `
   const Container = styled.main`
-    width: ${breakpoints.sm ? "92%" : (breakpoints.md ? "84%" : "1024px")};
+    width: ${breakpoints.sm ? "92%" : (breakpoints.md ? "84%" : "960px")};
     margin: 0 auto auto;
   `
   console.log(breakpoints)

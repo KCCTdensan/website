@@ -11,15 +11,9 @@ export default function Header(props) {
 
   const [ isNavLinksOpen, setNavLinksOpen ] = useState(false)
 
-
   const StyledHeader = styled.header`
     height: 72px;
-    margin-bottom: 36px;
-    padding: 0 ${breakpoints.sm ? "5%" : (breakpoints.md ? "14%" : "9%")};
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: space-between;
+    margin-bottom: ${breakpoints.sm ? "11px" : "36px"};
     background: ${color.light.bg};
     border-bottom: 4px solid lightblue;
     box-shadow: 0 11px 24px #f4f4f4;
@@ -28,19 +22,30 @@ export default function Header(props) {
       outline: none;
     }
   `
-  {/* StaticImage使えん */}
-  {/*
+  const NavRow = styled.div`
+    max-width: 990px;
+    width: ${breakpoints.sm ? "94%" : (breakpoints.md ? "88%" : "990px")};
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+  `
+  {/* StaticImage使えん
   const LogoImg = styled(StaticImage)`
     height: 100%;
   `
   */}
   const LogoLink = styled(Link)`
+    /* リンクの大きさを画像の幅だけにしたい */
+    width: 234px;
+
     img {
       height: 100%;
     }
     img:hover {
       transition: .1s;
-      transform: scale(.95)
+      transform: scale(.95);
     }
   `
   const NavLinksHorizontal = styled.div`
@@ -100,25 +105,24 @@ export default function Header(props) {
 
   return (
     <StyledHeader>
-      {/* リンクの大きさを画像の幅だけにしたい */}
-      <div css="display: inline-block;">
+      <NavRow>
         <LogoLink to="/">
           {/* StaticImageにstyled-componentsを当てると描画されなくなる。クソ。 */}
           {/*<LogoImg src="../assets/logo.png" alt="Logo" />*/}
-        <img src="/assets/logo.png" alt="Logo" />
+          <img src="/assets/logo.png" alt="Logo" />
         </LogoLink>
-      </div>
-      {
-        breakpoints.md ? (
-          <NavLinksMenu>
-            <NavLinks />
-          </NavLinksMenu>
-        ) : (
-          <NavLinksHorizontal>
-            <NavLinks />
-          </NavLinksHorizontal>
-        )
-      }
+        {
+          breakpoints.md ? (
+            <NavLinksMenu>
+              {/*<NavLinks />*/}
+            </NavLinksMenu>
+          ) : (
+            <NavLinksHorizontal>
+              <NavLinks />
+            </NavLinksHorizontal>
+          )
+        }
+      </NavRow>
     </StyledHeader>
   )
 }

@@ -1,10 +1,13 @@
 import React from "react"
 import styled from "styled-components"
+import { useBreakpoint } from "gatsby-plugin-breakpoints"
 
 export default function Footer(props) {
+  const breakpoints = useBreakpoint()
+
   const StyledFooter = styled.footer`
     height: 42px;
-    margin-top: 42px;
+    margin-top: ${breakpoints.sm ? "11px" : "42px"};
     display: flex;
     flex-direction: row;
     align-items: center;

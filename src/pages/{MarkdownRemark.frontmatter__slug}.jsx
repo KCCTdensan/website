@@ -20,7 +20,7 @@ export default function MarkdownPage({ data }) {
     flex-direction: column;
   `
   const Container = styled.main`
-    width: 70%;
+    width: ${breakpoints.sm ? "92%" : (breakpoints.md ? "84%" : "960px")};
     margin: 0 auto auto;
   `
 
