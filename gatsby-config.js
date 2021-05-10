@@ -7,6 +7,7 @@ module.exports = {
     author: "神戸市立工業高等専門学校 電子計算機部"
   },
   plugins: [
+    "gatsby-plugin-breakpoints",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -16,17 +17,27 @@ module.exports = {
         background_color: color.light.bg,
         theme_color: color.light.main,
         display: "browser",
-        icon: "static/assets/icon.png"
+        icon: `${__dirname}/src/assets/icon.png`
       }
     },
+    // "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sass",
+    // "gatsby-plugin-sharp",
     "gatsby-plugin-styled-components",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "assets",
+        path: `${__dirname}/src/assets`
+      }
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "markdown-pages",
         path: `${__dirname}/src/markdown-pages`
-      },
+      }
     },
     "gatsby-transformer-remark"
   ]

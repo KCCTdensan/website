@@ -1,7 +1,8 @@
-import React from 'react'
+import React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 
-import Layout from '../components/layout'
-import Seo from '../components/seo'
+import Layout from "../components/layout"
+import Seo from "../components/seo"
 
 export default function Activities() {
   return (
@@ -9,32 +10,32 @@ export default function Activities() {
       <Seo title="活動内容" />
 
       <h2>ゲーム制作</h2>
-      <img src="/assets/images/densan_game.png" width="250" alt="ゲーム制作画像" />
+      {/*<StaticImage src="../assets/images/densan_game.png" alt="ゲーム制作画像" />*/}
       <br />
       部内でチームを組み、ゲームを制作し、日本ゲーム大賞U18部門に応募しています。
 
       <h2>音楽制作</h2>
-      <img src="/assets/images/densan_music.png" width="250" alt="音楽制作画像" />
+      {/*<StaticImage src="../assets/images/densan_music.png" alt="音楽制作画像" />*/}
       <br />
       DTMソフトを使って、音楽を制作し、高専祭でCDの配布を行っています。
 
       <h2>映像制作</h2>
-      <img src="/assets/images/densan_movie.png" width="250" alt="映像制作画像" />
+      {/*<StaticImage src="../assets/images/densan_movie.png" alt="映像制作画像" />*/}
       <br />
       活動映像や、短編映画の制作を行っています。
 
       <h2>Pepper開発</h2>
-      <img src="/assets/images/densan_pepper.png" width="250" alt="Pepper開発画像" />
+      {/*<StaticImage src="../assets/images/densan_pepper.png" alt="Pepper開発画像" />*/}
       <br />
       地域の商店街と連携し、地域活性化のため、Pepperの開発を行っています。
 
       <h2>イラスト制作</h2>
-      <img src="/assets/images/densan_illustration.png" width="250" alt="イラスト制作画像" />
+      {/*<StaticImage src="../assets/images/densan_illustration.png" alt="イラスト制作画像" />*/}
       <br />
       部にあるペンタブレットを使用し、イラストを描いています。
 
       <h2>大会・コンテスト出場</h2>
-      <img src="/assets/images/densan_contest.png" width="250" alt="大会・コンテスト画像" />
+      {/*<StaticImage src="../assets/images/densan_contest.png" alt="大会・コンテスト画像" />*/}
       <br />
       プログラミングコンテストやパソコン甲子園などの大会に出場しています。
 

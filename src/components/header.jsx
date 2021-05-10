@@ -1,15 +1,21 @@
-import React from "react"
-import styled from "styled-components"
+import React, { useState } from "react"
 import { Link } from "gatsby"
+import styled from "styled-components"
+import { useBreakpoint } from "gatsby-plugin-breakpoints"
+// import { StaticImage } from "gatsby-plugin-image"
 
 import color from "./color"
 
 export default function Header(props) {
+  const breakpoints = useBreakpoint()
+
+  const [ isNavLinksOpen, setNavLinksOpen ] = useState(false)
+
 
   const StyledHeader = styled.header`
     height: 72px;
     margin-bottom: 36px;
-    padding: 0 10%;
+    padding: 0 ${breakpoints.sm ? "5%" : (breakpoints.md ? "14%" : "9%")};
     display: flex;
     flex-direction: row;
     align-items: stretch;
@@ -22,6 +28,12 @@ export default function Header(props) {
       outline: none;
     }
   `
+  {/* StaticImage使えん */}
+  {/*
+  const LogoImg = styled(StaticImage)`
+    height: 100%;
+  `
+  */}
   const LogoLink = styled(Link)`
     img {
       height: 100%;
@@ -31,14 +43,14 @@ export default function Header(props) {
       transform: scale(.95)
     }
   `
-  const NavLinks = styled.div`
+  const NavLinksHorizontal = styled.div`
     display: flex;
     flex-direction: row;
     align-items: stretch;
 
     a {
       /*min-width: 36px;*/
-      margin: 0 18px;
+      margin: 0 11px;
       /* display: flex; なのでできない */
       /*padding: auto;*/
       position: relative;
@@ -69,22 +81,44 @@ export default function Header(props) {
       width: 50%;
     }
   `
+  const NavLinksMenu = styled.div`
+    background: purple;
+  `
 
-  return (
-    <StyledHeader>
-      <div css="display: inline-block;">
-        <LogoLink to="/">
-          <img src="/assets/logo.png" alt="Logo" />
-        </LogoLink>
-      </div>
-      <NavLinks>
+  function NavLinks() {
+    return (
+      <>
         <Link to="/">トップページ</Link>
         <Link to="/activities">活動内容</Link>
         <Link to="/works">作品</Link>
         {/*<a href="https://blog.d3bu.net">ブログ</a>*/}
         <Link to="/joinus">入部希望の方へ</Link>
         <a href="http://www.kobe-kosen.ac.jp">学校ホームページ</a>
-      </NavLinks>
+      </>
+    )
+  }
+
+  return (
+    <StyledHeader>
+      {/* リンクの大きさを画像の幅だけにしたい */}
+      <div css="display: inline-block;">
+        <LogoLink to="/">
+          {/* StaticImageにstyled-componentsを当てると描画されなくなる。クソ。 */}
+          {/*<LogoImg src="../assets/logo.png" alt="Logo" />*/}
+        <img src="/assets/logo.png" alt="Logo" />
+        </LogoLink>
+      </div>
+      {
+        breakpoints.md ? (
+          <NavLinksMenu>
+            <NavLinks />
+          </NavLinksMenu>
+        ) : (
+          <NavLinksHorizontal>
+            <NavLinks />
+          </NavLinksHorizontal>
+        )
+      }
     </StyledHeader>
   )
 }

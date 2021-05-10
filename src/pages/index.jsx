@@ -1,8 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 
-import Layout from '../components/layout'
-import Seo from '../components/seo'
+import Layout from "../components/layout"
+import Seo from "../components/seo"
 
 export default function Home() {
 
@@ -14,7 +14,6 @@ export default function Home() {
     overflow: hidden;
 
     img {
-      display: block;
       position: absolute;
       width: inherit;
       height: inherit;
@@ -22,12 +21,10 @@ export default function Home() {
       animation: slideAnime 16s ease infinite;
       border-radius: 5px;
     }
-
     img:nth-of-type(1) { animation-delay: 0s }
     img:nth-of-type(2) { animation-delay: 4s }
     img:nth-of-type(3) { animation-delay: 8s }
     img:nth-of-type(4) { animation-delay: 12s }
-  
     @keyframes slideAnime {
       0% { left: 100% }
       2% { left: 0 }
@@ -47,6 +44,10 @@ export default function Home() {
     background-clip: text;
     -webkit-background-clip: text;
     background-image: linear-gradient(135deg, red, orange, yellow, green, aqua, blue, purple);
+
+    span {
+      display: inline-block;
+    }
   `
 
   return (
@@ -54,14 +55,20 @@ export default function Home() {
       <Seo title="トップページ" />
 
       <PicsSlide>
-        <img src="assets/images/densan_intro.png" alt="slide_1" />
-        <img src="assets/images/index_slider1.jpg" alt="slide_2" />
-        <img src="assets/images/index_slider2.jpg" alt="slide_3" />
-        <img src="assets/images/index_slider3.jpg" alt="slide_4" />
+        <img src="/assets/images/densan_intro.png" alt="slide_1" />
+        <img src="/assets/images/index_slider1.jpg" alt="slide_2" />
+        <img src="/assets/images/index_slider2.jpg" alt="slide_3" />
+        <img src="/assets/images/index_slider3.jpg" alt="slide_4" />
       </PicsSlide>
       <WelcomeText>
-        パソコンを利用し、ゲーム、音楽、映像、VRソフトの制作、Pepperの開発などを行っています。<br />
-        皆さんもぜひ、PCを使った活動をやってみませんか?兼部の方も大歓迎です!
+        <span>パソコンを利用し、</span>
+        <span>ゲーム、音楽、映像、VRソフトの制作、</span>
+        <span>Pepperの開発</span>
+        <span>などを行っています。</span>
+        <br />
+        <span>皆さんもぜひ、</span>
+        <span>PCを使った活動をやってみませんか?</span>
+        <span>兼部の方も大歓迎です!</span>
       </WelcomeText>
       <a class="twitter-timeline" href="https://twitter.com/kcct_densan">Tweets by kcct_densan</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </Layout>
