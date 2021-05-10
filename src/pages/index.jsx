@@ -62,15 +62,15 @@ export default function Home() {
       </PicsSlide>
       <WelcomeText>
         <span>パソコンを利用し、</span>
-        <span>ゲーム、音楽、映像、VRソフトの制作、</span>
+        <span>ゲーム、音楽、映像、</span>
+        <span>VRソフトの制作、</span>
         <span>Pepperの開発</span>
         <span>などを行っています。</span>
-        <br />
         <span>皆さんもぜひ、</span>
-        <span>PCを使った活動をやってみませんか?</span>
+        <span>PCを使った活動を</span>
+        <span>やってみませんか?</span>
         <span>兼部の方も大歓迎です!</span>
       </WelcomeText>
-      <a class="twitter-timeline" href="https://twitter.com/kcct_densan">Tweets by kcct_densan</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </Layout>
   )
 }
