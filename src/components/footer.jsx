@@ -35,11 +35,11 @@ export default function Footer(props) {
   return (
     <StyledFooter>
       <IconLinks>
-        <a href="https://twitter.com/kcct_densan" target="_blank">
+        <a href="https://twitter.com/kcct_densan" target="_blank" rel="noreferrer">
           <img src="/assets/icons/twitter.png" />
         </a>
         |
-        <a href="https://github.com/KCCTdensan" target="_blank">
+        <a href="https://github.com/KCCTdensan" target="_blank" rel="noreferrer">
           <img src="/assets/icons/github.png" />
         </a>
       </IconLinks>

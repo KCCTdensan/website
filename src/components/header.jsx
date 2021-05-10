@@ -98,7 +98,7 @@ export default function Header(props) {
         <Link to="/works">作品</Link>
         {/*<a href="https://blog.d3bu.net">ブログ</a>*/}
         <Link to="/joinus">入部希望の方へ</Link>
-        <a href="http://www.kobe-kosen.ac.jp">学校ホームページ</a>
+        <a href="http://www.kobe-kosen.ac.jp" target="_blank" rel="noreferrer">学校ホームページ</a>
       </>
     )
   }
