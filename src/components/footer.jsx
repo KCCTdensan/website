@@ -21,8 +21,8 @@ export default function Footer(props) {
   const IconLinks = styled.div`
     margin-top: 4px;
     img {
-      height: 24px;
-      margin: 8px;
+      height: 32px;
+      padding: 8px;
     }
   `
   const CopyRight = styled.small`
