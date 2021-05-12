@@ -34,7 +34,7 @@ export default function Home() {
     }
   `
   const WelcomeText = styled.p`
-    margin: 48px;
+    margin: 48px 0;
     text-align: center;
     font-weight: 900;
     font-size: x-large;
