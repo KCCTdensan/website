@@ -27,6 +27,10 @@ export default function Layout(props) {
       from { opacity: 0; }
       to { opacity: 1; }
     }
+
+    a {
+      outline: none;
+    }
   `
   const PcContainer = styled(Container)`
     width: 960px;
