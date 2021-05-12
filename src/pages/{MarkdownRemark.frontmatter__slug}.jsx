@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import styled from "styled-components"
 import { useBreakpoint } from "gatsby-plugin-breakpoints"
 
@@ -7,7 +7,7 @@ import "../components/global.scss"
 
 import Header from "../components/header"
 import Footer from "../components/footer"
-import Seo from '../components/seo'
+import Seo from "../components/seo"
 
 export default function MarkdownLayout({ data }) {
   const { markdownRemark } = data
@@ -46,7 +46,6 @@ export default function MarkdownLayout({ data }) {
     <FullHeight>
       <Header />
       <Seo title={frontmatter.title} />
-      <h1>{frontmatter.title}</h1>
       {
         breakpoints.pc
         ? <PcContainer dangerouslySetInnerHTML={{ __html: html }} />
