@@ -49,7 +49,7 @@ export default function Header(props) {
     height: 100%;
   `
   */
-  const LogoLink = styled.div`
+  const LogoLink = styled(Link)`
     /* リンクの大きさを画像の幅だけにしたい */
     width: 234px;
 
