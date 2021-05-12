@@ -31,6 +31,10 @@ export default function MarkdownLayout({ data }) {
       from { opacity: 0; }
       to { opacity: 1; }
     }
+
+    a {
+      outline: none;
+    }
   `
   const PcContainer = styled(Container)`
     width: 960px;

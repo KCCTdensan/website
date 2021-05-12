@@ -1,5 +1,13 @@
 @import "reseter.css/css/reseter.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
 
-a {
-  outline: none;
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+pre {
+  padding: 8px 18px;
+  border-radius: 4px;
+  background: #eee;
+  line-height: 1.8;
 }
