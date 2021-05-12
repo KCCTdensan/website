@@ -17,6 +17,16 @@ export default function Layout(props) {
   `
   const Container = styled.main`
     margin: 0 auto auto;
+
+    animation: fadeIn 0.5s ease 0s 1 normal;
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @-webkit-keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
   `
   const PcContainer = styled(Container)`
     width: 960px;
