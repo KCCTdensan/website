@@ -16,16 +16,36 @@ export default function Layout(props) {
     flex-direction: column;
   `
   const Container = styled.main`
-    /*width: ${breakpoints.sm ? "92%" : (breakpoints.md ? "84%" : "960px")};*/
-    max-width: 960px;
     margin: 0 auto auto;
   `
-  console.log(breakpoints)
+  const PcContainer = styled(Container)`
+    width: 960px;
+  `
+  const TabContainer = styled(Container)`
+    width: 84%;
+  `
+  const MobileContainer = styled(Container)`
+    width: 92%;
+  `
 
   return (
     <FullHeight>
       <Header />
-      <Container>{props.children}</Container>
+      {
+        breakpoints.pc
+        ? <PcContainer>{props.children}</PcContainer>
+        : null
+      }
+      {
+        breakpoints.tab
+        ? <TabContainer>{props.children}</TabContainer>
+        : null
+      }
+      {
+        breakpoints.mobile
+        ? <MobileContainer>{props.children}</MobileContainer>
+        : null
+      }
       <Footer />
     </FullHeight>
   )

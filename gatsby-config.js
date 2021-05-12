@@ -7,7 +7,16 @@ module.exports = {
     author: "神戸市立工業高等専門学校 電子計算機部"
   },
   plugins: [
-    "gatsby-plugin-breakpoints",
+    {
+      resolve: "gatsby-plugin-breakpoints",
+      options: {
+        queries: {
+          mobile: "(max-width: 719px)",
+          tab: "(min-width: 720px) and (max-width: 1535px)",
+          pc: "(min-width: 1536px)"
+        },
+      }
+    },
     {
       resolve: "gatsby-plugin-manifest",
       options: {

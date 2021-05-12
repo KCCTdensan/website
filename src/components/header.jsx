@@ -6,6 +6,19 @@ import { useBreakpoint } from "gatsby-plugin-breakpoints"
 
 import color from "./color"
 
+function NavLinks() {
+  return (
+    <>
+      <Link to="/">トップページ</Link>
+      <Link to="/activities">活動内容</Link>
+      <Link to="/works">作品</Link>
+      {/*<a href="https://blog.d3bu.net">ブログ</a>*/}
+      <Link to="/joinus">入部希望の方へ</Link>
+      <a href="http://www.kobe-kosen.ac.jp" target="_blank" rel="noreferrer">学校ホームページ</a>
+    </>
+  )
+}
+
 export default function Header(props) {
   const breakpoints = useBreakpoint()
 
@@ -13,7 +26,7 @@ export default function Header(props) {
 
   const StyledHeader = styled.header`
     height: 72px;
-    margin-bottom: ${breakpoints.sm ? "11px" : "36px"};
+    margin-bottom: ${breakpoints.mobile ? "11px" : "36px"};
     background: ${color.light.bg};
     border-bottom: 4px solid lightblue;
     box-shadow: 0 11px 24px #f4f4f4;
@@ -24,19 +37,19 @@ export default function Header(props) {
   `
   const NavRow = styled.div`
     max-width: 990px;
-    width: ${breakpoints.sm ? "94%" : (breakpoints.md ? "88%" : "990px")};
+    width: ${breakpoints.mobile ? "94%" : (breakpoints.tab ? "88%" : "990px")};
     margin: 0 auto;
     display: flex;
     flex-direction: row;
     align-items: stretch;
     justify-content: space-between;
   `
-  {/* StaticImage使えん
+  /* StaticImage使えん
   const LogoImg = styled(StaticImage)`
     height: 100%;
   `
-  */}
-  const LogoLink = styled(Link)`
+  */
+  const LogoLink = styled.div`
     /* リンクの大きさを画像の幅だけにしたい */
     width: 234px;
 
@@ -48,7 +61,7 @@ export default function Header(props) {
       transform: scale(.95);
     }
   `
-  const NavLinksHorizontal = styled.div`
+  const PcNavLinks = styled.div`
     display: flex;
     flex-direction: row;
     align-items: stretch;
@@ -86,22 +99,12 @@ export default function Header(props) {
       width: 50%;
     }
   `
-  const NavLinksMenu = styled.div`
+  const MobileNavLinks = styled.div`
     background: purple;
+    :before {
+      content: "めにゅー(開発中です)";
+    }
   `
-
-  function NavLinks() {
-    return (
-      <>
-        <Link to="/">トップページ</Link>
-        <Link to="/activities">活動内容</Link>
-        <Link to="/works">作品</Link>
-        {/*<a href="https://blog.d3bu.net">ブログ</a>*/}
-        <Link to="/joinus">入部希望の方へ</Link>
-        <a href="http://www.kobe-kosen.ac.jp" target="_blank" rel="noreferrer">学校ホームページ</a>
-      </>
-    )
-  }
 
   return (
     <StyledHeader>
@@ -111,24 +114,16 @@ export default function Header(props) {
           {/*<LogoImg src="../assets/logo.png" alt="Logo" />*/}
           <img src="/assets/logo.png" alt="Logo" />
         </LogoLink>
-        {/*
-          breakpoints.sm ? (
-            <NavLinksMenu>
-              <NavLinks />
-            </NavLinksMenu>
-          ) : ( breakpoints.md ? (
-            <NavLinksMenu>
-              <NavLinks />
-            </NavLinksMenu>
-          ) : (
-            <NavLinksHorizontal>
-              <NavLinks />
-            </NavLinksHorizontal>
-          ))
-        */}
-        <NavLinksHorizontal>
-          <NavLinks />
-        </NavLinksHorizontal>
+        {
+          breakpoints.pc
+          ? <PcNavLinks><NavLinks /></PcNavLinks>
+          : null
+        }
+        {
+          breakpoints.tab || breakpoints.mobile
+          ? <MobileNavLinks>{/*<NavLinks />*/}</MobileNavLinks>
+          : null
+        }
       </NavRow>
     </StyledHeader>
   )
