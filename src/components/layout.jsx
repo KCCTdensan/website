@@ -16,7 +16,8 @@ export default function Layout(props) {
     flex-direction: column;
   `
   const Container = styled.main`
-    width: ${breakpoints.sm ? "92%" : (breakpoints.md ? "84%" : "960px")};
+    /*width: ${breakpoints.sm ? "92%" : (breakpoints.md ? "84%" : "960px")};*/
+    max-width: 960px;
     margin: 0 auto auto;
   `
   console.log(breakpoints)

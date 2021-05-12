@@ -111,10 +111,10 @@ export default function Header(props) {
           {/*<LogoImg src="../assets/logo.png" alt="Logo" />*/}
           <img src="/assets/logo.png" alt="Logo" />
         </LogoLink>
-        {
+        {/*
           breakpoints.sm ? (
             <NavLinksMenu>
-              {/*<NavLinks />*/}
+              <NavLinks />
             </NavLinksMenu>
           ) : ( breakpoints.md ? (
             <NavLinksMenu>
@@ -125,7 +125,10 @@ export default function Header(props) {
               <NavLinks />
             </NavLinksHorizontal>
           ))
-        }
+        */}
+        <NavLinksHorizontal>
+          <NavLinks />
+        </NavLinksHorizontal>
       </NavRow>
     </StyledHeader>
   )
