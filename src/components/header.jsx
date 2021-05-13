@@ -25,7 +25,6 @@ export default function Header(props) {
   const [ isNavLinksOpen, setNavLinksOpen ] = useState(false)
 
   const StyledHeader = styled.header`
-    height: 72px;
     margin-bottom: ${breakpoints.mobile ? "11px" : "36px"};
     background: ${color.light.bg};
     border-bottom: 4px solid lightblue;
@@ -37,6 +36,7 @@ export default function Header(props) {
   `
   const NavRow = styled.div`
     max-width: 990px;
+    height: 72px;
     width: ${breakpoints.mobile ? "94%" : (breakpoints.tab ? "88%" : "990px")};
     margin: 0 auto;
     display: flex;
