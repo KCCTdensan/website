@@ -7,7 +7,7 @@ import Seo from "../components/seo"
 export default function Home() {
 
   const PicsSlide = styled.div`
-    width: 800px;
+    max-width: 800px;
     height: 450px;
     margin: auto;
     position: relative;
@@ -15,8 +15,8 @@ export default function Home() {
 
     img {
       position: absolute;
-      width: inherit;
-      height: inherit;
+      width: 100%;
+      height: 100%;
       left: 100%;
       animation: slideAnime 16s ease infinite;
       border-radius: 5px;
