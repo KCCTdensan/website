@@ -1,5 +1,5 @@
 ---
-slug: "setup-environment"
+slug: "pepper/setup-environment"
 title: "Pepper開発環境構築"
 ---
 
