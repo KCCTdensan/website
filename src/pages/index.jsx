@@ -33,17 +33,19 @@ export default function Home() {
       100% { left: -100% }
     }
   `
-  const WelcomeText = styled.p`
+  const GamingText = styled.p`
     margin: 48px 0;
     text-align: center;
     font-weight: 900;
-    font-size: x-large;
     font-style: oblique 9deg;
 
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
     background-image: linear-gradient(135deg, red, orange, yellow, green, aqua, blue, purple);
+  `
+  const WelcomeText = styled(GamingText)`
+    font-size: x-large;
 
     span {
       display: inline-block;
@@ -71,6 +73,16 @@ export default function Home() {
         <span>やってみませんか?</span>
         <span>兼部の方も大歓迎です!</span>
       </WelcomeText>
+
+      <h2><GamingText>このウェブサイトについて</GamingText></h2>
+      <GamingText>
+        2021年にリニューアルした、新しい電子計算機部のウェブサイトです!
+      </GamingText>
+      <a href="https://github.com/KCCTdensan/d3bu.net" target="_blank" rel="noreferrer">
+        <GamingText>
+          →→→ サイトのソースコードはここをクリック! ←←←
+        </GamingText>
+      </a>
     </Layout>
   )
 }
