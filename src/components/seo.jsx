@@ -41,6 +41,10 @@ export default function Seo({ title="", description="", lang="ja", meta=[] }) {
           content: "website"
         },
         {
+          property: "og:image",
+          content: "https://d3bu.net/assets/icon.png"
+        },
+        {
           name: "twitter:card",
           content: "summary"
         },

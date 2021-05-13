@@ -1,5 +1,5 @@
 ---
-slug: "/monster"
+slug: "monster"
 title: "Monster"
 ---
 

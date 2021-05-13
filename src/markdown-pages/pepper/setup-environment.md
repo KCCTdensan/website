@@ -1,6 +1,6 @@
 ---
-slug: /pepper/setup-environment
-title: Pepper開発環境構築
+slug: "setup-environment"
+title: "Pepper開発環境構築"
 ---
 
 # Pepper開発環境構築
