@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import Twemoji from "react-twemoji"
 import { useBreakpoint } from "gatsby-plugin-breakpoints"
 
 import "./global.scss"
@@ -10,10 +11,17 @@ import Footer from "./footer"
 export default function Layout(props) {
   const breakpoints = useBreakpoint()
 
-  const FullHeight = styled.div`
+  const FullHeight = styled(Twemoji)`
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+
+    img.emoji {
+      height: 1em;
+      width: 1em;
+      margin: 0 .05em 0 .1em;
+      vertical-align: -0.1em;
+    }
   `
   const Container = styled.main`
     margin: 0 auto auto;
