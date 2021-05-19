@@ -15,9 +15,9 @@ export default function InnerHome() {
       <h1>部員向け</h1>
 
       <p>
-        どこからもリンクされていないのでブクマでもしといてください〜
+        このページはサイト内のどこからもリンクされていないのでブクマでもしといてください〜
         <br />
-        部員以外が読むことも一応想定して書いているつもりです
+        一応部員以外が読むことも想定して書いているつもりです
       </p>
 
       <h2>入門記事</h2>
@@ -29,6 +29,7 @@ export default function InnerHome() {
       <h2>リンク集</h2>
       <ul>
         <li><Link to="/maintenance">このサイトの運用メモ</Link></li>
+        <li><Link to="/wsl2-setup">WSL爆速セットアップガイド</Link></li>
         <li><Link to="/pepper/setup-environment">Pepper開発環境構築ガイド</Link></li>
       </ul>
 

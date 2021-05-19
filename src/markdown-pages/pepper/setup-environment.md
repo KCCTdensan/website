@@ -7,55 +7,7 @@ title: "Pepper開発環境構築"
 
 どうしても動かなかったら山Dまで
 
-## WSLの有効化
-
-[Windows10にWSLをインストールする | docs.microsoft.com](https://docs.microsoft.com/ja-jp/windows/wsl/install-win10#manual-installation-steps)
-
-とりあえずこれ読んでWSLを使える状態にしちゃってください。  
-途中何回か再起動が必要だったりするけど頑張って～
-
-## ディストロを選択・ダウンロード
-
-何もわからないのであればDebianでいいです。  
-MicrosoftStoreで検索・ダウンロードします。
-
-## (Debian)初期設定
-
-Debian以外の人は雰囲気で頑張ってください。
-
-### 起動
-
-アプリ一覧のとこからDebianってやつを探して起動してください。
-
-### sudoersの編集
-
-sudo使う時にいちいちパスワード入力するのはダルいので設定を変えます。  
-自分以外が使う可能性がある環境でこれをするのはお勧めしません。
-
-ではまず
-
-```bash
-sudo visudo
-```
-
-とやって、
-
-```
-%sudo   ALL=(ALL:ALL) ALL
-```
-
-の行(だいたい23行目あたりにある)を
-
-```
-%sudo   ALL=NOPASSWD: ALL
-```
-
-と書き変えてください。
-
-`Ctrl x`
-`y`
-`Enter`
-で保存して終了できます。
+まず，[WSLのセットアップ](/wsl2-setup)を完了させておいてください。
 
 ### 必須パッケージのインストール
 
@@ -69,7 +21,7 @@ sudo apt install -y curl python2 libpython2.7
 ### SDKのダウンロードと展開
 
 ```bash
-sudo curl -L https://community-static.aldebaran.com/resources/2.5.10/Python%20SDK/pynaoqi-python2.7-2.5.7.1-linux64.tar.gz | tar zx -C /opt
+sudo curl -L https://community-static.aldebaran.com/resources/2.5.10/Python%20SDK/pynaoqi-python2.7-2.5.7.1-linux64.tar.gz | tar xz -C /opt
 sudo ln -s pynaoqi-python2.7-2.5.7.1-linux64 /opt/pynaoqi
 ```
 
@@ -77,9 +29,7 @@ sudo ln -s pynaoqi-python2.7-2.5.7.1-linux64 /opt/pynaoqi
 
 ```bash
 echo 'export PYTHONPATH=/opt/pynaoqi/lib/python2.7/site-packages:${PYTHONPATH}' >> ~/.profile
-echo 'alias ll="ls -l"; alias la="ls -Al"' >> ~/.bashrc
 . ~/{.bashrc,.profile}
-ln -sf /mnt/c/Users/$(cmd.exe /c "SET /P X=%USERNAME%<NUL" 2>/dev/null) WinHome
 ```
 
 ## 動作確認
