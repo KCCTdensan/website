@@ -76,7 +76,7 @@ export default function Home() {
 
       <h2><GamingText>このウェブサイトについて</GamingText></h2>
       <GamingText>
-        2021年にリニューアルした、新しい電子計算機部のウェブサイトです!
+        2021年にリニューアルした、電子計算機部の新しいウェブサイトです!
       </GamingText>
       <a href="https://github.com/KCCTdensan/d3bu.net" target="_blank" rel="noreferrer">
         <GamingText>

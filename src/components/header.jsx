@@ -29,6 +29,7 @@ export default function Header(props) {
     background: ${color.light.bg};
     border-bottom: 4px solid lightblue;
     box-shadow: 0 11px 24px #f4f4f4;
+    font-feature-settings: "palt";
 
     a {
       outline: none;
