@@ -17,8 +17,8 @@ module.exports = {
       options: {
         queries: {
           mobile: "(max-width: 719px)",
-          tab: "(min-width: 720px) and (max-width: 1535px)",
-          pc: "(min-width: 1536px)"
+          tab: "(min-width: 720px) and (max-width: 1023px)",
+          pc: "(min-width: 1024px)"
         },
       }
     },
