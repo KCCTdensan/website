@@ -30,6 +30,7 @@ export default function InnerHome() {
       <ul>
         <li><Link to="/maintenance">このサイトの運用メモ</Link></li>
         <li><Link to="/wsl2-setup">WSL爆速セットアップガイド</Link></li>
+        <li><Link to="/setup-node">Nodejs環境構築</Link></li>
         <li><Link to="/pepper/setup-environment">Pepper開発環境構築ガイド</Link></li>
       </ul>
 
