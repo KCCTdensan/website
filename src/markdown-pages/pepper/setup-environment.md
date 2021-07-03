@@ -21,8 +21,9 @@ sudo apt install -y curl python2 libpython2.7
 ### SDKのダウンロードと展開
 
 ```bash
-sudo curl -L https://community-static.aldebaran.com/resources/2.5.10/Python%20SDK/pynaoqi-python2.7-2.5.7.1-linux64.tar.gz | tar xz -C /opt
+sudo curl -fsSL https://community-static.aldebaran.com/resources/2.5.10/Python%20SDK/pynaoqi-python2.7-2.5.7.1-linux64.tar.gz | sudo tar xz --no-same-owner -C/opt
 sudo ln -s pynaoqi-python2.7-2.5.7.1-linux64 /opt/pynaoqi
+sudo chmod 755 -R /opt/pynaoqi/lib/python2.7/site-packages
 ```
 
 ### PATH通したりその他諸々
