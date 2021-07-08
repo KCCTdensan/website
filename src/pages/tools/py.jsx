@@ -6,16 +6,22 @@ import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 
 const TermWrapper = styled.div`
-  height: 36em;
+  height: 20em;
   margin: 32px 0;
   padding: 4px;
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: auto;
   background: lightgray;
   border-radius: 8px;
-  overflow: auto;
   box-shadow: 0 11px 24px #f4f4f4;
 `
 const TermDiv = styled.div`
   border-radius: 8px;
+`
+const GhostText = styled.div`
+  color: gray;
+  position: absolute;
 `
 
 export default function Py() {
@@ -41,6 +47,13 @@ export default function Py() {
         <script src="https://cdn.jsdelivr.net/gh/jcubic/static/js/wcwidth.js"></script>
       </Helmet>
       <TermWrapper>
+        <GhostText>
+          Try it !
+          <br />
+          <br />
+          <br />
+          Now loading...
+        </GhostText>
         <TermDiv id="terminal" ref={terminal} />
       </TermWrapper>
 
