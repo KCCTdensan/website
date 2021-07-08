@@ -6,4 +6,4 @@
 
 # 解説
 
-[ここ](https://d3bu.net/maintenance)を参考にしてください
+[ここ](https://d3bu.net/maintenance)を参考にしてください.
