@@ -1,6 +1,6 @@
 ---
 sulg: "どこやねん？"
-title: "jsx環境構築"
+title: "node環境構築"
 ---
 
 # node環境構築
