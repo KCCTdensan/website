@@ -27,9 +27,17 @@ export default function InnerHome() {
       </ul>
 
       <h2>リンク集</h2>
+
+      <h3>ツール</h3>
+      <ul>
+        <li><Link to="/tools/py">Python REPL</Link></li>
+      </ul>
+
+      <h3>記事</h3>
       <ul>
         <li><Link to="/maintenance">このサイトの運用メモ</Link></li>
         <li><Link to="/wsl2-setup">WSL爆速セットアップガイド</Link></li>
+        <li><Link to="/setup-node">Nodejs環境構築</Link></li>
         <li><Link to="/pepper/setup-environment">Pepper開発環境構築ガイド</Link></li>
       </ul>
 

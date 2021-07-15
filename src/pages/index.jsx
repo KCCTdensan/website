@@ -33,16 +33,28 @@ export default function Home() {
       100% { left: -100% }
     }
   `
-  const GamingText = styled.p`
+  const GamingText = styled.div`
     margin: 48px 0;
     text-align: center;
     font-weight: 900;
     font-style: oblique 9deg;
 
     color: transparent;
+    background-image: repeating-linear-gradient(135deg,
+      red, orange, yellow, green, aqua, blue, purple,
+      red, orange, yellow, green);
+    background-size: 800%;
+    background-repeat: repeat-x;
+
     background-clip: text;
     -webkit-background-clip: text;
-    background-image: linear-gradient(135deg, red, orange, yellow, green, aqua, blue, purple);
+
+    animation: gaming 5s linear infinite;
+    @keyframes gaming {
+      from { background-position: 0% 50% }
+      /*何故か80%くらいでいい感じに動く*/
+      to { background-position: 80% 50% }
+    }
   `
   const WelcomeText = styled(GamingText)`
     font-size: x-large;
@@ -76,7 +88,7 @@ export default function Home() {
 
       <h2><GamingText>このウェブサイトについて</GamingText></h2>
       <GamingText>
-        2021年にリニューアルした、新しい電子計算機部のウェブサイトです!
+        2021年にリニューアルした、電子計算機部の新しいウェブサイトです!
       </GamingText>
       <a href="https://github.com/KCCTdensan/d3bu.net" target="_blank" rel="noreferrer">
         <GamingText>

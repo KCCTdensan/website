@@ -44,6 +44,7 @@ export default function Footer(props) {
     justify-content: space-between;
     background: #ddd;
     box-shadow: 0 -11px 24px #fafafa;
+    font-feature-settings: "palt";
 
     a {
       outline: none;

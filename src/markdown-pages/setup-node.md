@@ -1,11 +1,11 @@
 ---
-sulg: "どこやねん？"
-title: "node環境構築"
+slug: "setup-node"
+title: "Nodejs環境構築"
 ---
 
-# node環境構築
+# Nodejs環境構築
 
-どうしても動かなかったら山D or 山Tまで
+どうしても動かなかったら山Tまで
 
 まず，[WSLのセットアップ](/wsl2-setup)を完了させておいてください。
 
@@ -13,12 +13,12 @@ title: "node環境構築"
 ```
 sudo apt-get update
 sudo apt-get install -y nodejs npm
-sudo npm install n -g
 ```
-これではバージョンが古すぎるのでバージョンを上げる。
+ここで入るものはバージョンが古すぎるのでバージョンを上げる。
 
 ## 安定版のインストール
 ```
+sudo npm install n -g
 sudo n stable
 ```
 

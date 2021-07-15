@@ -110,7 +110,7 @@ sudo visudo
 の行を
 
 ```
-%sudo   ALL=NOPASSWD: ALL
+%sudo   ALL=(ALL:ALL) NOPASSWD: ALL
 ```
 
 と書き変えてやってください。

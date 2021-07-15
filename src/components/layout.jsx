@@ -8,7 +8,7 @@ import "./global.scss"
 import Header from "./header"
 import Footer from "./footer"
 
-export default function Layout(props) {
+export default function Layout({ children, Wide }) {
   const breakpoints = useBreakpoint()
 
   const FullHeight = styled(Twemoji)`
@@ -24,6 +24,7 @@ export default function Layout(props) {
     }
   `
   const Container = styled.main`
+    width: 84%;
     margin: 0 auto auto;
 
     animation: fadeIn 0.5s ease 0s 1 normal;
@@ -53,21 +54,21 @@ export default function Layout(props) {
   return (
     <FullHeight>
       <Header />
-      {
-        breakpoints.pc
-        ? <PcContainer>{props.children}</PcContainer>
-        : null
-      }
-      {
-        breakpoints.tab
-        ? <TabContainer>{props.children}</TabContainer>
-        : null
-      }
-      {
-        breakpoints.mobile
-        ? <MobileContainer>{props.children}</MobileContainer>
-        : null
-      }
+      {(()=>{
+        switch (true) {
+          case breakpoints.mobile:
+            return <MobileContainer>{children}</MobileContainer>
+
+          case Wide:
+          case breakpoints.tab:
+            return <TabContainer>{children}</TabContainer>
+
+          case breakpoints.pc:
+            return <PcContainer>{children}</PcContainer>
+
+          default: return null
+        }
+      })()}
       <Footer />
     </FullHeight>
   )
