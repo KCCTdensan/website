@@ -1,0 +1,29 @@
+.fullheight {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 84%;
+  margin: 0 auto auto;
+
+  animation: fadeIn 0.5s ease 0s 1 normal;
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}
+  // const PcContainer = styled(Container)`
+  //   width: 960px;
+  // `
+  // const TabContainer = styled(Container)`
+  //   width: 84%;
+  // `
+  // const MobileContainer = styled(Container)`
+  //   width: 92%;
+  // `

@@ -5,6 +5,10 @@ body {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
+a {
+  outline: none;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-feature-settings: "palt";
 }
@@ -26,4 +30,12 @@ pre {
     margin: 0;
     padding: 0;
   }
+}
+
+// twemoji
+img.emoji {
+  height: 1em;
+  width: 1em;
+  margin: 0 .05em 0 .1em;
+  vertical-align: -0.1em;
 }

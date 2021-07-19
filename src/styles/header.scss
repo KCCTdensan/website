@@ -1,0 +1,77 @@
+header {
+// margin-bottom: ${breakpoints.mobile ? "11px" : "36px"};
+// background: ${color.light.bg};
+border-bottom: 4px solid lightblue;
+box-shadow: 0 11px 24px #f4f4f4;
+font-feature-settings: "palt";
+
+// row
+max-width: 990px;
+height: 72px;
+// width: ${breakpoints.mobile ? "94%" : (breakpoints.tab ? "88%" : "990px")};
+margin: 0 auto;
+display: flex;
+flex-direction: row;
+align-items: stretch;
+justify-content: space-between;
+// end row
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+
+  a {
+    /*min-width: 36px;*/
+    margin: 0 11px;
+    /* display: flex; なのでできない */
+    /*padding: auto;*/
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  a::before,
+  a::after {
+    width: 0;
+    display: block;
+    position: absolute;
+    bottom: 8px;
+    content: "";
+    border-bottom: solid 4px white;
+    transition: .2s ease;
+  }
+  a::before {
+    left: 50%;
+  }
+  a::after {
+    right: 50%;
+  }
+  a:hover::before,
+  a:hover::after {
+    width: 50%;
+  }
+}
+
+.navbuttons {
+  background: purple;
+  :before {
+    content: "めにゅー(開発中です)";
+  }
+}
+
+.logo {
+  /* リンクの大きさを画像の幅だけにしたい */
+  width: 234px;
+
+  img {
+    height: 100%;
+  }
+  img:hover {
+    transition: .1s;
+    transform: scale(.95);
+  }
+}
