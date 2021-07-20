@@ -2,19 +2,19 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 // import { StaticImage } from "gatsby-plugin-image"
 
-import * as headerStyle from "../styles/header.scss"
+import * as style from "../styles/header.module.scss"
 
 const Header = () => {
   // const [ isNavLinksOpen, setNavLinksOpen ] = useState(false)
 
   return (
     <header>
-      <Link to="/" className={headerStyle.logo}>
+      <Link to="/" className={style.logo}>
         {/* StaticImageにstyled-componentsを当てると描画されなくなる。クソ。 */}
         {/*<LogoImg src="../assets/logo.png" alt="Logo" />*/}
         <img src="/assets/logo.png" alt="Logo" />
       </Link>
-      <div className={headerStyle.links}>
+      <div className={style.links}>
         <Link to="/">トップページ</Link>
         <Link to="/activities">活動内容</Link>
         <Link to="/works">作品</Link>

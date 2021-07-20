@@ -13,16 +13,6 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: "gatsby-plugin-breakpoints",
-      options: {
-        queries: {
-          mobile: "(max-width: 719px)",
-          tab: "(min-width: 720px) and (max-width: 1023px)",
-          pc: "(min-width: 1024px)"
-        },
-      }
-    },
-    {
       resolve: "gatsby-plugin-manifest",
       options: {
         name: "電算部.net",
@@ -38,14 +28,6 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
     // "gatsby-plugin-sharp",
-    "gatsby-plugin-styled-components",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "assets",
-        path: `${__dirname}/src/assets`
-      }
-    },
     {
       resolve: "gatsby-source-filesystem",
       options: {

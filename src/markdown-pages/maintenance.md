@@ -39,7 +39,8 @@ title: "ページタイトル"
 
 ## ページのスタイルの修正・改造
 
-/src/components/global.scssがグローバルに適用されるSCSSファイルです。  
+/src/styles/global/global.scssがグローバルに適用されるSCSSファイルです。
+/src/styles以下の`hoge.module.scss`にSCSSファイルを置いて、`import * as styles from "/path/to/hoge.module.scss"`でインポート・適用できます。  
 /src/components以下にJSXで書かれた、ページの部品(コンポーネント)やそのテンプレートとなるファイルがあります。  
 /src/pages/\{MarkdownRemark...のファイルにはmarkdownで記述されたページ用のテンプレートが書かれています。
 JSXの方で使われるLayoutに変更を加えた場合は、このファイルにも同様の変更を適用してください。
