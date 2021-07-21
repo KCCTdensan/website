@@ -21,7 +21,7 @@ module.exports = {
         background_color: color.light.bg,
         theme_color: color.light.main,
         display: "browser",
-        icon: `${__dirname}/src/assets/icon.png`
+        icon: `${__dirname}/static/assets/icon.png`
       }
     },
     // "gatsby-plugin-image",
