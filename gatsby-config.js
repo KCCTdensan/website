@@ -1,9 +1,7 @@
-const color = require("./src/components/color")
-
 module.exports = {
   siteMetadata: {
     title: "電算部.net",
-    description: "神戸高専電算部公式ウェブサイト",
+    description: "神戸高専電算部 公式ウェブサイト",
     author: "神戸高専 電子計算機部",
     keywords: `
       電算部,でんさんぶ,電子計算機部,神戸高専,神戸高専電子計算機部,KCCT,高専,神戸,部活,部活動,
@@ -15,13 +13,15 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "電算部.net",
-        short_name: "d3bu",
-        start_url: "/",
-        background_color: color.light.bg,
-        theme_color: color.light.main,
+        name: "電算部のウェブサイト",
+        short_name: "電算部.net",
+        description: "神戸高専電算部 公式ウェブサイト",
+        lang: "ja",
         display: "browser",
-        icon: `${__dirname}/static/assets/icon.png`
+        icon: "static/assets/icon.png",
+        start_url: "/",
+        background_color: "#87cefa",
+        theme_color: "#fff"
       }
     },
     // "gatsby-plugin-image",
@@ -32,7 +32,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "markdown-pages",
-        path: `${__dirname}/src/markdown-pages`
+        path: "src/markdown-pages"
       }
     },
     "gatsby-transformer-remark"
