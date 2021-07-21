@@ -1,9 +1,7 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import Header from "../components/header"
-import Footer from "../components/footer"
 import Seo from "../components/seo"
 
 const MarkdownLayout = ({ data }) => {

@@ -18,8 +18,7 @@
     "react-helmet": "6.1.x",
     "react-twemoji": "0.3.x",
     "reseter.css": "1.1.x",
-    "sass": "1.35.x",
-    "styled-components": "5.3.x"
+    "sass": "1.35.x"
   },
   "license": "MIT",
   "private": true,

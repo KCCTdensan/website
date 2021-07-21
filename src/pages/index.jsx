@@ -1,80 +1,22 @@
 import React from "react"
-import styled from "styled-components"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+import * as style from "../styles/pages/index.module.scss"
+
 export default function Home() {
-
-  const PicsSlide = styled.div`
-    max-width: 800px;
-    height: 450px;
-    margin: auto;
-    position: relative;
-    overflow: hidden;
-
-    img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      left: 100%;
-      animation: slideAnime 16s ease infinite;
-      border-radius: 5px;
-    }
-    img:nth-of-type(1) { animation-delay: 0s }
-    img:nth-of-type(2) { animation-delay: 4s }
-    img:nth-of-type(3) { animation-delay: 8s }
-    img:nth-of-type(4) { animation-delay: 12s }
-    @keyframes slideAnime {
-      0% { left: 100% }
-      2% { left: 0 }
-      23% { left: 0 }
-      25% { left: -100% }
-      100% { left: -100% }
-    }
-  `
-  const GamingText = styled.div`
-    margin: 48px 0;
-    text-align: center;
-    font-weight: 900;
-    font-style: oblique 9deg;
-
-    color: transparent;
-    background-image: repeating-linear-gradient(135deg,
-      red, orange, yellow, green, aqua, blue, purple,
-      red, orange, yellow, green);
-    background-size: 800%;
-    background-repeat: repeat-x;
-
-    background-clip: text;
-    -webkit-background-clip: text;
-
-    animation: gaming 5s linear infinite;
-    @keyframes gaming {
-      from { background-position: 0% 50% }
-      /*何故か80%くらいでいい感じに動く*/
-      to { background-position: 80% 50% }
-    }
-  `
-  const WelcomeText = styled(GamingText)`
-    font-size: x-large;
-
-    span {
-      display: inline-block;
-    }
-  `
-
   return (
     <Layout>
       <Seo title="トップページ" />
 
-      <PicsSlide>
+      <div className={style.picsslide}>
         <img src="/assets/images/densan_intro.png" alt="slide_1" />
         <img src="/assets/images/index_slider1.jpg" alt="slide_2" />
         <img src="/assets/images/index_slider2.jpg" alt="slide_3" />
         <img src="/assets/images/index_slider3.jpg" alt="slide_4" />
-      </PicsSlide>
-      <WelcomeText>
+      </div>
+      <div className={style.gamingtext}>
         <span>パソコンを利用し、</span>
         <span>ゲーム、音楽、映像、</span>
         <span>VRソフトの制作、</span>
@@ -84,16 +26,16 @@ export default function Home() {
         <span>PCを使った活動を</span>
         <span>やってみませんか?</span>
         <span>兼部の方も大歓迎です!</span>
-      </WelcomeText>
+      </div>
 
-      <h2><GamingText>このウェブサイトについて</GamingText></h2>
-      <GamingText>
+      <h2><div className={style.gamingtext}>このウェブサイトについて</div></h2>
+      <div className={style.gamingtext}>
         2021年にリニューアルした、電子計算機部の新しいウェブサイトです!
-      </GamingText>
+      </div>
       <a href="https://github.com/KCCTdensan/d3bu.net" target="_blank" rel="noreferrer">
-        <GamingText>
+        <div className={style.gamingtext}>
           →→→ サイトのソースコードはここをクリック! ←←←
-        </GamingText>
+        </div>
       </a>
     </Layout>
   )

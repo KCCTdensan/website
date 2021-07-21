@@ -1,0 +1,49 @@
+.faqlist {
+  details {
+    margin: 16px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 0 8px 2px #f4f4f4;
+  }
+  details[open] {
+    margin: 18px 0;
+    box-shadow: 0 0 16px 4px #eee;
+  }
+  details[open] summary {
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+.q {
+  padding: 12px;
+  user-select: none;
+  font-weight: bolder;
+
+  ::marker {
+    color: gray;
+    font-size: 1em;
+  }
+  ::before {
+    content: "Q.";
+    width: 1.5em;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.3em;
+    line-height: 1em;
+  }
+}
+
+.a {
+  padding: 12px;
+  padding-left: 4em;
+
+  ::before {
+    content: "A.";
+    width: 1.5em;
+    margin-left: -1.5em;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.3em;
+    line-height: 1em;
+  }
+}
