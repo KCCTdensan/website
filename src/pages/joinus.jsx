@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-import * as style from "../styles/pages/joinus.module.scss"
+import * as style from "../styles/joinus.module.scss"
 
 export default function JoinUs() {
   return (

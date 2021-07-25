@@ -1,0 +1,19 @@
+@mixin pc_layout {
+  @media screen and (min-width: 1024px) { @content; }
+}
+@mixin non_pc_layout {
+  @media screen and (max-width: 1023px) { @content; }
+}
+@mixin tab_layout {
+  @media screen and (min-width: 720px) and (max-width: 1023px) { @content; }
+}
+@mixin mobile_layout {
+  @media screen and (max-width: 719px) { @content; }
+}
+
+@mixin flex($direction: row, $justify: space-between, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}

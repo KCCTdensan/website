@@ -1,0 +1,193 @@
+@import "./colors.scss";
+@import "./aliases.scss";
+
+
+// Layout
+
+.fullheight {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin container {
+  width: 84%;
+  margin: 0 auto auto;
+
+  animation: fadeIn 0.5s ease 0s 1 normal;
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}
+
+.container {
+  @include container;
+
+  // const PcContainer = styled(Container)`
+  //   width: 960px;
+  // `
+  // const TabContainer = styled(Container)`
+  //   width: 84%;
+  // `
+  // const MobileContainer = styled(Container)`
+  //   width: 92%;
+  // `
+}
+
+.widecontainer {
+  @include container;
+
+  width: 100%;
+}
+
+
+// Header
+
+.header_main {
+  @include flex($align: stretch);
+  height: 72px;
+  padding: 0 16px;
+  background: $c-primary;
+  font-feature-settings: "palt";
+}
+
+.logo_link {
+  /* リンクの大きさを画像の幅だけにしたい */
+  width: 234px;
+
+  .logo_img {
+    height: 100%;
+    &:hover {
+      transition: .1s;
+      transform: scale(.95);
+    }
+  }
+}
+
+.links_link {
+  a {
+    @include flex;
+    height: 100%;
+    color: $c-text-colored;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative; // 下のアレ用
+    min-width: 36px;
+    margin: 0 11px;
+
+    &::before,
+    &::after {
+      width: 0;
+      display: block;
+      position: absolute;
+      bottom: 8px;
+      content: "";
+      border-bottom: solid 4px white;
+      transition: .2s ease;
+    }
+
+    &::before {
+      left: 50%;
+    }
+
+    &::after {
+      right: 50%;
+    }
+
+    &:hover {
+      &::before,
+      &::after {
+        width: 50%;
+      }
+    }
+  }
+}
+
+.links_desktop {
+  @include pc_layout {
+    @include flex($align: stretch);
+
+    background: red;
+
+    div {
+      height: 100%;
+    }
+  }
+  @include non_pc_layout { display: none; }
+}
+
+.links_menu {
+  @include pc_layout { display: none; }
+  @include non_pc_layout {
+    @include flex($direction: column, $align: stretch);
+
+    background: purple;
+
+    div {
+      height: 100px;
+    }
+  }
+}
+
+.links_menu_toggle_button {
+  @include pc_layout { display: none; }
+  @include non_pc_layout {
+    background: yellow;
+    &__img {}
+  }
+}
+
+.links_menu_open {
+  max-height: 500px;
+  transition: max-height 1s;
+}
+.links_menu_close {
+  max-height: 0;
+  transition: max-height 0.7s;
+}
+
+.navbuttons {
+  background: purple;
+  &::before {
+    content: "めにゅー(開発中です)";
+  }
+}
+
+
+// Footer
+
+footer {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #ddd;
+  box-shadow: 0 -11px 24px #fafafa;
+  font-feature-settings: "palt";
+}
+
+// desktop
+//      margin-top: 38px;
+// mobile
+//      margin-top; 11px;
+
+.iconlink {
+  margin-top: 4px;
+  img {
+    width: 32px;
+    padding: 8px;
+  }
+}
+
+.copyright {
+  margin-bottom: 4px;
+  display: inline-block;
+  color: #444;
+  font-weight: bold;
+}

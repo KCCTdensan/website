@@ -1,27 +1,49 @@
-import React, { useState } from "react"
+import React, { createRef, forwardRef } from "react"
 import { Link } from "gatsby"
 // import { StaticImage } from "gatsby-plugin-image"
 
-import * as style from "../styles/header.module.scss"
+import * as style from "./style.module.scss"
+
+const LinksContents = ({ desktopLinks=false, menuLinks=false }) => (
+  <div className={
+    desktopLinks
+    ? style.links_desktop : menuLinks
+    ? style.links_menu : null
+  }>
+    <div className={style.links_link}><Link to="/">トップページ</Link></div>
+    <div className={style.links_link}><Link to="/activities">活動内容</Link></div>
+    <div className={style.links_link}><Link to="/works">作品</Link></div>
+    {/*<div className={style.links_link}><a href="https://blog.d3bu.net">ブログ</a></div>*/}
+    <div className={style.links_link}><Link to="/joinus">入部希望の方へ</Link></div>
+    <div className={style.links_link}><a href="http://www.kobe-kosen.ac.jp" target="_blank" rel="noreferrer">学校ホームページ</a></div>
+  </div>
+)
 
 const Header = () => {
-  // const [ isNavLinksOpen, setNavLinksOpen ] = useState(false)
+  const menuLinksRef = createRef()
+  const MenuLinksContents = forwardRef((_, ref) => (
+    <div>
+      <LinksContents menuLinks ref={menuLinksRef} />
+    </div>
+  ))
 
   return (
     <header>
-      <Link to="/" className={style.logo}>
-        {/* StaticImageにstyled-componentsを当てると描画されなくなる。クソ。 */}
-        {/*<LogoImg src="../assets/logo.png" alt="Logo" />*/}
-        <img src="/assets/logo.png" alt="Logo" />
-      </Link>
-      <div className={style.links}>
-        <Link to="/">トップページ</Link>
-        <Link to="/activities">活動内容</Link>
-        <Link to="/works">作品</Link>
-        {/*<a href="https://blog.d3bu.net">ブログ</a>*/}
-        <Link to="/joinus">入部希望の方へ</Link>
-        <a href="http://www.kobe-kosen.ac.jp" target="_blank" rel="noreferrer">学校ホームページ</a>
+      <div className={style.header_main}>
+        <Link to="/" className={style.logo_link}>
+          {/*<LogoImg src="../assets/logo.png" alt="Logo" />*/}
+          <img src="/assets/logo.png" alt="Logo" className={style.logo_img} />
+        </Link>
+        <LinksContents desktopLinks />
+        <button onClick={() => {
+          console.log(menuLinksRef.current)
+          menuLinksRef.current.classList.toggle(style.links_menu_open)
+          menuLinksRef.current.classList.toggle(style.links_menu_close)
+        }} className={style.links_menu_toggle_button}>
+          o
+        </button>
       </div>
+      <MenuLinksContents ref={menuLinksRef} />
     </header>
   )
 }

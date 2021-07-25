@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-import * as style from "../styles/pages/index.module.scss"
+import * as style from "../styles/index.module.scss"
 
 export default function Home() {
   return (
