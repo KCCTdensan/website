@@ -1,0 +1,8 @@
+@import "../components/colors.scss";
+
+a.titlelink {
+  color: $c-text;
+  user-select: none;
+  &:hover { color: $c-link-hover; }
+  &:active { color: $c-link-active; }
+}

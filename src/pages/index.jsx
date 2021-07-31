@@ -5,7 +5,7 @@ import Seo from "../components/seo"
 
 import * as style from "../styles/index.module.scss"
 
-export default function Home() {
+const Home = () => {
   return (
     <Layout>
       <Seo title="神戸高専 電算部" disableSiteName />
@@ -16,7 +16,7 @@ export default function Home() {
         <img src="/assets/images/index_slider2.jpg" alt="slide_3" />
         <img src="/assets/images/index_slider3.jpg" alt="slide_4" />
       </div>
-      <div className={style.gamingtext}>
+      <div className={style.welcometext + ' ' + style.gamingtext}>
         <span>パソコンを利用し、</span>
         <span>ゲーム、音楽、映像、</span>
         <span>VRソフトの制作、</span>
@@ -40,3 +40,5 @@ export default function Home() {
     </Layout>
   )
 }
+
+export default Home

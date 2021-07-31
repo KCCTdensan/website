@@ -1,0 +1,32 @@
+@import "../../components/colors.scss";
+
+.per_year_events {
+  margin: 20px 4px;
+  border: 1px solid $c-border-gray;
+  border-radius: 8px;
+  box-shadow: 0 0 8px 2px #eee;
+  user-select: none;
+
+  summary {
+    margin: 8px 8px;
+    padding: 0 8px;
+    &::marker {
+      color: gray;
+    }
+  }
+
+  &[open] summary {
+    padding-bottom: 8px;
+    border-bottom: 1px solid $c-border-gray;
+  }
+
+  h3 { display: inline; }
+
+  ul {
+    margin: 12px 16px;
+
+    li {
+      margin-left: 16px;
+    }
+  }
+}

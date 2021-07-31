@@ -79,7 +79,7 @@ const Layout = ({ children, Wide=false }) => {
     <Twemoji className={style.fullheight}>
       <Header />
       <main
-        className={Wide ? style.widecontainer : style.container}
+        className={style.container + (Wide ? ` ${style.wide}` : '')}
       >{children}</main>
       <Footer />
     </Twemoji>

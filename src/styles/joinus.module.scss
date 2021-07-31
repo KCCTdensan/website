@@ -1,49 +1,58 @@
-.faqlist {
-  details {
-    margin: 16px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0 0 8px 2px #f4f4f4;
+@import "../components/colors.scss";
+
+.faq {
+  margin: 16px 4px;
+  border: 1px solid $c-border-gray;
+  border-radius: 8px;
+  box-shadow: 0 0 8px 2px #eee;
+  font-size: larger;
+  user-select: none;
+
+  summary {
+    margin: 8px 8px;
+    padding: 0 8px;
+    &::before {
+      content: "Q.";
+      width: 1.5em;
+      display: inline-block;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+    &::marker {
+      color: gray;
+    }
   }
-  details[open] {
-    margin: 18px 0;
-    box-shadow: 0 0 16px 4px #eee;
+
+  &[open] summary {
+    padding-bottom: 8px;
+    border-bottom: 1px solid $c-border-gray;
   }
-  details[open] summary {
-    border-bottom: 1px solid #ccc;
+
+  div {
+    margin: 12px 16px;
+    margin-left: 32px;
+    &::before {
+      content: "A.";
+      width: 1.5em;
+      display: inline-block;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
   }
 }
+
 
 .q {
   padding: 12px;
   user-select: none;
   font-weight: bolder;
-
-  ::marker {
+  &::marker {
     color: gray;
     font-size: 1em;
-  }
-  ::before {
-    content: "Q.";
-    width: 1.5em;
-    display: inline-block;
-    font-weight: bold;
-    font-size: 1.3em;
-    line-height: 1em;
   }
 }
 
 .a {
   padding: 12px;
   padding-left: 4em;
-
-  ::before {
-    content: "A.";
-    width: 1.5em;
-    margin-left: -1.5em;
-    display: inline-block;
-    font-weight: bold;
-    font-size: 1.3em;
-    line-height: 1em;
-  }
 }
