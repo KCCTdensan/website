@@ -8,7 +8,7 @@ import * as style from "../styles/index.module.scss"
 export default function Home() {
   return (
     <Layout>
-      <Seo title="トップページ" />
+      <Seo title="神戸高専 電算部" disableSiteName />
 
       <div className={style.picsslide}>
         <img src="/assets/images/densan_intro.png" alt="slide_1" />

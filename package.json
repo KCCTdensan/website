@@ -2,7 +2,7 @@
   "name": "d3bu.net",
   "version": "0.1.0",
   "dependencies": {
-    "gatsby": "3.10.0",
+    "gatsby": "3.10.2",
     "gatsby-plugin-image": "1.10.x",
     "gatsby-plugin-manifest": "3.10.x",
     "gatsby-plugin-react-helmet": "4.10.x",
@@ -15,12 +15,15 @@
     "react-helmet": "6.1.x",
     "react-twemoji": "0.3.x",
     "reseter.css": "2.0.x",
-    "sass": "1.35.x"
+    "sass": "1.37.x"
+  },
+  "devDependencies": {
+    "prettier": "2.3.x"
   },
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build && prettier -w \"public/**/*.html\"",
     "dev": "gatsby develop"
   }
 }

@@ -7,13 +7,13 @@ module.exports = {
       電算部,でんさんぶ,電子計算機部,神戸高専,神戸高専電子計算機部,KCCT,高専,神戸,部活,部活動,
       パソコン,パソコン部,コンピューター,コンピュータークラブ,コンピューター部,
       プログラミング,作曲,電子回路,CG,2DCG,3DCG
-    `.replace(/\s/g, "")
+    `.replace(/\s/g, '')
   },
   plugins: [
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "電算部のウェブサイト",
+        name: "電算部.net",
         short_name: "電算部.net",
         description: "神戸高専電算部 公式ウェブサイト",
         lang: "ja",
