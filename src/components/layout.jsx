@@ -1,4 +1,4 @@
-import React, { createRef, forwardRef }  from "react"
+import React, { useState, useRef }  from "react"
 import Twemoji from "react-twemoji"
 import { Link } from "gatsby"
 
@@ -8,28 +8,19 @@ import * as style from "./style.module.scss"
 
 // Header
 
-const LinksContents = ({ desktopLinks=false, menuLinks=false }) => (
-  <div className={
-    desktopLinks
-    ? style.links_desktop : menuLinks
-    ? style.links_menu : null
-  }>
-    <div className={style.links_link}><Link to="/">トップページ</Link></div>
-    <div className={style.links_link}><Link to="/activities">活動内容</Link></div>
-    <div className={style.links_link}><Link to="/works">作品</Link></div>
-    {/*<div className={style.links_link}><a href="https://blog.d3bu.net">ブログ</a></div>*/}
-    <div className={style.links_link}><Link to="/joinus">入部希望の方へ</Link></div>
-    <div className={style.links_link}><a href="http://www.kobe-kosen.ac.jp" target="_blank" rel="noreferrer">学校ホームページ</a></div>
-  </div>
-)
-
 export const Header = () => {
-  const menuLinksRef = createRef()
-  const MenuLinksContents = forwardRef((_, ref) => (
-    <div>
-      <LinksContents menuLinks ref={menuLinksRef} />
-    </div>
-  ))
+  const linksMenuRef = useRef()
+  const linksMenuHamburger = useRef()
+  const LinksContents = () => (
+    <>
+      <div className={style.links_link}><Link to="/">トップページ</Link></div>
+      <div className={style.links_link}><Link to="/activities">活動内容</Link></div>
+      <div className={style.links_link}><Link to="/works">作品</Link></div>
+      {/*<div className={style.links_link}><a href="https://blog.d3bu.net">ブログ</a></div>*/}
+      <div className={style.links_link}><Link to="/joinus">入部希望の方へ</Link></div>
+      <div className={style.links_link}><a href="http://www.kobe-kosen.ac.jp" target="_blank" rel="noreferrer">学校ホームページ</a></div>
+    </>
+  )
 
   return (
     <header>
@@ -38,16 +29,25 @@ export const Header = () => {
           {/*<LogoImg src="../assets/logo.png" alt="Logo" />*/}
           <img src="/assets/logo.png" alt="Logo" className={style.logo_img} />
         </Link>
-        <LinksContents desktopLinks />
-        <button onClick={() => {
-          console.log(menuLinksRef.current)
-          menuLinksRef.current.classList.toggle(style.links_menu_open)
-          menuLinksRef.current.classList.toggle(style.links_menu_close)
-        }} className={style.links_menu_toggle_button}>
-          o
+        <div className={style.links_desktop}><LinksContents /></div>
+        <button
+          onClick={() => {
+            linksMenuRef.current.classList.toggle(style.links_menu_open)
+            linksMenuRef.current.classList.toggle(style.links_menu_close)
+            linksMenuHamburger.current.classList.toggle(style.open)
+            linksMenuHamburger.current.classList.toggle(style.close)
+          }}
+          className={style.links_menu_hamburger}
+        >
+          <span className={style.links_menu_hamburger__line + ' ' + style.close} ref={linksMenuHamburger} />
         </button>
       </div>
-      <MenuLinksContents ref={menuLinksRef} />
+      <div
+        className={style.links_menu + ' ' + style.links_menu_close}
+        ref={linksMenuRef}
+      >
+        <LinksContents />
+      </div>
     </header>
   )
 }

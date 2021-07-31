@@ -1,12 +1,27 @@
 @import "reseter.css/css/reseter.min.css";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+@import "./colors.scss";
 
 body {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
 a {
+  color: $c-link;
   outline: none;
+  text-decoration: none;
+  &:visited {
+    color: $c-link-visited;
+    text-decoration: none;
+  }
+  &:hover {
+    color: $c-link-hover;
+    text-decoration: underline;
+  }
+  &:active {
+    color: $c-link-active;
+    text-decoration: none;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {

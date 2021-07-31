@@ -27,7 +27,6 @@
 
 .container {
   @include container;
-
   // const PcContainer = styled(Container)`
   //   width: 960px;
   // `
@@ -41,19 +40,30 @@
 
 .widecontainer {
   @include container;
-
   width: 100%;
 }
 
 
 // Header
 
+header {
+  @include flex($direction: column);
+  margin-bottom: 24px;
+  user-select: none;
+}
+
 .header_main {
   @include flex($align: stretch);
+  width: 100%;
   height: 72px;
-  padding: 0 16px;
   background: $c-primary;
   font-feature-settings: "palt";
+  @include pc_layout {
+    padding: 0 32px;
+  }
+  @include non_pc_layout {
+    padding: 0 2%;
+  }
 }
 
 .logo_link {
@@ -79,7 +89,6 @@
     position: relative; // 下のアレ用
     min-width: 36px;
     margin: 0 11px;
-
     &::before,
     &::after {
       width: 0;
@@ -90,15 +99,12 @@
       border-bottom: solid 4px white;
       transition: .2s ease;
     }
-
     &::before {
       left: 50%;
     }
-
     &::after {
       right: 50%;
     }
-
     &:hover {
       &::before,
       &::after {
@@ -112,8 +118,6 @@
   @include pc_layout {
     @include flex($align: stretch);
 
-    background: red;
-
     div {
       height: 100%;
     }
@@ -122,39 +126,88 @@
 }
 
 .links_menu {
+  overflow: hidden;
   @include pc_layout { display: none; }
   @include non_pc_layout {
     @include flex($direction: column, $align: stretch);
-
-    background: purple;
+    width: 100%;
+    background: $c-bg-secondary;
 
     div {
       height: 100px;
     }
   }
 }
-
-.links_menu_toggle_button {
-  @include pc_layout { display: none; }
-  @include non_pc_layout {
-    background: yellow;
-    &__img {}
-  }
-}
-
 .links_menu_open {
   max-height: 500px;
-  transition: max-height 1s;
+  transition: max-height .2s;
 }
 .links_menu_close {
   max-height: 0;
-  transition: max-height 0.7s;
+  transition: max-height .2s;
 }
 
-.navbuttons {
-  background: purple;
-  &::before {
-    content: "めにゅー(開発中です)";
+.links_menu_hamburger {
+  @include pc_layout { display: none; }
+  @include non_pc_layout {
+    width: 64px;
+    height: 64px;
+    margin: auto 0;
+    padding: 0;
+    background: none;
+    border: none;
+    &__line {
+      display: block;
+      width: 48px;
+      height: 4px;
+      margin: auto;
+      border-radius: 2px;
+      background: $c-text-colored;
+      &::before {
+        display: block;
+        height: 4px;
+        position: relative;
+        bottom: 16px;
+        border-radius: 2px;
+        content: '';
+        background: $c-text-colored;
+      }
+      &::after {
+        display: block;
+        height: 4px;
+        position: relative;
+        top: 16-4px;
+        border-radius: 2px;
+        content: '';
+        background: $c-text-colored;
+      }
+      &.open {
+        background: transparent;
+        transition: all .1s;
+        &::before {
+          bottom: 0px;
+          transform: rotate(45deg);
+          transition: all .1s;
+        }
+        &::after {
+          top: 0-4px;
+          transform: rotate(-45deg);
+          transition: all .1s;
+        }
+      }
+      &.close {
+        background: $c-text-colored;
+        transition: all .1s;
+        &::before {
+          bottom: 16px;
+          transition: all .1s;
+        }
+        &::after {
+          top: 16-4px;
+          transition: all .1s;
+        }
+      }
+    }
   }
 }
 
