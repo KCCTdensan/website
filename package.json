@@ -1,26 +1,23 @@
 {
-  "name": "d3bu.net",
-  "version": "0.1.0",
   "dependencies": {
-    "gatsby": "3.10.2",
-    "gatsby-plugin-image": "1.10.x",
-    "gatsby-plugin-manifest": "3.10.x",
-    "gatsby-plugin-react-helmet": "4.10.x",
-    "gatsby-plugin-sass": "4.10.x",
-    "gatsby-plugin-sharp": "3.10.x",
-    "gatsby-source-filesystem": "3.10.x",
-    "gatsby-transformer-remark": "4.7.x",
+    "gatsby": "3.11.1",
+    "gatsby-plugin-image": "1.11.0",
+    "gatsby-plugin-manifest": "3.11.0",
+    "gatsby-plugin-react-helmet": "4.11.0",
+    "gatsby-plugin-sass": "4.11.0",
+    "gatsby-plugin-sharp": "3.11.0",
+    "gatsby-source-filesystem": "3.11.0",
+    "gatsby-transformer-remark": "4.8.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-helmet": "6.1.x",
-    "react-twemoji": "0.3.x",
-    "reseter.css": "2.0.x",
-    "sass": "1.37.x"
+    "react-helmet": "6.1.0",
+    "react-twemoji": "0.3.0",
+    "reseter.css": "2.0.0",
+    "sass": "1.37.5"
   },
   "devDependencies": {
-    "prettier": "2.3.x"
+    "prettier": "2.x"
   },
-  "license": "MIT",
   "private": true,
   "scripts": {
     "build": "gatsby build && prettier -w \"public/**/*.html\"",
