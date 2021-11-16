@@ -1,26 +1,26 @@
 {
-  "dependencies": {
-    "gatsby": "3.11.1",
-    "gatsby-plugin-image": "1.11.0",
-    "gatsby-plugin-manifest": "3.11.0",
-    "gatsby-plugin-react-helmet": "4.11.0",
-    "gatsby-plugin-sass": "4.11.0",
-    "gatsby-plugin-sharp": "3.11.0",
-    "gatsby-source-filesystem": "3.11.0",
-    "gatsby-transformer-remark": "4.8.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-helmet": "6.1.0",
-    "react-twemoji": "0.3.0",
-    "reseter.css": "2.0.0",
-    "sass": "1.37.5"
-  },
-  "devDependencies": {
-    "prettier": "2.x"
-  },
-  "private": true,
-  "scripts": {
-    "build": "gatsby build && prettier -w \"public/**/*.html\"",
-    "dev": "gatsby develop"
-  }
+	"name": "d3bu.net",
+	"version": "2.0.0",
+	"devDependencies": {
+		"@sveltejs/adapter-static": "next",
+		"@sveltejs/kit": "next",
+		"autoprefixer": "^10.4.0",
+		"cssnano": "^5.0.10",
+		"postcss": "^8.3.11",
+		"postcss-load-config": "^3.1.0",
+		"svelte": "^3.44.1",
+		"svelte-check": "^2.2.9",
+		"svelte-preprocess": "^4.9.8",
+		"tailwindcss": "^2.2.19",
+		"tslib": "^2.3.1",
+		"typescript": "^4.4.4"
+	},
+	"scripts": {
+		"build": "svelte-kit build",
+		"check": "svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+		"dev": "svelte-kit dev",
+		"preview": "svelte-kit preview"
+	},
+	"type": "module"
 }
