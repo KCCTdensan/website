@@ -2,7 +2,7 @@
 	import Meta from "$lib/Meta.svelte"
 </script>
 
-<Meta title="KCCT電算部" noTitleFormat />
+<Meta title="神戸高専 電算部" description="神戸高専電算部のウェブサイトです．" noTitleFormat />
 
 <h1>神戸高専 電算部</h1>
 

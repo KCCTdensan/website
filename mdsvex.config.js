@@ -1,8 +1,7 @@
 export default {
-	extensions: [".svelte.md", ".md", ".svx"],
+	extensions: [".svx", ".md"],
 	smartypants: {
 		dashes: "oldschool",
 	},
-	remarkPlugins: [],
-	rehypePlugins: [],
+	layout: "./src/mdLayout.svelte",
 }
