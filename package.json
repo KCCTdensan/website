@@ -9,6 +9,7 @@
 		"mdsvex": "^0.9.8",
 		"postcss": "^8.3.11",
 		"postcss-load-config": "^3.1.0",
+		"prettier": "^2.4.1",
 		"svelte": "^3.44.2",
 		"svelte-check": "^2.2.10",
 		"svelte-preprocess": "^4.9.8",
@@ -17,10 +18,11 @@
 		"typescript": "^4.5.2"
 	},
 	"scripts": {
-		"build": "svelte-kit build",
+		"build": "svelte-kit build && npm run postbuild",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
 		"dev": "svelte-kit dev",
+		"postbuild": "mv build/404/index.html build/404.html && prettier -w build/",
 		"preview": "svelte-kit preview"
 	},
 	"type": "module"
