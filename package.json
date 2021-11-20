@@ -18,7 +18,7 @@
 		"typescript": "^4.5.2"
 	},
 	"scripts": {
-		"build": "svelte-kit build && npm run postbuild",
+		"build": "svelte-kit build",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
 		"dev": "svelte-kit dev",
