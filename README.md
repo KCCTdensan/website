@@ -2,6 +2,8 @@
 
 電子計算機部公式ウェブサイト
 
-# 解説
+## 解説
 
-そのうち書きます
+[src/routes/inner/maintenance.md](ソース)
+
+[https://d3bu.net/inner/maintenance](フル)
