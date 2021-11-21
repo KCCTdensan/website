@@ -4,6 +4,7 @@
 	export let title         : string = "\"hello, world\""
 	export let description   : string = "神戸高専電算部のウェブサイト"
 	export let author        : string = "KCCTdensan"
+	export let noRobots      : bool   = false
 	export let noTitleFormat : bool   = false
 
 	const destTitle = title + (noTitleFormat ? "" : " :: d3bu.net")
@@ -14,6 +15,7 @@
 	<meta name="description"  content="{description}" />
 	<meta name="author"       conetnt="{author}" />
 	<meta name="keywords"     content="電算部,電子計算機部,神戸高専,KCCT,高専" />
+	<meta name="robots"       content="{noRobots ? "none" : "all"}" />
 
 	<meta name="twitter:card"     content="summary" />
 	<meta name="twitter:site"     content="@kcct_densan" />
