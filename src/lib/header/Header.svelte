@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from "$app/stores"
+	// import logo from "./logo.svg"
 
 	const navLinks = [
 		{ path: "/",      name: "Top"   },
@@ -12,7 +13,7 @@
 	<nav>
 		<ul class="flex">
 			{#each navLinks as { path, name }}
-				<li class:navLinkActive={$page.path === path}><a href={path}>{name}</a></li>
+				<li class:navLinkActive={$page.path === path}><a sveltekit:prefetch href={path}>{name}</a></li>
 			{/each}
 		</ul>
 	</nav>
