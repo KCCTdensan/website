@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import Meta from "$lib/Meta.svelte"
 
 	export let title         = "\"hello, world\""

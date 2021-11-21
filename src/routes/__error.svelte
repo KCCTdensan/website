@@ -1,13 +1,13 @@
 <script context="module" lang="ts">
-	import Meta from "$lib/Meta.svelte"
 	export function load(props) {
 		return { props }
 	}
 </script>
 
-<script>
-	export let status = undefined;
-	export let error  = undefined;
+<script lang="ts">
+	import Meta from "$lib/Meta.svelte"
+	export let status : int     = undefined;
+	export let error  : string  = undefined;
 </script>
 
 <Meta title="Error_{status}" description="エラーが発生しました．" />

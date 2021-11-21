@@ -3,5 +3,5 @@ export default {
 	smartypants: {
 		dashes: "oldschool",
 	},
-	layout: "./src/mdLayout.svelte",
+	layout: "./src/MDLayout.svelte",
 }
