@@ -2,6 +2,9 @@
 
 電子計算機部公式ウェブサイト
 
-# 解説
+[d3bu.pgaes.dev](https://d3bu.pages.dev)
 
-そのうち書きます
+## 解説
+
+- [ソース](src/routes/inner/maintenance.md)
+- [フル](https://d3bu.net/inner/maintenance)
