@@ -1,9 +1,10 @@
 # d3bu.net
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/180201d6-f474-4575-ba55-5f235fb3052b/deploy-status)](https://app.netlify.com/sites/d3bu/deploys)
-
 電子計算機部公式ウェブサイト
 
-# 解説
+[d3bu.pgaes.dev](https://d3bu.pages.dev)
 
-[ここ](https://d3bu.net/maintenance)を参考にしてください
+## 解説
+
+- [ソース](src/routes/inner/maintenance.md)
+- [フル](https://d3bu.net/inner/maintenance)
