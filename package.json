@@ -4,10 +4,11 @@
 	"devDependencies": {
 		"@sveltejs/adapter-static": "next",
 		"@sveltejs/kit": "next",
+		"@themesberg/flowbite": "^1.2.0",
 		"autoprefixer": "^10.4.0",
-		"cssnano": "^5.0.11",
+		"cssnano": "^5.0.12",
 		"mdsvex": "^0.9.8",
-		"postcss": "^8.4.1",
+		"postcss": "^8.4.4",
 		"postcss-load-config": "^3.1.0",
 		"postcss-viewport-height-correction": "^1.1.1",
 		"prettier": "^2.5.0",
