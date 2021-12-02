@@ -5,6 +5,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        transparent: "transparent",
         bodyBG: "#0F172A",
         mainBG: "#FAFAFA",
         mainText: "#000000",

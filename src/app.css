@@ -13,11 +13,6 @@ h6 { @apply text-xl font-medium; }
 
 @tailwind components;
 
-.container {
-  @apply mx-auto drop-shadow-2xl bg-mainBG text-mainText;
-  max-width: 840px;
-}
-
 .AAAAAAAAA {
   @apply text-9xl text-red-600 font-black;
 }
