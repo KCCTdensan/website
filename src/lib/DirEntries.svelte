@@ -1,13 +1,13 @@
 <script lang="ts">
   import { browser } from "$app/env"
 
-  let layout
-  import { layout } from "@roxi/routify?client"
+  // let layout
+  // import { layout } from "@roxi/routify?client"
 
-  import { create as BareStore } from "./BareStore"
-  if (!browser) {
-    layout = BareStore()
-  }
+  // import { create as BareStore } from "./BareStore"
+  // if (!browser) {
+  //   layout = BareStore()
+  // }
 </script>
 
 {#if browser}<!-- SSRでエラーになる対策 -->
