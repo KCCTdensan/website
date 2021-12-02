@@ -1,6 +1,7 @@
 <script lang="ts">
   import { page } from "$app/stores"
   // import logo from "./logo.svg"
+  import Logo from "./Logo.svelte"
 
   const navLinks = [
     { path: "/",      name: "Top"   },
@@ -8,30 +9,57 @@
   ]
 </script>
 
-<header class="select-none">
-  <div class="w-11/12 md:w-4/5 lg:w-2/3 mx-auto flex justify-between">
-    <a class="h-16 flex items-center" href="/">
-      <img class="h-full pointer-events-none" src="/icon.png" alt="Logo"><!-- SVGアニメーションにしたい -->
-      <span class="inline-block mx-2 text-xl font-black">神戸高専電子計算機部</span>
-    </a>
-    <nav class="hidden sm:flex">
-      <ul class="flex">
+<header class="select-none bg-headerBG text-headerText">
+  <div class="h-16 flex justify-between">
+    <!-- ロゴ -->
+    <div class="sm:mx-4">
+      <Logo />
+    </div>
+    <!-- トップのリンク集 -->
+    <nav class="hidden mx-4 sm:flex">
+      <ul class="flex items-center">
         {#each navLinks as { path, name }}
-          <li class="mx-2" class:navLinkActive={$page.path === path}>
-            <a sveltekit:prefetch href={path}>{name}</a>
+          <li class="block h-full" class:navLinkActive={$page.path === path}>
+            <a class="block h-full w-24 px-2 flex items-center justify-center hover:bg-red-600 text-xl font-bold"
+               sveltekit:prefetch
+               href={path}>{name}</a>
           </li>
         {/each}
-        <li><a rel="external" href="http://www.kobe-kosen.ac.jp">学校HP</a></li>
+        <li class="block h-full">
+          <a class="block h-full w-24 px-2 flex items-center justify-center hover:bg-red-600 text-xl font-bold"
+             rel="external"
+             href="http://www.kobe-kosen.ac.jp">学校HP</a>
+        </li>
       </ul>
     </nav>
     <nav class="flex sm:hidden">
-      もばいるめにゅー
+      <button data-collapse-toggle="mobileMenu">三</button>
     </nav>
+  </div>
+  <!-- もばいるめにゅー -->
+  <div id="mobileMenu" class="hidden bg-yellow-600">
+    <ul class="flex items-center">
+      {#each navLinks as { path, name }}
+        <li class="" class:navLinkActive={$page.path === path}>
+          <a class=""
+             sveltekit:prefetch
+             href={path}>{name}</a>
+        </li>
+      {/each}
+      <li class="">
+        <a class=""
+           rel="external"
+           href="http://www.kobe-kosen.ac.jp">学校HP</a>
+      </li>
+    </ul>
   </div>
 </header>
 
 <style lang="postcss">
   .navLinkActive {
-    @apply italic;
+    @apply text-purple-400;
+  }
+  #mobileMenu .navLinkActive {
+    @apply bg-red-600;
   }
 </style>
