@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		%svelte.head%
-		<script>
-			function setViewportProperty(doc) {
-				var prevClientHeight
-				function handleResize() {
-					var clientHeight = doc.clientHeight
-					if(clientHeight === prevClientHeight) return
-					requestAnimationFrame(function updateViewportHeight() {
-						doc.style.setProperty("--vh", clientHeight * 0.01 + "px")
-						prevClientHeight = clientHeight
-					})
-				}
-				handleResize()
-				return handleResize
-			}
-			window.addEventListener("resize", setViewportProperty(document.documentElement))
-		</script>
-	</head>
-	<body>
-		<div id="svelte">%svelte.body%</div>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    %svelte.head%
+    <script>
+      function setViewportProperty(doc) {
+        var prevClientHeight
+        function handleResize() {
+          var clientHeight = doc.clientHeight
+          if (clientHeight === prevClientHeight) return
+          requestAnimationFrame(function updateViewportHeight() {
+            doc.style.setProperty("--vh", clientHeight * 0.01 + "px")
+            prevClientHeight = clientHeight
+          })
+        }
+        handleResize()
+        return handleResize
+      }
+      window.addEventListener("resize", setViewportProperty(document.documentElement))
+    </script>
+  </head>
+  <body>
+    <div id="svelte">%svelte.body%</div>
+  </body>
 </html>
