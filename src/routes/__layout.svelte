@@ -1,7 +1,7 @@
 <script lang="ts">
-  // import "@themesberg/flowbite"
-  import Header from "$lib/header/Header.svelte"
+  import "@themesberg/flowbite?client"
   import "../app.css"
+  import Header from "$lib/header/Header.svelte"
 </script>
 
 <div class="min-h-screen flex">

@@ -2,6 +2,7 @@
   "name": "d3bu.net",
   "version": "2.0.0",
   "devDependencies": {
+    "@roxi/routify": "^2.18.3",
     "@sveltejs/adapter-static": "next",
     "@sveltejs/kit": "next",
     "@themesberg/flowbite": "^1.2.0",
@@ -13,18 +14,16 @@
     "postcss-viewport-height-correction": "^1.1.1",
     "prettier": "^2.5.0",
     "svelte": "^3.44.2",
-    "svelte-check": "^2.2.10",
     "svelte-preprocess": "^4.9.8",
     "tailwindcss": "^2.2.19",
     "tslib": "^2.3.1",
-    "typescript": "^4.5.2"
+    "typescript": "^4.5.2",
+    "vite-plugin-iso-import": "^0.1.2"
   },
   "scripts": {
     "build": "svelte-kit build",
-    "check": "svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
     "dev": "svelte-kit dev",
-    "postbuild": "mv build/404/index.html build/404.html && prettier -w build/",
+    "postbuild": "mv build/404/index.html build/404.html && prettier -w \"build/**/*.html\"",
     "preview": "svelte-kit preview"
   },
   "type": "module"

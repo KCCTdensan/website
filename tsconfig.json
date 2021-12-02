@@ -17,7 +17,8 @@
     "paths": {
       "$lib": ["src/lib"],
       "$lib/*": ["src/lib/*"]
-    }
+    },
+    "plugins": [{ "name": "vite-plugin-iso-import" }] // Svelteでは意味ないけど．
   },
   "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"]
 }
