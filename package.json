@@ -23,7 +23,9 @@
   "scripts": {
     "build": "svelte-kit build",
     "dev": "svelte-kit dev",
-    "postbuild": "mv build/404/index.html build/404.html && prettier -w \"build/**/*.html\"",
+    "postbuild": "npm run postbuild:404 && npm run postbuild:pretty",
+    "postbuild:404": "mv build/404/index.html build/404.html",
+    "postbuild:pretty": "prettier -w \"build/**/*.html\"",
     "preview": "svelte-kit preview"
   },
   "type": "module"
