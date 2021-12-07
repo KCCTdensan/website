@@ -1,7 +1,7 @@
 ---
 title: 部室のサーバーについて
 description: 部員向け
-noRobots
+noRobots: true
 ---
 
 # 部室のサーバーについて
