@@ -1,7 +1,7 @@
 @tailwind base;
 
 body {
-  @apply bg-bodyBG;
+  @apply bg-bodyBG_light dark:bg-bodyBG;
 }
 
 h1 { @apply text-6xl font-black; }

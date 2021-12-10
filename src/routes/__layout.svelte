@@ -8,7 +8,7 @@
   <div class="lg:my-5 container flex flex-col">
     <Header />
     <div class="flex-grow flex flex-col bg-mainBG text-mainText drop-shadow-2xl">
-      <main class="px-4 pt-6 flex flex-col animate-fadeIn">
+      <main class="sm:px-1 md:px-4 pt-6 flex flex-col animate-fadeIn">
         <slot>Hello!</slot>
       </main>
       <footer class="mt-auto justify-between">

@@ -7,6 +7,7 @@ module.exports = {
       colors: {
         transparent: "transparent",
         bodyBG: "#0F172A",
+        bodyBG_light: "#F3F4F6",
         mainBG: "#FAFAFA",
         mainText: "#000000",
         headerBG: "#1E3A8A",
