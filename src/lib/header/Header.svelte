@@ -6,6 +6,8 @@
   const navLinks = [
     { path: "/",      name: "Top"   },
     { path: "/about", name: "About" },
+    { path: "/dev",   name: "Dev"   },
+    //{ path: "/articles", name: "Articles" },
   ]
 </script>
 
