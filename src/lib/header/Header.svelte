@@ -32,6 +32,7 @@
           <li class="block h-full">
             <a class="block h-full w-24 px-2 flex items-center justify-center hover:bg-red-600 text-xl font-bold"
                rel="external"
+               target="_blank"
                href="http://www.kobe-kosen.ac.jp">学校HP</a>
           </li>
         </ul>
