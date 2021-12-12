@@ -15,6 +15,7 @@ export default {
   kit: {
     target: "#svelte",
     adapter: adapter(),
+    trailingSlash: "always",
     vite: {
       plugins: [isoImport()],
     },
