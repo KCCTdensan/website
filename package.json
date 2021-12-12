@@ -23,6 +23,7 @@
   "scripts": {
     "build": "svelte-kit build",
     "dev": "svelte-kit dev",
+    "dev-host": "svelte-kit dev --host",
     "postbuild": "npm run postbuild:404 && npm run postbuild:pretty",
     "postbuild:404": "mv build/404/index.html build/404.html && rmdir build/404",
     "postbuild:pretty": "prettier -w \"build/**/*.html\"",
