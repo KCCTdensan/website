@@ -16,8 +16,8 @@
   <div class="select-none lg:pt-1 bg-headerBG text-headerText drop-shadow-2xl">
     <div class="h-20 flex justify-between">
       <!-- ロゴ -->
-      <div class="sm:mx-4">
-        <Logo />
+      <div class="h-20 sm:mx-4">
+        <Logo url="/" />
       </div>
       <!-- トップのリンク集 -->
       <nav class="hidden mx-4 sm:flex">
