@@ -24,13 +24,13 @@
         <ul class="flex items-center">
           {#each navLinks as { path, name }}
             <li class="block h-full" class:navLinkActive={$page.path === path}>
-              <a class="block h-full w-24 px-2 flex items-center justify-center hover:bg-red-600 text-xl font-bold"
+              <a class="block h-full w-24 px-2 flex items-center justify-center hover:bg-red-600 text-white text-xl font-bold"
                  sveltekit:prefetch
                  href={path}>{name}</a>
             </li>
           {/each}
           <li class="block h-full">
-            <a class="block h-full w-24 px-2 flex items-center justify-center hover:bg-red-600 text-xl font-bold"
+            <a class="block h-full w-24 px-2 flex items-center justify-center hover:bg-red-600 text-white text-xl font-bold"
                rel="external"
                target="_blank"
                href="http://www.kobe-kosen.ac.jp">学校HP</a>
@@ -46,13 +46,13 @@
       <ul class="flex items-center">
         {#each navLinks as { path, name }}
           <li class="" class:navLinkActive={$page.path === path}>
-            <a class=""
+            <a class="text-white"
                sveltekit:prefetch
                href={path}>{name}</a>
           </li>
         {/each}
         <li class="">
-          <a class=""
+          <a class="text-white"
              rel="external"
              href="http://www.kobe-kosen.ac.jp">学校HP</a>
         </li>
