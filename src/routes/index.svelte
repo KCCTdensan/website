@@ -5,7 +5,10 @@
 
 <Meta title="神戸高専 電算部" description="神戸高専電算部のウェブサイトです．" noTitleFormat />
 
-<h1>神戸高専 電算部</h1>
+<h1>
+  <span class="inline-block">神戸高専</span>
+  <span class="inline-block">電算部</span>
+</h1>
 
 <h2>このサイトについて</h2>
 

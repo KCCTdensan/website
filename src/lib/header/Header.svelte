@@ -1,26 +1,27 @@
 <script lang="ts">
+  import Icon from "svelte-awesome"
+  import { bars } from "svelte-awesome/icons"
   import { page } from "$app/stores"
-  // import logo from "./logo.svg"
   import Logo from "./Logo.svelte"
 
   const navLinks = [
     { path: "/",      name: "Top"   },
     { path: "/about", name: "About" },
     { path: "/dev",   name: "Dev"   },
-    //{ path: "/articles", name: "Articles" },
+    //{ path: "/blog", name: "Blog" },
   ]
 </script>
 
 <header class="lg:px-3 bg-transparent">
   <!-- ここらへんニョキってしたい -->
   <div class="select-none lg:pt-1 bg-headerBG text-headerText drop-shadow-2xl">
-    <div class="h-20 flex justify-between">
+    <div class="h-20 px-2 flex justify-between">
       <!-- ロゴ -->
       <div class="h-20 sm:mx-4">
         <Logo url="/" />
       </div>
       <!-- トップのリンク集 -->
-      <nav class="hidden mx-4 sm:flex">
+      <nav class="mx-4 hidden md:flex">
         <ul class="flex items-center">
           {#each navLinks as { path, name }}
             <li class="block h-full" class:navLinkActive={$page.path === path}>
@@ -37,8 +38,10 @@
           </li>
         </ul>
       </nav>
-      <nav class="flex sm:hidden">
-        <button data-collapse-toggle="mobileMenu">三</button>
+      <nav class="flex md:hidden">
+        <button class="w-16 px-3" data-collapse-toggle="mobileMenu">
+          <Icon class="w-full h-full" data={bars} />
+        </button>
       </nav>
     </div>
     <!-- もばいるめにゅー -->
