@@ -18,13 +18,13 @@
       <span class="inline-block">
         Post: {new Date(date).toLocaleString("ja")}
       </span>
-      <time datetime="{new Date(dateUpd).toISOString()}">
-        Updated: {new Date(dateUpd).toLocaleString("ja")}
-      </time>
+      <span class="inline-block">
+        Updated: <time datetime="{new Date(dateUpd).toISOString()}">{new Date(dateUpd).toLocaleString("ja")}</time>
+      </span>
     {:else}
-      <time datetime="{new Date(date).toISOString()}">
-        Post: {new Date(date).toLocaleString("ja")}
-      </time>
+      <span class="inline-block">
+        Post: <time datetime="{new Date(date).toISOString()}">{new Date(date).toLocaleString("ja")}</time>
+      </span>
     {/if}
   </div>
   <hr class="">
