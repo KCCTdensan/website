@@ -1,7 +1,10 @@
 <script lang="ts">
   import Icon from "svelte-awesome"
   import { bars } from "svelte-awesome/icons"
+
+  import { hamburgerrrrr } from "$lib/stores"
   import { page } from "$app/stores"
+
   import Logo from "./Logo.svelte"
 
   const navLinks = [
@@ -39,13 +42,20 @@
         </ul>
       </nav>
       <nav class="flex md:hidden">
-        <button class="w-16 px-3" data-collapse-toggle="mobileMenu">
+        <!-- <button class="w-16 px-3" data-collapse-toggle="sideMenu"> -->
+        <button
+          id="theMenuButton"
+          class="w-16 px-3"
+          class:hamburgerrrrr
+          on:click={() => hamburgerrrrr.update(d => !d)}
+        >
           <Icon class="w-full h-full" data={bars} />
         </button>
       </nav>
     </div>
     <!-- もばいるめにゅー -->
-    <div id="mobileMenu" class="hidden bg-yellow-600">
+    <div id="sideMenu" class="bg-yellow-600"
+      class:hidden={!$hamburgerrrrr}><!-- とりま -->
       <ul class="flex items-center">
         {#each navLinks as { path, name }}
           <li class="" class:navLinkActive={$page.path === path}>
@@ -68,7 +78,10 @@
   .navLinkActive {
     @apply text-purple-400;
   }
-  #mobileMenu .navLinkActive {
+  #sideMenu .navLinkActive {
     @apply bg-red-600;
+  }
+  #theMenuButton .hamburgerrrrr {
+    /* ハンバーガーボタン(アクティブ) */
   }
 </style>

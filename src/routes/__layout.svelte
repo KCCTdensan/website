@@ -1,8 +1,12 @@
 <script lang="ts">
   import "@themesberg/flowbite?client"
   import "../app.css"
+
   import Icon from "svelte-awesome"
   import { github, twitter } from "svelte-awesome/icons"
+
+  import { hamburgerrrrr } from "$lib/stores"
+
   import Header from "$lib/header/Header.svelte"
 </script>
 
@@ -32,7 +36,9 @@
               class="h-6 w-6 inline-block text-gray-600"
             ><Icon class="w-full h-full" data={twitter} /></a>
           </div>
-          <small class="mx-auto mb-4 mt-2 text-base font-bold">&copy; 1974-{ new Date().getFullYear() } KCCTdensan 神戸高専電算部</small>
+          <small
+            class="mx-auto mb-4 mt-2 text-base font-bold"
+          >&copy; 1974-{ new Date().getFullYear() } KCCTdensan 神戸高専電算部</small>
         </div>
         <!-- right -->
         <div>
