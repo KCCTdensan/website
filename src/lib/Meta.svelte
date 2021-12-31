@@ -23,7 +23,7 @@
 
   <meta property="og:title"       content="{destTitle}" />
   <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://d3bu.net{$page.path}" />
+  <meta property="og:url"         content="https://d3bu.net{$page.url.pathname}" />
   <meta property="og:image"       content="https://d3bu.net/icon.png" />
   <meta property="og:description" content="{description}" />
   <meta property="og:site_name"   content="電算部.net" />

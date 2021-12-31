@@ -27,7 +27,7 @@
       <nav class="mx-4 hidden md:flex">
         <ul class="flex items-center">
           {#each navLinks as { path, name }}
-            <li class="block h-full" class:navLinkActive={$page.path === path}>
+            <li class="block h-full" class:navLinkActive={$page.url.pathname === path}>
               <a class="block h-full w-24 px-2 flex items-center justify-center hover:bg-red-600 text-white text-xl font-bold"
                  sveltekit:prefetch
                  href={path}>{name}</a>
@@ -58,7 +58,7 @@
       class:hidden={!$hamburgerrrrr}><!-- とりま -->
       <ul class="flex items-center">
         {#each navLinks as { path, name }}
-          <li class="" class:navLinkActive={$page.path === path}>
+          <li class="" class:navLinkActive={$page.url.pathname === path}>
             <a class="text-white"
                sveltekit:prefetch
                href={path}>{name}</a>
