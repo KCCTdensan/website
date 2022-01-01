@@ -2,7 +2,6 @@
   "name": "d3bu.net",
   "version": "2.0.0",
   "devDependencies": {
-    "@roxi/routify": "2.18.4",
     "@sveltejs/adapter-static": "next",
     "@sveltejs/kit": "next",
     "@themesberg/flowbite": "1.2.0",

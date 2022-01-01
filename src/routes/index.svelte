@@ -1,6 +1,5 @@
 <script lang="ts">
   import Meta from "$lib/Meta.svelte"
-  import DirEntries from "$lib/DirEntries.svelte"
 </script>
 
 <Meta title="神戸高専 電算部" description="神戸高専電算部のウェブサイトです．" noTitleFormat />
@@ -18,5 +17,3 @@
 </p>
 
 <h2>新着情報</h2>
-
-<DirEntries />

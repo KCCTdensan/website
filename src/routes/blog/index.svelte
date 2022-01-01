@@ -2,10 +2,8 @@
   import { API_BASE } from "$lib/_env"
   export async function load({ fetch, params }) {
     const url = `${API_BASE}/blog.json`
-    let error = undefined
     const res = await fetch(url)
-      .catch(e => {error=e})
-    if(error) return {
+    if(!res.ok) return {
       status: res.status,
       error: new Error(`Could not load ${url}`),
     }

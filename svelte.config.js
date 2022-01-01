@@ -6,12 +6,7 @@ import { isoImport } from "vite-plugin-iso-import"
 
 export default {
   extensions: [".svelte", ...mdsvexConfig.extensions],
-  preprocess: [
-    preprocess({
-      postcss: true,
-    }),
-    mdsvex(mdsvexConfig),
-  ],
+  preprocess: [preprocess(), mdsvex(mdsvexConfig)],
   kit: {
     target: "#svelte",
     adapter: adapter(),
