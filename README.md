@@ -2,7 +2,7 @@
 
 電子計算機部公式ウェブサイト
 
-[d3bu.pgaes.dev](https://d3bu.pages.dev)
+[d3bu.pages.dev](https://d3bu.pages.dev)
 
 ## 解説
 
