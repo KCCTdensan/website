@@ -1,15 +1,7 @@
 <script context="module" lang="ts">
-  import { API_BASE } from "$lib/_env"
   export async function load({ fetch, params }) {
-    const url = `${API_BASE}/api/blog.json`
-    const res = await fetch(url)
-    if(!res.ok) return {
-      status: res.status,
-      error: new Error(`Could not load ${url}`),
-    }
-    const entries = (await res.json()).data
-
-    return { props: { entries } }
+    const { data } = await fetch("/api/articles/blog.json").then(r=>r.json())
+    return { props: { entries: data } }
   }
 </script>
 
