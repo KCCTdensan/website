@@ -1,5 +1,5 @@
 <script lang="ts">
-  import "../app.css"
+  import "../app.scss"
 
   import Icon from "svelte-awesome"
   import { github, twitter } from "svelte-awesome/icons"
