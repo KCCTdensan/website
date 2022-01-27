@@ -1,6 +1,9 @@
 {
   "name": "d3bu.net",
   "version": "2.0.0",
+  "dependencies": {
+    "sanitize.css": "13.0.0"
+  },
   "devDependencies": {
     "@sveltejs/adapter-static": "next",
     "@sveltejs/kit": "next",
