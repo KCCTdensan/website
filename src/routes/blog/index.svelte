@@ -1,7 +1,7 @@
 <script context="module" lang="ts">
   import { API_BASE } from "$lib/_env"
   export async function load({ fetch, params }) {
-    const url = `${API_BASE}/blog.json`
+    const url = `${API_BASE}/api/blog.json`
     const res = await fetch(url)
     if(!res.ok) return {
       status: res.status,
