@@ -48,9 +48,9 @@
   </div>
 </div>
 
-<style type="postcss">
+<style lang="scss">
   .container {
-    @apply mx-auto;
+    margin: 0 auto;
     max-width: 840px;
   }
 </style>
