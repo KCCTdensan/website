@@ -1,5 +1,3 @@
-@tailwind base;
-
 body {
   @apply bg-bodyBG_light dark:bg-bodyBG;
 }
@@ -15,10 +13,6 @@ h4 { @apply text-3xl font-bold; }
 h5 { @apply text-2xl font-medium; }
 h6 { @apply text-xl font-medium; }
 
-@tailwind components;
-
 .AAAAAAAAA {
   @apply text-9xl text-red-600 font-black;
 }
-
-@tailwind utilities;

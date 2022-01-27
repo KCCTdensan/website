@@ -1,5 +1,4 @@
 <script lang="ts">
-  import "@themesberg/flowbite?client"
   import "../app.css"
 
   import Icon from "svelte-awesome"
