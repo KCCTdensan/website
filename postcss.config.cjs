@@ -1,4 +1,3 @@
-// const tailwindcss = require("tailwindcss")
 const postcssVhCorrection = require("postcss-viewport-height-correction")
 const autoprefixer = require("autoprefixer")
 const cssnano = require("cssnano")
@@ -8,7 +7,6 @@ const dev = mode === "development"
 
 module.exports = {
   plugins: [
-    // tailwindcss(),
     postcssVhCorrection,
     autoprefixer,
     !dev && cssnano({ preset: "default" }),
