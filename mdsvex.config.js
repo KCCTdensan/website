@@ -1,7 +1,9 @@
 export default {
-  extensions: [".svx", ".md"],
+  extensions: [".md", ".svx"],
   smartypants: {
     dashes: "oldschool",
   },
-  layout: "./src/MDLayout.svelte",
+  layout: {
+    _: "./src/MDLayout.svelte",
+  },
 }
