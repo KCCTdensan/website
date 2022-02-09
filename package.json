@@ -29,7 +29,7 @@
     "build:404": "mv build/404/index.html build/404.html && rmdir build/404",
     "build:kit": "svelte-kit build",
     "build:pretty": "prettier -w 'build/**/*.html'",
-    "build:sitemap": "svelte-sitemap --trailing-slashes -d https://d3bu.net -i 'inner/**'",
+    "build:sitemap": "svelte-sitemap --trailing-slashes -d https://d3bu.net -i '404.html' -i 'inner/**'",
     "dev": "svelte-kit dev",
     "dev-host": "svelte-kit dev --host",
     "preview": "svelte-kit preview",
