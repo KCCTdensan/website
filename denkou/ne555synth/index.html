@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-security-policy" content="" />
+    <title>NE555でシンセをつくりたい &lt;- d3bu.net</title>
+    <meta name="description" content="NE555であそびま" data-svelte="svelte-184h1n8" />
+    <meta name="author" conetnt="KCCTdensan" data-svelte="svelte-184h1n8" />
+    <meta name="keywords" content="電算部,電子計算機部,神戸高専,KCCT,高専" data-svelte="svelte-184h1n8" />
+    <meta name="robots" content="all" data-svelte="svelte-184h1n8" />
+    <meta name="twitter:card" content="summary" data-svelte="svelte-184h1n8" />
+    <meta name="twitter:site" content="@kcct_densan" data-svelte="svelte-184h1n8" />
+    <meta name="twitter:creator" content="@kcct_densan" data-svelte="svelte-184h1n8" />
+    <meta property="og:title" content="NE555でシンセをつくりたい &lt;- d3bu.net" data-svelte="svelte-184h1n8" />
+    <meta property="og:type" content="website" data-svelte="svelte-184h1n8" />
+    <meta property="og:url" content="https://d3bu.net/denkou/ne555synth/" data-svelte="svelte-184h1n8" />
+    <meta property="og:image" content="https://d3bu.net/icon.png" data-svelte="svelte-184h1n8" />
+    <meta property="og:description" content="NE555であそびま" data-svelte="svelte-184h1n8" />
+    <meta property="og:site_name" content="電算部.net" data-svelte="svelte-184h1n8" />
+    <link rel="stylesheet" href="/_app/assets/vendor-ee994d73.css" />
+    <link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-b9c4587e.css" />
+    <link rel="modulepreload" href="/_app/start-2ee020d6.js" />
+    <link rel="modulepreload" href="/_app/chunks/vendor-b5658156.js" />
+    <link rel="modulepreload" href="/_app/pages/__layout.svelte-2464acd8.js" />
+    <link rel="modulepreload" href="/_app/chunks/stores-6406947a.js" />
+    <link rel="modulepreload" href="/_app/pages/denkou/ne555synth/index.md-b04b2ffc.js" />
+    <link rel="modulepreload" href="/_app/chunks/MDLayout-15715bec.js" />
+    <link rel="modulepreload" href="/_app/chunks/Meta-32e421de.js" />
+    <script type="module">
+      import { start } from "/_app/start-2ee020d6.js"
+      start({
+        target: document.querySelector("#svelte"),
+        paths: { base: "", assets: "" },
+        session: {},
+        route: true,
+        spa: false,
+        trailing_slash: "always",
+        hydrate: {
+          status: 200,
+          error: null,
+          nodes: [import("/_app/pages/__layout.svelte-2464acd8.js"), import("/_app/pages/denkou/ne555synth/index.md-b04b2ffc.js")],
+          url: new URL("http://sveltekit-prerender/denkou/ne555synth/"),
+          params: {},
+        },
+      })
+    </script>
+    <script>
+      function setViewportProperty(doc) {
+        var prevClientHeight
+        function handleResize() {
+          var clientHeight = doc.clientHeight
+          if (clientHeight === prevClientHeight) return
+          requestAnimationFrame(function updateViewportHeight() {
+            doc.style.setProperty("--vh", clientHeight * 0.01 + "px")
+            prevClientHeight = clientHeight
+          })
+        }
+        handleResize()
+        return handleResize
+      }
+      window.addEventListener("resize", setViewportProperty(document.documentElement))
+    </script>
+  </head>
+  <body>
+    <div id="svelte">
+      <div class="min-h-screen flex">
+        <div class="lg:my-5 container flex flex-col svelte-y638zu">
+          <header class="lg:px-3 bg-transparent">
+            <div class="select-none lg:pt-1 bg-headerBG text-headerText drop-shadow-2xl">
+              <div class="h-20 px-2 flex justify-between">
+                <div class="h-20 sm:mx-4">
+                  <div class="relative h-full flex items-center">
+                    <img class="h-full pointer-events-none" src="/icon.png" alt="Logo" />
+                    <span class="inline-block mx-2 text-xl font-black"><span class="inline-block">神戸高専</span><span class="inline-block">電子計算機部</span></span>
+                    <a class="absolute h-full w-full inset-0" href="/"></a>
+                  </div>
+                </div>
+
+                <nav class="mx-4 hidden md:flex">
+                  <ul class="flex items-center">
+                    <li class="block h-full svelte-e6fud6">
+                      <a class="block h-full w-24 px-2 flex items-center justify-center hover:bg-red-600 text-white text-xl font-bold" sveltekit:prefetch href="/">Top</a>
+                    </li>
+                    <li class="block h-full svelte-e6fud6">
+                      <a class="block h-full w-24 px-2 flex items-center justify-center hover:bg-red-600 text-white text-xl font-bold" sveltekit:prefetch href="/about">About</a>
+                    </li>
+                    <li class="block h-full svelte-e6fud6">
+                      <a class="block h-full w-24 px-2 flex items-center justify-center hover:bg-red-600 text-white text-xl font-bold" sveltekit:prefetch href="/dev">Dev</a>
+                    </li>
+                    <li class="block h-full">
+                      <a
+                        class="block h-full w-24 px-2 flex items-center justify-center hover:bg-red-600 text-white text-xl font-bold"
+                        rel="external"
+                        target="_blank"
+                        href="http://www.kobe-kosen.ac.jp"
+                        >学校HP</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+                <nav class="flex md:hidden">
+                  <button id="theMenuButton" class="w-16 px-3 hamburgerrrrr">
+                    <svg version="1.1" class="fa-icon w-full h-full svelte-1dof0an" width="13.714285714285714" height="16" role="presentation" viewBox="0 0 1536 1792">
+                      <path
+                        id="path-0"
+                        d="M1536 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zM1536 832v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zM1536 320v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z"
+                      ></path>
+                    </svg>
+                  </button>
+                </nav>
+              </div>
+
+              <div id="sideMenu" class="bg-yellow-600 svelte-e6fud6 hidden">
+                <ul class="flex items-center">
+                  <li class="svelte-e6fud6"><a class="text-white" sveltekit:prefetch href="/">Top</a></li>
+                  <li class="svelte-e6fud6"><a class="text-white" sveltekit:prefetch href="/about">About</a></li>
+                  <li class="svelte-e6fud6"><a class="text-white" sveltekit:prefetch href="/dev">Dev</a></li>
+                  <li class=""><a class="text-white" rel="external" href="http://www.kobe-kosen.ac.jp">学校HP</a></li>
+                </ul>
+              </div>
+            </div>
+          </header>
+          <div class="flex-grow flex flex-col bg-mainBG text-mainText drop-shadow-2xl">
+            <main class="px-1 md:px-4 pt-6 flex flex-col animate-fadeIn">
+              <h1>NE555でシンセをつくるらしい</h1>
+              <h2>シンセって、なんだろう。</h2>
+              <ul>
+                <li><a href>シンセとは</a></li>
+                <li><a href>各部位のご案内</a></li>
+              </ul>
+              <h2>基礎を、作らせていただきます。</h2>
+              <ul>
+                <li><a href>NE555って何</a></li>
+              </ul>
+            </main>
+            <footer class="mt-auto justify-between">
+              <div></div>
+
+              <div class="flex flex-col justify-center">
+                <div class="mx-auto mt-8 w-14 flex justify-between">
+                  <a href="https://github.com/KCCTdensan" rel="external" target="_blank" class="h-6 w-6 inline-block text-gray-600"
+                    ><svg version="1.1" class="fa-icon w-full h-full svelte-1dof0an" width="13.714285714285714" height="16" role="presentation" viewBox="0 0 1536 1792">
+                      <path
+                        id="path-0"
+                        d="M768 128q209 0 385.5 103t279.5 279.5 103 385.5q0 251-146.5 451.5t-378.5 277.5q-27 5-40-7t-13-30q0-3 0.5-76.5t0.5-134.5q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-119-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-85-13.5q-45 113-8 204-79 87-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-39 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 0.5 88.5t0.5 54.5q0 18-13 30t-40 7q-232-77-378.5-277.5t-146.5-451.5q0-209 103-385.5t279.5-279.5 385.5-103zM291 1231q3-7-7-12-10-3-13 2-3 7 7 12 9 6 13-2zM322 1265q7-5-2-16-10-9-16-3-7 5 2 16 10 10 16 3zM352 1310q9-7 0-19-8-13-17-6-9 5 0 18t17 7zM394 1352q8-8-4-19-12-12-20-3-9 8 4 19 12 12 20 3zM451 1377q3-11-13-16-15-4-19 7t13 15q15 6 19-6zM514 1382q0-13-17-11-16 0-16 11 0 13 17 11 16 0 16-11zM572 1372q-2-11-18-9-16 3-14 15t18 8 14-14z"
+                      ></path></svg
+                  ></a>
+                  <a href="https://twitter.com/intent/user?user_id=444436310" rel="external" target="_blank" class="h-6 w-6 inline-block text-gray-600"
+                    ><svg version="1.1" class="fa-icon w-full h-full svelte-1dof0an" width="14.857142857142858" height="16" role="presentation" viewBox="0 0 1664 1792">
+                      <path
+                        id="path-0"
+                        d="M1620 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"
+                      ></path></svg
+                  ></a>
+                </div>
+                <small class="mx-auto mb-4 mt-2 text-base font-bold">© 1974-2022 KCCTdensan 神戸高専電算部</small>
+              </div>
+
+              <div></div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
