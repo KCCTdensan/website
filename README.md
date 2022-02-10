@@ -2,7 +2,7 @@
 
 電子計算機部公式ウェブサイト
 
-[![.github/workflows/gh-pages.yml](https://github.com/KCCTdensan/d3bu.net/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/KCCTdensan/d3bu.net/actions/workflows/gh-pages.yml)
+[![Deploy](https://github.com/KCCTdensan/d3bu.net/actions/workflows/deploy.yml/badge.svg)](https://github.com/KCCTdensan/d3bu.net/actions/workflows/deploy.yml)
 
 ## 解説
 
