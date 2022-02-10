@@ -1,0 +1,36 @@
+name: GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+
+      - uses: pnpm/action-setup@v2
+        with:
+          run_install: true
+
+      - name: Build
+        run: pnpm run build
+        env:
+					API_BASE: ${{ secrets.ENV_API_BASE }}
+
+			- name: Deploy
+			  uses: peaceiris/actions-gh-pages@v3
+				with:
+					github_token: ${{ secrets.GITHUB_TOKEN }}
+					publish_branch: gh-pages
+ 					publish_dir: ./build
