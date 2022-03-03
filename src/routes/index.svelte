@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Meta from "$lib/Meta.svelte"
+  import Meta from "$lib/meta.svelte"
 </script>
 
 <Meta title="神戸高専 電算部" description="神戸高専電算部のウェブサイトです．" noTitleFormat />

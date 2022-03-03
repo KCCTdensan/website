@@ -4,6 +4,6 @@ export default {
     dashes: "oldschool",
   },
   layout: {
-    _: "./src/MDLayout.svelte",
+    _: "./src/md_layout.svelte",
   },
 }

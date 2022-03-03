@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Meta from "$lib/Meta.svelte"
+  import Meta from "$lib/meta.svelte"
 </script>
 
 <Meta title="Error_404" description="エラーが発生しました．" />

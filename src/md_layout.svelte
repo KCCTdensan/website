@@ -1,5 +1,5 @@
 <script>
-  import Meta from "$lib/Meta.svelte"
+  import Meta from "$lib/meta.svelte"
 
   export let title         = "\"hello, world\""
   export let description   = "神戸高専電算部のウェブサイト"

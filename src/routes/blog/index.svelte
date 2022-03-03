@@ -6,7 +6,7 @@
 </script>
 
 <script lang="ts">
-  import Meta from "$lib/Meta.svelte"
+  import Meta from "$lib/meta.svelte"
 
   export let entries
 </script>

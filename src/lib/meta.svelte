@@ -7,7 +7,7 @@
   export let noRobots      : bool   = false
   export let noTitleFormat : bool   = false
 
-  const destTitle = title + (noTitleFormat ? "" : " <- d3bu.net")
+  const destTitle = title + (noTitleFormat ? "" : " :: d3bu.net")
 </script>
 
 <svelte:head>

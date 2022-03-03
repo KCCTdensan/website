@@ -13,8 +13,8 @@
 </script>
 
 <script lang="ts">
-  import Meta from "$lib/Meta.svelte"
-  import MDLayout from "../../MDLayout.svelte"
+  import Meta from "$lib/meta.svelte"
+  import MDLayout from "../../md_layout.svelte"
 
   export let data
 
