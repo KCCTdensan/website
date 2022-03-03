@@ -1,21 +1,13 @@
-@import "styles/sanitize.css";
+@import "styles/sanitize.scss";
 @import "styles/responsive.scss";
-
-body {
-  @apply bg-bodyBG_light dark:bg-bodyBG;
-}
+@import "styles/helpers.scss";
+@import "styles/colors.scss";
 
 a {
-  @apply font-bold text-blue-700;
-}
-
-h1 { @apply text-6xl font-black; }
-h2 { @apply text-5xl font-black; }
-h3 { @apply text-4xl font-bold; }
-h4 { @apply text-3xl font-bold; }
-h5 { @apply text-2xl font-medium; }
-h6 { @apply text-xl font-medium; }
-
-.AAAAAAAAA {
-  @apply text-9xl text-red-600 font-black;
+  color: $c-link;
+  font-weight: bolder;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
