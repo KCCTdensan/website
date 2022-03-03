@@ -1,15 +1,14 @@
 <script lang="ts">
   import Fa from "svelte-fa"
   import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons"
-  // import { hamburgerrrrr } from "$lib/stores"
-  // import Header from "$lib/header/Header.svelte"
+  import Header from "$lib/header/header.svelte"
   import "../app.scss"
 </script>
 
 <div class="app">
   <div class="container">
     <header class="header">
-      <!-- <Header /> -->
+      <Header />
     </header>
     <main class="main">
       <slot>Hello!</slot>
@@ -21,10 +20,10 @@
       <div class="flex-col">
         <div class="iconLinks">
           <a class="smallIcon" href="https://github.com/KCCTdensan" target="_blank" rel="external">
-            <Fa class="icon" icon={faGithub} />
+            <Fa class="fa" icon={faGithub} />
           </a>
           <a class="smallIcon" href="https://twitter.com/intent/user?user_id=444436310" target="_blank" rel="external">
-            <Fa class="icon" icon={faTwitter} />
+            <Fa class="fa" icon={faTwitter} />
           </a>
         </div>
         <small class="copyright">&copy; 1974-{ new Date().getFullYear() } KCCTdensan 神戸高専電算部</small>
@@ -71,9 +70,6 @@
 
   .smallIcon {
     // h-6 w-6 inline-block text-gray-600
-    .icon {
-      // w-full h-full
-    }
   }
 
   .copyright {

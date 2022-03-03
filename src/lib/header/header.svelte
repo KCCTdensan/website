@@ -1,11 +1,11 @@
 <script lang="ts">
-  import Icon from "svelte-awesome"
-  import { bars } from "svelte-awesome/icons"
+  import Fa from "svelte-fa"
+  import { faBars } from "@fortawesome/free-solid-svg-icons"
 
   import { hamburgerrrrr } from "$lib/stores"
   import { page } from "$app/stores"
 
-  import Logo from "./Logo.svelte"
+  import Logo from "./logo.svelte"
 
   const navLinks = [
     { path: "/",      name: "Top"   },
@@ -49,7 +49,7 @@
           class:hamburgerrrrr
           on:click={() => hamburgerrrrr.update(d => !d)}
         >
-          <Icon class="w-full h-full" data={bars} />
+          <Fa class="fa" icon={faBars} />
         </button>
       </nav>
     </div>
