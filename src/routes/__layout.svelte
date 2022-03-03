@@ -20,10 +20,10 @@
       <div class="flex-col">
         <div class="iconLinks">
           <a class="smallIcon" href="https://github.com/KCCTdensan" target="_blank" rel="external">
-            <Fa class="fa" icon={faGithub} />
+            <Fa class="fa" icon={faGithub} size={"lg"} />
           </a>
           <a class="smallIcon" href="https://twitter.com/intent/user?user_id=444436310" target="_blank" rel="external">
-            <Fa class="fa" icon={faTwitter} />
+            <Fa class="fa" icon={faTwitter} size={"lg"} />
           </a>
         </div>
         <small class="copyright">&copy; 1974-{ new Date().getFullYear() } KCCTdensan 神戸高専電算部</small>
@@ -40,6 +40,8 @@
   @import "../styles/helpers.scss";
   @import "../styles/colors.scss";
 
+  $section-margin: 1.5rem;
+
   .app {
     @extend .flex-row;
     min-height: 100vh;
@@ -48,31 +50,39 @@
 
   .container {
     @extend .flex-col;
-    width: 840px;//
-    margin: 40px auto;//
-    padding: 40px;//
+    width: 768px;
+    height: 100%;
+    margin: 48px auto;
     background-color: $c-bg;
     color: $c-text;
   }
 
   .header {}
 
-  .main {}
+  .main {
+    margin: $section-margin;
+  }
 
   .footer {
-    // justify-center
+    @extend .flex-row;
+    margin: $section-margin;
+    justify-content: space-between;
 
     .iconLinks {
-      // w-100 justify-center
-      // mx-auto mt-8 w-14 flex justify-between
+      @extend .flex-row;
+      justify-content: center;
     }
   }
 
   .smallIcon {
-    // h-6 w-6 inline-block text-gray-600
+    margin: .4em;
+    color: $c-dimText;
   }
 
   .copyright {
-    // mx-auto mb-4 mt-2 text-base font-bold
+    margin: 0 auto;
+    color: $c-dimText;
+    font-size: .9rem;
+    font-weight: bold;
   }
 </style>
