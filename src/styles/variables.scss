@@ -8,6 +8,7 @@ $c-link: #0827f5 !default;
 $c-linkLight: #64a7df !default;
 
 $c-ground: #000 !default;
+$c-groundShadow: #444 !default;
 $c-headerBg: #f00 !default;
 $c-headerText: #fff !default;
 $c-headerNavBg: #000 !default;
@@ -18,4 +19,4 @@ $c-logoText: #fff !default;
 
 // Fonts
 
-$f-mono: "Fira Code", ui-monospace, monospace;
+$f-mono: "Fira Code", ui-monospace, monospace !default;

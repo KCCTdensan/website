@@ -51,7 +51,7 @@
   .app {
     @extend .flex-row;
     min-height: 100vh;
-    background-color: $c-ground;
+    background: radial-gradient(at 50% 0%, $c-groundShadow, $c-ground);
   }
 
   .container {
@@ -59,6 +59,7 @@
     width: 768px;
     height: 100%;
     margin: 48px auto;
+    border-radius: 8px;
     background-color: $c-bg;
     color: $c-text;
   }
