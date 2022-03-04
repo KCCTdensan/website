@@ -17,6 +17,18 @@
     { path: "/dev/",    name: "Dev"   },
     { path: "/blog/",   name: "Blog"  },
   ]
+
+  let path = ""
+  let idx = 0
+  const breadcrumbs = $page.url.pathname
+    .split("/")
+    .slice(0, -1)
+    .map((name, i) => {
+      idx = i
+      path += name += "/" // ?!
+      return { name, path }
+    })
+  breadcrumbs[idx] = { ...breadcrumbs[idx], path: undefined }
 </script>
 
 <header class="header">
@@ -31,6 +43,7 @@
     <div><!-- 何か --></div>
   </div>
   <nav class="headerNav">
+    <span>&gt; ls /</span>
     <ul class="navLinks">
       {#each navLinks as { path, name }}
         <li class:active={$page.url.pathname === path}>
@@ -41,8 +54,20 @@
         <a href="http://www.kobe-kosen.ac.jp" target="_blank" rel="external">KCCT</a>
       </li>
     </ul>
-    <span>&gt; print(pkg::info);</span>
-    <span>{`"${pkg.name}@${pkg.version}"`}</span>
+    <span>&gt; pwd</span>
+    <ul class="breadcrumbs">
+      {#each breadcrumbs as { path, name }}
+        <li>
+          {#if path !== undefined}
+            <a href={path}>{name}</a>
+          {:else}
+            <span>{name}</span>
+          {/if}
+        </li>
+      {/each}
+    </ul>
+    <span>&gt; curl /api/package.json</span>
+    <span>{`{"name":"${pkg.name}","version":"${pkg.version}"}`}</span>
     <span>&gt; _</span>
   </nav>
 </header>
@@ -106,21 +131,22 @@
       @extend .flex-row;
       margin: 0;
 
-      li:first-child::before {
-        margin-right: .5em;
-        content: "> enum nav_links = {";
-      }
       li:not(:last-child)::after { // 隣接セレクタだと折り返しが厳しい
-        margin-right: .5em;
-        content: ",";
-      }
-      li:last-child::after {
-        margin-left: .5em;
-        content: "};";
+        margin-right: 1em;
+        content: "";
       }
 
       .active a {
         color: $c-headerNavStrong;
+      }
+    }
+
+    .breadcrumbs {
+      @extend .flex-row;
+      margin: 0;
+
+      li:not(:first-child) {
+        margin-left: .1em;
       }
     }
   }
