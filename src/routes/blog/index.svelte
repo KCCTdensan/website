@@ -1,12 +1,13 @@
 <script context="module" lang="ts">
   export async function load({ fetch, params }) {
-    const { data } = await fetch("/api/articles/blog.json").then(r=>r.json())
+    const { data } = await fetch("/api/articles/blog.json").then(r => r.json())
     return { props: { entries: data } }
   }
 </script>
 
 <script lang="ts">
   import Meta from "$lib/meta.svelte"
+  import { dateFmt } from "$lib/fmt"
 
   export let entries
 </script>
@@ -17,11 +18,11 @@
 
 <dl>
   {#each entries as article}
-    <dt class="">
+    <dt>
+      {article.date ? `${dateFmt(new Date(article.date))} - ` : ""}
       <a href={`/blog/${article.slug}`}>{article.title}</a>
-      <span class="inline-block"
-      >by {article.author || "KCCTdensan"} {article.date ? `- ${new Date(article.date).toLocaleString("ja")}` : ""}</span>
+      <span>by {article.author || "KCCTdensan"}</span>
     </dt>
-    <dd class="">{article.description || ""}</dd>
+    <dd>{article.description || ""}</dd>
   {/each}
 </dl>

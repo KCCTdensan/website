@@ -1,5 +1,6 @@
 <script>
   import Meta from "$lib/meta.svelte"
+  import { dateFmt } from "$lib/fmt"
 
   export let title         = "\"hello, world\""
   export let description   = "神戸高専電算部のウェブサイト"
@@ -16,18 +17,18 @@
   <div>
     {#if dateUpd}
       <span class="inline-block">
-        Post: {new Date(date).toLocaleString("ja")}
+        Post: {dateFmt(new Date(date))}
       </span>
       <span class="inline-block">
-        Updated: <time datetime="{new Date(dateUpd).toISOString()}">{new Date(dateUpd).toLocaleString("ja")}</time>
+        Updated: <time datetime="{new Date(dateUpd).toISOString()}">{dateFmt(new Date(dateUpd))}</time>
       </span>
     {:else}
       <span class="inline-block">
-        Post: <time datetime="{new Date(date).toISOString()}">{new Date(date).toLocaleString("ja")}</time>
+        Post: <time datetime="{new Date(date).toISOString()}">{dateFmt(new Date(date))}</time>
       </span>
     {/if}
   </div>
-  <hr class="">
+  <hr>
 {/if}
 
 <slot>Hello from MarkDown!</slot>

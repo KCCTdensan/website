@@ -7,18 +7,9 @@
 
 <script lang="ts">
   import Meta from "$lib/meta.svelte"
+  import { dateFmt } from "$lib/fmt"
 
   export let newsData
-
-  function dateFmt(d: Date): string {
-    return `${
-      d.getFullYear()
-    }/${
-      `0${d.getMonth()+1}`.slice(-2)
-    }/${
-      `0${d.getDate()}`.slice(-2)
-    }`
-  }
 </script>
 
 <Meta title="神戸高専 電算部" description="神戸高専電算部のウェブサイトです．" noTitleFormat />
