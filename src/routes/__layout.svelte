@@ -1,14 +1,21 @@
+<script context="module" lang="ts">
+  export async function load({ fetch }) { // Header用
+    const pkg = await fetch("/api/package.json").then(r => r.json())
+    return { props: { pkg } }
+  }
+</script>
+
 <script lang="ts">
   import Icon from "$lib/icon.svelte"
-  import Header from "$lib/header/header.svelte"
+  import Header from "$lib/header.svelte"
   import "../app.scss"
+
+  export let pkg // Header用
 </script>
 
 <div class="app">
   <div class="container">
-    <header class="header">
-      <Header />
-    </header>
+    <Header pkg={pkg} />
     <main class="main">
       <slot>Hello!</slot>
     </main>
@@ -55,8 +62,6 @@
     background-color: $c-bg;
     color: $c-text;
   }
-
-  .header {}
 
   .main {
     margin: $section-margin;
