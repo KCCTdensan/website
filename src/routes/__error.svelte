@@ -6,7 +6,7 @@
 
 <script lang="ts">
   import Meta from "$lib/meta.svelte"
-  export let status : int     = undefined
+  export let status : number  = undefined
   export let error  : string  = undefined
 </script>
 

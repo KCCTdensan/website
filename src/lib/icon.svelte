@@ -13,11 +13,4 @@
   export let scale: number
 </script>
 
-<Icon class="icon" data={faSvgs[type][faName(name)]} scale={scale} />
-
-<style lang="scss">
-  .icon {
-    width: 100%;
-    height: 100%;
-  }
-</style>
+<Icon data={faSvgs[type][faName(name)]} scale={scale} />
