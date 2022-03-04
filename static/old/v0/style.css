@@ -1,0 +1,78 @@
+body>h1{
+        text-align: center;
+}
+#menu{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 20px;
+        justify-content: center;
+}
+#GitHub {
+	height: 1rem;
+	vertical-align: middle;
+}
+@media (max-width: 640px) {
+	#menu{
+		flex-direction:column;
+	}
+}
+#menu li{
+	list-style-type: none;
+	padding: 5px;
+	text-align: center;
+	background-color: #F8F8FF;
+	border: solid 1px #8080D0;
+}
+#menu li a{
+	display: block;
+}
+
+/* only used in index.html */
+.importanttttt{
+	color: red;
+	font-weight: 900;
+}
+span.big{
+	font-size: xx-large;
+}
+/* */
+
+#container{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#left{
+	width: 600px;
+}
+
+.content_list{
+	padding:0;
+}
+
+.content_list > li{
+	list-style: none;
+	border: solid 1px #8080D0;
+	margin: 20px;
+}
+
+div{
+	border: solid 1px #8080D0;
+	margin: 20px;
+	padding: 10px;
+}
+
+#faq dd{
+	margin-bottom: 20px;
+	background-color: #EEEEFF;
+}
+
+.image_list{
+	list-style :none;
+	display: flex;
+	flex-wrap: wrap;
+}
+.image_list li{
+	padding-right: 20px;
+	width: 300px;
+}
