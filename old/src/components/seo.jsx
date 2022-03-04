@@ -37,7 +37,7 @@ export default function Seo({ title="", disableSiteName=false, description="", k
         { property: "og:description", content: pageDescription  },
         { property: "og:site_name",   content: siteTitle        },
         { property: "og:type",        content: "website"        },
-        { property: "og:image",       content: "https://d3bu.net/assets/icon.png" },
+        { property: "og:image",       content: "https://d3bu.net/old/v1/assets/icon.png" },
 
         { name: "twitter:title",      content: pageTitle        },
         { name: "twitter:description",content: pageDescription  },

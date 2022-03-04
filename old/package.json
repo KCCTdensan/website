@@ -3,6 +3,7 @@
     "gatsby": "3.11.1",
     "gatsby-plugin-image": "1.11.0",
     "gatsby-plugin-manifest": "3.11.0",
+    "gatsby-plugin-pnpm": "1.2.10",
     "gatsby-plugin-react-helmet": "4.11.0",
     "gatsby-plugin-sass": "4.11.0",
     "gatsby-plugin-sharp": "3.11.0",
@@ -16,11 +17,13 @@
     "sass": "1.37.5"
   },
   "devDependencies": {
-    "prettier": "2.x"
+    "prettier": "2.x",
+    "typescript": "*",
+    "webpack": "5.52.x"
   },
   "private": true,
   "scripts": {
-    "build": "gatsby build && prettier -w \"public/**/*.html\"",
-    "dev": "gatsby develop"
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider && gatsby build --prefix-paths && prettier -w \"public/**/*.html\"",
+    "dev": "export NODE_OPTIONS=--openssl-legacy-provider && gatsby develop --prefix-paths"
   }
 }
