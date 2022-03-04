@@ -10,7 +10,7 @@
     { path: "/",      name: "Top"   },
     { path: "/about", name: "About" },
     { path: "/dev",   name: "Dev"   },
-    //{ path: "/blog", name: "Blog" },
+    { path: "/blog",  name: "Blog"  },
   ]
 </script>
 
