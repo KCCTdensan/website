@@ -138,6 +138,7 @@
 
       .active a {
         color: $c-headerNavStrong;
+        text-decoration: underline;
       }
     }
 
