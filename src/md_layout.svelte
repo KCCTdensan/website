@@ -27,6 +27,9 @@
         Post: <time datetime="{new Date(date).toISOString()}">{dateFmt(new Date(date))}</time>
       </span>
     {/if}
+    <span class="inline-block">
+      Author: {author}
+    </span>
   </div>
   <hr>
 {/if}

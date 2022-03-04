@@ -1,6 +1,5 @@
 ---
 title: 部室のサーバーについて
-description: 部員向け
 noRobots: true
 ---
 

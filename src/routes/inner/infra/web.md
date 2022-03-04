@@ -1,5 +1,8 @@
 ---
 title: 運用メモ
+date: 2021-05-10
+dateUpd: 2021-07-21
+author: 山D
 noRobots: true
 ---
 
