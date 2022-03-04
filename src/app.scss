@@ -24,16 +24,16 @@ a {
 }
 
 code {
-  margin: 0 .5em;
-  padding: .5em;
-  border-radius: .5em;
+  margin: .25em;
+  padding: .25em .5em;
+  border-radius: .25em;
   background-color: $c-dimBg;
-  font-family: $f-mono;
+  font: .8em $f-mono;
 }
 
 pre {
-  padding: 1em;
-  border-radius: .5em;
+  padding: .5em 1em;
+  border-radius: .25em;
   background-color: $c-dimBg;
 
   code {
