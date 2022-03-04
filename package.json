@@ -28,9 +28,11 @@
     "vite-plugin-iso-import": "0.1.3"
   },
   "scripts": {
-    "build": "run-s build:kit build:404 build:sitemap build:pretty",
+    "build": "run-s build:old build:kit build:404 build:sitemap build:pretty",
     "build:404": "mv build/404/index.html build/404.html && rmdir build/404",
     "build:kit": "svelte-kit build",
+    "build:old": "mkdir -p static/old && run-p 'build:old:*'",
+    "build:old:v1": "npm run -w old/v1 build && cp -r old/v1/public static/old/v1",
     "build:pretty": "prettier -w 'build/**/*.html'",
     "build:sitemap": "svelte-sitemap --trailing-slashes -d https://d3bu.net -i '404.html' -i 'inner/**'",
     "dev": "svelte-kit dev",
@@ -38,5 +40,8 @@
     "preview": "svelte-kit preview",
     "preview-host": "svelte-kit preview --host"
   },
-  "type": "module"
+  "type": "module",
+  "workspaces": [
+    "old/v1"
+  ]
 }

@@ -1,4 +1,6 @@
 {
+  "name": "d3bu.net",
+  "version": "1.0.0",
   "dependencies": {
     "gatsby": "3.11.1",
     "gatsby-plugin-image": "1.11.0",
@@ -17,13 +19,12 @@
     "sass": "1.37.5"
   },
   "devDependencies": {
-    "prettier": "2.x",
     "typescript": "*",
     "webpack": "5.52.x"
   },
   "private": true,
   "scripts": {
-    "build": "export NODE_OPTIONS=--openssl-legacy-provider && gatsby build --prefix-paths && prettier -w \"public/**/*.html\"",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider && gatsby build --prefix-paths",
     "dev": "export NODE_OPTIONS=--openssl-legacy-provider && gatsby develop --prefix-paths"
   }
 }
