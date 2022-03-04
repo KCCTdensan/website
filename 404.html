@@ -21,11 +21,13 @@
     <meta property="og:site_name" content="電算部.net" data-svelte="svelte-1inund6" />
     <link rel="stylesheet" href="/_app/assets/vendor-b00f1465.css" />
     <link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-9290e7e7.css" />
-    <link rel="modulepreload" href="/_app/start-3f2676ef.js" />
+    <link rel="stylesheet" href="/_app/assets/pages/__error.svelte-87a34a7a.css" />
+    <link rel="modulepreload" href="/_app/start-9bfa20a6.js" />
     <link rel="modulepreload" href="/_app/chunks/vendor-9e78a147.js" />
-    <link rel="modulepreload" href="/_app/pages/__layout.svelte-775fcdb9.js" />
+    <link rel="modulepreload" href="/_app/pages/__layout.svelte-ad894f94.js" />
     <link rel="modulepreload" href="/_app/chunks/stores-7295e635.js" />
-    <link rel="modulepreload" href="/_app/pages/404.svelte-9c76d24d.js" />
+    <link rel="modulepreload" href="/_app/pages/404.svelte-205d3567.js" />
+    <link rel="modulepreload" href="/_app/pages/__error.svelte-479febee.js" />
     <link rel="modulepreload" href="/_app/chunks/meta-5e902eb1.js" />
     <script>
       function setViewportProperty(doc) {
@@ -61,13 +63,14 @@
               <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/" class="svelte-1hs0eq0">Top</a></li>
               <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/about/" class="svelte-1hs0eq0">About</a></li>
               <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/dev/" class="svelte-1hs0eq0">Dev</a></li>
+              <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/inner/" class="svelte-1hs0eq0">Inner</a></li>
               <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/blog/" class="svelte-1hs0eq0">Blog</a></li>
               <li class="svelte-1hs0eq0"><a href="http://www.kobe-kosen.ac.jp" target="_blank" rel="external" class="svelte-1hs0eq0">KCCT</a></li>
             </ul>
             <span class="svelte-1hs0eq0">&gt; pwd</span>
             <ul class="breadcrumbs svelte-1hs0eq0">
               <li class="svelte-1hs0eq0"><a href="/" class="svelte-1hs0eq0">/</a></li>
-              <li class="svelte-1hs0eq0"><span class="svelte-1hs0eq0">404/</span></li>
+              <li class="svelte-1hs0eq0"><a href="/404/" class="svelte-1hs0eq0">404/</a></li>
             </ul>
             <span class="svelte-1hs0eq0">&gt; curl /api/package.json</span>
             <span class="svelte-1hs0eq0">{&quot;name&quot;:&quot;d3bu.net&quot;,&quot;version&quot;:&quot;2.1.0&quot;}</span>
@@ -75,11 +78,10 @@
           </nav>
         </header>
         <main class="main svelte-1flnfih">
-          <h1>
-            <pre><code><span class="text-red-600">error:</span> Not found
-  x | assert(<span class="text-red-600">status != 404</span>);
-    |        <span class="text-red-600">~~~~~~~^~~~~~</span></code>
-</pre>
+          <h1 class="svelte-1bajh7d">
+            <pre class="svelte-1bajh7d"><code class="svelte-1bajh7d"><span class="red">error:</span> Not found
+  x | static_assert(<span class="red">status != 404</span>);
+    |               <span class="red">~~~~~~~^~~~~~</span></code></pre>
           </h1>
 
           <p>お探しのページは見つかりませんでした……ごめんなさい………</p>
@@ -112,10 +114,10 @@
       </div>
     </div>
 
-    <script type="module" data-hydrate="pe6upc">
-      import { start } from "/_app/start-3f2676ef.js"
+    <script type="module" data-hydrate="p9v952">
+      import { start } from "/_app/start-9bfa20a6.js"
       start({
-        target: document.querySelector('[data-hydrate="pe6upc"]').parentNode,
+        target: document.querySelector('[data-hydrate="p9v952"]').parentNode,
         paths: { base: "", assets: "" },
         session: {},
         route: true,
@@ -124,7 +126,7 @@
         hydrate: {
           status: 200,
           error: null,
-          nodes: [import("/_app/pages/__layout.svelte-775fcdb9.js"), import("/_app/pages/404.svelte-9c76d24d.js")],
+          nodes: [import("/_app/pages/__layout.svelte-ad894f94.js"), import("/_app/pages/404.svelte-205d3567.js")],
           params: {},
         },
       })

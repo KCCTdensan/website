@@ -21,11 +21,11 @@
     <meta property="og:site_name" content="電算部.net" data-svelte="svelte-1inund6" />
     <link rel="stylesheet" href="/_app/assets/vendor-b00f1465.css" />
     <link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-9290e7e7.css" />
-    <link rel="modulepreload" href="/_app/start-3f2676ef.js" />
+    <link rel="modulepreload" href="/_app/start-9bfa20a6.js" />
     <link rel="modulepreload" href="/_app/chunks/vendor-9e78a147.js" />
-    <link rel="modulepreload" href="/_app/pages/__layout.svelte-775fcdb9.js" />
+    <link rel="modulepreload" href="/_app/pages/__layout.svelte-ad894f94.js" />
     <link rel="modulepreload" href="/_app/chunks/stores-7295e635.js" />
-    <link rel="modulepreload" href="/_app/pages/inner/index.md-6f84d77a.js" />
+    <link rel="modulepreload" href="/_app/pages/inner/index.md-8afa0ddd.js" />
     <link rel="modulepreload" href="/_app/chunks/md_layout-d5434de2.js" />
     <link rel="modulepreload" href="/_app/chunks/meta-5e902eb1.js" />
     <link rel="modulepreload" href="/_app/chunks/fmt-158ed921.js" />
@@ -63,13 +63,14 @@
               <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/" class="svelte-1hs0eq0">Top</a></li>
               <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/about/" class="svelte-1hs0eq0">About</a></li>
               <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/dev/" class="svelte-1hs0eq0">Dev</a></li>
+              <li class="svelte-1hs0eq0 active"><a sveltekit:prefetch href="/inner/" class="svelte-1hs0eq0">Inner</a></li>
               <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/blog/" class="svelte-1hs0eq0">Blog</a></li>
               <li class="svelte-1hs0eq0"><a href="http://www.kobe-kosen.ac.jp" target="_blank" rel="external" class="svelte-1hs0eq0">KCCT</a></li>
             </ul>
             <span class="svelte-1hs0eq0">&gt; pwd</span>
             <ul class="breadcrumbs svelte-1hs0eq0">
               <li class="svelte-1hs0eq0"><a href="/" class="svelte-1hs0eq0">/</a></li>
-              <li class="svelte-1hs0eq0"><span class="svelte-1hs0eq0">inner/</span></li>
+              <li class="svelte-1hs0eq0"><a href="/inner/" class="svelte-1hs0eq0">inner/</a></li>
             </ul>
             <span class="svelte-1hs0eq0">&gt; curl /api/package.json</span>
             <span class="svelte-1hs0eq0">{&quot;name&quot;:&quot;d3bu.net&quot;,&quot;version&quot;:&quot;2.1.0&quot;}</span>
@@ -85,7 +86,6 @@
           <hr />
 
           <h1>部員向け</h1>
-          <p>このページはサイト内のどこからもリンクされていないのでブクマでもしといてください〜</p>
           <p>※弊部員以外が読むことも想定して書いているつもりです</p>
           <h2>資料</h2>
 
@@ -141,10 +141,10 @@
       </div>
     </div>
 
-    <script type="module" data-hydrate="joukmz">
-      import { start } from "/_app/start-3f2676ef.js"
+    <script type="module" data-hydrate="1i8a0jj">
+      import { start } from "/_app/start-9bfa20a6.js"
       start({
-        target: document.querySelector('[data-hydrate="joukmz"]').parentNode,
+        target: document.querySelector('[data-hydrate="1i8a0jj"]').parentNode,
         paths: { base: "", assets: "" },
         session: {},
         route: true,
@@ -153,7 +153,7 @@
         hydrate: {
           status: 200,
           error: null,
-          nodes: [import("/_app/pages/__layout.svelte-775fcdb9.js"), import("/_app/pages/inner/index.md-6f84d77a.js")],
+          nodes: [import("/_app/pages/__layout.svelte-ad894f94.js"), import("/_app/pages/inner/index.md-8afa0ddd.js")],
           params: {},
         },
       })

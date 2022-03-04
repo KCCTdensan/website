@@ -21,9 +21,9 @@
     <meta property="og:site_name" content="電算部.net" data-svelte="svelte-1inund6" />
     <link rel="stylesheet" href="/_app/assets/vendor-b00f1465.css" />
     <link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-9290e7e7.css" />
-    <link rel="modulepreload" href="/_app/start-3f2676ef.js" />
+    <link rel="modulepreload" href="/_app/start-9bfa20a6.js" />
     <link rel="modulepreload" href="/_app/chunks/vendor-9e78a147.js" />
-    <link rel="modulepreload" href="/_app/pages/__layout.svelte-775fcdb9.js" />
+    <link rel="modulepreload" href="/_app/pages/__layout.svelte-ad894f94.js" />
     <link rel="modulepreload" href="/_app/chunks/stores-7295e635.js" />
     <link rel="modulepreload" href="/_app/pages/blog/_slug_.svelte-935d6904.js" />
     <link rel="modulepreload" href="/_app/chunks/md_layout-d5434de2.js" />
@@ -63,6 +63,7 @@
               <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/" class="svelte-1hs0eq0">Top</a></li>
               <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/about/" class="svelte-1hs0eq0">About</a></li>
               <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/dev/" class="svelte-1hs0eq0">Dev</a></li>
+              <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/inner/" class="svelte-1hs0eq0">Inner</a></li>
               <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/blog/" class="svelte-1hs0eq0">Blog</a></li>
               <li class="svelte-1hs0eq0"><a href="http://www.kobe-kosen.ac.jp" target="_blank" rel="external" class="svelte-1hs0eq0">KCCT</a></li>
             </ul>
@@ -70,7 +71,7 @@
             <ul class="breadcrumbs svelte-1hs0eq0">
               <li class="svelte-1hs0eq0"><a href="/" class="svelte-1hs0eq0">/</a></li>
               <li class="svelte-1hs0eq0"><a href="/blog/" class="svelte-1hs0eq0">blog/</a></li>
-              <li class="svelte-1hs0eq0"><span class="svelte-1hs0eq0">hexo/</span></li>
+              <li class="svelte-1hs0eq0"><a href="/blog/hexo/" class="svelte-1hs0eq0">hexo/</a></li>
             </ul>
             <span class="svelte-1hs0eq0">&gt; curl /api/package.json</span>
             <span class="svelte-1hs0eq0">{&quot;name&quot;:&quot;d3bu.net&quot;,&quot;version&quot;:&quot;2.1.0&quot;}</span>
@@ -198,10 +199,10 @@ npm install hexo-renderer-ejs --save
       </div>
     </div>
 
-    <script type="module" data-hydrate="s08vqk">
-      import { start } from "/_app/start-3f2676ef.js"
+    <script type="module" data-hydrate="rc59r3">
+      import { start } from "/_app/start-9bfa20a6.js"
       start({
-        target: document.querySelector('[data-hydrate="s08vqk"]').parentNode,
+        target: document.querySelector('[data-hydrate="rc59r3"]').parentNode,
         paths: { base: "", assets: "" },
         session: {},
         route: true,
@@ -210,7 +211,7 @@ npm install hexo-renderer-ejs --save
         hydrate: {
           status: 200,
           error: null,
-          nodes: [import("/_app/pages/__layout.svelte-775fcdb9.js"), import("/_app/pages/blog/_slug_.svelte-935d6904.js")],
+          nodes: [import("/_app/pages/__layout.svelte-ad894f94.js"), import("/_app/pages/blog/_slug_.svelte-935d6904.js")],
           params: { slug: "hexo" },
         },
       })
@@ -223,7 +224,7 @@ npm install hexo-renderer-ejs --save
         "status": 200,
         "statusText": "",
         "headers": { "content-type": "application/json; charset=utf-8" },
-        "body": "{\"data\":[{\"slug\":\"first-post\",\"title\":\"ブログをリニューアルしました！\",\"date\":\"2018-12-02T15:26:30.000Z\",\"body\":\"\u003Ch6 id=\\\"writer-ポッチャマ\\\">\u003Cu>Writer: ポッチャマ\u003C/u>\u003C/h6>\\n\u003Cp>神戸高専電算部のブログをリニューアルしました！\\nこれからどしどし記事を投稿していきます！\u003C/p>\\n\"},{\"slug\":\"hexo\",\"title\":\"Hexoで爆速ブログ開設\",\"date\":\"2018-12-02T16:02:08.000Z\",\"body\":\"\u003Ch6 id=\\\"writer-ポッチャマ\\\">\u003Cu>Writer: ポッチャマ\u003C/u>\u003C/h6>\\n\u003Cp>電算部のブログがかなり管理しづらかったので、&quot;Hexo&quot;というサイトジェネレータを使ってリニューアルしてみました。\u003C/p>\\n\u003Ch2 id=\\\"hexoとは\\\">Hexoとは?\u003C/h2>\\n\u003Cp>node.js(サーバーサイドで動作するJavaScript)で作られたパッケージ。これを使うと、静的サイトを簡単に作ることができる。\u003C/p>\\n\u003Ch2 id=\\\"とにかくブログ作ってみる\\\">とにかくブログ作ってみる\u003C/h2>\\n\u003Cul>\\n\u003Cli>\u003Ch3 id=\\\"環境構築\\\">環境構築\u003C/h3>\\n\u003Cp>  部員はWindowsユーザーがほとんどなので、ここではWindowsでの手順のみ記述する。\u003C/p>\\n\u003Col>\\n\u003Cli>\u003Ch4 id=\\\"npmをインストール\\\">npmをインストール\u003C/h4>\\n\u003Cp> Hexoなどのnodeパッケージの管理に必要なnpm(node package manager)をインストールする。\\n 下記の公式サイトからNode.js/npmのインストーラがダウンロードできる。\\n LTSとLatestがあるが、LTSで良いと思う。\\n \u003Ca href=\\\"https://nodejs.org/ja/\\\" title=\\\"node.js公式\\\">node.js公式\u003C/a>\\n ダウンロードしたインストーラーを起動し、インストール。インストール中色々聞かれるけど基本的にデフォルトでOK。\\n コマンドプロンプトでNode.js、npmが使えるか確認。\u003C/p>\\n\u003Cpre>\u003Ccode>node --version\\nnpm --version\\n\u003C/code>\u003C/pre>\\n\u003Cp> バージョン情報が表示されればインストールに成功している。\u003C/p>\\n\u003C/li>\\n\u003Cli>\u003Ch4 id=\\\"hexo-cliのインストール\\\">Hexo-cliのインストール\u003C/h4>\\n\u003Cp> npmを使ってHexo-cliをインストールする。\u003C/p>\\n\u003Cpre>\u003Ccode>npm install hexo-cli -g\\n\u003C/code>\u003C/pre>\\n\u003C/li>\\n\u003C/ol>\\n\u003C/li>\\n\u003Cli>\u003Ch3 id=\\\"サイト作成\\\">サイト作成\u003C/h3>\\n\u003Col>\\n\u003Cli>\u003Ch4 id=\\\"プロジェクト作成\\\">プロジェクト作成\u003C/h4>\\n\u003Cp> コマンドプロンプトでプロジェクトのディレクトリを作成したい場所に移動し、下記のコマンドを実行する。\u003C/p>\\n\u003Cpre>\u003Ccode>hexo init プロジェクト名\\n\u003C/code>\u003C/pre>\\n\u003Cp> 大量の文字列が表示され、プロジェクト名と同名のディレクトリが作成される。\u003C/p>\\n\u003C/li>\\n\u003Cli>\u003Ch4 id=\\\"表示させてみる\\\">表示させてみる\u003C/h4>\\n\u003Cp> 作成したディレクトリに移動し、コマンドを実行するとリンクが表示されるのでアクセスしてみよう。\u003C/p>\\n\u003Cpre>\u003Ccode>cd プロジェクト名\\nhexo server\\n\u003C/code>\u003C/pre>\\n\u003Cp> こんな感じのページが見れるはず。\\n \u003Cimg src=\\\"/api/assets/img/hexopage.png\\\" alt=\\\"hexopage\\\">\u003C/p>\\n\u003C/li>\\n\u003C/ol>\\n\u003C/li>\\n\u003Cli>\u003Ch3 id=\\\"使い方\\\">使い方\u003C/h3>\\n\u003Col>\\n\u003Cli>\u003Cp>記事の追加\u003C/p>\\n\u003Cpre>\u003Ccode>hexo new &quot;ページタイトル&quot;\\n\u003C/code>\u003C/pre>\\n\u003Cp> このコマンドでsource/_posts/の中にマークダウン形式のファイルが作成されるので、それを編集する。\u003C/p>\\n\u003C/li>\\n\u003Cli>\u003Cp>github pagesに公開\\n _config.ymlを編集\u003C/p>\\n\u003Cpre>\u003Ccode>url: http://githubのユーザー名.github.io/リポジトリ名/\\n\\n...\\n\\ndeploy:\\n  type: git\\n  repo: git@github.com:ユーザー名/リポジトリ名.git #clone時のurl\\n  branch: gh-pages\\n\u003C/code>\u003C/pre>\\n\u003Cp> 必要なnodeパッケージを追加でインストール\u003C/p>\\n\u003Cpre>\u003Ccode>npm install hexo-deployer-git --save\\nnpm install hexo-renderer-ejs --save\\n\u003C/code>\u003C/pre>\\n\u003Cp> hexoコマンドを実行\u003C/p>\\n\u003Cpre>\u003Ccode>hexo deploy -g\\n\u003C/code>\u003C/pre>\\n\u003Cp> githubのリポジトリにgh-pagesブランチが追加され、そこでデプロイされる。\u003C/p>\\n\u003C/li>\\n\u003C/ol>\\n\u003C/li>\\n\u003C/ul>\\n\u003Cp>ARCHIVESが404になったりHOMEのアクセス先がおかしかったりとエラーもあるが、\\nとりあえずこれで最低限のブログの運用ができるはず...\\nマークダウン形式で記事が書けるようになった。\u003C/p>\\n\"}]}"
+        "body": "{\"data\":[{\"slug\":\"hexo\",\"title\":\"Hexoで爆速ブログ開設\",\"date\":\"2018-12-02T16:02:08.000Z\",\"body\":\"\u003Ch6 id=\\\"writer-ポッチャマ\\\">\u003Cu>Writer: ポッチャマ\u003C/u>\u003C/h6>\\n\u003Cp>電算部のブログがかなり管理しづらかったので、&quot;Hexo&quot;というサイトジェネレータを使ってリニューアルしてみました。\u003C/p>\\n\u003Ch2 id=\\\"hexoとは\\\">Hexoとは?\u003C/h2>\\n\u003Cp>node.js(サーバーサイドで動作するJavaScript)で作られたパッケージ。これを使うと、静的サイトを簡単に作ることができる。\u003C/p>\\n\u003Ch2 id=\\\"とにかくブログ作ってみる\\\">とにかくブログ作ってみる\u003C/h2>\\n\u003Cul>\\n\u003Cli>\u003Ch3 id=\\\"環境構築\\\">環境構築\u003C/h3>\\n\u003Cp>  部員はWindowsユーザーがほとんどなので、ここではWindowsでの手順のみ記述する。\u003C/p>\\n\u003Col>\\n\u003Cli>\u003Ch4 id=\\\"npmをインストール\\\">npmをインストール\u003C/h4>\\n\u003Cp> Hexoなどのnodeパッケージの管理に必要なnpm(node package manager)をインストールする。\\n 下記の公式サイトからNode.js/npmのインストーラがダウンロードできる。\\n LTSとLatestがあるが、LTSで良いと思う。\\n \u003Ca href=\\\"https://nodejs.org/ja/\\\" title=\\\"node.js公式\\\">node.js公式\u003C/a>\\n ダウンロードしたインストーラーを起動し、インストール。インストール中色々聞かれるけど基本的にデフォルトでOK。\\n コマンドプロンプトでNode.js、npmが使えるか確認。\u003C/p>\\n\u003Cpre>\u003Ccode>node --version\\nnpm --version\\n\u003C/code>\u003C/pre>\\n\u003Cp> バージョン情報が表示されればインストールに成功している。\u003C/p>\\n\u003C/li>\\n\u003Cli>\u003Ch4 id=\\\"hexo-cliのインストール\\\">Hexo-cliのインストール\u003C/h4>\\n\u003Cp> npmを使ってHexo-cliをインストールする。\u003C/p>\\n\u003Cpre>\u003Ccode>npm install hexo-cli -g\\n\u003C/code>\u003C/pre>\\n\u003C/li>\\n\u003C/ol>\\n\u003C/li>\\n\u003Cli>\u003Ch3 id=\\\"サイト作成\\\">サイト作成\u003C/h3>\\n\u003Col>\\n\u003Cli>\u003Ch4 id=\\\"プロジェクト作成\\\">プロジェクト作成\u003C/h4>\\n\u003Cp> コマンドプロンプトでプロジェクトのディレクトリを作成したい場所に移動し、下記のコマンドを実行する。\u003C/p>\\n\u003Cpre>\u003Ccode>hexo init プロジェクト名\\n\u003C/code>\u003C/pre>\\n\u003Cp> 大量の文字列が表示され、プロジェクト名と同名のディレクトリが作成される。\u003C/p>\\n\u003C/li>\\n\u003Cli>\u003Ch4 id=\\\"表示させてみる\\\">表示させてみる\u003C/h4>\\n\u003Cp> 作成したディレクトリに移動し、コマンドを実行するとリンクが表示されるのでアクセスしてみよう。\u003C/p>\\n\u003Cpre>\u003Ccode>cd プロジェクト名\\nhexo server\\n\u003C/code>\u003C/pre>\\n\u003Cp> こんな感じのページが見れるはず。\\n \u003Cimg src=\\\"/api/assets/img/hexopage.png\\\" alt=\\\"hexopage\\\">\u003C/p>\\n\u003C/li>\\n\u003C/ol>\\n\u003C/li>\\n\u003Cli>\u003Ch3 id=\\\"使い方\\\">使い方\u003C/h3>\\n\u003Col>\\n\u003Cli>\u003Cp>記事の追加\u003C/p>\\n\u003Cpre>\u003Ccode>hexo new &quot;ページタイトル&quot;\\n\u003C/code>\u003C/pre>\\n\u003Cp> このコマンドでsource/_posts/の中にマークダウン形式のファイルが作成されるので、それを編集する。\u003C/p>\\n\u003C/li>\\n\u003Cli>\u003Cp>github pagesに公開\\n _config.ymlを編集\u003C/p>\\n\u003Cpre>\u003Ccode>url: http://githubのユーザー名.github.io/リポジトリ名/\\n\\n...\\n\\ndeploy:\\n  type: git\\n  repo: git@github.com:ユーザー名/リポジトリ名.git #clone時のurl\\n  branch: gh-pages\\n\u003C/code>\u003C/pre>\\n\u003Cp> 必要なnodeパッケージを追加でインストール\u003C/p>\\n\u003Cpre>\u003Ccode>npm install hexo-deployer-git --save\\nnpm install hexo-renderer-ejs --save\\n\u003C/code>\u003C/pre>\\n\u003Cp> hexoコマンドを実行\u003C/p>\\n\u003Cpre>\u003Ccode>hexo deploy -g\\n\u003C/code>\u003C/pre>\\n\u003Cp> githubのリポジトリにgh-pagesブランチが追加され、そこでデプロイされる。\u003C/p>\\n\u003C/li>\\n\u003C/ol>\\n\u003C/li>\\n\u003C/ul>\\n\u003Cp>ARCHIVESが404になったりHOMEのアクセス先がおかしかったりとエラーもあるが、\\nとりあえずこれで最低限のブログの運用ができるはず...\\nマークダウン形式で記事が書けるようになった。\u003C/p>\\n\"},{\"slug\":\"first-post\",\"title\":\"ブログをリニューアルしました！\",\"date\":\"2018-12-02T15:26:30.000Z\",\"body\":\"\u003Ch6 id=\\\"writer-ポッチャマ\\\">\u003Cu>Writer: ポッチャマ\u003C/u>\u003C/h6>\\n\u003Cp>神戸高専電算部のブログをリニューアルしました！\\nこれからどしどし記事を投稿していきます！\u003C/p>\\n\"}]}"
       }
     </script>
   </body>
