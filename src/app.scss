@@ -3,6 +3,14 @@
 @import "styles/helpers.scss";
 @import "styles/colors.scss";
 
+body {
+  font-size: 1.2rem;
+
+  *:focus-visible {
+    outline: auto;
+  }
+}
+
 a {
   color: $c-link;
   font-weight: bolder;
