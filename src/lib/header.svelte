@@ -19,17 +19,11 @@
     { path: "/blog/",   name: "Blog"  },
   ]
 
-  let path = ""
-  let idx = 0
-  const breadcrumbs = $page.url.pathname
-    .split("/")
-    .slice(0, -1)
-    .map((name, i) => {
-      idx = i
-      path += name += "/" // ?!
-      return { name, path }
-    })
-  breadcrumbs[idx] = { ...breadcrumbs[idx], path: undefined }
+  $: pathA = $page.url.pathname.split("/")
+  $: breadcrumbs = pathA.slice(0, -1).map((name, i) => ({
+    name: name+"/",
+    path: `${pathA.slice(0, i+1).join("/")}/`,
+  }))
 </script>
 
 <header class="header">
