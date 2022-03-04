@@ -1,5 +1,24 @@
+<script context="module" lang="ts">
+  export async function load({ fetch, params }) {
+    const newsData = await fetch("/api/articles/news.json").then(r => r.json())
+    return { props: { newsData } }
+  }
+</script>
+
 <script lang="ts">
   import Meta from "$lib/meta.svelte"
+
+  export let newsData
+
+  function dateFmt(d: Date): string {
+    return `${
+      d.getFullYear()
+    }/${
+      `0${d.getMonth()+1}`.slice(-2)
+    }/${
+      `0${d.getDate()}`.slice(-2)
+    }`
+  }
 </script>
 
 <Meta title="神戸高専 電算部" description="神戸高専電算部のウェブサイトです．" noTitleFormat />
@@ -17,3 +36,14 @@
 </p>
 
 <h2>新着情報</h2>
+
+<dl>
+  {#each newsData.data as article}
+    <dt>
+      {article.date ? `${dateFmt(new Date(article.date))} - ` : ""}
+      <a href={`/news/${article.slug}`}>{article.title}</a>
+      <span>by {article.author || "KCCTdensan"}</span>
+    </dt>
+    <dd>{article.description || ""}</dd>
+  {/each}
+</dl>
