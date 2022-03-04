@@ -1,6 +1,5 @@
 <script lang="ts">
-  import Fa from "svelte-fa"
-  import { faBars } from "@fortawesome/free-solid-svg-icons"
+  import Icon from "$lib/icon.svelte"
 
   import { hamburgerrrrr } from "$lib/stores"
   import { page } from "$app/stores"
@@ -49,7 +48,7 @@
           class:hamburgerrrrr
           on:click={() => hamburgerrrrr.update(d => !d)}
         >
-          <Fa class="fa" icon={faBars} />
+          <Icon type={"solid"} name={"bars"} />
         </button>
       </nav>
     </div>
