@@ -1,6 +1,6 @@
 <script context="module" lang="ts">
   export async function load({ fetch, params }) {
-    const { data } = await fetch("/api/articles/blog.json").then(r => r.json())
+    const { data } = await fetch("/api/articles/news.json").then(r => r.json())
     const article = data.find(i => i.slug === params.slug)
     if(article === undefined) {
       return {
