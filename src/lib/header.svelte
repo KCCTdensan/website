@@ -49,7 +49,7 @@
 
 <style lang="scss">
   @import "../styles/helpers.scss";
-  @import "../styles/colors.scss";
+  @import "../styles/variables.scss";
 
   .header {
     @extend .flex-col;

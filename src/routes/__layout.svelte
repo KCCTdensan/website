@@ -44,7 +44,7 @@
 
 <style lang="scss">
   @import "../styles/helpers.scss";
-  @import "../styles/colors.scss";
+  @import "../styles/variables.scss";
 
   $section-margin: 1.5rem;
 
