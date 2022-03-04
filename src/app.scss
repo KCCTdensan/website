@@ -23,6 +23,25 @@ a {
   }
 }
 
+code {
+  margin: 0 .5em;
+  padding: .5em;
+  border-radius: .5em;
+  background-color: $c-dimBg;
+  font-family: $f-mono;
+}
+
+pre {
+  padding: 1em;
+  border-radius: .5em;
+  background-color: $c-dimBg;
+
+  code {
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .inline-block {
   display: inline-block;
 }
