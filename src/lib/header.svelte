@@ -88,11 +88,10 @@
 
   .headerNav {
     @extend .flex-col;
-    // height: 2.5rem;
     padding: .5em;
     background-color: $c-headerNavBg;
     color: $c-headerNavText;
-    font-family: ui-monospace;
+    font: 1rem/1.8 $f-mono;
     cursor: text;
 
     * {
