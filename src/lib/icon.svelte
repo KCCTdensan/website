@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Fa from "svelte-fa"
+  import Icon from "svelte-awesome"
   import * as brands from "@fortawesome/free-brands-svg-icons"
   import * as regular from "@fortawesome/free-regular-svg-icons"
   import * as solid from "@fortawesome/free-solid-svg-icons"
@@ -10,13 +10,13 @@
 
   export let type: "brands" | "regular" | "solid"
   export let name: string
-  export let size: string
+  export let scale: number
 </script>
 
-<Fa class="fa" icon={faSvgs[type][faName(name)]} size={size} />
+<Icon class="icon" data={faSvgs[type][faName(name)]} scale={scale} />
 
 <style lang="scss">
-  .fa {
+  .icon {
     width: 100%;
     height: 100%;
   }

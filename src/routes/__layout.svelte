@@ -19,10 +19,10 @@
       <div class="flex-col">
         <div class="iconLinks">
           <a class="smallIcon" href="https://github.com/KCCTdensan" target="_blank" rel="external">
-            <Icon type={"brands"} name={"github"} size={"lg"} />
+            <Icon type={"brands"} name={"github"} scale={1.2} />
           </a>
           <a class="smallIcon" href="https://twitter.com/intent/user?user_id=444436310" target="_blank" rel="external">
-            <Icon type={"brands"} name={"twitter"} size={"lg"} />
+            <Icon type={"brands"} name={"twitter"} scale={1.2} />
           </a>
         </div>
         <small class="copyright">&copy; 1974-{ new Date().getFullYear() } KCCTdensan 神戸高専電算部</small>
