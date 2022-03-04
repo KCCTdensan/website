@@ -25,3 +25,20 @@
     エラーが発生しました．
   {/if}
 </p>
+
+<style lang="scss">
+  @import "../styles/variables.scss";
+
+  h1 pre {
+    margin: 0;
+    padding: 0;
+    background-color: $c-bg;
+    font-size: 2rem;
+
+    code {
+      margin: 0;
+      padding: 0;
+      background-color: $c-bg;
+    }
+  }
+</style>
