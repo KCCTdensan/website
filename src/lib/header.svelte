@@ -15,6 +15,7 @@
     { path: "/",        name: "Top"   },
     { path: "/about/",  name: "About" },
     { path: "/dev/",    name: "Dev"   },
+    { path: "/inner/",  name: "Inner" },
     { path: "/blog/",   name: "Blog"  },
   ]
 
