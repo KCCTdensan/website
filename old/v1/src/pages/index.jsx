@@ -1,4 +1,5 @@
 import React from "react"
+import { withPrefix } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -11,10 +12,10 @@ const Home = () => {
       <Seo title="神戸高専 電算部" disableSiteName />
 
       <div className={style.picsslide}>
-        <img src="/assets/images/densan_intro.png" alt="slide_1" />
-        <img src="/assets/images/index_slider1.jpg" alt="slide_2" />
-        <img src="/assets/images/index_slider2.jpg" alt="slide_3" />
-        <img src="/assets/images/index_slider3.jpg" alt="slide_4" />
+        <img src={withPrefix("/assets/images/densan_intro.png")} alt="slide_1" />
+        <img src={withPrefix("/assets/images/index_slider1.jpg")} alt="slide_2" />
+        <img src={withPrefix("/assets/images/index_slider2.jpg")} alt="slide_3" />
+        <img src={withPrefix("/assets/images/index_slider3.jpg")} alt="slide_4" />
       </div>
       <div className={style.welcometext + ' ' + style.gamingtext}>
         <span>パソコンを利用し、</span>

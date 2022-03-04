@@ -1,6 +1,6 @@
 import React, { useState, useRef }  from "react"
 import Twemoji from "react-twemoji"
-import { Link } from "gatsby"
+import { Link, withPrefix } from "gatsby"
 
 import "./global.scss"
 import * as style from "./style.module.scss"
@@ -27,7 +27,7 @@ export const Header = () => {
       <div className={style.header_main}>
         <Link to="/" className={style.logo_link}>
           {/*<LogoImg src="../assets/logo.png" alt="Logo" />*/}
-          <img src="/assets/logo.png" alt="Logo" className={style.logo_img} />
+          <img src={withPrefix("/assets/logo.png")} alt="Logo" className={style.logo_img} />
         </Link>
         <div className={style.links_desktop}><LinksContents /></div>
         <button
@@ -60,10 +60,10 @@ const Footer = () => {
     <footer>
       <div className={style.iconlinks}>
         <a href="https://twitter.com/kcct_densan" target="_blank" rel="noreferrer">
-          <img src="/assets/icons/twitter.svg" alt="Twitter logo" />
+          <img src={withPrefix("/assets/icons/twitter.svg")} alt="Twitter logo" />
         </a>
         <a href="https://github.com/KCCTdensan" target="_blank" rel="noreferrer">
-          <img src="/assets/icons/github.svg" alt="GitHub logo" />
+          <img src={withPrefix("/assets/icons/github.svg")} alt="GitHub logo" />
         </a>
       </div>
       <small className={style.copyright}>&copy; 1974-{new Date().getFullYear()} KCCT 電算部</small>

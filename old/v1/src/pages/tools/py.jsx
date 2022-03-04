@@ -1,5 +1,6 @@
 import React, { createRef, useEffect } from "react"
 import { Helmet } from "react-helmet"
+import { withPrefix } from "gatsby"
 
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
@@ -28,7 +29,7 @@ export default function Py() {
 
   useEffect(() => {
     const scriptTag = document.createElement("script")
-    scriptTag.src = "/assets/lib/pyterm.js"
+    scriptTag.src = withPrefix("/assets/lib/pyterm.js")
     document.body.appendChild(scriptTag)
   }, [])
 
