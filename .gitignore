@@ -5,4 +5,3 @@ node_modules
 /package
 .env
 .pnpm-debug.log*
-/static/old
