@@ -34,6 +34,7 @@
     padding: 0;
     background-color: $c-bg;
     font-size: 2rem;
+    line-height: 1;
 
     code {
       margin: 0;
