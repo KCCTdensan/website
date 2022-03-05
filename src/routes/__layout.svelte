@@ -6,16 +6,39 @@
 </script>
 
 <script lang="ts">
+  import { browser } from "$app/env"
   import Icon from "$lib/icon.svelte"
   import Header from "$lib/header.svelte"
   import "../app.scss"
 
   export let pkg // Header用，要改修
+  let konami = false
+
+  // Konami Code
+  if(browser) {
+    const command = [
+      "ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a",
+    ]
+    let cur = 0
+    addEventListener("keydown", e => {
+      if(e.key == command[cur++]) {
+        if(cur == command.length) {
+          konami = true
+          console.log("!!")
+        }
+      } else {
+        cur = 0
+      }
+    })
+  }
 </script>
 
 <div class="app">
   <div class="container">
     <Header {pkg} />
+    {#if konami}
+      <audio autoplay controls src="/nyan.ogg" />
+    {/if}
     <main class="main">
       <slot>Hello!</slot>
     </main>
