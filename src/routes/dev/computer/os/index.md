@@ -1,5 +1,6 @@
 ---
 title: OS開発
+description: "計算機制作::OS"
 ---
 
 # OS開発
