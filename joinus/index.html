@@ -2,22 +2,22 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="../../favicon.ico" />
+    <link rel="icon" href="../favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-security-policy" content="" />
-    <title>Nodejs環境構築 :: d3bu.net</title>
-    <meta name="description" content="神戸高専電算部のウェブサイト" data-svelte="svelte-1inund6" />
-    <meta name="author" content="山D, 山T" data-svelte="svelte-1inund6" />
+    <title>JoinUs :: d3bu.net</title>
+    <meta name="description" content="電算部について" data-svelte="svelte-1inund6" />
+    <meta name="author" content="KCCTdensan" data-svelte="svelte-1inund6" />
     <meta name="keywords" content="電算部,電子計算機部,神戸高専,KCCT,高専" data-svelte="svelte-1inund6" />
     <meta name="robots" content="all" data-svelte="svelte-1inund6" />
     <meta name="twitter:card" content="summary" data-svelte="svelte-1inund6" />
     <meta name="twitter:site" content="@kcct_densan" data-svelte="svelte-1inund6" />
     <meta name="twitter:creator" content="@kcct_densan" data-svelte="svelte-1inund6" />
-    <meta property="og:title" content="Nodejs環境構築 :: d3bu.net" data-svelte="svelte-1inund6" />
+    <meta property="og:title" content="JoinUs :: d3bu.net" data-svelte="svelte-1inund6" />
     <meta property="og:type" content="website" data-svelte="svelte-1inund6" />
-    <meta property="og:url" content="https://d3bu.net/docs/setup-node/" data-svelte="svelte-1inund6" />
+    <meta property="og:url" content="https://d3bu.net/joinus/" data-svelte="svelte-1inund6" />
     <meta property="og:image" content="https://d3bu.net/icon.png" data-svelte="svelte-1inund6" />
-    <meta property="og:description" content="神戸高専電算部のウェブサイト" data-svelte="svelte-1inund6" />
+    <meta property="og:description" content="電算部について" data-svelte="svelte-1inund6" />
     <meta property="og:site_name" content="電算部.net" data-svelte="svelte-1inund6" />
     <link rel="stylesheet" href="/_app/assets/vendor-b00f1465.css" />
     <link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-fbd2be40.css" />
@@ -25,7 +25,7 @@
     <link rel="modulepreload" href="/_app/chunks/vendor-9e78a147.js" />
     <link rel="modulepreload" href="/_app/pages/__layout.svelte-8ca2486d.js" />
     <link rel="modulepreload" href="/_app/chunks/stores-7295e635.js" />
-    <link rel="modulepreload" href="/_app/pages/docs/setup-node.md-00a6fa05.js" />
+    <link rel="modulepreload" href="/_app/pages/joinus.md-712ff58b.js" />
     <link rel="modulepreload" href="/_app/chunks/md_layout-d5434de2.js" />
     <link rel="modulepreload" href="/_app/chunks/meta-5e902eb1.js" />
     <link rel="modulepreload" href="/_app/chunks/fmt-158ed921.js" />
@@ -66,14 +66,13 @@
               <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/blog/" class="svelte-1hs0eq0">Blog</a></li>
               <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/dev/" class="svelte-1hs0eq0">Dev</a></li>
               <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/inner/" class="svelte-1hs0eq0">Inner</a></li>
-              <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/joinus/" class="svelte-1hs0eq0">JoinUs</a></li>
+              <li class="svelte-1hs0eq0 active"><a sveltekit:prefetch href="/joinus/" class="svelte-1hs0eq0">JoinUs</a></li>
               <li class="svelte-1hs0eq0"><a href="http://www.kobe-kosen.ac.jp" target="_blank" rel="external" class="svelte-1hs0eq0">KCCT</a></li>
             </ul>
             <span class="svelte-1hs0eq0">&gt; pwd</span>
             <ul class="breadcrumbs svelte-1hs0eq0">
               <li class="svelte-1hs0eq0"><a href="/" class="svelte-1hs0eq0">/</a></li>
-              <li class="svelte-1hs0eq0"><a href="/docs/" class="svelte-1hs0eq0">docs/</a></li>
-              <li class="svelte-1hs0eq0"><a href="/docs/setup-node/" class="svelte-1hs0eq0">setup-node/</a></li>
+              <li class="svelte-1hs0eq0"><a href="/joinus/" class="svelte-1hs0eq0">joinus/</a></li>
             </ul>
             <span class="svelte-1hs0eq0">&gt; curl /api/package.json</span>
             <span class="svelte-1hs0eq0">{&quot;name&quot;:&quot;d3bu.net&quot;,&quot;version&quot;:&quot;2.1.0&quot;}</span>
@@ -81,40 +80,40 @@
           </nav>
         </header>
         <main class="main svelte-1flnfih">
-          <div>
-            <span class="inline-block">Post: 2021/06/03</span>
-            <span class="inline-block">Updated: <time datetime="2021-07-15T00:00:00.000Z">2021/07/15</time></span>
-            <span class="inline-block">Author: 山D, 山T</span>
-          </div>
-          <hr />
-
-          <h1>Nodejs環境構築</h1>
-          <p>どうしても動かなかったら山Tまで</p>
-          <p>まず，<a href="/wsl2-setup">WSLのセットアップ</a>を完了させておいてください。</p>
-          <h2>必須パッケージのインストール</h2>
-          <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">sudo apt-get update
-sudo apt-get install -y nodejs npm</code><!-- HTML_TAG_END --></pre>
-          <p>ここで入るものはバージョンが古すぎるのでバージョンを上げる。</p>
-          <h2>安定版のインストール</h2>
-          <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">sudo npm install n -g
-sudo n stable</code><!-- HTML_TAG_END --></pre>
-          <h2>古いnodeを消す</h2>
-          <p>ややこしいし、使わないので消しましょう！</p>
-          <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">sudo apt purge -y nodejs npm</code><!-- HTML_TAG_END --></pre>
-          <h2>シェルへの再ログインとバージョン確認</h2>
-          <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">exec $SHELL -l
-node -v</code><!-- HTML_TAG_END --></pre>
-          <p>これでバージョンが14以降なら大丈夫です！</p>
-          <h2>最新版にしたかったら</h2>
-          <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">sudo n latest</code><!-- HTML_TAG_END --></pre>
-          <p>で最新版にできます。</p>
-          <h2>バージョンの切り替え</h2>
-          <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">sudo n</code><!-- HTML_TAG_END --></pre>
-          <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">ο node/14.17.0
-    node/16.2.0
-
-Use up/down arrow keys to select a version, return key to install, d to delete, q to quit</code><!-- HTML_TAG_END --></pre>
-          <p>と打って出てくる上の画面の左端のoを矢印キーで移動させて’enter’で決定、‘q’キャンセルできる。ちなみに’d’で選択したバージョンを消せる。</p>
+          <h1>入部希望の方へ</h1>
+          <p>皆さんも是非参加してみませんか？ 兼部も大歓迎です!</p>
+          <h2>要件</h2>
+          <ul>
+            <li>月に1度ある部会に参加すること</li>
+            <li>3000円/年を部費として納めること</li>
+          </ul>
+          <h2>FAQ</h2>
+          <ul>
+            <li>
+              自分のPCは必要ですか？
+              <ul>
+                <li>部室・演習室にあるPCを利用できるので，必須ではありません。 しかし，自分のPCがあると学生生活でも便利です．</li>
+              </ul>
+            </li>
+            <li>
+              パソコンは好きだけど，知識は全然ありません．大丈夫ですか？
+              <ul>
+                <li>大丈夫です！部活では，コンテストに出場し，経験を積みながら知識をつけることができます． 自分で勉強したり，先輩に教えてもらいながら活動しましょう!</li>
+              </ul>
+            </li>
+            <li>
+              兼部はOKですか？
+              <ul>
+                <li>OKです!</li>
+              </ul>
+            </li>
+            <li>
+              プログラミングや作曲などを学ぶ際に，一定のカリキュラムのようなものはありますか？
+              <ul>
+                <li>プログラミングの講習会を実施しています</li>
+              </ul>
+            </li>
+          </ul>
         </main>
         <footer class="footer svelte-1flnfih">
           <div></div>
@@ -144,10 +143,10 @@ Use up/down arrow keys to select a version, return key to install, d to delete, 
       </div>
     </div>
 
-    <script type="module" data-hydrate="1k18oz7">
+    <script type="module" data-hydrate="1vyxnfk">
       import { start } from "/_app/start-6e4f9118.js"
       start({
-        target: document.querySelector('[data-hydrate="1k18oz7"]').parentNode,
+        target: document.querySelector('[data-hydrate="1vyxnfk"]').parentNode,
         paths: { base: "", assets: "" },
         session: {},
         route: true,
@@ -156,7 +155,7 @@ Use up/down arrow keys to select a version, return key to install, d to delete, 
         hydrate: {
           status: 200,
           error: null,
-          nodes: [import("/_app/pages/__layout.svelte-8ca2486d.js"), import("/_app/pages/docs/setup-node.md-00a6fa05.js")],
+          nodes: [import("/_app/pages/__layout.svelte-8ca2486d.js"), import("/_app/pages/joinus.md-712ff58b.js")],
           params: {},
         },
       })

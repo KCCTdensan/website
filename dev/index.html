@@ -5,7 +5,7 @@
     <link rel="icon" href="../favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-security-policy" content="" />
-    <title>開発 :: d3bu.net</title>
+    <title>Dev :: d3bu.net</title>
     <meta name="description" content="開発開発開発開発" data-svelte="svelte-1inund6" />
     <meta name="author" content="KCCTdensan" data-svelte="svelte-1inund6" />
     <meta name="keywords" content="電算部,電子計算機部,神戸高専,KCCT,高専" data-svelte="svelte-1inund6" />
@@ -13,19 +13,19 @@
     <meta name="twitter:card" content="summary" data-svelte="svelte-1inund6" />
     <meta name="twitter:site" content="@kcct_densan" data-svelte="svelte-1inund6" />
     <meta name="twitter:creator" content="@kcct_densan" data-svelte="svelte-1inund6" />
-    <meta property="og:title" content="開発 :: d3bu.net" data-svelte="svelte-1inund6" />
+    <meta property="og:title" content="Dev :: d3bu.net" data-svelte="svelte-1inund6" />
     <meta property="og:type" content="website" data-svelte="svelte-1inund6" />
     <meta property="og:url" content="https://d3bu.net/dev/" data-svelte="svelte-1inund6" />
     <meta property="og:image" content="https://d3bu.net/icon.png" data-svelte="svelte-1inund6" />
     <meta property="og:description" content="開発開発開発開発" data-svelte="svelte-1inund6" />
     <meta property="og:site_name" content="電算部.net" data-svelte="svelte-1inund6" />
     <link rel="stylesheet" href="/_app/assets/vendor-b00f1465.css" />
-    <link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-9290e7e7.css" />
-    <link rel="modulepreload" href="/_app/start-ccb4b57a.js" />
+    <link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-fbd2be40.css" />
+    <link rel="modulepreload" href="/_app/start-6e4f9118.js" />
     <link rel="modulepreload" href="/_app/chunks/vendor-9e78a147.js" />
-    <link rel="modulepreload" href="/_app/pages/__layout.svelte-ad894f94.js" />
+    <link rel="modulepreload" href="/_app/pages/__layout.svelte-8ca2486d.js" />
     <link rel="modulepreload" href="/_app/chunks/stores-7295e635.js" />
-    <link rel="modulepreload" href="/_app/pages/dev/index.md-e9f66944.js" />
+    <link rel="modulepreload" href="/_app/pages/dev/index.md-003e0f2b.js" />
     <link rel="modulepreload" href="/_app/chunks/md_layout-d5434de2.js" />
     <link rel="modulepreload" href="/_app/chunks/meta-5e902eb1.js" />
     <link rel="modulepreload" href="/_app/chunks/fmt-158ed921.js" />
@@ -62,9 +62,11 @@
             <ul class="navLinks svelte-1hs0eq0">
               <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/" class="svelte-1hs0eq0">Top</a></li>
               <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/about/" class="svelte-1hs0eq0">About</a></li>
+              <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/news/" class="svelte-1hs0eq0">News</a></li>
+              <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/blog/" class="svelte-1hs0eq0">Blog</a></li>
               <li class="svelte-1hs0eq0 active"><a sveltekit:prefetch href="/dev/" class="svelte-1hs0eq0">Dev</a></li>
               <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/inner/" class="svelte-1hs0eq0">Inner</a></li>
-              <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/blog/" class="svelte-1hs0eq0">Blog</a></li>
+              <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/joinus/" class="svelte-1hs0eq0">JoinUs</a></li>
               <li class="svelte-1hs0eq0"><a href="http://www.kobe-kosen.ac.jp" target="_blank" rel="external" class="svelte-1hs0eq0">KCCT</a></li>
             </ul>
             <span class="svelte-1hs0eq0">&gt; pwd</span>
@@ -79,11 +81,25 @@
         </header>
         <main class="main svelte-1flnfih">
           <h1>開発</h1>
-          <p>開発</p>
+          <p>開発やってます．</p>
+          <h2>低レイヤ</h2>
+          <p>真の意味での自作コンピュータを目指します．</p>
+          <ul>
+            <li><a href="computer/">計算機制作</a> : OS，CPUなど</li>
+          </ul>
           <h2>電子工作</h2>
           <ul>
-            <li><a href="/denkou">電子工作</a></li>
-            <li><a href="https://denko.d3bu.net" target="_blank">電工部</a></li>
+            <li><a href="denkou/">電子工作</a> : ちょっとしたIoTなど</li>
+            <li><a href="https://denko.d3bu.net" rel="nofollow">電工部</a> : 電子工作に特化した部活</li>
+          </ul>
+          <h2>Web関連</h2>
+          <p>React，Vue，Svelteなどモダンなフレームワークを使用して遊んでいます．</p>
+          <ul>
+            <li><a href="https://github.com/KCCTdensan/d3bu.net" rel="nofollow">d3bu.net</a> : このWebサイト</li>
+          </ul>
+          <h2>その他</h2>
+          <ul>
+            <li><a href="/tools/py/">Python REPL</a></li>
           </ul>
         </main>
         <footer class="footer svelte-1flnfih">
@@ -114,10 +130,10 @@
       </div>
     </div>
 
-    <script type="module" data-hydrate="7w754o">
-      import { start } from "/_app/start-ccb4b57a.js"
+    <script type="module" data-hydrate="1uwwlzx">
+      import { start } from "/_app/start-6e4f9118.js"
       start({
-        target: document.querySelector('[data-hydrate="7w754o"]').parentNode,
+        target: document.querySelector('[data-hydrate="1uwwlzx"]').parentNode,
         paths: { base: "", assets: "" },
         session: {},
         route: true,
@@ -126,7 +142,7 @@
         hydrate: {
           status: 200,
           error: null,
-          nodes: [import("/_app/pages/__layout.svelte-ad894f94.js"), import("/_app/pages/dev/index.md-e9f66944.js")],
+          nodes: [import("/_app/pages/__layout.svelte-8ca2486d.js"), import("/_app/pages/dev/index.md-003e0f2b.js")],
           params: {},
         },
       })

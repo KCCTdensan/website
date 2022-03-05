@@ -11,16 +11,16 @@
     <loc>https://d3bu.net/blog/</loc>
   </url>
   <url>
-    <loc>https://d3bu.net/denkou/</loc>
+    <loc>https://d3bu.net/dev/</loc>
   </url>
   <url>
-    <loc>https://d3bu.net/dev/</loc>
+    <loc>https://d3bu.net/joinus/</loc>
   </url>
   <url>
     <loc>https://d3bu.net/monster/</loc>
   </url>
   <url>
-    <loc>https://d3bu.net/osdev/</loc>
+    <loc>https://d3bu.net/news/</loc>
   </url>
   <url>
     <loc>https://d3bu.net/blog/first-post/</loc>
@@ -29,7 +29,10 @@
     <loc>https://d3bu.net/blog/hexo/</loc>
   </url>
   <url>
-    <loc>https://d3bu.net/denkou/ne555synth/</loc>
+    <loc>https://d3bu.net/dev/computer/</loc>
+  </url>
+  <url>
+    <loc>https://d3bu.net/dev/denkou/</loc>
   </url>
   <url>
     <loc>https://d3bu.net/docs/github/</loc>
@@ -48,6 +51,9 @@
   </url>
   <url>
     <loc>https://d3bu.net/news/2022-site-renew/</loc>
+  </url>
+  <url>
+    <loc>https://d3bu.net/news/activities/</loc>
   </url>
   <url>
     <loc>https://d3bu.net/old/v0/AdventC.html</loc>
@@ -72,6 +78,15 @@
   </url>
   <url>
     <loc>https://d3bu.net/tools/py/</loc>
+  </url>
+  <url>
+    <loc>https://d3bu.net/dev/computer/cpu/</loc>
+  </url>
+  <url>
+    <loc>https://d3bu.net/dev/computer/os/</loc>
+  </url>
+  <url>
+    <loc>https://d3bu.net/dev/denkou/ne555synth/</loc>
   </url>
   <url>
     <loc>https://d3bu.net/old/v0/AC2017/dec10.html</loc>

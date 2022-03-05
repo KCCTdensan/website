@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-ccb4b57a.js",
+    "file": "start-6e4f9118.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -11,13 +11,11 @@
       "src/routes/__error.svelte",
       "src/routes/index.svelte",
       "src/routes/monster.md",
-      "src/routes/denkou/index.md",
-      "src/routes/denkou/ne555synth/index.md",
+      "src/routes/joinus.md",
       "src/routes/about.md",
       "src/routes/inner/index.md",
       "src/routes/inner/infra/servers.md",
       "src/routes/inner/infra/web.md",
-      "src/routes/osdev/index.md",
       "src/routes/tools/py.svelte",
       "src/routes/blog/index.svelte",
       "src/routes/blog/[slug].svelte",
@@ -25,13 +23,20 @@
       "src/routes/docs/wsl2-setup.md",
       "src/routes/docs/github.md",
       "src/routes/docs/pepper.md",
+      "src/routes/news/index.md",
+      "src/routes/news/activities.md",
       "src/routes/news/[slug].svelte",
       "src/routes/404.svelte",
-      "src/routes/dev/index.md"
+      "src/routes/dev/index.md",
+      "src/routes/dev/computer/index.md",
+      "src/routes/dev/computer/cpu/index.md",
+      "src/routes/dev/computer/os/index.md",
+      "src/routes/dev/denkou/index.md",
+      "src/routes/dev/denkou/ne555synth/index.md"
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-ad894f94.js",
+    "file": "pages/__layout.svelte-8ca2486d.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -40,7 +45,7 @@
       "_stores-7295e635.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-9290e7e7.css"
+      "assets/pages/__layout.svelte-fbd2be40.css"
     ],
     "assets": [
       "assets/FiraCode-Light-e3aa3db0.woff2",
@@ -96,22 +101,9 @@
       "_fmt-158ed921.js"
     ]
   },
-  "src/routes/denkou/index.md": {
-    "file": "pages/denkou/index.md-9db51b80.js",
-    "src": "src/routes/denkou/index.md",
-    "isEntry": true,
-    "isDynamicEntry": true,
-    "imports": [
-      "_vendor-9e78a147.js",
-      "_md_layout-d5434de2.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js",
-      "_fmt-158ed921.js"
-    ]
-  },
-  "src/routes/denkou/ne555synth/index.md": {
-    "file": "pages/denkou/ne555synth/index.md-729127c3.js",
-    "src": "src/routes/denkou/ne555synth/index.md",
+  "src/routes/joinus.md": {
+    "file": "pages/joinus.md-712ff58b.js",
+    "src": "src/routes/joinus.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
@@ -123,7 +115,7 @@
     ]
   },
   "src/routes/about.md": {
-    "file": "pages/about.md-7aafe664.js",
+    "file": "pages/about.md-c03989c0.js",
     "src": "src/routes/about.md",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -164,19 +156,6 @@
   "src/routes/inner/infra/web.md": {
     "file": "pages/inner/infra/web.md-32e63e6a.js",
     "src": "src/routes/inner/infra/web.md",
-    "isEntry": true,
-    "isDynamicEntry": true,
-    "imports": [
-      "_vendor-9e78a147.js",
-      "_md_layout-d5434de2.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js",
-      "_fmt-158ed921.js"
-    ]
-  },
-  "src/routes/osdev/index.md": {
-    "file": "pages/osdev/index.md-6c2daebd.js",
-    "src": "src/routes/osdev/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
@@ -273,6 +252,32 @@
       "_fmt-158ed921.js"
     ]
   },
+  "src/routes/news/index.md": {
+    "file": "pages/news/index.md-5d0c9053.js",
+    "src": "src/routes/news/index.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-9e78a147.js",
+      "_md_layout-d5434de2.js",
+      "_fmt-158ed921.js",
+      "_meta-5e902eb1.js",
+      "_stores-7295e635.js"
+    ]
+  },
+  "src/routes/news/activities.md": {
+    "file": "pages/news/activities.md-08a31426.js",
+    "src": "src/routes/news/activities.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-9e78a147.js",
+      "_md_layout-d5434de2.js",
+      "_meta-5e902eb1.js",
+      "_stores-7295e635.js",
+      "_fmt-158ed921.js"
+    ]
+  },
   "src/routes/news/[slug].svelte": {
     "file": "pages/news/_slug_.svelte-c6d3be21.js",
     "src": "src/routes/news/[slug].svelte",
@@ -299,8 +304,73 @@
     ]
   },
   "src/routes/dev/index.md": {
-    "file": "pages/dev/index.md-e9f66944.js",
+    "file": "pages/dev/index.md-003e0f2b.js",
     "src": "src/routes/dev/index.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-9e78a147.js",
+      "_md_layout-d5434de2.js",
+      "_meta-5e902eb1.js",
+      "_stores-7295e635.js",
+      "_fmt-158ed921.js"
+    ]
+  },
+  "src/routes/dev/computer/index.md": {
+    "file": "pages/dev/computer/index.md-2f9441db.js",
+    "src": "src/routes/dev/computer/index.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-9e78a147.js",
+      "_md_layout-d5434de2.js",
+      "_meta-5e902eb1.js",
+      "_stores-7295e635.js",
+      "_fmt-158ed921.js"
+    ]
+  },
+  "src/routes/dev/computer/cpu/index.md": {
+    "file": "pages/dev/computer/cpu/index.md-aeb281f0.js",
+    "src": "src/routes/dev/computer/cpu/index.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-9e78a147.js",
+      "_md_layout-d5434de2.js",
+      "_meta-5e902eb1.js",
+      "_stores-7295e635.js",
+      "_fmt-158ed921.js"
+    ]
+  },
+  "src/routes/dev/computer/os/index.md": {
+    "file": "pages/dev/computer/os/index.md-8f1b4c50.js",
+    "src": "src/routes/dev/computer/os/index.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-9e78a147.js",
+      "_md_layout-d5434de2.js",
+      "_meta-5e902eb1.js",
+      "_stores-7295e635.js",
+      "_fmt-158ed921.js"
+    ]
+  },
+  "src/routes/dev/denkou/index.md": {
+    "file": "pages/dev/denkou/index.md-5dd75514.js",
+    "src": "src/routes/dev/denkou/index.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-9e78a147.js",
+      "_md_layout-d5434de2.js",
+      "_meta-5e902eb1.js",
+      "_stores-7295e635.js",
+      "_fmt-158ed921.js"
+    ]
+  },
+  "src/routes/dev/denkou/ne555synth/index.md": {
+    "file": "pages/dev/denkou/ne555synth/index.md-ffd86c31.js",
+    "src": "src/routes/dev/denkou/ne555synth/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [

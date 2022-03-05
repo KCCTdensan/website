@@ -2,30 +2,30 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="../favicon.ico" />
+    <link rel="icon" href="../../../favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-security-policy" content="" />
-    <title>電子工作 :: d3bu.net</title>
-    <meta name="description" content="電子工作をします" data-svelte="svelte-1inund6" />
+    <title>CPU開発 :: d3bu.net</title>
+    <meta name="description" content="計算機制作::CPU" data-svelte="svelte-1inund6" />
     <meta name="author" content="KCCTdensan" data-svelte="svelte-1inund6" />
     <meta name="keywords" content="電算部,電子計算機部,神戸高専,KCCT,高専" data-svelte="svelte-1inund6" />
     <meta name="robots" content="all" data-svelte="svelte-1inund6" />
     <meta name="twitter:card" content="summary" data-svelte="svelte-1inund6" />
     <meta name="twitter:site" content="@kcct_densan" data-svelte="svelte-1inund6" />
     <meta name="twitter:creator" content="@kcct_densan" data-svelte="svelte-1inund6" />
-    <meta property="og:title" content="電子工作 :: d3bu.net" data-svelte="svelte-1inund6" />
+    <meta property="og:title" content="CPU開発 :: d3bu.net" data-svelte="svelte-1inund6" />
     <meta property="og:type" content="website" data-svelte="svelte-1inund6" />
-    <meta property="og:url" content="https://d3bu.net/denkou/" data-svelte="svelte-1inund6" />
+    <meta property="og:url" content="https://d3bu.net/dev/computer/cpu/" data-svelte="svelte-1inund6" />
     <meta property="og:image" content="https://d3bu.net/icon.png" data-svelte="svelte-1inund6" />
-    <meta property="og:description" content="電子工作をします" data-svelte="svelte-1inund6" />
+    <meta property="og:description" content="計算機制作::CPU" data-svelte="svelte-1inund6" />
     <meta property="og:site_name" content="電算部.net" data-svelte="svelte-1inund6" />
     <link rel="stylesheet" href="/_app/assets/vendor-b00f1465.css" />
-    <link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-9290e7e7.css" />
-    <link rel="modulepreload" href="/_app/start-ccb4b57a.js" />
+    <link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-fbd2be40.css" />
+    <link rel="modulepreload" href="/_app/start-6e4f9118.js" />
     <link rel="modulepreload" href="/_app/chunks/vendor-9e78a147.js" />
-    <link rel="modulepreload" href="/_app/pages/__layout.svelte-ad894f94.js" />
+    <link rel="modulepreload" href="/_app/pages/__layout.svelte-8ca2486d.js" />
     <link rel="modulepreload" href="/_app/chunks/stores-7295e635.js" />
-    <link rel="modulepreload" href="/_app/pages/denkou/index.md-9db51b80.js" />
+    <link rel="modulepreload" href="/_app/pages/dev/computer/cpu/index.md-aeb281f0.js" />
     <link rel="modulepreload" href="/_app/chunks/md_layout-d5434de2.js" />
     <link rel="modulepreload" href="/_app/chunks/meta-5e902eb1.js" />
     <link rel="modulepreload" href="/_app/chunks/fmt-158ed921.js" />
@@ -62,15 +62,19 @@
             <ul class="navLinks svelte-1hs0eq0">
               <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/" class="svelte-1hs0eq0">Top</a></li>
               <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/about/" class="svelte-1hs0eq0">About</a></li>
-              <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/dev/" class="svelte-1hs0eq0">Dev</a></li>
-              <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/inner/" class="svelte-1hs0eq0">Inner</a></li>
+              <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/news/" class="svelte-1hs0eq0">News</a></li>
               <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/blog/" class="svelte-1hs0eq0">Blog</a></li>
+              <li class="svelte-1hs0eq0 active"><a sveltekit:prefetch href="/dev/" class="svelte-1hs0eq0">Dev</a></li>
+              <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/inner/" class="svelte-1hs0eq0">Inner</a></li>
+              <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/joinus/" class="svelte-1hs0eq0">JoinUs</a></li>
               <li class="svelte-1hs0eq0"><a href="http://www.kobe-kosen.ac.jp" target="_blank" rel="external" class="svelte-1hs0eq0">KCCT</a></li>
             </ul>
             <span class="svelte-1hs0eq0">&gt; pwd</span>
             <ul class="breadcrumbs svelte-1hs0eq0">
               <li class="svelte-1hs0eq0"><a href="/" class="svelte-1hs0eq0">/</a></li>
-              <li class="svelte-1hs0eq0"><a href="/denkou/" class="svelte-1hs0eq0">denkou/</a></li>
+              <li class="svelte-1hs0eq0"><a href="/dev/" class="svelte-1hs0eq0">dev/</a></li>
+              <li class="svelte-1hs0eq0"><a href="/dev/computer/" class="svelte-1hs0eq0">computer/</a></li>
+              <li class="svelte-1hs0eq0"><a href="/dev/computer/cpu/" class="svelte-1hs0eq0">cpu/</a></li>
             </ul>
             <span class="svelte-1hs0eq0">&gt; curl /api/package.json</span>
             <span class="svelte-1hs0eq0">{&quot;name&quot;:&quot;d3bu.net&quot;,&quot;version&quot;:&quot;2.1.0&quot;}</span>
@@ -78,16 +82,10 @@
           </nav>
         </header>
         <main class="main svelte-1flnfih">
-          <h1>電子工作</h1>
-          <p>電算部の電子工作活動についての記録です</p>
-          <h2>固定記事(シリーズ)</h2>
-          <ul>
-            <li><a href="/denkou/ne555synth/">NE555でシンセをつくるらしい</a></li>
-          </ul>
-          <h2>新着記事</h2>
-          <ul>
-            <li></li>
-          </ul>
+          <h1>CPU開発</h1>
+          <p>高専生なら1度は必ず挑戦すると言われている自作CPUを部活で制作しています。</p>
+          <h2>ハリボテック</h2>
+          <p>まだ完成していません。</p>
         </main>
         <footer class="footer svelte-1flnfih">
           <div></div>
@@ -117,10 +115,10 @@
       </div>
     </div>
 
-    <script type="module" data-hydrate="ude5q">
-      import { start } from "/_app/start-ccb4b57a.js"
+    <script type="module" data-hydrate="2vkt1o">
+      import { start } from "/_app/start-6e4f9118.js"
       start({
-        target: document.querySelector('[data-hydrate="ude5q"]').parentNode,
+        target: document.querySelector('[data-hydrate="2vkt1o"]').parentNode,
         paths: { base: "", assets: "" },
         session: {},
         route: true,
@@ -129,7 +127,7 @@
         hydrate: {
           status: 200,
           error: null,
-          nodes: [import("/_app/pages/__layout.svelte-ad894f94.js"), import("/_app/pages/denkou/index.md-9db51b80.js")],
+          nodes: [import("/_app/pages/__layout.svelte-8ca2486d.js"), import("/_app/pages/dev/computer/cpu/index.md-aeb281f0.js")],
           params: {},
         },
       })
