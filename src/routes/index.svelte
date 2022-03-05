@@ -45,7 +45,3 @@
     <dd>{article.description || ""}</dd>
   {/each}
 </dl>
-
-<h2>サイトマップ</h2>
-
-そんなものはない．
