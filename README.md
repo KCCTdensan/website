@@ -6,5 +6,5 @@
 
 ## 解説
 
-- [ソース](src/routes/inner/maintenance.md)
-- [フル](https://d3bu.net/inner/maintenance)
+- [ソース](src/routes/inner/inner/infra/web.md)
+- [フル](https://d3bu.net/inner/infra/web/)
