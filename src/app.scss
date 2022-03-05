@@ -3,6 +3,8 @@
 @import "styles/variables.scss";
 @import "firacode";
 
+// Global
+
 body {
   font-size: 1.2rem;
 
@@ -41,6 +43,12 @@ pre {
     padding: 0;
   }
 }
+
+// MD
+// MD用のlayout.svelteで指定しても無理
+
+
+// Components
 
 .inline-block {
   display: inline-block;

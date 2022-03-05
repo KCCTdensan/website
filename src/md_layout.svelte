@@ -34,4 +34,10 @@
   <hr>
 {/if}
 
-<slot>Hello from MarkDown!</slot>
+<div class="md">
+  <slot>Hello from MarkDown!</slot>
+</div>
+
+<style lang="scss">
+  // 無視される
+</style>
