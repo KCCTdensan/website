@@ -39,5 +39,5 @@
 </div>
 
 <style lang="scss">
-  // 無視される
+  /* NOT WORKS */
 </style>

@@ -16,13 +16,10 @@
 
 <h1>電算「部」log</h1>
 
-<dl>
-  {#each entries as article}
-    <dt>
-      {article.date ? `${dateFmt(new Date(article.date))} - ` : ""}
-      <a href={`/blog/${article.slug}`}>{article.title}</a>
-      <span>by {article.author || "KCCTdensan"}</span>
-    </dt>
-    <dd>{article.description || ""}</dd>
-  {/each}
-</dl>
+{#each entries as article}
+  <article>
+    {article.date ? `${dateFmt(new Date(article.date))} - ` : ""}
+    <a href={`/blog/${article.slug}`}>{article.title}</a>
+    <span class="inline-block">by {article.author || "KCCTdensan"}</span>
+  </article>
+{/each}

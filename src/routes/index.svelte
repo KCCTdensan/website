@@ -35,13 +35,10 @@
 
 <h2>新着情報</h2>
 
-<dl>
-  {#each newsData.data as article}
-    <dt>
-      {article.date ? `${dateFmt(new Date(article.date))} - ` : ""}
-      <a href={`/news/${article.slug}`}>{article.title}</a>
-      <span>by {article.author || "KCCTdensan"}</span>
-    </dt>
-    <dd>{article.description || ""}</dd>
-  {/each}
-</dl>
+{#each newsData.data as article}
+  <article>
+    {article.date ? `${dateFmt(new Date(article.date))} - ` : ""}
+    <a href={`/news/${article.slug}`}>{article.title}</a>
+    <span class="inline-block">by {article.author || "KCCTdensan"}</span>
+  </article>
+{/each}
