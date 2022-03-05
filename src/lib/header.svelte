@@ -12,11 +12,12 @@
   export let pkg
 
   const navLinks = [
-    { path: "/",        name: "Top"   },
-    { path: "/about/",  name: "About" },
-    { path: "/dev/",    name: "Dev"   },
-    { path: "/inner/",  name: "Inner" },
-    { path: "/blog/",   name: "Blog"  },
+    { path: "/",        name: "Top"     },
+    { path: "/about/",  name: "About"   },
+    { path: "/blog/",   name: "Blog"    },
+    { path: "/dev/",    name: "Dev"     },
+    { path: "/inner/",  name: "Inner"   },
+    { path: "/joinus/", name: "JoinUs"  },
   ]
 
   $: pathA = $page.url.pathname.split("/")
