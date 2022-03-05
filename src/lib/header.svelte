@@ -11,6 +11,8 @@
 
   export let pkg
 
+  // pathAの2個分まで対応
+  // それ以上にの場合はnavLinksのロジックを変更する必要有
   const navLinks = [
     { path: "/",        name: "Top"     },
     { path: "/about/",  name: "About"   },
@@ -21,10 +23,11 @@
     { path: "/joinus/", name: "JoinUs"  },
   ]
 
-  $: pathA = $page.url.pathname.split("/")
-  $: breadcrumbs = pathA.slice(0, -1).map((name, i) => ({
-    name: name+"/",
-    path: `${pathA.slice(0, i+1).join("/")}/`,
+  $: pathA = $page.url.pathname.split("/").map(s => s + "/")
+    .slice(0, -1) // trailingSlash依存
+  $: breadcrumbs = pathA.map((name, i) => ({
+    name,
+    path: pathA.slice(0, i + 1).join(""),
   }))
 </script>
 
@@ -43,7 +46,7 @@
     <span>&gt; ls /</span>
     <ul class="navLinks">
       {#each navLinks as { path, name }}
-        <li class:active={$page.url.pathname === path}>
+        <li class:active={pathA.slice(0, 2).join("") === path}>
           <a sveltekit:prefetch href={path}>{name}</a>
         </li>
       {/each}
