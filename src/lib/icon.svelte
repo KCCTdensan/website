@@ -13,4 +13,4 @@
   export let scale: number
 </script>
 
-<Icon data={faSvgs[type][faName(name)]} scale={scale} />
+<Icon data={faSvgs[type][faName(name)]} {scale} />

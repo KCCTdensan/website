@@ -22,9 +22,16 @@
 <h2>このサイトについて</h2>
 
 <p>
-  2022年に(再度)リニューアルした、電算部の新しいウェブサイトです!<br>
+  2022年に(再度)リニューアルした，電算部の新しいウェブサイトです!<br>
   <a href="https://github.com/KCCTdensan/d3bu.net" target="_blank">ソースコード(github)</a>
 </p>
+
+<h3>旧バージョン</h3>
+
+<ul>
+  <li><a href="/old/v0/">2018年頃</a> - Riot.js製</li>
+  <li><a href="/old/v1/">2021年頃</a> - Gatsby製</li>
+</ul>
 
 <h2>新着情報</h2>
 
@@ -38,3 +45,7 @@
     <dd>{article.description || ""}</dd>
   {/each}
 </dl>
+
+<h2>サイトマップ</h2>
+
+そんなものはない．

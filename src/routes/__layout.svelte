@@ -10,12 +10,12 @@
   import Header from "$lib/header.svelte"
   import "../app.scss"
 
-  export let pkg // Header用
+  export let pkg // Header用，要改修
 </script>
 
 <div class="app">
   <div class="container">
-    <Header pkg={pkg} />
+    <Header {pkg} />
     <main class="main">
       <slot>Hello!</slot>
     </main>
