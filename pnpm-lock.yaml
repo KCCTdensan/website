@@ -4,6 +4,7 @@ specifiers:
   '@fortawesome/free-brands-svg-icons': 5.x
   '@fortawesome/free-regular-svg-icons': 5.x
   '@fortawesome/free-solid-svg-icons': 5.x
+  '@sveltejs/adapter-node': next
   '@sveltejs/adapter-static': next
   '@sveltejs/kit': next
   autoprefixer: 10.4.2
@@ -34,6 +35,7 @@ dependencies:
   sanitize.css: 13.0.0
 
 devDependencies:
+  '@sveltejs/adapter-node': 1.0.0-next.71
   '@sveltejs/adapter-static': 1.0.0-next.29
   '@sveltejs/kit': 1.0.0-next.294_sass@1.49.9+svelte@3.46.4
   autoprefixer: 10.4.2_postcss@8.4.8
@@ -142,6 +144,12 @@ packages:
     dependencies:
       estree-walker: 2.0.2
       picomatch: 2.3.1
+    dev: true
+
+  /@sveltejs/adapter-node/1.0.0-next.71:
+    resolution: {integrity: sha512-ELSQBSyk0IHMRi5Zct95jP+lTUJ0VQ/d7DxPMQTaDYVexpehDBOV6bXDzSNBl9boIIfEv77VD3lA7kgtuJnGdg==}
+    dependencies:
+      tiny-glob: 0.2.9
     dev: true
 
   /@sveltejs/adapter-static/1.0.0-next.29:

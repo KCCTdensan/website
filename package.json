@@ -9,6 +9,7 @@
     "sanitize.css": "13.0.0"
   },
   "devDependencies": {
+    "@sveltejs/adapter-node": "next",
     "@sveltejs/adapter-static": "next",
     "@sveltejs/kit": "next",
     "autoprefixer": "10.4.2",
@@ -43,7 +44,9 @@
     "dev": "svelte-kit dev",
     "dev-host": "svelte-kit dev --host",
     "preview": "svelte-kit preview",
-    "preview-host": "svelte-kit preview --host"
+    "preview-host": "svelte-kit preview --host",
+    "ssr:build": "SSR='true' run-s build:kit",
+    "ssr:start": "node build"
   },
   "type": "module",
   "workspaces": [

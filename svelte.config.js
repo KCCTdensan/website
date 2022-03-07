@@ -1,8 +1,14 @@
 import { mdsvex } from "mdsvex"
 import mdsvexConfig from "./mdsvex.config.js"
-import adapter from "@sveltejs/adapter-static"
+import adapterStatic from "@sveltejs/adapter-static"
+import adapterNode from "@sveltejs/adapter-node"
 import preprocess from "svelte-preprocess"
 import { isoImport } from "vite-plugin-iso-import"
+
+const mode = process.env.SSR
+const ssr = mode === "true"
+
+const out = "build"
 
 export default {
   extensions: [".svelte", ...mdsvexConfig.extensions],
@@ -11,7 +17,7 @@ export default {
     mdsvex(mdsvexConfig),
   ],
   kit: {
-    adapter: adapter(),
+    adapter: ssr ? adapterNode({ out }) : adapterStatic({ out }),
     prerender: {
       default: true,
       onError: "continue",
