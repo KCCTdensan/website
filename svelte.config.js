@@ -19,7 +19,7 @@ export default {
   kit: {
     adapter: ssr ? adapterNode({ out }) : adapterStatic({ out }),
     prerender: {
-      default: true,
+      default: !ssr,
       onError: "continue",
     },
     trailingSlash: "always",
