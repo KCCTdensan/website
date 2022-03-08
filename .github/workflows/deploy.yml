@@ -28,6 +28,7 @@ jobs:
         run: pnpm run build
         env:
           API_BASE: ${{ secrets.ENV_API_BASE }}
+          PLATFORM: gh-pages
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

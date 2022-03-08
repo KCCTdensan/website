@@ -6,6 +6,7 @@
 </script>
 
 <script lang="ts">
+  import { PLATFORM } from "$lib/_env"
   import { page } from "$app/stores"
   // import Icon from "$lib/icon.svelte"
 
@@ -66,6 +67,8 @@
         </li>
       {/each}
     </ul>
+    <span>&gt; echo $PLATFORM</span>
+    <span>{`${PLATFORM}`}</span>
     <span>&gt; curl /api/package.json</span>
     <span>{`{"name":"${pkg.name}","version":"${pkg.version}"}`}</span>
     <span>&gt; _</span>
