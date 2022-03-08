@@ -41,7 +41,10 @@
         ><span class="inline-block">電算部</span></span
       >
     </a>
-    <div><!-- 何か --></div>
+    <div class="pkgInfo">
+      <span>/api/package.json</span>
+      <span>{`{"name":"${pkg.name}","version":"${pkg.version}"}`}</span>
+    </div>
   </div>
   <nav class="headerNav">
     <span>&gt; ls /</span>
@@ -69,8 +72,6 @@
     </ul>
     <span>&gt; echo $PLATFORM</span>
     <span>{`${PLATFORM}`}</span>
-    <span>&gt; curl /api/package.json</span>
-    <span>{`{"name":"${pkg.name}","version":"${pkg.version}"}`}</span>
     <span>&gt; _</span>
   </nav>
 </header>
@@ -95,7 +96,6 @@
     .logo {
       @extend .flex-row;
       height: 100%;
-      width: 100%;
       padding: .25em;
       position: relative;
       align-items: center;
@@ -111,6 +111,16 @@
         font-size: 2em;
         font-weight: 900;
       }
+    }
+
+    .pkgInfo {
+      @extend .flex-col;
+      height: 100%;
+      margin: 0 .5rem;
+      justify-content: end;
+      align-items: end;
+      color: $c-headerDimText;
+      font-weight: bolder;
     }
   }
 
