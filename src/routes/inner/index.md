@@ -15,8 +15,12 @@ noRobots: true
 - [WSLセットアップガイド](/docs/wsl2-setup/)
 - [Nodejs環境構築](/docs/setup-node/)
 - [Pepper開発(Python)](/docs/pepper/)
+
+### インフラ
+
 - [Web運用ガイド](/inner/infra/web/)
 - [サーバーについて](/inner/infra/servers/)
+- [k0sクラスタ構築](/inner/infra/k0s/)
 
 ## ツール
 
