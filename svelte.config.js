@@ -23,6 +23,9 @@ export default {
     trailingSlash: "always",
     vite: {
       plugins: [isoImport()],
+      define: {
+        "process.env": process.env,
+      },
     },
   },
 }
