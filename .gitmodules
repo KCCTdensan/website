@@ -1,3 +1,7 @@
 [submodule "old/v0"]
 	path = old/v0
 	url = https://github.com/KCCTdensan/KCCTdensan.github.io.old
+[submodule "old/v0-blog"]
+	path = old/v0-blog
+	url = https://github.com/KCCTdensan/Blog
+	branch = gh-pages

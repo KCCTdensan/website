@@ -38,7 +38,7 @@
     "build:404": "mv build/404/index.html build/404.html && rmdir build/404",
     "build:kit": "svelte-kit build",
     "build:old": "mkdir -p static/old && run-p 'build:old:*'",
-    "build:old:v0": "cp -r old/v0 static/old/v0",
+    "build:old:v0": "cp -r old/v0 static/old/v0 && cp -r old/v0-blog static/old/v0/Blog",
     "build:old:v1": "npm run -w old/v1 build && cp -r old/v1/public static/old/v1",
     "build:pretty": "prettier -w 'build/**/*.html'",
     "build:sitemap": "svelte-sitemap --trailing-slashes -d https://d3bu.net -i '404.html' -i 'inner/**'",
