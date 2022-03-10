@@ -1,8 +1,10 @@
 <script context="module" lang="ts">
-  export async function load({ fetch }) { // Header用
+  // Header用
+  export async function load({ fetch }) {
     const pkg = await fetch("/api/package.json").then(r => r.json())
     return { props: { pkg } }
   }
+  //
 </script>
 
 <script lang="ts">

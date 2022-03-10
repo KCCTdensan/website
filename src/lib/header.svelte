@@ -1,8 +1,5 @@
 <script context="module" lang="ts">
-  export async function load({ fetch }) { // 何故か呼ばれない
-    const pkg = await fetch("/api/package.json").then(r => r.json())
-    return { props: { pkg } }
-  }
+  // 何故か呼ばれない
 </script>
 
 <script lang="ts">
