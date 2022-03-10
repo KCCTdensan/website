@@ -106,20 +106,6 @@ PCからぶっこ抜く．
 % ssh -i /path/to/priv_key -p 22 root@192.168.hoge.fuga
 ```
 
-### 6. パッケージのインストール
-
-これはラズパイ上での操作になる．
-
-以下のコマンドを実行すればいいのだが，
-`curl hogehoge | sh`する前にはスクリプトに問題が無いか確認すること．(セキュリティ的な意味でも)
-
-```
-# apt-get update
-# apt-get install -y vim curl
-```
-<!-- このコマンドは要らないかも -->
-<!-- # curl -fsSL https://get.k0s.sh | sh -->
-
 ## クラスタの構築(k0sctl)
 
 これを使うと楽らしい．(実際楽だった)
