@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-01a05e26.js",
+    "file": "start-24d9635b.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -15,6 +15,7 @@
       "src/routes/about.md",
       "src/routes/inner/index.md",
       "src/routes/inner/infra/servers.md",
+      "src/routes/inner/infra/k0s.md",
       "src/routes/inner/infra/web.md",
       "src/routes/tools/py.svelte",
       "src/routes/blog/index.svelte",
@@ -36,7 +37,7 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-e866307d.js",
+    "file": "pages/__layout.svelte-db3fb451.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -45,9 +46,68 @@
       "_stores-7295e635.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-fbd2be40.css"
+      "assets/pages/__layout.svelte-938aa0e0.css"
     ],
     "assets": [
+      "assets/KaTeX_AMS-Regular-0cdd387c.woff2",
+      "assets/KaTeX_AMS-Regular-30da91e8.woff",
+      "assets/KaTeX_AMS-Regular-68534840.ttf",
+      "assets/KaTeX_Caligraphic-Bold-de7701e4.woff2",
+      "assets/KaTeX_Caligraphic-Bold-1ae6bd74.woff",
+      "assets/KaTeX_Caligraphic-Bold-07d8e303.ttf",
+      "assets/KaTeX_Caligraphic-Regular-5d53e70a.woff2",
+      "assets/KaTeX_Caligraphic-Regular-3398dd02.woff",
+      "assets/KaTeX_Caligraphic-Regular-ed0b7437.ttf",
+      "assets/KaTeX_Fraktur-Bold-74444efd.woff2",
+      "assets/KaTeX_Fraktur-Bold-9be7ceb8.woff",
+      "assets/KaTeX_Fraktur-Bold-9163df9c.ttf",
+      "assets/KaTeX_Fraktur-Regular-51814d27.woff2",
+      "assets/KaTeX_Fraktur-Regular-5e28753b.woff",
+      "assets/KaTeX_Fraktur-Regular-1e6f9579.ttf",
+      "assets/KaTeX_Main-Bold-0f60d1b8.woff2",
+      "assets/KaTeX_Main-Bold-c76c5d69.woff",
+      "assets/KaTeX_Main-Bold-138ac28d.ttf",
+      "assets/KaTeX_Main-BoldItalic-99cd42a3.woff2",
+      "assets/KaTeX_Main-BoldItalic-a6f7ec0d.woff",
+      "assets/KaTeX_Main-BoldItalic-70ee1f64.ttf",
+      "assets/KaTeX_Main-Italic-97479ca6.woff2",
+      "assets/KaTeX_Main-Italic-f1d6ef86.woff",
+      "assets/KaTeX_Main-Italic-0d85ae7c.ttf",
+      "assets/KaTeX_Main-Regular-c2342cd8.woff2",
+      "assets/KaTeX_Main-Regular-c6368d87.woff",
+      "assets/KaTeX_Main-Regular-d0332f52.ttf",
+      "assets/KaTeX_Math-BoldItalic-dc47344d.woff2",
+      "assets/KaTeX_Math-BoldItalic-850c0af5.woff",
+      "assets/KaTeX_Math-BoldItalic-f9377ab0.ttf",
+      "assets/KaTeX_Math-Italic-7af58c5e.woff2",
+      "assets/KaTeX_Math-Italic-8a8d2445.woff",
+      "assets/KaTeX_Math-Italic-08ce98e5.ttf",
+      "assets/KaTeX_SansSerif-Bold-e99ae511.woff2",
+      "assets/KaTeX_SansSerif-Bold-ece03cfd.woff",
+      "assets/KaTeX_SansSerif-Bold-1ece03f7.ttf",
+      "assets/KaTeX_SansSerif-Italic-00b26ac8.woff2",
+      "assets/KaTeX_SansSerif-Italic-91ee6750.woff",
+      "assets/KaTeX_SansSerif-Italic-3931dd81.ttf",
+      "assets/KaTeX_SansSerif-Regular-68e8c73e.woff2",
+      "assets/KaTeX_SansSerif-Regular-11e4dc8a.woff",
+      "assets/KaTeX_SansSerif-Regular-f36ea897.ttf",
+      "assets/KaTeX_Script-Regular-036d4e95.woff2",
+      "assets/KaTeX_Script-Regular-d96cdf2b.woff",
+      "assets/KaTeX_Script-Regular-1c67f068.ttf",
+      "assets/KaTeX_Size1-Regular-6b47c401.woff2",
+      "assets/KaTeX_Size1-Regular-c943cc98.woff",
+      "assets/KaTeX_Size1-Regular-95b6d2f1.ttf",
+      "assets/KaTeX_Size2-Regular-d04c5421.woff2",
+      "assets/KaTeX_Size2-Regular-2014c523.woff",
+      "assets/KaTeX_Size2-Regular-a6b2099f.ttf",
+      "assets/KaTeX_Size3-Regular-6ab6b62e.woff",
+      "assets/KaTeX_Size3-Regular-500e04d5.ttf",
+      "assets/KaTeX_Size4-Regular-a4af7d41.woff2",
+      "assets/KaTeX_Size4-Regular-99f9c675.woff",
+      "assets/KaTeX_Size4-Regular-c647367d.ttf",
+      "assets/KaTeX_Typewriter-Regular-71d517d6.woff2",
+      "assets/KaTeX_Typewriter-Regular-e14fed02.woff",
+      "assets/KaTeX_Typewriter-Regular-f01f3e87.ttf",
       "assets/FiraCode-Light-e3aa3db0.woff2",
       "assets/FiraCode-Light-ece6bdf6.woff",
       "assets/FiraCode-Regular-a6ce5952.woff2",
@@ -63,7 +123,7 @@
     ]
   },
   "src/routes/__error.svelte": {
-    "file": "pages/__error.svelte-479febee.js",
+    "file": "pages/__error.svelte-1ee67c88.js",
     "src": "src/routes/__error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -73,11 +133,11 @@
       "_stores-7295e635.js"
     ],
     "css": [
-      "assets/pages/__error.svelte-87a34a7a.css"
+      "assets/pages/__error.svelte-29acc29f.css"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-45df160c.js",
+    "file": "pages/index.svelte-560dc1d4.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -89,78 +149,91 @@
     ]
   },
   "src/routes/monster.md": {
-    "file": "pages/monster.md-45e7880c.js",
+    "file": "pages/monster.md-ee4e5962.js",
     "src": "src/routes/monster.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-d5434de2.js",
+      "_md_layout-34828f51.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/joinus.md": {
-    "file": "pages/joinus.md-712ff58b.js",
+    "file": "pages/joinus.md-a2522e72.js",
     "src": "src/routes/joinus.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-d5434de2.js",
+      "_md_layout-34828f51.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/about.md": {
-    "file": "pages/about.md-c2140c73.js",
+    "file": "pages/about.md-5cef0629.js",
     "src": "src/routes/about.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-d5434de2.js",
+      "_md_layout-34828f51.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/inner/index.md": {
-    "file": "pages/inner/index.md-8afa0ddd.js",
+    "file": "pages/inner/index.md-f1e20205.js",
     "src": "src/routes/inner/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-d5434de2.js",
+      "_md_layout-34828f51.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/inner/infra/servers.md": {
-    "file": "pages/inner/infra/servers.md-4a55ab5b.js",
+    "file": "pages/inner/infra/servers.md-e04a856e.js",
     "src": "src/routes/inner/infra/servers.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-d5434de2.js",
+      "_md_layout-34828f51.js",
+      "_meta-5e902eb1.js",
+      "_stores-7295e635.js",
+      "_fmt-158ed921.js"
+    ]
+  },
+  "src/routes/inner/infra/k0s.md": {
+    "file": "pages/inner/infra/k0s.md-d1cf28f3.js",
+    "src": "src/routes/inner/infra/k0s.md",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-9e78a147.js",
+      "_md_layout-34828f51.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/inner/infra/web.md": {
-    "file": "pages/inner/infra/web.md-32e63e6a.js",
+    "file": "pages/inner/infra/web.md-b466a002.js",
     "src": "src/routes/inner/infra/web.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-d5434de2.js",
+      "_md_layout-34828f51.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
@@ -176,7 +249,7 @@
     ]
   },
   "src/routes/blog/index.svelte": {
-    "file": "pages/blog/index.svelte-4167b389.js",
+    "file": "pages/blog/index.svelte-01a4a8a9.js",
     "src": "src/routes/blog/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -188,111 +261,111 @@
     ]
   },
   "src/routes/blog/[slug].svelte": {
-    "file": "pages/blog/_slug_.svelte-935d6904.js",
+    "file": "pages/blog/_slug_.svelte-a38babb1.js",
     "src": "src/routes/blog/[slug].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-d5434de2.js",
+      "_md_layout-34828f51.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/docs/setup-node.md": {
-    "file": "pages/docs/setup-node.md-00a6fa05.js",
+    "file": "pages/docs/setup-node.md-966236ad.js",
     "src": "src/routes/docs/setup-node.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-d5434de2.js",
+      "_md_layout-34828f51.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/docs/wsl2-setup.md": {
-    "file": "pages/docs/wsl2-setup.md-0ea42ab9.js",
+    "file": "pages/docs/wsl2-setup.md-a240d3fe.js",
     "src": "src/routes/docs/wsl2-setup.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-d5434de2.js",
+      "_md_layout-34828f51.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/docs/github.md": {
-    "file": "pages/docs/github.md-54fe102a.js",
+    "file": "pages/docs/github.md-4067b951.js",
     "src": "src/routes/docs/github.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-d5434de2.js",
+      "_md_layout-34828f51.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/docs/pepper.md": {
-    "file": "pages/docs/pepper.md-293771f4.js",
+    "file": "pages/docs/pepper.md-3c9e7efa.js",
     "src": "src/routes/docs/pepper.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-d5434de2.js",
+      "_md_layout-34828f51.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/news/index.md": {
-    "file": "pages/news/index.md-5d0c9053.js",
+    "file": "pages/news/index.md-ee780a2a.js",
     "src": "src/routes/news/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-d5434de2.js",
+      "_md_layout-34828f51.js",
       "_fmt-158ed921.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js"
     ]
   },
   "src/routes/news/activities.md": {
-    "file": "pages/news/activities.md-08a31426.js",
+    "file": "pages/news/activities.md-04f3729e.js",
     "src": "src/routes/news/activities.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-d5434de2.js",
+      "_md_layout-34828f51.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/news/[slug].svelte": {
-    "file": "pages/news/_slug_.svelte-c6d3be21.js",
+    "file": "pages/news/_slug_.svelte-5b83e8fa.js",
     "src": "src/routes/news/[slug].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-d5434de2.js",
+      "_md_layout-34828f51.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/404.svelte": {
-    "file": "pages/404.svelte-205d3567.js",
+    "file": "pages/404.svelte-b78c7452.js",
     "src": "src/routes/404.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -304,78 +377,78 @@
     ]
   },
   "src/routes/dev/index.md": {
-    "file": "pages/dev/index.md-d66f6786.js",
+    "file": "pages/dev/index.md-74db8da6.js",
     "src": "src/routes/dev/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-d5434de2.js",
+      "_md_layout-34828f51.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/dev/computer/index.md": {
-    "file": "pages/dev/computer/index.md-2f9441db.js",
+    "file": "pages/dev/computer/index.md-8c481715.js",
     "src": "src/routes/dev/computer/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-d5434de2.js",
+      "_md_layout-34828f51.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/dev/computer/cpu/index.md": {
-    "file": "pages/dev/computer/cpu/index.md-aeb281f0.js",
+    "file": "pages/dev/computer/cpu/index.md-56c70b09.js",
     "src": "src/routes/dev/computer/cpu/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-d5434de2.js",
+      "_md_layout-34828f51.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/dev/computer/os/index.md": {
-    "file": "pages/dev/computer/os/index.md-8f1b4c50.js",
+    "file": "pages/dev/computer/os/index.md-bbed3b5d.js",
     "src": "src/routes/dev/computer/os/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-d5434de2.js",
+      "_md_layout-34828f51.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/dev/denkou/index.md": {
-    "file": "pages/dev/denkou/index.md-5dd75514.js",
+    "file": "pages/dev/denkou/index.md-80a524fe.js",
     "src": "src/routes/dev/denkou/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-d5434de2.js",
+      "_md_layout-34828f51.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/dev/denkou/ne555synth/index.md": {
-    "file": "pages/dev/denkou/ne555synth/index.md-ffd86c31.js",
+    "file": "pages/dev/denkou/ne555synth/index.md-4c9233b1.js",
     "src": "src/routes/dev/denkou/ne555synth/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-d5434de2.js",
+      "_md_layout-34828f51.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
@@ -403,8 +476,8 @@
   "_fmt-158ed921.js": {
     "file": "chunks/fmt-158ed921.js"
   },
-  "_md_layout-d5434de2.js": {
-    "file": "chunks/md_layout-d5434de2.js",
+  "_md_layout-34828f51.js": {
+    "file": "chunks/md_layout-34828f51.js",
     "imports": [
       "_vendor-9e78a147.js",
       "_meta-5e902eb1.js",

@@ -20,13 +20,13 @@
     <meta property="og:description" content="神戸高専電算部のウェブサイト" data-svelte="svelte-1inund6" />
     <meta property="og:site_name" content="電算部.net" data-svelte="svelte-1inund6" />
     <link rel="stylesheet" href="/_app/assets/vendor-b00f1465.css" />
-    <link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-fbd2be40.css" />
-    <link rel="modulepreload" href="/_app/start-01a05e26.js" />
+    <link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-938aa0e0.css" />
+    <link rel="modulepreload" href="/_app/start-24d9635b.js" />
     <link rel="modulepreload" href="/_app/chunks/vendor-9e78a147.js" />
-    <link rel="modulepreload" href="/_app/pages/__layout.svelte-e866307d.js" />
+    <link rel="modulepreload" href="/_app/pages/__layout.svelte-db3fb451.js" />
     <link rel="modulepreload" href="/_app/chunks/stores-7295e635.js" />
-    <link rel="modulepreload" href="/_app/pages/inner/infra/servers.md-4a55ab5b.js" />
-    <link rel="modulepreload" href="/_app/chunks/md_layout-d5434de2.js" />
+    <link rel="modulepreload" href="/_app/pages/inner/infra/servers.md-e04a856e.js" />
+    <link rel="modulepreload" href="/_app/chunks/md_layout-34828f51.js" />
     <link rel="modulepreload" href="/_app/chunks/meta-5e902eb1.js" />
     <link rel="modulepreload" href="/_app/chunks/fmt-158ed921.js" />
     <script>
@@ -49,42 +49,64 @@
   <body>
     <div class="app svelte-1flnfih">
       <div class="container svelte-1flnfih">
-        <header class="header svelte-1hs0eq0">
-          <div class="headerLogo svelte-1hs0eq0">
-            <a class="logo svelte-1hs0eq0" href="/"
-              ><img class="icon svelte-1hs0eq0" src="/icon.png" alt="Logo" />
-              <span class="text svelte-1hs0eq0"><span class="inline-block">神戸高専</span><span class="inline-block">電算部</span></span></a
+        <header class="header svelte-15jboos">
+          <div class="headerLogo svelte-15jboos">
+            <a class="logo svelte-15jboos" href="/"
+              ><img class="icon svelte-15jboos" src="/icon.png" alt="Logo" />
+              <span class="text svelte-15jboos"><span class="inline-block">神戸高専</span><span class="inline-block">電算部</span></span></a
             >
-            <div></div>
+            <div class="pkgInfo svelte-15jboos"><span>/api/package.json</span> <span>{&quot;name&quot;:&quot;d3bu.net&quot;,&quot;version&quot;:&quot;2.1.0&quot;}</span></div>
           </div>
-          <nav class="headerNav svelte-1hs0eq0">
-            <span class="svelte-1hs0eq0">&gt; ls /</span>
-            <ul class="navLinks svelte-1hs0eq0">
-              <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/" class="svelte-1hs0eq0">Top</a></li>
-              <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/about/" class="svelte-1hs0eq0">About</a></li>
-              <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/news/" class="svelte-1hs0eq0">News</a></li>
-              <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/blog/" class="svelte-1hs0eq0">Blog</a></li>
-              <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/dev/" class="svelte-1hs0eq0">Dev</a></li>
-              <li class="svelte-1hs0eq0 active"><a sveltekit:prefetch href="/inner/" class="svelte-1hs0eq0">Inner</a></li>
-              <li class="svelte-1hs0eq0"><a sveltekit:prefetch href="/joinus/" class="svelte-1hs0eq0">JoinUs</a></li>
-              <li class="svelte-1hs0eq0"><a href="http://www.kobe-kosen.ac.jp" target="_blank" rel="external" class="svelte-1hs0eq0">KCCT</a></li>
+          <nav class="headerNav svelte-15jboos">
+            <span class="svelte-15jboos">&gt; ls /</span>
+            <ul class="navLinks svelte-15jboos">
+              <li class="svelte-15jboos"><a sveltekit:prefetch href="/" class="svelte-15jboos">Top</a></li>
+              <li class="svelte-15jboos"><a sveltekit:prefetch href="/about/" class="svelte-15jboos">About</a></li>
+              <li class="svelte-15jboos"><a sveltekit:prefetch href="/news/" class="svelte-15jboos">News</a></li>
+              <li class="svelte-15jboos"><a sveltekit:prefetch href="/blog/" class="svelte-15jboos">Blog</a></li>
+              <li class="svelte-15jboos"><a sveltekit:prefetch href="/dev/" class="svelte-15jboos">Dev</a></li>
+              <li class="svelte-15jboos active"><a sveltekit:prefetch href="/inner/" class="svelte-15jboos">Inner</a></li>
+              <li class="svelte-15jboos"><a sveltekit:prefetch href="/joinus/" class="svelte-15jboos">JoinUs</a></li>
+              <li class="svelte-15jboos"><a href="http://www.kobe-kosen.ac.jp" target="_blank" rel="external" class="svelte-15jboos">KCCT</a></li>
             </ul>
-            <span class="svelte-1hs0eq0">&gt; pwd</span>
-            <ul class="breadcrumbs svelte-1hs0eq0">
-              <li class="svelte-1hs0eq0"><a href="/" class="svelte-1hs0eq0">/</a></li>
-              <li class="svelte-1hs0eq0"><a href="/inner/" class="svelte-1hs0eq0">inner/</a></li>
-              <li class="svelte-1hs0eq0"><a href="/inner/infra/" class="svelte-1hs0eq0">infra/</a></li>
-              <li class="svelte-1hs0eq0"><a href="/inner/infra/servers/" class="svelte-1hs0eq0">servers/</a></li>
+            <span class="svelte-15jboos">&gt; pwd</span>
+            <ul class="breadcrumbs svelte-15jboos">
+              <li class="svelte-15jboos"><a href="/" class="svelte-15jboos">/</a></li>
+              <li class="svelte-15jboos"><a href="/inner/" class="svelte-15jboos">inner/</a></li>
+              <li class="svelte-15jboos"><a href="/inner/infra/" class="svelte-15jboos">infra/</a></li>
+              <li class="svelte-15jboos"><a href="/inner/infra/servers/" class="svelte-15jboos">servers/</a></li>
             </ul>
-            <span class="svelte-1hs0eq0">&gt; curl /api/package.json</span>
-            <span class="svelte-1hs0eq0">{&quot;name&quot;:&quot;d3bu.net&quot;,&quot;version&quot;:&quot;2.1.0&quot;}</span>
-            <span class="svelte-1hs0eq0">&gt; _</span>
+            <span class="svelte-15jboos">&gt; echo $PLATFORM</span>
+            <span class="svelte-15jboos">dev</span>
+            <span class="svelte-15jboos">&gt; _</span>
           </nav>
         </header>
 
         <main class="main svelte-1flnfih">
-          <h1>部室のサーバーについて</h1>
-          <p>部室のインフラ(笑)</p>
+          <div class="md">
+            <h1>部室のサーバーについて</h1>
+            <p>部室のインフラ(笑)</p>
+            <p>mDNSは未設定．</p>
+            <h2>メインサーバー</h2>
+            <ul>
+              <li><code>192.168.100.100(SHOZABURO)</code></li>
+              <li>CPU : i5-4460 (4C4T)</li>
+              <li>メモリ : DDR4 8GB</li>
+              <li><code>/</code>，<code>/boot/efi</code> : 2.5インチSATA SSD(256GB)x1，xfs</li>
+              <li><code>/data</code> : 3.5インチSATA HDD(1TB)x2，btrfs(Data/Metadata/System全部ミラーリング)</li>
+            </ul>
+            <h2>k0sクラスタ</h2>
+            <ul>
+              <li><code>192.168.100.150(hiroshi)</code> : rpi 4B (arm64/4C4T/4GB)，32GB microSDカード</li>
+              <li><code>192.168.100.128(tako0)</code> : rpi 2B (armhf/4C4T/1GB)，32GB microSDカード</li>
+              <li><code>192.168.100.129(tako1)</code> : rpi 2B (armhf/4C4T/1GB)，32GB microSDカード</li>
+              <li><code>192.168.100.130(tako2)</code> : rpi 2B (armhf/4C4T/1GB)，32GB microSDカード</li>
+              <li><code>192.168.100.131(tako3)</code> : rpi 2B (armhf/4C4T/1GB)，32GB microSDカード(死にかけ？)</li>
+              <li><code>192.168.100.132(tako4)</code> : rpi 2B (armhf/4C4T/1GB)，32GB microSDカード</li>
+              <li><code>192.168.100.133(tako5)</code> : rpi 2B (armhf/4C4T/1GB)，32GB microSDカード</li>
+              <li><code>192.168.100.134(tako6)</code> : rpi 2B (armhf/4C4T/1GB)，16GB microSDカード(スロット破損)</li>
+            </ul>
+          </div>
         </main>
         <footer class="footer svelte-1flnfih">
           <div></div>
@@ -114,10 +136,10 @@
       </div>
     </div>
 
-    <script type="module" data-hydrate="k71jyl">
-      import { start } from "/_app/start-01a05e26.js"
+    <script type="module" data-hydrate="16p6701">
+      import { start } from "/_app/start-24d9635b.js"
       start({
-        target: document.querySelector('[data-hydrate="k71jyl"]').parentNode,
+        target: document.querySelector('[data-hydrate="16p6701"]').parentNode,
         paths: { base: "", assets: "" },
         session: {},
         route: true,
@@ -126,7 +148,7 @@
         hydrate: {
           status: 200,
           error: null,
-          nodes: [import("/_app/pages/__layout.svelte-e866307d.js"), import("/_app/pages/inner/infra/servers.md-4a55ab5b.js")],
+          nodes: [import("/_app/pages/__layout.svelte-db3fb451.js"), import("/_app/pages/inner/infra/servers.md-e04a856e.js")],
           params: {},
         },
       })
