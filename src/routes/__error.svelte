@@ -1,21 +1,21 @@
 <script context="module" lang="ts">
-export async function load({ error, status, fetch, url }) {
-  const recommends = []
-  if (status === 404 && !url.searchParams.has("404"))
-    await Promise.all([
-      fetch(`/old/v0${url.pathname}?404`)
-        .then(r => r.ok && recommends.push({
-          link: `/old/v0${url.pathname}`,
-          text: "旧版(2018年頃)へのリンク",
-        })),
-      fetch(`/old/v1${url.pathname}?404`)
-        .then(r => r.ok && recommends.push({
-          link: `/old/v1${url.pathname}`,
-          text: "旧版(2021年頃)へのリンク",
-        })),
-    ])
-  return { props: { error, status, recommends } }
-}
+  export async function load({ error, status, fetch, url }) {
+    const recommends = []
+    if(status === 404 && !/^\/old\/v[0-1]\/old\/v[0-1]/.test(url.pathname))
+      await Promise.all([
+        fetch(`/old/v0${url.pathname}`)
+          .then(r => r.ok && recommends.push({
+            link: `/old/v0${url.pathname}`,
+            text: "旧版(2018年頃)へのリンク",
+          })),
+        fetch(`/old/v1${url.pathname}`)
+          .then(r => r.ok && recommends.push({
+            link: `/old/v1${url.pathname}`,
+            text: "旧版(2021年頃)へのリンク",
+          })),
+      ])
+    return { props: { error, status, recommends } }
+  }
 </script>
 
 <script lang="ts">
