@@ -1,11 +1,11 @@
 ---
 title: ラズパイでk0sクラスタ構築
 date: 2022-03-08
-dateUpd: 2022-03-09
+dateUpd: 2022-03-10
 author: 山D
 ---
 
-注: 編集中
+# ラズパイでk0sクラスタ構築
 
 やったのでメモ．
 
@@ -106,16 +106,64 @@ PCからぶっこ抜く．
 % ssh -i /path/to/priv_key -p 22 root@192.168.hoge.fuga
 ```
 
-以降はラズパイ上での操作になる．
-
 ### 6. パッケージのインストール
 
-`curl hogehoge | sh`する前に問題が無いか確認すること．(セキュリティ的な意味でも)
+これはラズパイ上での操作になる．
+
+以下のコマンドを実行すればいいのだが，
+`curl hogehoge | sh`する前にはスクリプトに問題が無いか確認すること．(セキュリティ的な意味でも)
 
 ```
 # apt-get update
 # apt-get install -y vim curl
-# curl -fsSL https://get.k0s.sh | sh
+```
+<!-- このコマンドは要らないかも -->
+<!-- # curl -fsSL https://get.k0s.sh | sh -->
+
+## クラスタの構築(k0sctl)
+
+これを使うと楽らしい．(実際楽だった)
+
+まだ完全な理解に至っていないのでいろいろ不正確かも．
+
+### 1. 作業用PCにk0sctlを入れる
+
+実際にやるときはgithub([k0sproject/k0sctl](https://github.com/k0sproject/k0sctl#installation))を参照のこと．
+
+現状，goが動く環境で
+
+```
+% go install github.com/k0sproject/k0sctl@latest
 ```
 
-## k0sのセットアップ
+とするとよい(らしい)．
+
+### 2. 設定する
+
+実際にやるときは[docs.k0sproject.io](https://docs.k0sproject.io/v1.23.3+k0s.1/k0sctl-install/)を参照．
+
+```
+% k0sctl init > k0sctl.yaml
+```
+
+でk0sctlの設定の雛形が吐かれるので，これを編集する．
+このファイルはk0sのノード毎の設定とは別物なので注意．
+
+できたら実機にデプロイする．
+
+```
+% k0sctl apply --config k0sctl.yaml
+```
+
+しばらく(プロンプトが帰ってくるまで)待つ．
+
+終わったらkubeconfigを吐かせる．
+これによって`kubectl`が使えたりする．
+
+```
+% k0sctl kubeconfig > kubeconfig
+```
+
+## 蛇足
+
+ノードを全てラズパイで構築した場合，k0sctl applyでそこそこ時間がかかった．
