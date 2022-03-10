@@ -125,6 +125,9 @@
     <loc>https://d3bu.net/old/v0/AC2018/dec21.html</loc>
   </url>
   <url>
+    <loc>https://d3bu.net/old/v0/Blog/</loc>
+  </url>
+  <url>
     <loc>https://d3bu.net/old/v1/404/</loc>
   </url>
   <url>
@@ -173,9 +176,24 @@
     <loc>https://d3bu.net/old/v1/wsl2-setup/</loc>
   </url>
   <url>
+    <loc>https://d3bu.net/old/v0/Blog/archives/</loc>
+  </url>
+  <url>
     <loc>https://d3bu.net/old/v1/pepper/setup-environment/</loc>
   </url>
   <url>
     <loc>https://d3bu.net/old/v1/tools/py/</loc>
+  </url>
+  <url>
+    <loc>https://d3bu.net/old/v0/Blog/archives/2018/</loc>
+  </url>
+  <url>
+    <loc>https://d3bu.net/old/v0/Blog/archives/2018/12/</loc>
+  </url>
+  <url>
+    <loc>https://d3bu.net/old/v0/Blog/2018/12/02/first-post/</loc>
+  </url>
+  <url>
+    <loc>https://d3bu.net/old/v0/Blog/2018/12/02/hexo/</loc>
   </url>
 </urlset>
