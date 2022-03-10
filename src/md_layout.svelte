@@ -11,11 +11,13 @@
   export let dateUpd       = undefined // Updated
 
   const articleMetaVisible = author || date || dateUpd
-  let authors
+  let authors = []
   if(author) authors = Array.isArray(author) ? author : author.split(/, |,/)
 </script>
 
 <Meta { ...{ title, description, author, noRobots, noTitleFormat } } />
+
+<div class="md">
 
 {#if articleMetaVisible}
   <div class="meta">
@@ -48,18 +50,10 @@
   <hr>
 {/if}
 
-<div class="md">
-  <slot>Hello from MarkDown!</slot>
+<slot>Hello from MarkDown!</slot>
+
 </div>
 
 <style lang="scss">
-  @import "styles/variables.scss";
-
-  .meta {
-    font: 1rem $f-mono;
-
-    .iter > *:not(:last-child)::after {
-      content: ",";
-    }
-  }
+  /* SCSS NOT WORKING */
 </style>

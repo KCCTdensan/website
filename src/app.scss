@@ -56,3 +56,17 @@ pre {
 .red {
   color: #f00;
 }
+
+// MD // md_layout.svelte内でscssが使えない為
+
+.md {
+
+.meta {
+  font: 1rem $f-mono;
+
+  .iter > *:not(:last-child)::after {
+    content: ",";
+  }
+}
+
+}
