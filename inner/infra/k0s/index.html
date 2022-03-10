@@ -20,13 +20,13 @@
     <meta property="og:description" content="神戸高専電算部のウェブサイト" data-svelte="svelte-1inund6" />
     <meta property="og:site_name" content="電算部.net" data-svelte="svelte-1inund6" />
     <link rel="stylesheet" href="/_app/assets/vendor-b00f1465.css" />
-    <link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-938aa0e0.css" />
-    <link rel="modulepreload" href="/_app/start-c5fb6e36.js" />
+    <link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-81a0ac7c.css" />
+    <link rel="modulepreload" href="/_app/start-b181c2d0.js" />
     <link rel="modulepreload" href="/_app/chunks/vendor-9e78a147.js" />
-    <link rel="modulepreload" href="/_app/pages/__layout.svelte-1c9ec046.js" />
+    <link rel="modulepreload" href="/_app/pages/__layout.svelte-a286ac31.js" />
     <link rel="modulepreload" href="/_app/chunks/stores-7295e635.js" />
-    <link rel="modulepreload" href="/_app/pages/inner/infra/k0s.md-d1cf28f3.js" />
-    <link rel="modulepreload" href="/_app/chunks/md_layout-34828f51.js" />
+    <link rel="modulepreload" href="/_app/pages/inner/infra/k0s.md-e2431e96.js" />
+    <link rel="modulepreload" href="/_app/chunks/md_layout-b6f7a259.js" />
     <link rel="modulepreload" href="/_app/chunks/meta-5e902eb1.js" />
     <link rel="modulepreload" href="/_app/chunks/fmt-158ed921.js" />
     <script>
@@ -83,14 +83,21 @@
         </header>
 
         <main class="main svelte-1flnfih">
-          <div>
-            <span class="inline-block">Post: 2022/03/08</span>
-            <span class="inline-block">Updated: <time datetime="2022-03-10T00:00:00.000Z">2022/03/10</time></span>
-            <span class="inline-block">Author: 山D</span>
-          </div>
-          <hr />
-
           <div class="md">
+            <div class="meta">
+              <span>meta = {</span>
+              <span class="iter"
+                ><span>post: &quot;2022/03/08&quot;</span>
+                <span>updated: &quot;<time datetime="2022-03-10T00:00:00.000Z">2022/03/10</time>&quot;</span>
+                <span
+                  >authors: [<span class="iter"><span>&quot;山D&quot;</span></span
+                  >]</span
+                ></span
+              >
+              <span>};</span>
+            </div>
+            <hr />
+
             <h1>ラズパイでk0sクラスタ構築</h1>
             <p>やったのでメモ．</p>
             <h2>ラズパイのセットアップ</h2>
@@ -208,12 +215,6 @@ nameserver 1.1.1.1</code><!-- HTML_TAG_END --></pre>
             <p>ラズパイのローカルIPを固定しsshdを有効化したので，(とくにトラブらない限り)完全にヘッドレス運用が可能． ということでSDカードとLANケーブルを刺して電源を投入．</p>
             <p>しばらく待ってpingが通るようであれば，sshで接続する．</p>
             <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">% ssh -i /path/to/priv_key -p 22 root@192.168.hoge.fuga</code><!-- HTML_TAG_END --></pre>
-            <h3>6. パッケージのインストール</h3>
-            <p>これはラズパイ上での操作になる．</p>
-            <p>以下のコマンドを実行すればいいのだが， <code>curl hogehoge | sh</code>する前にはスクリプトに問題が無いか確認すること．(セキュリティ的な意味でも)</p>
-            <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined"># apt-get update
-# apt-get install -y vim curl</code><!-- HTML_TAG_END --></pre>
-
             <h2>クラスタの構築(k0sctl)</h2>
             <p>これを使うと楽らしい．(実際楽だった)</p>
             <p>まだ完全な理解に至っていないのでいろいろ不正確かも．</p>
@@ -263,10 +264,10 @@ nameserver 1.1.1.1</code><!-- HTML_TAG_END --></pre>
       </div>
     </div>
 
-    <script type="module" data-hydrate="veoxeq">
-      import { start } from "/_app/start-c5fb6e36.js"
+    <script type="module" data-hydrate="1qfa53o">
+      import { start } from "/_app/start-b181c2d0.js"
       start({
-        target: document.querySelector('[data-hydrate="veoxeq"]').parentNode,
+        target: document.querySelector('[data-hydrate="1qfa53o"]').parentNode,
         paths: { base: "", assets: "" },
         session: {},
         route: true,
@@ -275,7 +276,7 @@ nameserver 1.1.1.1</code><!-- HTML_TAG_END --></pre>
         hydrate: {
           status: 200,
           error: null,
-          nodes: [import("/_app/pages/__layout.svelte-1c9ec046.js"), import("/_app/pages/inner/infra/k0s.md-d1cf28f3.js")],
+          nodes: [import("/_app/pages/__layout.svelte-a286ac31.js"), import("/_app/pages/inner/infra/k0s.md-e2431e96.js")],
           params: {},
         },
       })

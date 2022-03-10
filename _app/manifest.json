@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-c5fb6e36.js",
+    "file": "start-b181c2d0.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -37,7 +37,7 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-1c9ec046.js",
+    "file": "pages/__layout.svelte-a286ac31.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -46,7 +46,7 @@
       "_stores-7295e635.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-938aa0e0.css"
+      "assets/pages/__layout.svelte-81a0ac7c.css"
     ],
     "assets": [
       "assets/KaTeX_AMS-Regular-0cdd387c.woff2",
@@ -149,91 +149,91 @@
     ]
   },
   "src/routes/monster.md": {
-    "file": "pages/monster.md-ee4e5962.js",
+    "file": "pages/monster.md-b5069dde.js",
     "src": "src/routes/monster.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-34828f51.js",
+      "_md_layout-b6f7a259.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/joinus.md": {
-    "file": "pages/joinus.md-a2522e72.js",
+    "file": "pages/joinus.md-e43ea570.js",
     "src": "src/routes/joinus.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-34828f51.js",
+      "_md_layout-b6f7a259.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/about.md": {
-    "file": "pages/about.md-5cef0629.js",
+    "file": "pages/about.md-69838578.js",
     "src": "src/routes/about.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-34828f51.js",
+      "_md_layout-b6f7a259.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/inner/index.md": {
-    "file": "pages/inner/index.md-f1e20205.js",
+    "file": "pages/inner/index.md-98d56428.js",
     "src": "src/routes/inner/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-34828f51.js",
+      "_md_layout-b6f7a259.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/inner/infra/servers.md": {
-    "file": "pages/inner/infra/servers.md-e04a856e.js",
+    "file": "pages/inner/infra/servers.md-08e06b1b.js",
     "src": "src/routes/inner/infra/servers.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-34828f51.js",
+      "_md_layout-b6f7a259.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/inner/infra/k0s.md": {
-    "file": "pages/inner/infra/k0s.md-d1cf28f3.js",
+    "file": "pages/inner/infra/k0s.md-e2431e96.js",
     "src": "src/routes/inner/infra/k0s.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-34828f51.js",
+      "_md_layout-b6f7a259.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/inner/infra/web.md": {
-    "file": "pages/inner/infra/web.md-b466a002.js",
+    "file": "pages/inner/infra/web.md-62e4bdb8.js",
     "src": "src/routes/inner/infra/web.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-34828f51.js",
+      "_md_layout-b6f7a259.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
@@ -261,104 +261,104 @@
     ]
   },
   "src/routes/blog/[slug].svelte": {
-    "file": "pages/blog/_slug_.svelte-a38babb1.js",
+    "file": "pages/blog/_slug_.svelte-507eb55d.js",
     "src": "src/routes/blog/[slug].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-34828f51.js",
+      "_md_layout-b6f7a259.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/docs/setup-node.md": {
-    "file": "pages/docs/setup-node.md-966236ad.js",
+    "file": "pages/docs/setup-node.md-931bf3c2.js",
     "src": "src/routes/docs/setup-node.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-34828f51.js",
+      "_md_layout-b6f7a259.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/docs/wsl2-setup.md": {
-    "file": "pages/docs/wsl2-setup.md-a240d3fe.js",
+    "file": "pages/docs/wsl2-setup.md-7f1326b4.js",
     "src": "src/routes/docs/wsl2-setup.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-34828f51.js",
+      "_md_layout-b6f7a259.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/docs/github.md": {
-    "file": "pages/docs/github.md-4067b951.js",
+    "file": "pages/docs/github.md-c837138f.js",
     "src": "src/routes/docs/github.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-34828f51.js",
+      "_md_layout-b6f7a259.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/docs/pepper.md": {
-    "file": "pages/docs/pepper.md-3c9e7efa.js",
+    "file": "pages/docs/pepper.md-cd32140a.js",
     "src": "src/routes/docs/pepper.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-34828f51.js",
+      "_md_layout-b6f7a259.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/news/index.md": {
-    "file": "pages/news/index.md-ee780a2a.js",
+    "file": "pages/news/index.md-89a161df.js",
     "src": "src/routes/news/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-34828f51.js",
+      "_md_layout-b6f7a259.js",
       "_fmt-158ed921.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js"
     ]
   },
   "src/routes/news/activities.md": {
-    "file": "pages/news/activities.md-04f3729e.js",
+    "file": "pages/news/activities.md-eaf743d5.js",
     "src": "src/routes/news/activities.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-34828f51.js",
+      "_md_layout-b6f7a259.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/news/[slug].svelte": {
-    "file": "pages/news/_slug_.svelte-5b83e8fa.js",
+    "file": "pages/news/_slug_.svelte-3e18c3d8.js",
     "src": "src/routes/news/[slug].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-34828f51.js",
+      "_md_layout-b6f7a259.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
@@ -377,78 +377,78 @@
     ]
   },
   "src/routes/dev/index.md": {
-    "file": "pages/dev/index.md-74db8da6.js",
+    "file": "pages/dev/index.md-b74b1f1b.js",
     "src": "src/routes/dev/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-34828f51.js",
+      "_md_layout-b6f7a259.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/dev/computer/index.md": {
-    "file": "pages/dev/computer/index.md-8c481715.js",
+    "file": "pages/dev/computer/index.md-06c26c45.js",
     "src": "src/routes/dev/computer/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-34828f51.js",
+      "_md_layout-b6f7a259.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/dev/computer/cpu/index.md": {
-    "file": "pages/dev/computer/cpu/index.md-56c70b09.js",
+    "file": "pages/dev/computer/cpu/index.md-53292777.js",
     "src": "src/routes/dev/computer/cpu/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-34828f51.js",
+      "_md_layout-b6f7a259.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/dev/computer/os/index.md": {
-    "file": "pages/dev/computer/os/index.md-bbed3b5d.js",
+    "file": "pages/dev/computer/os/index.md-a466f61a.js",
     "src": "src/routes/dev/computer/os/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-34828f51.js",
+      "_md_layout-b6f7a259.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/dev/denkou/index.md": {
-    "file": "pages/dev/denkou/index.md-80a524fe.js",
+    "file": "pages/dev/denkou/index.md-4a8dc3a6.js",
     "src": "src/routes/dev/denkou/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-34828f51.js",
+      "_md_layout-b6f7a259.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/dev/denkou/ne555synth/index.md": {
-    "file": "pages/dev/denkou/ne555synth/index.md-4c9233b1.js",
+    "file": "pages/dev/denkou/ne555synth/index.md-8d3ecb61.js",
     "src": "src/routes/dev/denkou/ne555synth/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-9e78a147.js",
-      "_md_layout-34828f51.js",
+      "_md_layout-b6f7a259.js",
       "_meta-5e902eb1.js",
       "_stores-7295e635.js",
       "_fmt-158ed921.js"
@@ -476,8 +476,8 @@
   "_fmt-158ed921.js": {
     "file": "chunks/fmt-158ed921.js"
   },
-  "_md_layout-34828f51.js": {
-    "file": "chunks/md_layout-34828f51.js",
+  "_md_layout-b6f7a259.js": {
+    "file": "chunks/md_layout-b6f7a259.js",
     "imports": [
       "_vendor-9e78a147.js",
       "_meta-5e902eb1.js",

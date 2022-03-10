@@ -20,13 +20,13 @@
     <meta property="og:description" content="神戸高専電算部のウェブサイト" data-svelte="svelte-1inund6" />
     <meta property="og:site_name" content="電算部.net" data-svelte="svelte-1inund6" />
     <link rel="stylesheet" href="/_app/assets/vendor-b00f1465.css" />
-    <link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-938aa0e0.css" />
-    <link rel="modulepreload" href="/_app/start-c5fb6e36.js" />
+    <link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-81a0ac7c.css" />
+    <link rel="modulepreload" href="/_app/start-b181c2d0.js" />
     <link rel="modulepreload" href="/_app/chunks/vendor-9e78a147.js" />
-    <link rel="modulepreload" href="/_app/pages/__layout.svelte-1c9ec046.js" />
+    <link rel="modulepreload" href="/_app/pages/__layout.svelte-a286ac31.js" />
     <link rel="modulepreload" href="/_app/chunks/stores-7295e635.js" />
-    <link rel="modulepreload" href="/_app/pages/docs/setup-node.md-966236ad.js" />
-    <link rel="modulepreload" href="/_app/chunks/md_layout-34828f51.js" />
+    <link rel="modulepreload" href="/_app/pages/docs/setup-node.md-931bf3c2.js" />
+    <link rel="modulepreload" href="/_app/chunks/md_layout-b6f7a259.js" />
     <link rel="modulepreload" href="/_app/chunks/meta-5e902eb1.js" />
     <link rel="modulepreload" href="/_app/chunks/fmt-158ed921.js" />
     <script>
@@ -82,14 +82,21 @@
         </header>
 
         <main class="main svelte-1flnfih">
-          <div>
-            <span class="inline-block">Post: 2021/06/03</span>
-            <span class="inline-block">Updated: <time datetime="2021-07-15T00:00:00.000Z">2021/07/15</time></span>
-            <span class="inline-block">Author: 山D, 山T</span>
-          </div>
-          <hr />
-
           <div class="md">
+            <div class="meta">
+              <span>meta = {</span>
+              <span class="iter"
+                ><span>post: &quot;2021/06/03&quot;</span>
+                <span>updated: &quot;<time datetime="2021-07-15T00:00:00.000Z">2021/07/15</time>&quot;</span>
+                <span
+                  >authors: [<span class="iter"><span>&quot;山D&quot;</span><span>&quot;山T&quot;</span></span
+                  >]</span
+                ></span
+              >
+              <span>};</span>
+            </div>
+            <hr />
+
             <h1>Nodejs環境構築</h1>
             <p>どうしても動かなかったら山Tまで</p>
             <p>まず，<a href="/wsl2-setup">WSLのセットアップ</a>を完了させておいてください。</p>
@@ -147,10 +154,10 @@ Use up/down arrow keys to select a version, return key to install, d to delete, 
       </div>
     </div>
 
-    <script type="module" data-hydrate="1kkztn7">
-      import { start } from "/_app/start-c5fb6e36.js"
+    <script type="module" data-hydrate="latibx">
+      import { start } from "/_app/start-b181c2d0.js"
       start({
-        target: document.querySelector('[data-hydrate="1kkztn7"]').parentNode,
+        target: document.querySelector('[data-hydrate="latibx"]').parentNode,
         paths: { base: "", assets: "" },
         session: {},
         route: true,
@@ -159,7 +166,7 @@ Use up/down arrow keys to select a version, return key to install, d to delete, 
         hydrate: {
           status: 200,
           error: null,
-          nodes: [import("/_app/pages/__layout.svelte-1c9ec046.js"), import("/_app/pages/docs/setup-node.md-966236ad.js")],
+          nodes: [import("/_app/pages/__layout.svelte-a286ac31.js"), import("/_app/pages/docs/setup-node.md-931bf3c2.js")],
           params: {},
         },
       })

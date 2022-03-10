@@ -20,13 +20,13 @@
     <meta property="og:description" content="神戸高専電算部のウェブサイト" data-svelte="svelte-1inund6" />
     <meta property="og:site_name" content="電算部.net" data-svelte="svelte-1inund6" />
     <link rel="stylesheet" href="/_app/assets/vendor-b00f1465.css" />
-    <link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-938aa0e0.css" />
-    <link rel="modulepreload" href="/_app/start-c5fb6e36.js" />
+    <link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-81a0ac7c.css" />
+    <link rel="modulepreload" href="/_app/start-b181c2d0.js" />
     <link rel="modulepreload" href="/_app/chunks/vendor-9e78a147.js" />
-    <link rel="modulepreload" href="/_app/pages/__layout.svelte-1c9ec046.js" />
+    <link rel="modulepreload" href="/_app/pages/__layout.svelte-a286ac31.js" />
     <link rel="modulepreload" href="/_app/chunks/stores-7295e635.js" />
-    <link rel="modulepreload" href="/_app/pages/news/_slug_.svelte-5b83e8fa.js" />
-    <link rel="modulepreload" href="/_app/chunks/md_layout-34828f51.js" />
+    <link rel="modulepreload" href="/_app/pages/news/_slug_.svelte-3e18c3d8.js" />
+    <link rel="modulepreload" href="/_app/chunks/md_layout-b6f7a259.js" />
     <link rel="modulepreload" href="/_app/chunks/meta-5e902eb1.js" />
     <link rel="modulepreload" href="/_app/chunks/fmt-158ed921.js" />
     <script>
@@ -82,12 +82,20 @@
         </header>
 
         <main class="main svelte-1flnfih">
-          <div>
-            <span class="inline-block">Post: <time datetime="2022-03-04T00:00:00.000Z">2022/03/04</time></span> <span class="inline-block">Author: 山D</span>
-          </div>
-          <hr />
-
           <div class="md">
+            <div class="meta">
+              <span>meta = {</span>
+              <span class="iter"
+                ><span>post: &quot;<time datetime="2022-03-04T00:00:00.000Z">2022/03/04</time>&quot;</span>
+                <span
+                  >authors: [<span class="iter"><span>&quot;山D&quot;</span></span
+                  >]</span
+                ></span
+              >
+              <span>};</span>
+            </div>
+            <hr />
+
             <!-- HTML_TAG_START -->
             <h2 id="tldr">TL;DR</h2>
             <p>年度末だしWebページのデザインを変えてみた．</p>
@@ -127,10 +135,10 @@
       </div>
     </div>
 
-    <script type="module" data-hydrate="1qx7c9j">
-      import { start } from "/_app/start-c5fb6e36.js"
+    <script type="module" data-hydrate="k02mtw">
+      import { start } from "/_app/start-b181c2d0.js"
       start({
-        target: document.querySelector('[data-hydrate="1qx7c9j"]').parentNode,
+        target: document.querySelector('[data-hydrate="k02mtw"]').parentNode,
         paths: { base: "", assets: "" },
         session: {},
         route: true,
@@ -139,7 +147,7 @@
         hydrate: {
           status: 200,
           error: null,
-          nodes: [import("/_app/pages/__layout.svelte-1c9ec046.js"), import("/_app/pages/news/_slug_.svelte-5b83e8fa.js")],
+          nodes: [import("/_app/pages/__layout.svelte-a286ac31.js"), import("/_app/pages/news/_slug_.svelte-3e18c3d8.js")],
           params: { slug: "2022-site-renew" },
         },
       })
