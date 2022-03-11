@@ -8,9 +8,10 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: kcctdensan/densan-web
+  API_BASE: ${{ secrets.ENV_API_BASE }}
 
 jobs:
-  gh-pages:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -32,3 +33,4 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          flavor: latest=true

@@ -2,7 +2,8 @@
 
 電子計算機部公式ウェブサイト
 
-[![Deploy](https://github.com/KCCTdensan/d3bu.net/actions/workflows/deploy.yml/badge.svg)](https://github.com/KCCTdensan/d3bu.net/actions/workflows/deploy.yml)
+[![gh-pages](https://github.com/KCCTdensan/KCCTdensan.github.io/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/KCCTdensan/KCCTdensan.github.io/actions/workflows/gh-pages.yml)
+[![container](https://github.com/KCCTdensan/KCCTdensan.github.io/actions/workflows/container.yml/badge.svg)](https://github.com/KCCTdensan/KCCTdensan.github.io/actions/workflows/container.yml)
 
 ## 解説
 
