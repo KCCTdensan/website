@@ -29,6 +29,9 @@
     <loc>https://d3bu.net/blog/hexo/</loc>
   </url>
   <url>
+    <loc>https://d3bu.net/dev/cluster/</loc>
+  </url>
+  <url>
     <loc>https://d3bu.net/dev/computer/</loc>
   </url>
   <url>
@@ -78,6 +81,9 @@
   </url>
   <url>
     <loc>https://d3bu.net/tools/py/</loc>
+  </url>
+  <url>
+    <loc>https://d3bu.net/dev/cluster/k0s/</loc>
   </url>
   <url>
     <loc>https://d3bu.net/dev/computer/cpu/</loc>
