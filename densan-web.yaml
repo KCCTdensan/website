@@ -3,6 +3,12 @@ kind: Namespace
 metadata:
   name: densan-web
 ---
+# apiVersion: v1
+# kind: Secret
+# metadata:
+#   name: github-secret
+#   namespace: densan-web
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -23,6 +29,21 @@ spec:
         image: ghcr.io/kcctdensan/densan-web:main
         ports:
         - containerPort: 3000
+      imagePullSecrets:
+      - name: github-secret
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: densan-web-listener
+  namespace: densan-web
+spec:
+  template:
+    spec:
+      containers:
+      - name: cloudflared
+        iamge: cloudflare/cloudflared
+        # listen densan-web
 ---
 apiVersion: v1
 kind: Service
