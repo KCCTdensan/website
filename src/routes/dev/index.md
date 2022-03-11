@@ -13,18 +13,24 @@ description: 開発開発開発開発
 
 - [計算機制作](computer/) : OS，CPUなど
 
-## 電子工作
+## ラズパイクラスタ
 
-パソコン部といえど電子工作くらいはします．
+余らせているラズパイを有効活用しています．
 
-- [電子工作](denkou/) : ちょっとしたIoTなど
-- [電工部](https://denko.d3bu.net) : 電子工作に特化した部活
+- [ラズパイクラスタ](cluster/)
 
 ## Web関連
 
 React，Vue，Svelteなどモダンなフレームワークを使用して遊んでいます．
 
 - [d3bu.net](https://github.com/KCCTdensan/d3bu.net) : このWebサイト
+
+## 電子工作
+
+パソコン部といえど電子工作くらいはします．
+
+- [電子工作](denkou/) : ちょっとしたIoTなど
+- [電工部](https://denko.d3bu.net) : 電子工作に特化した部活
 
 ## その他
 
