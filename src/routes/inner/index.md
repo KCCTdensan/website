@@ -20,7 +20,7 @@ noRobots: true
 
 - [Web運用ガイド](/inner/infra/web/)
 - [サーバーについて](/inner/infra/servers/)
-- [k0sクラスタ構築](/inner/infra/k0s/)
+- [ラズパイクラスタ](/dev/cluster/)
 
 ## ツール
 
