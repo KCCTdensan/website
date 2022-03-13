@@ -16,15 +16,26 @@ noRobots: true
 - [Nodejs環境構築](/docs/setup-node/)
 - [Pepper開発(Python)](/docs/pepper/)
 
+### イベント
+
+- [PC甲子園 環境構築 @演習室](/inner/pck-env/)
+
 ### インフラ
 
 - [Web運用ガイド](/inner/infra/web/)
 - [サーバーについて](/inner/infra/servers/)
+- [Cloudflared](/inner/infra/cloudflared/)
+- [ポスグレの設定](/inner/infra/postgresql/)
+- [Prometheusとポスグレの連携](/inner/infra/prom-pgdb/)
 - [ラズパイクラスタ](/dev/cluster/)
 
 ## ツール
 
 - [Python REPL](/tools/py)
+
+## リンク
+
+- [HackMD](https://hackmd.io/team/kcctdensan)
 
 ## 遺跡
 
