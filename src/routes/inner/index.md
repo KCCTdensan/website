@@ -24,9 +24,14 @@ noRobots: true
 
 - [Web運用ガイド](/inner/infra/web/)
 - [サーバーについて](/inner/infra/servers/)
+- [ラズパイ部室モニタ](/inner/infra/rpi-busitsu/)
+
+
 - [Cloudflared](/inner/infra/cloudflared/)
 - [ポスグレの設定](/inner/infra/postgresql/)
 - [Prometheusとポスグレの連携](/inner/infra/prom-pgdb/)
+
+
 - [ラズパイクラスタ](/dev/cluster/)
 
 ## ツール
