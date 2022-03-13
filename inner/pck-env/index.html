@@ -5,17 +5,17 @@
     <link rel="icon" href="../../favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-security-policy" content="" />
-    <title>Pepper開発環境構築 :: d3bu.net</title>
+    <title>PC甲子園 環境構築 @演習室 :: d3bu.net</title>
     <meta name="description" content="神戸高専電算部のウェブサイト" data-svelte="svelte-1inund6" />
-    <meta name="author" content="山D" data-svelte="svelte-1inund6" />
+    <meta name="author" content="KCCTdensan" data-svelte="svelte-1inund6" />
     <meta name="keywords" content="電算部,電子計算機部,神戸高専,KCCT,高専" data-svelte="svelte-1inund6" />
-    <meta name="robots" content="all" data-svelte="svelte-1inund6" />
+    <meta name="robots" content="none" data-svelte="svelte-1inund6" />
     <meta name="twitter:card" content="summary" data-svelte="svelte-1inund6" />
     <meta name="twitter:site" content="@kcct_densan" data-svelte="svelte-1inund6" />
     <meta name="twitter:creator" content="@kcct_densan" data-svelte="svelte-1inund6" />
-    <meta property="og:title" content="Pepper開発環境構築 :: d3bu.net" data-svelte="svelte-1inund6" />
+    <meta property="og:title" content="PC甲子園 環境構築 @演習室 :: d3bu.net" data-svelte="svelte-1inund6" />
     <meta property="og:type" content="website" data-svelte="svelte-1inund6" />
-    <meta property="og:url" content="https://d3bu.net/docs/pepper/" data-svelte="svelte-1inund6" />
+    <meta property="og:url" content="https://d3bu.net/inner/pck-env/" data-svelte="svelte-1inund6" />
     <meta property="og:image" content="https://d3bu.net/icon.png" data-svelte="svelte-1inund6" />
     <meta property="og:description" content="神戸高専電算部のウェブサイト" data-svelte="svelte-1inund6" />
     <meta property="og:site_name" content="電算部.net" data-svelte="svelte-1inund6" />
@@ -25,7 +25,7 @@
     <link rel="modulepreload" href="/_app/chunks/vendor-9e78a147.js" />
     <link rel="modulepreload" href="/_app/pages/__layout.svelte-9690608f.js" />
     <link rel="modulepreload" href="/_app/chunks/stores-7295e635.js" />
-    <link rel="modulepreload" href="/_app/pages/docs/pepper.md-cd32140a.js" />
+    <link rel="modulepreload" href="/_app/pages/inner/pck-env.md-9c86ab34.js" />
     <link rel="modulepreload" href="/_app/chunks/md_layout-b6f7a259.js" />
     <link rel="modulepreload" href="/_app/chunks/meta-5e902eb1.js" />
     <link rel="modulepreload" href="/_app/chunks/fmt-158ed921.js" />
@@ -65,15 +65,15 @@
               <li class="svelte-15jboos"><a sveltekit:prefetch href="/news/" class="svelte-15jboos">News</a></li>
               <li class="svelte-15jboos"><a sveltekit:prefetch href="/blog/" class="svelte-15jboos">Blog</a></li>
               <li class="svelte-15jboos"><a sveltekit:prefetch href="/dev/" class="svelte-15jboos">Dev</a></li>
-              <li class="svelte-15jboos"><a sveltekit:prefetch href="/inner/" class="svelte-15jboos">Inner</a></li>
+              <li class="svelte-15jboos active"><a sveltekit:prefetch href="/inner/" class="svelte-15jboos">Inner</a></li>
               <li class="svelte-15jboos"><a sveltekit:prefetch href="/joinus/" class="svelte-15jboos">JoinUs</a></li>
               <li class="svelte-15jboos"><a href="http://www.kobe-kosen.ac.jp" target="_blank" rel="external" class="svelte-15jboos">KCCT</a></li>
             </ul>
             <span class="svelte-15jboos">&gt; pwd</span>
             <ul class="breadcrumbs svelte-15jboos">
               <li class="svelte-15jboos"><a href="/" class="svelte-15jboos">/</a></li>
-              <li class="svelte-15jboos"><a href="/docs/" class="svelte-15jboos">docs/</a></li>
-              <li class="svelte-15jboos"><a href="/docs/pepper/" class="svelte-15jboos">pepper/</a></li>
+              <li class="svelte-15jboos"><a href="/inner/" class="svelte-15jboos">inner/</a></li>
+              <li class="svelte-15jboos"><a href="/inner/pck-env/" class="svelte-15jboos">pck-env/</a></li>
             </ul>
             <span class="svelte-15jboos">&gt; echo $PLATFORM</span>
             <span class="svelte-15jboos">gh-pages</span>
@@ -86,50 +86,101 @@
             <div class="meta">
               <span>meta = {</span>
               <span class="iter"
-                ><span>post: &quot;2021/05/13&quot;</span>
-                <span>updated: &quot;<time datetime="2021-07-03T00:00:00.000Z">2021/07/03</time>&quot;</span>
-                <span
-                  >authors: [<span class="iter"><span>&quot;山D&quot;</span></span
-                  >]</span
-                ></span
-              >
+                ><span>post: &quot;2021/09/11&quot;</span>
+                <span>updated: &quot;<time datetime="2021-12-28T08:18:16.220Z">2021/12/28</time>&quot;</span>
+              </span>
               <span>};</span>
             </div>
             <hr />
 
-            <h1>Pepper開発環境構築</h1>
-            <p>どうしても動かなかったら山Dまで</p>
-            <p>まず，<a href="/wsl2-setup">WSLのセットアップ</a>を完了させておいてください。</p>
-            <h3>必須パッケージのインストール</h3>
-            <pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> update
-<span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> -y <span class="token function">curl</span> python2 libpython2.7</code><!-- HTML_TAG_END --></pre>
-            <h2>実際に環境を構築する</h2>
-            <h3>SDKのダウンロードと展開</h3>
-            <pre
-              class="language-bash"
-            ><!-- HTML_TAG_START --><code class="language-bash"><span class="token function">sudo</span> <span class="token function">curl</span> -fsSL https://community-static.aldebaran.com/resources/2.5.10/Python%20SDK/pynaoqi-python2.7-2.5.7.1-linux64.tar.gz <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">tar</span> xz --no-same-owner -C/opt
-<span class="token function">sudo</span> <span class="token function">ln</span> -s pynaoqi-python2.7-2.5.7.1-linux64 /opt/pynaoqi
-<span class="token function">sudo</span> <span class="token function">chmod</span> <span class="token number">755</span> -R /opt/pynaoqi/lib/python2.7/site-packages</code><!-- HTML_TAG_END --></pre>
-            <h3>PATH通したりその他諸々</h3>
-            <pre
-              class="language-bash"
-            ><!-- HTML_TAG_START --><code class="language-bash"><span class="token builtin class-name">echo</span> <span class="token string">'export PYTHONPATH=/opt/pynaoqi/lib/python2.7/site-packages:$&#123;PYTHONPATH&#125;'</span> <span class="token operator">>></span> ~/.profile
-<span class="token builtin class-name">.</span> ~/<span class="token punctuation">&#123;</span>.bashrc,.profile<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-            <h2>動作確認</h2>
-            <pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash">python2</code><!-- HTML_TAG_END --></pre>
-            <p>Pythonのrepl(対話型のインターフェース)が起動します。</p>
-            <p>以下を打ってみてください。</p>
-            <pre class="language-python"><!-- HTML_TAG_START --><code class="language-python"><span class="token keyword">import</span> qi</code><!-- HTML_TAG_END --></pre>
+            <h1>PC甲子園 環境構築 @演習室</h1>
+            <h2>VSCode</h2>
             <p>
-              エラーが出ずにプロンプトが戻ってきましたか？<br />
-              戻ってきたなら成功です！ エラーを吐いたのなら失敗です！
+              <strong><a href="https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user" rel="nofollow">VSCode</a></strong>
             </p>
-            <h2>動作確認(おまけ)</h2>
-            <pre class="language-python2"><!-- HTML_TAG_START --><code class="language-python2">import qi
-s = qi.Session()
-s.connect(&quot;tcp://192.168.x.x:9559&quot;)
-tts = s.service(&quot;ALTextToSpeech&quot;)
-tts.say(&quot;布団が吹っ飛んだ&quot;)</code><!-- HTML_TAG_END --></pre>
+            <h2>コンパイラの使い方</h2>
+            <p>まず、コードを保存したフォルダを表示する。 そしてShiftキーを押しながら何も無い所を右クリックして</p>
+            <p><img src="https://i.imgur.com/WsHKMJy.png" /></p>
+            <p>コマンドウィンドウをここで開いてください。</p>
+            <pre
+              class="language-bash"
+            ><!-- HTML_TAG_START --><code class="language-bash">C:<span class="token punctuation"></span>Users<span class="token punctuation"></span>densanbu<span class="token punctuation"></span>Desktop<span class="token operator">></span>g++ hoge.cpp
+C:<span class="token punctuation"></span>Users<span class="token punctuation"></span>densanbu<span class="token punctuation"></span>Desktop<span class="token operator">></span>.<span class="token punctuation"></span>a.exe</code><!-- HTML_TAG_END --></pre>
+            <p>こんな感じで使える。細かいところは先輩に聞いてください。</p>
+            <h2>Windowsを起動する</h2>
+            <p>
+              電源起動→F9連打<br />
+              2行目のWindowsのやつを矢印キーで選択してEnter
+            </p>
+            <p>
+              <strong>USER: <code>densanbu</code></strong
+              ><br />
+              <strong>PASS: <code>kosen</code></strong>
+            </p>
+            <h2>ブラウザを入れる</h2>
+            <p>Chrome/Firefoxを入れる。</p>
+            <p>InternetExplorer(eの水色のロゴ)でchromeと検索 ダウンロードしたやつをクリックしてインストール</p>
+            <h2>コンパイラをインストール</h2>
+            <p>細かいとこは気にせずに。</p>
+            <p>
+              <a href="https://sourceforge.net/projects/mingw/files/Installer/mingw-get-setup.exe/download" rel="nofollow"
+                >https://sourceforge.net/projects/mingw/files/Installer/mingw-get-setup.exe/download</a
+              >
+            </p>
+            <p><img src="https://i.imgur.com/Mo8RuG9.png" /></p>
+            <p>適当に”次へ”的なやつを連打する。 そうするとインストールが完了する。</p>
+            <p>しかし実はこれはコンパイラをインストールするためのソフトのインストーラで，まだコンパイラ本体はインストールできていない。</p>
+            <p>なので次こそはコンパイラをインストール。</p>
+            <p>(勝手に開かれるウィンドウを閉じた人は)先ほどインストールしたソフトのショートカットがデスクトップに表示されてるはずなので，それをクリック。</p>
+            <p><img src="https://i.imgur.com/zKldKQB.png" /></p>
+            <p><img src="https://i.imgur.com/jkJruSk.png" /></p>
+            <p>こんな感じで，</p>
+            <ul>
+              <li><code>mingw-developer-toolkit</code></li>
+              <li><code>mingw32-base</code></li>
+              <li><code>mingw-gcc-g++</code></li>
+              <li><code>msys-base</code></li>
+            </ul>
+            <p>にチェックする。 (何個かは勝手にチェックされるはず。)</p>
+            <p><img src="https://i.imgur.com/Lymfn3x.png" /></p>
+            <p>それが終わったら、その変更を適用する。</p>
+            <p><img src="https://i.imgur.com/hlDQsl4.png" /></p>
+            <p>左上のメニューから，<code>Apply Changes</code>をクリック。 ほんで出てきたウィンドウの<code>Apply</code>ボタンを押す。 するとインストールが始まります。</p>
+            <h3>PATH通す</h3>
+            <p>これでコンパイラをインストールできました。 しかしこれをコマンドとして使用するためには<em>PATHを通す</em>という儀式を行わなければいけません。</p>
+            <p>ということで<code>Windown + R</code>で”ファイル名を指定して実行”というものを開いて，<code>control</code>と入力する。</p>
+            <p><img src="https://i.imgur.com/k9ltNv4.png" /></p>
+            <p>Enterでコンパネが開くと思うので，検索欄に<code>path</code>と入力して，出てきた”環境変数を編集”をクリックする。</p>
+            <p><img src="https://i.imgur.com/UL5PksP.png" /></p>
+            <p>Pathというやつを選択して”編集”をクリックする。</p>
+            <p><img src="https://i.imgur.com/ruKIcDd.png" /></p>
+            <p>こんな感じの画面が表示されるはず。 今後これを”タイプA”とする。 (内容は人によって変わるかも。)</p>
+            <p><img src="https://i.imgur.com/WWTl4jS.png" /></p>
+            <p>場合によってはこんな感じかも。(これは”タイプB”とする。)</p>
+            <p><img src="https://i.imgur.com/zB6klhi.png" /></p>
+            <h3>タイプAの人</h3>
+            <p>“新規”を押して，<code>C:\MinGW\bin</code>を入力して，OKを連打してウィンドウを閉じる。 それだけ。</p>
+            <p><img src="https://i.imgur.com/BCCazFI.png" /></p>
+            <h3>タイプBの人</h3>
+            <p><img src="https://i.imgur.com/gimgeX0.png" /></p>
+            <p>こんな感じ。 最後に<code>C:\MinGW\bin;</code>を入力する。 それで終わり。</p>
+            <h3>その後</h3>
+            <p>タイプAもタイプBも一旦集合。てか今後手順が分かれることはないのでこれからは普通に読み進めてください。</p>
+            <p>さて，忘れていたかもしれませんがそろそろコンパイラのインストールが終わっているはずです。</p>
+            <p><img src="https://i.imgur.com/G14Ts4A.png" /></p>
+            <p>こんなふうに，“All changes were applied successfully;“と出ていたら成功です。 失敗してたら先輩に聞きましょう。</p>
+            <p>そこで一旦サインアウトします。(<strong>これは儀式に必要な手順</strong>)</p>
+            <p><img src="https://i.imgur.com/VV88QkY.png" /></p>
+            <p>そしてもっかいログインします。</p>
+            <h2>コンパイラ検証編</h2>
+            <p>正常にインストールできているか試します。</p>
+            <p><img src="https://i.imgur.com/RYXnq5Q.png" /></p>
+            <p>これでコマンドプロンプトが起動します。</p>
+            <p><img src="https://i.imgur.com/ksHbv6G.png" /></p>
+            <p><code>gcc</code>とだけ打って，こんな感じのエラーが出てたら正解。 出てなかったら手を挙げてください。</p>
+            <h2>エディタ</h2>
+            <p>VSCode入れましょう: <a href="https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user" rel="nofollow">URL</a></p>
+            <p>エディタの環境構築は近所の人に教えてもらいましょう。</p>
           </div>
         </main>
         <footer class="footer svelte-1flnfih">
@@ -160,10 +211,10 @@ tts.say(&quot;布団が吹っ飛んだ&quot;)</code><!-- HTML_TAG_END --></pre>
       </div>
     </div>
 
-    <script type="module" data-hydrate="cxa86">
+    <script type="module" data-hydrate="h1djpi">
       import { start } from "/_app/start-8af6d57d.js"
       start({
-        target: document.querySelector('[data-hydrate="cxa86"]').parentNode,
+        target: document.querySelector('[data-hydrate="h1djpi"]').parentNode,
         paths: { base: "", assets: "" },
         session: {},
         route: true,
@@ -172,7 +223,7 @@ tts.say(&quot;布団が吹っ飛んだ&quot;)</code><!-- HTML_TAG_END --></pre>
         hydrate: {
           status: 200,
           error: null,
-          nodes: [import("/_app/pages/__layout.svelte-9690608f.js"), import("/_app/pages/docs/pepper.md-cd32140a.js")],
+          nodes: [import("/_app/pages/__layout.svelte-9690608f.js"), import("/_app/pages/inner/pck-env.md-9c86ab34.js")],
           params: {},
         },
       })

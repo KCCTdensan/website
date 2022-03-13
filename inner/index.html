@@ -21,11 +21,11 @@
     <meta property="og:site_name" content="電算部.net" data-svelte="svelte-1inund6" />
     <link rel="stylesheet" href="/_app/assets/vendor-b00f1465.css" />
     <link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-81a0ac7c.css" />
-    <link rel="modulepreload" href="/_app/start-15377e65.js" />
+    <link rel="modulepreload" href="/_app/start-8af6d57d.js" />
     <link rel="modulepreload" href="/_app/chunks/vendor-9e78a147.js" />
-    <link rel="modulepreload" href="/_app/pages/__layout.svelte-84219be5.js" />
+    <link rel="modulepreload" href="/_app/pages/__layout.svelte-9690608f.js" />
     <link rel="modulepreload" href="/_app/chunks/stores-7295e635.js" />
-    <link rel="modulepreload" href="/_app/pages/inner/index.md-98d56428.js" />
+    <link rel="modulepreload" href="/_app/pages/inner/index.md-0f40f887.js" />
     <link rel="modulepreload" href="/_app/chunks/md_layout-b6f7a259.js" />
     <link rel="modulepreload" href="/_app/chunks/meta-5e902eb1.js" />
     <link rel="modulepreload" href="/_app/chunks/fmt-158ed921.js" />
@@ -101,15 +101,31 @@
               <li><a href="/docs/setup-node/">Nodejs環境構築</a></li>
               <li><a href="/docs/pepper/">Pepper開発(Python)</a></li>
             </ul>
+            <h3>イベント</h3>
+            <ul>
+              <li><a href="/inner/pck-env/">PC甲子園 環境構築 @演習室</a></li>
+            </ul>
             <h3>インフラ</h3>
             <ul>
               <li><a href="/inner/infra/web/">Web運用ガイド</a></li>
               <li><a href="/inner/infra/servers/">サーバーについて</a></li>
-              <li><a href="/inner/infra/k0s/">k0sクラスタ構築</a></li>
+              <li><a href="/inner/infra/rpi-busitsu/">ラズパイ部室モニタ</a></li>
+            </ul>
+            <ul>
+              <li><a href="/inner/infra/cloudflared/">Cloudflared</a></li>
+              <li><a href="/inner/infra/postgresql/">ポスグレの設定</a></li>
+              <li><a href="/inner/infra/prom-pgdb/">Prometheusとポスグレの連携</a></li>
+            </ul>
+            <ul>
+              <li><a href="/dev/cluster/">ラズパイクラスタ</a></li>
             </ul>
             <h2>ツール</h2>
             <ul>
               <li><a href="/tools/py">Python REPL</a></li>
+            </ul>
+            <h2>リンク</h2>
+            <ul>
+              <li><a href="https://hackmd.io/team/kcctdensan" rel="nofollow">HackMD</a></li>
             </ul>
             <h2>遺跡</h2>
             <ul>
@@ -153,10 +169,10 @@
       </div>
     </div>
 
-    <script type="module" data-hydrate="vs1iub">
-      import { start } from "/_app/start-15377e65.js"
+    <script type="module" data-hydrate="dvwbwd">
+      import { start } from "/_app/start-8af6d57d.js"
       start({
-        target: document.querySelector('[data-hydrate="vs1iub"]').parentNode,
+        target: document.querySelector('[data-hydrate="dvwbwd"]').parentNode,
         paths: { base: "", assets: "" },
         session: {},
         route: true,
@@ -165,7 +181,7 @@
         hydrate: {
           status: 200,
           error: null,
-          nodes: [import("/_app/pages/__layout.svelte-84219be5.js"), import("/_app/pages/inner/index.md-98d56428.js")],
+          nodes: [import("/_app/pages/__layout.svelte-9690608f.js"), import("/_app/pages/inner/index.md-0f40f887.js")],
           params: {},
         },
       })

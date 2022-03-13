@@ -2,22 +2,22 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="../favicon.ico" />
+    <link rel="icon" href="../../../favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-security-policy" content="" />
-    <title>Dev :: d3bu.net</title>
-    <meta name="description" content="開発開発開発開発" data-svelte="svelte-1inund6" />
+    <title>Cloudflared :: d3bu.net</title>
+    <meta name="description" content="神戸高専電算部のウェブサイト" data-svelte="svelte-1inund6" />
     <meta name="author" content="KCCTdensan" data-svelte="svelte-1inund6" />
     <meta name="keywords" content="電算部,電子計算機部,神戸高専,KCCT,高専" data-svelte="svelte-1inund6" />
-    <meta name="robots" content="all" data-svelte="svelte-1inund6" />
+    <meta name="robots" content="none" data-svelte="svelte-1inund6" />
     <meta name="twitter:card" content="summary" data-svelte="svelte-1inund6" />
     <meta name="twitter:site" content="@kcct_densan" data-svelte="svelte-1inund6" />
     <meta name="twitter:creator" content="@kcct_densan" data-svelte="svelte-1inund6" />
-    <meta property="og:title" content="Dev :: d3bu.net" data-svelte="svelte-1inund6" />
+    <meta property="og:title" content="Cloudflared :: d3bu.net" data-svelte="svelte-1inund6" />
     <meta property="og:type" content="website" data-svelte="svelte-1inund6" />
-    <meta property="og:url" content="https://d3bu.net/dev/" data-svelte="svelte-1inund6" />
+    <meta property="og:url" content="https://d3bu.net/inner/infra/cloudflared/" data-svelte="svelte-1inund6" />
     <meta property="og:image" content="https://d3bu.net/icon.png" data-svelte="svelte-1inund6" />
-    <meta property="og:description" content="開発開発開発開発" data-svelte="svelte-1inund6" />
+    <meta property="og:description" content="神戸高専電算部のウェブサイト" data-svelte="svelte-1inund6" />
     <meta property="og:site_name" content="電算部.net" data-svelte="svelte-1inund6" />
     <link rel="stylesheet" href="/_app/assets/vendor-b00f1465.css" />
     <link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-81a0ac7c.css" />
@@ -25,7 +25,7 @@
     <link rel="modulepreload" href="/_app/chunks/vendor-9e78a147.js" />
     <link rel="modulepreload" href="/_app/pages/__layout.svelte-9690608f.js" />
     <link rel="modulepreload" href="/_app/chunks/stores-7295e635.js" />
-    <link rel="modulepreload" href="/_app/pages/dev/index.md-ea40fae0.js" />
+    <link rel="modulepreload" href="/_app/pages/inner/infra/cloudflared.md-e8103df7.js" />
     <link rel="modulepreload" href="/_app/chunks/md_layout-b6f7a259.js" />
     <link rel="modulepreload" href="/_app/chunks/meta-5e902eb1.js" />
     <link rel="modulepreload" href="/_app/chunks/fmt-158ed921.js" />
@@ -64,15 +64,17 @@
               <li class="svelte-15jboos"><a sveltekit:prefetch href="/about/" class="svelte-15jboos">About</a></li>
               <li class="svelte-15jboos"><a sveltekit:prefetch href="/news/" class="svelte-15jboos">News</a></li>
               <li class="svelte-15jboos"><a sveltekit:prefetch href="/blog/" class="svelte-15jboos">Blog</a></li>
-              <li class="svelte-15jboos active"><a sveltekit:prefetch href="/dev/" class="svelte-15jboos">Dev</a></li>
-              <li class="svelte-15jboos"><a sveltekit:prefetch href="/inner/" class="svelte-15jboos">Inner</a></li>
+              <li class="svelte-15jboos"><a sveltekit:prefetch href="/dev/" class="svelte-15jboos">Dev</a></li>
+              <li class="svelte-15jboos active"><a sveltekit:prefetch href="/inner/" class="svelte-15jboos">Inner</a></li>
               <li class="svelte-15jboos"><a sveltekit:prefetch href="/joinus/" class="svelte-15jboos">JoinUs</a></li>
               <li class="svelte-15jboos"><a href="http://www.kobe-kosen.ac.jp" target="_blank" rel="external" class="svelte-15jboos">KCCT</a></li>
             </ul>
             <span class="svelte-15jboos">&gt; pwd</span>
             <ul class="breadcrumbs svelte-15jboos">
               <li class="svelte-15jboos"><a href="/" class="svelte-15jboos">/</a></li>
-              <li class="svelte-15jboos"><a href="/dev/" class="svelte-15jboos">dev/</a></li>
+              <li class="svelte-15jboos"><a href="/inner/" class="svelte-15jboos">inner/</a></li>
+              <li class="svelte-15jboos"><a href="/inner/infra/" class="svelte-15jboos">infra/</a></li>
+              <li class="svelte-15jboos"><a href="/inner/infra/cloudflared/" class="svelte-15jboos">cloudflared/</a></li>
             </ul>
             <span class="svelte-15jboos">&gt; echo $PLATFORM</span>
             <span class="svelte-15jboos">gh-pages</span>
@@ -82,32 +84,49 @@
 
         <main class="main svelte-1flnfih">
           <div class="md">
-            <h1>開発</h1>
-            <p>開発やってます．</p>
-            <h2>低レイヤ</h2>
-            <p>真の意味での自作コンピュータを目指します．</p>
+            <div class="meta">
+              <span>meta = {</span>
+              <span class="iter"
+                ><span>post: &quot;2021/08/14&quot;</span>
+                <span>updated: &quot;<time datetime="2021-12-28T08:13:10.738Z">2021/12/28</time>&quot;</span>
+              </span>
+              <span>};</span>
+            </div>
+            <hr />
+
+            <h1>Cloudflared</h1>
+            <h2>サーバー側</h2>
+            <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined"># cloudflared tunnel login
+# cloudflared tunnel create hoge
+# cloudflared tunnel route dns hoge hoge.fuga.net # ここらへんは手動でやってもいい
+# cloudflared tunnel route dns hoge hoge-ssh.fuga.net # 上に同じく
+# vim ~/.cloudflared/config.yaml
+# cloudflared service install</code><!-- HTML_TAG_END --></pre>
+            <h2>config.yaml</h2>
+            <pre class="language-yaml"><!-- HTML_TAG_START --><code class="language-yaml"><span class="token key atrule">tunnel</span><span class="token punctuation">:</span> piyo
+<span class="token key atrule">credentials-file</span><span class="token punctuation">:</span> /root/.cloudflared/piyo.json
+
+<span class="token key atrule">ingress</span><span class="token punctuation">:</span>
+<span class="token punctuation">-</span> <span class="token key atrule">hostname</span><span class="token punctuation">:</span> hoge.fuga.net
+  <span class="token key atrule">service</span><span class="token punctuation">:</span> http<span class="token punctuation">:</span>//localhost<span class="token punctuation">:</span><span class="token number">80</span>
+<span class="token punctuation">-</span> <span class="token key atrule">hostname</span><span class="token punctuation">:</span> hoge<span class="token punctuation">-</span>ssh.fuga.net
+  <span class="token key atrule">service</span><span class="token punctuation">:</span> ssh<span class="token punctuation">:</span>//localhost<span class="token punctuation">:</span><span class="token number">22</span>
+<span class="token punctuation">-</span> <span class="token key atrule">service</span><span class="token punctuation">:</span> http_status<span class="token punctuation">:</span><span class="token number">404</span></code><!-- HTML_TAG_END --></pre>
+            <h2>クライアント側</h2>
+            <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">% cloudflared access ssh-config --hostname hoge-ssh.d3bu.net</code><!-- HTML_TAG_END --></pre>
+            <h2>参考</h2>
             <ul>
-              <li><a href="computer/">計算機制作</a> : OS，CPUなど</li>
-            </ul>
-            <h2>ラズパイクラスタ</h2>
-            <p>余らせているラズパイを有効活用しています．</p>
-            <ul>
-              <li><a href="cluster/">ラズパイクラスタ</a></li>
-            </ul>
-            <h2>Web関連</h2>
-            <p>React，Vue，Svelteなどモダンなフレームワークを使用して遊んでいます．</p>
-            <ul>
-              <li><a href="https://github.com/KCCTdensan/d3bu.net" rel="nofollow">d3bu.net</a> : このWebサイト</li>
-            </ul>
-            <h2>電子工作</h2>
-            <p>パソコン部といえど電子工作くらいはします．</p>
-            <ul>
-              <li><a href="denkou/">電子工作</a> : ちょっとしたIoTなど</li>
-              <li><a href="https://denko.d3bu.net" rel="nofollow">電工部</a> : 電子工作に特化した部活</li>
-            </ul>
-            <h2>その他</h2>
-            <ul>
-              <li><a href="/tools/py/">Python REPL</a></li>
+              <li>
+                <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/tunnel-guide" rel="nofollow"
+                  >https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/tunnel-guide</a
+                >
+              </li>
+              <li>
+                <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/configuration-file/ingress" rel="nofollow"
+                  >https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/configuration-file/ingress</a
+                >
+              </li>
+              <li><a href="https://zenn.dev/grarich/articles/4fcf016080fbcb" rel="nofollow">https://zenn.dev/grarich/articles/4fcf016080fbcb</a></li>
             </ul>
           </div>
         </main>
@@ -139,10 +158,10 @@
       </div>
     </div>
 
-    <script type="module" data-hydrate="ol0no7">
+    <script type="module" data-hydrate="y1ztuc">
       import { start } from "/_app/start-8af6d57d.js"
       start({
-        target: document.querySelector('[data-hydrate="ol0no7"]').parentNode,
+        target: document.querySelector('[data-hydrate="y1ztuc"]').parentNode,
         paths: { base: "", assets: "" },
         session: {},
         route: true,
@@ -151,7 +170,7 @@
         hydrate: {
           status: 200,
           error: null,
-          nodes: [import("/_app/pages/__layout.svelte-9690608f.js"), import("/_app/pages/dev/index.md-ea40fae0.js")],
+          nodes: [import("/_app/pages/__layout.svelte-9690608f.js"), import("/_app/pages/inner/infra/cloudflared.md-e8103df7.js")],
           params: {},
         },
       })

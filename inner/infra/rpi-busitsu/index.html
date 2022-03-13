@@ -2,22 +2,22 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="../favicon.ico" />
+    <link rel="icon" href="../../../favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-security-policy" content="" />
-    <title>Dev :: d3bu.net</title>
-    <meta name="description" content="開発開発開発開発" data-svelte="svelte-1inund6" />
+    <title>ラズパイ部室モニタについて :: d3bu.net</title>
+    <meta name="description" content="神戸高専電算部のウェブサイト" data-svelte="svelte-1inund6" />
     <meta name="author" content="KCCTdensan" data-svelte="svelte-1inund6" />
     <meta name="keywords" content="電算部,電子計算機部,神戸高専,KCCT,高専" data-svelte="svelte-1inund6" />
-    <meta name="robots" content="all" data-svelte="svelte-1inund6" />
+    <meta name="robots" content="none" data-svelte="svelte-1inund6" />
     <meta name="twitter:card" content="summary" data-svelte="svelte-1inund6" />
     <meta name="twitter:site" content="@kcct_densan" data-svelte="svelte-1inund6" />
     <meta name="twitter:creator" content="@kcct_densan" data-svelte="svelte-1inund6" />
-    <meta property="og:title" content="Dev :: d3bu.net" data-svelte="svelte-1inund6" />
+    <meta property="og:title" content="ラズパイ部室モニタについて :: d3bu.net" data-svelte="svelte-1inund6" />
     <meta property="og:type" content="website" data-svelte="svelte-1inund6" />
-    <meta property="og:url" content="https://d3bu.net/dev/" data-svelte="svelte-1inund6" />
+    <meta property="og:url" content="https://d3bu.net/inner/infra/rpi-busitsu/" data-svelte="svelte-1inund6" />
     <meta property="og:image" content="https://d3bu.net/icon.png" data-svelte="svelte-1inund6" />
-    <meta property="og:description" content="開発開発開発開発" data-svelte="svelte-1inund6" />
+    <meta property="og:description" content="神戸高専電算部のウェブサイト" data-svelte="svelte-1inund6" />
     <meta property="og:site_name" content="電算部.net" data-svelte="svelte-1inund6" />
     <link rel="stylesheet" href="/_app/assets/vendor-b00f1465.css" />
     <link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-81a0ac7c.css" />
@@ -25,7 +25,7 @@
     <link rel="modulepreload" href="/_app/chunks/vendor-9e78a147.js" />
     <link rel="modulepreload" href="/_app/pages/__layout.svelte-9690608f.js" />
     <link rel="modulepreload" href="/_app/chunks/stores-7295e635.js" />
-    <link rel="modulepreload" href="/_app/pages/dev/index.md-ea40fae0.js" />
+    <link rel="modulepreload" href="/_app/pages/inner/infra/rpi-busitsu.md-f99d965a.js" />
     <link rel="modulepreload" href="/_app/chunks/md_layout-b6f7a259.js" />
     <link rel="modulepreload" href="/_app/chunks/meta-5e902eb1.js" />
     <link rel="modulepreload" href="/_app/chunks/fmt-158ed921.js" />
@@ -64,15 +64,17 @@
               <li class="svelte-15jboos"><a sveltekit:prefetch href="/about/" class="svelte-15jboos">About</a></li>
               <li class="svelte-15jboos"><a sveltekit:prefetch href="/news/" class="svelte-15jboos">News</a></li>
               <li class="svelte-15jboos"><a sveltekit:prefetch href="/blog/" class="svelte-15jboos">Blog</a></li>
-              <li class="svelte-15jboos active"><a sveltekit:prefetch href="/dev/" class="svelte-15jboos">Dev</a></li>
-              <li class="svelte-15jboos"><a sveltekit:prefetch href="/inner/" class="svelte-15jboos">Inner</a></li>
+              <li class="svelte-15jboos"><a sveltekit:prefetch href="/dev/" class="svelte-15jboos">Dev</a></li>
+              <li class="svelte-15jboos active"><a sveltekit:prefetch href="/inner/" class="svelte-15jboos">Inner</a></li>
               <li class="svelte-15jboos"><a sveltekit:prefetch href="/joinus/" class="svelte-15jboos">JoinUs</a></li>
               <li class="svelte-15jboos"><a href="http://www.kobe-kosen.ac.jp" target="_blank" rel="external" class="svelte-15jboos">KCCT</a></li>
             </ul>
             <span class="svelte-15jboos">&gt; pwd</span>
             <ul class="breadcrumbs svelte-15jboos">
               <li class="svelte-15jboos"><a href="/" class="svelte-15jboos">/</a></li>
-              <li class="svelte-15jboos"><a href="/dev/" class="svelte-15jboos">dev/</a></li>
+              <li class="svelte-15jboos"><a href="/inner/" class="svelte-15jboos">inner/</a></li>
+              <li class="svelte-15jboos"><a href="/inner/infra/" class="svelte-15jboos">infra/</a></li>
+              <li class="svelte-15jboos"><a href="/inner/infra/rpi-busitsu/" class="svelte-15jboos">rpi-busitsu/</a></li>
             </ul>
             <span class="svelte-15jboos">&gt; echo $PLATFORM</span>
             <span class="svelte-15jboos">gh-pages</span>
@@ -82,33 +84,51 @@
 
         <main class="main svelte-1flnfih">
           <div class="md">
-            <h1>開発</h1>
-            <p>開発やってます．</p>
-            <h2>低レイヤ</h2>
-            <p>真の意味での自作コンピュータを目指します．</p>
+            <div class="meta">
+              <span>meta = {</span>
+              <span class="iter"
+                ><span>post: &quot;<time datetime="2022-03-13T00:00:00.000Z">2022/03/13</time>&quot;</span>
+              </span>
+              <span>};</span>
+            </div>
+            <hr />
+
+            <h1>ラズパイ部室モニタについて</h1>
+            <p>リポジトリ : <a href="https://github.com/KCCTdensan/busitsu" rel="nofollow">https://github.com/KCCTdensan/busitsu</a></p>
+            <h2>仕様</h2>
+            <p>温度，湿度を測る．</p>
+            <p>Prometheusのexporterっぽいやつを実装してる．</p>
+            <p>現状，rpi 4B<code>192.168.100.150(hiroshi)</code>で動作中．</p>
+            <h2>(裏)仕様</h2>
+            <p>誰か直してください．</p>
             <ul>
-              <li><a href="computer/">計算機制作</a> : OS，CPUなど</li>
+              <li>ファイル(シリアル)を読むスレッドが落ちても何もしない為，センサが抜き差しされるごとに(プロセスの)再起動が必要</li>
+              <li>フルのvibe-dに依存してしまっている為ビルドが重い(4Bでも重い)</li>
             </ul>
-            <h2>ラズパイクラスタ</h2>
-            <p>余らせているラズパイを有効活用しています．</p>
-            <ul>
-              <li><a href="cluster/">ラズパイクラスタ</a></li>
-            </ul>
-            <h2>Web関連</h2>
-            <p>React，Vue，Svelteなどモダンなフレームワークを使用して遊んでいます．</p>
-            <ul>
-              <li><a href="https://github.com/KCCTdensan/d3bu.net" rel="nofollow">d3bu.net</a> : このWebサイト</li>
-            </ul>
-            <h2>電子工作</h2>
-            <p>パソコン部といえど電子工作くらいはします．</p>
-            <ul>
-              <li><a href="denkou/">電子工作</a> : ちょっとしたIoTなど</li>
-              <li><a href="https://denko.d3bu.net" rel="nofollow">電工部</a> : 電子工作に特化した部活</li>
-            </ul>
-            <h2>その他</h2>
-            <ul>
-              <li><a href="/tools/py/">Python REPL</a></li>
-            </ul>
+            <h2>インストール</h2>
+            <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined"># apt-get update
+# apt-get install -y runit runit-run git ldc dub
+# apt-get install -y build-essential zlib1g-dev libssl-dev # vibe-d
+# git clone https://github.com/KCCTdensan/busitsu /opt/busitsu
+# cd /opt/busitsu/rpi
+# dub build -b release # クッソ時間がかかる
+# mkdir -p /etc/sv/busitsu
+# touch /etc/sv/busitsu/run
+# chmod +x /etc/sv/busitsu/run</code><!-- HTML_TAG_END --></pre>
+            <p><code>/etc/sv/busitsu/run</code>を以下のようにする．</p>
+            <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">#!/usr/bin/env sh
+exec /opt/busitsu/rpi/busitsu</code><!-- HTML_TAG_END --></pre>
+            <p>また，<code>/opt/busitsu/rpi/source/busitsu/app.d</code>の<code>/dev/ttyUSB0</code>を適当なパスに修正する． (当然，編集後にはビルドが必要)</p>
+            <p>最後にサービスを有効化・起動させる．</p>
+            <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined"># ln -s /etc/sv/busitsu /etc/service/busitsu</code><!-- HTML_TAG_END --></pre>
+            <h2>Prometheusの設定</h2>
+            <p><code>prometheus.yml</code>の<code>scrape_configs:</code>に以下を追記する．</p>
+            <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">  - job_name: &#39;busitsu&#39;
+    static_configs:
+    - targets: [&#39;hiroshi.d3bu.net:8080&#39;]</code><!-- HTML_TAG_END --></pre>
+            <p>サービスをreloadすれば完成．</p>
+            <h2>(おまけ) Grafanaの設定</h2>
+            <p><code>busitsu_temp{}</code>と<code>busitsu_humid{}</code>を使う．</p>
           </div>
         </main>
         <footer class="footer svelte-1flnfih">
@@ -139,10 +159,10 @@
       </div>
     </div>
 
-    <script type="module" data-hydrate="ol0no7">
+    <script type="module" data-hydrate="1yma8nf">
       import { start } from "/_app/start-8af6d57d.js"
       start({
-        target: document.querySelector('[data-hydrate="ol0no7"]').parentNode,
+        target: document.querySelector('[data-hydrate="1yma8nf"]').parentNode,
         paths: { base: "", assets: "" },
         session: {},
         route: true,
@@ -151,7 +171,7 @@
         hydrate: {
           status: 200,
           error: null,
-          nodes: [import("/_app/pages/__layout.svelte-9690608f.js"), import("/_app/pages/dev/index.md-ea40fae0.js")],
+          nodes: [import("/_app/pages/__layout.svelte-9690608f.js"), import("/_app/pages/inner/infra/rpi-busitsu.md-f99d965a.js")],
           params: {},
         },
       })

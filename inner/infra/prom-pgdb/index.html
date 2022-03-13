@@ -5,7 +5,7 @@
     <link rel="icon" href="../../../favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-security-policy" content="" />
-    <title>部室のサーバーについて :: d3bu.net</title>
+    <title>Prometheusとポスグレの連携 :: d3bu.net</title>
     <meta name="description" content="神戸高専電算部のウェブサイト" data-svelte="svelte-1inund6" />
     <meta name="author" content="KCCTdensan" data-svelte="svelte-1inund6" />
     <meta name="keywords" content="電算部,電子計算機部,神戸高専,KCCT,高専" data-svelte="svelte-1inund6" />
@@ -13,9 +13,9 @@
     <meta name="twitter:card" content="summary" data-svelte="svelte-1inund6" />
     <meta name="twitter:site" content="@kcct_densan" data-svelte="svelte-1inund6" />
     <meta name="twitter:creator" content="@kcct_densan" data-svelte="svelte-1inund6" />
-    <meta property="og:title" content="部室のサーバーについて :: d3bu.net" data-svelte="svelte-1inund6" />
+    <meta property="og:title" content="Prometheusとポスグレの連携 :: d3bu.net" data-svelte="svelte-1inund6" />
     <meta property="og:type" content="website" data-svelte="svelte-1inund6" />
-    <meta property="og:url" content="https://d3bu.net/inner/infra/servers/" data-svelte="svelte-1inund6" />
+    <meta property="og:url" content="https://d3bu.net/inner/infra/prom-pgdb/" data-svelte="svelte-1inund6" />
     <meta property="og:image" content="https://d3bu.net/icon.png" data-svelte="svelte-1inund6" />
     <meta property="og:description" content="神戸高専電算部のウェブサイト" data-svelte="svelte-1inund6" />
     <meta property="og:site_name" content="電算部.net" data-svelte="svelte-1inund6" />
@@ -25,7 +25,7 @@
     <link rel="modulepreload" href="/_app/chunks/vendor-9e78a147.js" />
     <link rel="modulepreload" href="/_app/pages/__layout.svelte-9690608f.js" />
     <link rel="modulepreload" href="/_app/chunks/stores-7295e635.js" />
-    <link rel="modulepreload" href="/_app/pages/inner/infra/servers.md-08e06b1b.js" />
+    <link rel="modulepreload" href="/_app/pages/inner/infra/prom-pgdb.md-dfdc1487.js" />
     <link rel="modulepreload" href="/_app/chunks/md_layout-b6f7a259.js" />
     <link rel="modulepreload" href="/_app/chunks/meta-5e902eb1.js" />
     <link rel="modulepreload" href="/_app/chunks/fmt-158ed921.js" />
@@ -74,7 +74,7 @@
               <li class="svelte-15jboos"><a href="/" class="svelte-15jboos">/</a></li>
               <li class="svelte-15jboos"><a href="/inner/" class="svelte-15jboos">inner/</a></li>
               <li class="svelte-15jboos"><a href="/inner/infra/" class="svelte-15jboos">infra/</a></li>
-              <li class="svelte-15jboos"><a href="/inner/infra/servers/" class="svelte-15jboos">servers/</a></li>
+              <li class="svelte-15jboos"><a href="/inner/infra/prom-pgdb/" class="svelte-15jboos">prom-pgdb/</a></li>
             </ul>
             <span class="svelte-15jboos">&gt; echo $PLATFORM</span>
             <span class="svelte-15jboos">gh-pages</span>
@@ -84,27 +84,112 @@
 
         <main class="main svelte-1flnfih">
           <div class="md">
-            <h1>部室のサーバーについて</h1>
-            <p>部室のインフラ(笑)</p>
-            <p>mDNSは未設定．</p>
-            <h2>メインサーバー</h2>
+            <div class="meta">
+              <span>meta = {</span>
+              <span class="iter"
+                ><span>post: &quot;2021/12/28&quot;</span>
+                <span>updated: &quot;<time datetime="2021-12-28T10:49:22.233Z">2021/12/28</time>&quot;</span>
+              </span>
+              <span>};</span>
+            </div>
+            <hr />
+
+            <h1>Prometheusとポスグレの連携</h1>
+            <h2>promscale</h2>
+            <p><a href="https://github.com/timescale/promscale" rel="nofollow">https://github.com/timescale/promscale</a></p>
+            <p>prometheusとgrafanaの間に入ってくれる(grafana側からは普通のprometheusとして使える)． debをgithubのリリースページから落とす．</p>
+            <p><code>promscale.conf</code>をこうする．</p>
+            <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">PROMSCALE_DB_HOST=&quot;localhost&quot;
+PROMSCALE_DB_NAME=&quot;prometheus&quot;
+PROMSCALE_DB_PASSWORD=&quot;hogehoge&quot;
+PROMSCALE_DB_PORT=&quot;5432&quot;
+PROMSCALE_DB_SSL_MODE=&quot;allow&quot;
+PROMSCALE_DB_USER=&quot;prometheus&quot;</code><!-- HTML_TAG_END --></pre>
+            <p>また，<code>prometheus.yml</code>に以下を追記する．</p>
+            <pre class="language-yaml"><!-- HTML_TAG_START --><code class="language-yaml"><span class="token comment"># Promscale</span>
+<span class="token key atrule">remote_write</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">url</span><span class="token punctuation">:</span> <span class="token string">"http://localhost:9201/write"</span>
+    <span class="token key atrule">remote_timeout</span><span class="token punctuation">:</span> 30s
+    <span class="token key atrule">queue_config</span><span class="token punctuation">:</span>
+      <span class="token key atrule">capacity</span><span class="token punctuation">:</span> <span class="token number">10000</span>
+      <span class="token key atrule">max_samples_per_send</span><span class="token punctuation">:</span> <span class="token number">3000</span>
+      <span class="token key atrule">batch_send_deadline</span><span class="token punctuation">:</span> 10s
+      <span class="token key atrule">min_shards</span><span class="token punctuation">:</span> <span class="token number">4</span>
+      <span class="token key atrule">max_shards</span><span class="token punctuation">:</span> <span class="token number">200</span>
+      <span class="token key atrule">min_backoff</span><span class="token punctuation">:</span> 100ms
+      <span class="token key atrule">max_backoff</span><span class="token punctuation">:</span> 10s
+<span class="token key atrule">remote_read</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">url</span><span class="token punctuation">:</span> <span class="token string">"http://localhost:9201/read"</span>
+    <span class="token key atrule">read_recent</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></code><!-- HTML_TAG_END --></pre>
+            <h2>pgdb(v13を想定)に拡張を入れる</h2>
+            <p>以下を<code>/etc/apt/sources.list.d/timescale.list</code>に書く．</p>
+            <pre
+              class="language-undefined"
+            ><!-- HTML_TAG_START --><code class="language-undefined">deb [signed-by=/usr/share/keyrings/timescale.gpg] https://packagecloud.io/timescale/timescaledb/debian/ bullseye main</code><!-- HTML_TAG_END --></pre>
+            <p>以下を実行 :</p>
+            <pre
+              class="language-bash"
+            ><!-- HTML_TAG_START --><code class="language-bash">$ <span class="token function">curl</span> -L https://packagecloud.io/timescale/timescaledb/gpgkey <span class="token operator">|</span> <span class="token function">sudo</span> gpg --dearmor -o /usr/share/keyrings/timescale.gpg
+$ <span class="token function">sudo</span> <span class="token function">apt</span> update
+$ <span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> timescaledb-2-postgresql-13</code><!-- HTML_TAG_END --></pre>
+            <p>postgresql.confの</p>
+            <pre
+              class="language-undefined"
+            ><!-- HTML_TAG_START --><code class="language-undefined">#shared_preload_libraries = &#39;&#39;  # (change requires restart)</code><!-- HTML_TAG_END --></pre>
+            <p>の行を</p>
+            <pre
+              class="language-undefined"
+            ><!-- HTML_TAG_START --><code class="language-undefined">shared_preload_libraries = &#39;timescaledb&#39;        # (change requires restart)</code><!-- HTML_TAG_END --></pre>
+            <p>とする． ポスグレをrestartしてから対象のDBを作り，</p>
+            <pre
+              class="language-sql"
+            ><!-- HTML_TAG_START --><code class="language-sql"><span class="token operator">></span> <span class="token keyword">CREATE</span> EXTENSION <span class="token keyword">IF</span> <span class="token operator">NOT</span> <span class="token keyword">EXISTS</span> timescaledb<span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre>
+            <p>する． それっぽいのが出る．</p>
+            <h2>もう一度ポスグレをいじる</h2>
+            <p>promscaleも開始前に一応migrate用のSQL走らせてくれるのだが，create roleしようとしやがる．</p>
+            <p>まあ動かなけりゃ話にならないのでしゃーなしの権限付与．</p>
+            <pre
+              class="language-sql"
+            ><!-- HTML_TAG_START --><code class="language-sql"><span class="token operator">></span> <span class="token keyword">ALTER</span> ROLE prometheus <span class="token keyword">WITH</span> CREATEROLE<span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre>
+            <h2>いけた</h2>
+            <p>いけた</p>
+
+            <h2>使ったファイル</h2>
             <ul>
-              <li><code>192.168.100.100(SHOZABURO)</code></li>
-              <li>CPU : i5-4460 (4C4T)</li>
-              <li>メモリ : DDR4 8GB</li>
-              <li><code>/</code>，<code>/boot/efi</code> : 2.5インチSATA SSD(256GB)x1，xfs</li>
-              <li><code>/data</code> : 3.5インチSATA HDD(1TB)x2，btrfs(Data/Metadata/System全部ミラーリング)</li>
+              <li>
+                promscale
+                <ul>
+                  <li>
+                    <a href="https://github.com/timescale/promscale/releases/download/0.7.1/promscale_0.7.1_Linux_x86_64.deb" rel="nofollow"
+                      >https://github.com/timescale/promscale/releases/download/0.7.1/promscale_0.7.1_Linux_x86_64.deb</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                prom-migrator(使ってない)
+                <ul>
+                  <li>
+                    <a href="https://github.com/timescale/promscale/releases/download/0.7.1/prom-migrator_0.0.3_Linux_x86_64" rel="nofollow"
+                      >https://github.com/timescale/promscale/releases/download/0.7.1/prom-migrator_0.0.3_Linux_x86_64</a
+                    >
+                  </li>
+                </ul>
+              </li>
             </ul>
-            <h2>k0sクラスタ</h2>
+            <p>その他はdebian標準のやつ(postgresql-13はpg公式リポジトリのやつ)</p>
+            <h2>参考</h2>
             <ul>
-              <li><code>192.168.100.150(hiroshi)</code> : rpi 4B (arm64/4C4T/4GB)，32GB microSDカード</li>
-              <li><code>192.168.100.128(tako0)</code> : rpi 2B (armhf/4C4T/1GB)，32GB microSDカード</li>
-              <li><code>192.168.100.129(tako1)</code> : rpi 2B (armhf/4C4T/1GB)，32GB microSDカード</li>
-              <li><code>192.168.100.130(tako2)</code> : rpi 2B (armhf/4C4T/1GB)，32GB microSDカード</li>
-              <li><code>192.168.100.131(tako3)</code> : rpi 2B (armhf/4C4T/1GB)，32GB microSDカード(死にかけ？)</li>
-              <li><code>192.168.100.132(tako4)</code> : rpi 2B (armhf/4C4T/1GB)，32GB microSDカード</li>
-              <li><code>192.168.100.133(tako5)</code> : rpi 2B (armhf/4C4T/1GB)，32GB microSDカード</li>
-              <li><code>192.168.100.134(tako6)</code> : rpi 2B (armhf/4C4T/1GB)，16GB microSDカード(スロット破損)</li>
+              <li>
+                <a href="https://docs.timescale.com/install/latest/self-hosted/installation-debian/#setting-up-the-timescaledb-extension" rel="nofollow"
+                  >https://docs.timescale.com/install/latest/self-hosted/installation-debian/#setting-up-the-timescaledb-extension</a
+                >
+              </li>
+              <li>
+                <a href="https://docs.timescale.com/timescaledb/latest/how-to-guides/migrate-data/same-db/" rel="nofollow"
+                  >https://docs.timescale.com/timescaledb/latest/how-to-guides/migrate-data/same-db/</a
+                >
+              </li>
             </ul>
           </div>
         </main>
@@ -136,10 +221,10 @@
       </div>
     </div>
 
-    <script type="module" data-hydrate="srqyoe">
+    <script type="module" data-hydrate="xisclb">
       import { start } from "/_app/start-8af6d57d.js"
       start({
-        target: document.querySelector('[data-hydrate="srqyoe"]').parentNode,
+        target: document.querySelector('[data-hydrate="xisclb"]').parentNode,
         paths: { base: "", assets: "" },
         session: {},
         route: true,
@@ -148,7 +233,7 @@
         hydrate: {
           status: 200,
           error: null,
-          nodes: [import("/_app/pages/__layout.svelte-9690608f.js"), import("/_app/pages/inner/infra/servers.md-08e06b1b.js")],
+          nodes: [import("/_app/pages/__layout.svelte-9690608f.js"), import("/_app/pages/inner/infra/prom-pgdb.md-dfdc1487.js")],
           params: {},
         },
       })

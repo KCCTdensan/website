@@ -83,6 +83,9 @@
     <loc>https://d3bu.net/tools/py/</loc>
   </url>
   <url>
+    <loc>https://d3bu.net/dev/cluster/ghcr-ci/</loc>
+  </url>
+  <url>
     <loc>https://d3bu.net/dev/cluster/k0s/</loc>
   </url>
   <url>
