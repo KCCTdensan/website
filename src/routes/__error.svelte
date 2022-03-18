@@ -1,30 +1,42 @@
 <script context="module" lang="ts">
-  export async function load({ error, status, fetch, url }) {
-    const recommends = []
-    if(status === 404 && !/^\/old\/v[0-1]\/old\/v[0-1]/.test(url.pathname))
-      await Promise.all([
-        fetch(`/old/v0${url.pathname}`)
-          .then(r => r.ok && recommends.push({
-            link: `/old/v0${url.pathname}`,
-            text: "旧版(2018年頃)へのリンク",
-          })),
-        fetch(`/old/v1${url.pathname}`)
-          .then(r => r.ok && recommends.push({
-            link: `/old/v1${url.pathname}`,
-            text: "旧版(2021年頃)へのリンク",
-          })),
-      ])
-    return { props: { error, status, recommends } }
+  export async function load(props) {
+    return { props }
   }
 </script>
 
 <script lang="ts">
   import { page } from "$app/stores"
+  import { browser } from "$app/env"
   import Meta from "$lib/meta.svelte"
 
   export let status: number = undefined
   export let error = undefined
-  export let recommends: { link: string, text: string }[] = []
+
+  interface Recommend {
+    link: string
+    text: string
+  }
+
+  async function getRecommend(rec: Recommend): Promise<Recommend> {
+    return /^\/old\/v[0-1]\/old\/v[0-1]/.test($page.url.pathname)
+      ? Promise.reject("not ok (recursive)")
+      : fetch(rec.link).then(res => res.ok ? rec : Promise.reject("not ok"))
+  }
+
+  let recommends: Recommend[] = []
+
+  if(browser) { // 暫定
+    [
+      { link: `/old/v0${$page.url.pathname}`, text: "旧版(2018年頃)へのリンク" },
+      { link: `/old/v1${$page.url.pathname}`, text: "旧版(2021年頃)へのリンク" },
+    ].forEach(async (rec: Recommend) => {
+      try {
+        // recommends = [...recommends, await getRecommend(rec)] // NOT WORKS
+        recommends.push(await getRecommend(rec))
+        recommends = recommends
+      } catch {/* 無いのはしゃーない */}
+    })
+  }
 </script>
 
 <Meta title="Error_{status}" description="エラーが発生しました．" />
