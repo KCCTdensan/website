@@ -1,10 +1,10 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-8af6d57d.js",
+    "file": "start-9edc933b.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_vendor-9e78a147.js"
+      "_vendor-01ce2e80.js"
     ],
     "dynamicImports": [
       "src/routes/__layout.svelte",
@@ -44,16 +44,16 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-9690608f.js",
+    "file": "pages/__layout.svelte-e2d820b8.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_stores-7295e635.js"
+      "_vendor-01ce2e80.js",
+      "_stores-88e3b49f.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-81a0ac7c.css"
+      "assets/pages/__layout.svelte-1569fa3b.css"
     ],
     "assets": [
       "assets/KaTeX_AMS-Regular-0cdd387c.woff2",
@@ -130,455 +130,455 @@
     ]
   },
   "src/routes/__error.svelte": {
-    "file": "pages/__error.svelte-84a8994f.js",
+    "file": "pages/__error.svelte-afece43e.js",
     "src": "src/routes/__error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js"
+      "_vendor-01ce2e80.js",
+      "_stores-88e3b49f.js",
+      "_meta-78e42577.js"
     ],
     "css": [
       "assets/pages/__error.svelte-29acc29f.css"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-560dc1d4.js",
+    "file": "pages/index.svelte-021a3484.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_meta-5e902eb1.js",
+      "_vendor-01ce2e80.js",
+      "_meta-78e42577.js",
       "_fmt-158ed921.js",
-      "_stores-7295e635.js"
+      "_stores-88e3b49f.js"
     ]
   },
   "src/routes/monster.md": {
-    "file": "pages/monster.md-b5069dde.js",
+    "file": "pages/monster.md-ab206b73.js",
     "src": "src/routes/monster.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_md_layout-b6f7a259.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js",
+      "_vendor-01ce2e80.js",
+      "_md_layout-a3da939d.js",
+      "_meta-78e42577.js",
+      "_stores-88e3b49f.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/joinus.md": {
-    "file": "pages/joinus.md-e43ea570.js",
+    "file": "pages/joinus.md-ffb99ee3.js",
     "src": "src/routes/joinus.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_md_layout-b6f7a259.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js",
+      "_vendor-01ce2e80.js",
+      "_md_layout-a3da939d.js",
+      "_meta-78e42577.js",
+      "_stores-88e3b49f.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/about.md": {
-    "file": "pages/about.md-543d4f36.js",
+    "file": "pages/about.md-22a0fcdc.js",
     "src": "src/routes/about.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_md_layout-b6f7a259.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js",
+      "_vendor-01ce2e80.js",
+      "_md_layout-a3da939d.js",
+      "_meta-78e42577.js",
+      "_stores-88e3b49f.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/inner/index.md": {
-    "file": "pages/inner/index.md-0f40f887.js",
+    "file": "pages/inner/index.md-a8e66954.js",
     "src": "src/routes/inner/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_md_layout-b6f7a259.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js",
+      "_vendor-01ce2e80.js",
+      "_md_layout-a3da939d.js",
+      "_meta-78e42577.js",
+      "_stores-88e3b49f.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/inner/pck-env.md": {
-    "file": "pages/inner/pck-env.md-9c86ab34.js",
+    "file": "pages/inner/pck-env.md-6729cac3.js",
     "src": "src/routes/inner/pck-env.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_md_layout-b6f7a259.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js",
+      "_vendor-01ce2e80.js",
+      "_md_layout-a3da939d.js",
+      "_meta-78e42577.js",
+      "_stores-88e3b49f.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/inner/infra/cloudflared.md": {
-    "file": "pages/inner/infra/cloudflared.md-e8103df7.js",
+    "file": "pages/inner/infra/cloudflared.md-2037866a.js",
     "src": "src/routes/inner/infra/cloudflared.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_md_layout-b6f7a259.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js",
+      "_vendor-01ce2e80.js",
+      "_md_layout-a3da939d.js",
+      "_meta-78e42577.js",
+      "_stores-88e3b49f.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/inner/infra/rpi-busitsu.md": {
-    "file": "pages/inner/infra/rpi-busitsu.md-f99d965a.js",
+    "file": "pages/inner/infra/rpi-busitsu.md-5877bd3a.js",
     "src": "src/routes/inner/infra/rpi-busitsu.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_md_layout-b6f7a259.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js",
+      "_vendor-01ce2e80.js",
+      "_md_layout-a3da939d.js",
+      "_meta-78e42577.js",
+      "_stores-88e3b49f.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/inner/infra/postgresql.md": {
-    "file": "pages/inner/infra/postgresql.md-93c7eab7.js",
+    "file": "pages/inner/infra/postgresql.md-c6ba9b61.js",
     "src": "src/routes/inner/infra/postgresql.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_md_layout-b6f7a259.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js",
+      "_vendor-01ce2e80.js",
+      "_md_layout-a3da939d.js",
+      "_meta-78e42577.js",
+      "_stores-88e3b49f.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/inner/infra/prom-pgdb.md": {
-    "file": "pages/inner/infra/prom-pgdb.md-dfdc1487.js",
+    "file": "pages/inner/infra/prom-pgdb.md-ebf93670.js",
     "src": "src/routes/inner/infra/prom-pgdb.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_md_layout-b6f7a259.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js",
+      "_vendor-01ce2e80.js",
+      "_md_layout-a3da939d.js",
+      "_meta-78e42577.js",
+      "_stores-88e3b49f.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/inner/infra/servers.md": {
-    "file": "pages/inner/infra/servers.md-08e06b1b.js",
+    "file": "pages/inner/infra/servers.md-ce9dff52.js",
     "src": "src/routes/inner/infra/servers.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_md_layout-b6f7a259.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js",
+      "_vendor-01ce2e80.js",
+      "_md_layout-a3da939d.js",
+      "_meta-78e42577.js",
+      "_stores-88e3b49f.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/inner/infra/web.md": {
-    "file": "pages/inner/infra/web.md-62e4bdb8.js",
+    "file": "pages/inner/infra/web.md-3fe70462.js",
     "src": "src/routes/inner/infra/web.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_md_layout-b6f7a259.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js",
+      "_vendor-01ce2e80.js",
+      "_md_layout-a3da939d.js",
+      "_meta-78e42577.js",
+      "_stores-88e3b49f.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/tools/py.svelte": {
-    "file": "pages/tools/py.svelte-5a2b9fb8.js",
+    "file": "pages/tools/py.svelte-db930d24.js",
     "src": "src/routes/tools/py.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js"
+      "_vendor-01ce2e80.js"
     ]
   },
   "src/routes/blog/index.svelte": {
-    "file": "pages/blog/index.svelte-01a4a8a9.js",
+    "file": "pages/blog/index.svelte-5ee9c418.js",
     "src": "src/routes/blog/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_meta-5e902eb1.js",
+      "_vendor-01ce2e80.js",
+      "_meta-78e42577.js",
       "_fmt-158ed921.js",
-      "_stores-7295e635.js"
+      "_stores-88e3b49f.js"
     ]
   },
   "src/routes/blog/[slug].svelte": {
-    "file": "pages/blog/_slug_.svelte-507eb55d.js",
+    "file": "pages/blog/_slug_.svelte-90b119f5.js",
     "src": "src/routes/blog/[slug].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_md_layout-b6f7a259.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js",
+      "_vendor-01ce2e80.js",
+      "_md_layout-a3da939d.js",
+      "_meta-78e42577.js",
+      "_stores-88e3b49f.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/docs/setup-node.md": {
-    "file": "pages/docs/setup-node.md-931bf3c2.js",
+    "file": "pages/docs/setup-node.md-8142349f.js",
     "src": "src/routes/docs/setup-node.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_md_layout-b6f7a259.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js",
+      "_vendor-01ce2e80.js",
+      "_md_layout-a3da939d.js",
+      "_meta-78e42577.js",
+      "_stores-88e3b49f.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/docs/wsl2-setup.md": {
-    "file": "pages/docs/wsl2-setup.md-7f1326b4.js",
+    "file": "pages/docs/wsl2-setup.md-a57a869f.js",
     "src": "src/routes/docs/wsl2-setup.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_md_layout-b6f7a259.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js",
+      "_vendor-01ce2e80.js",
+      "_md_layout-a3da939d.js",
+      "_meta-78e42577.js",
+      "_stores-88e3b49f.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/docs/github.md": {
-    "file": "pages/docs/github.md-c837138f.js",
+    "file": "pages/docs/github.md-f37d3039.js",
     "src": "src/routes/docs/github.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_md_layout-b6f7a259.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js",
+      "_vendor-01ce2e80.js",
+      "_md_layout-a3da939d.js",
+      "_meta-78e42577.js",
+      "_stores-88e3b49f.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/docs/pepper.md": {
-    "file": "pages/docs/pepper.md-cd32140a.js",
+    "file": "pages/docs/pepper.md-db70aa0e.js",
     "src": "src/routes/docs/pepper.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_md_layout-b6f7a259.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js",
+      "_vendor-01ce2e80.js",
+      "_md_layout-a3da939d.js",
+      "_meta-78e42577.js",
+      "_stores-88e3b49f.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/news/index.md": {
-    "file": "pages/news/index.md-89a161df.js",
+    "file": "pages/news/index.md-393c3cec.js",
     "src": "src/routes/news/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_md_layout-b6f7a259.js",
+      "_vendor-01ce2e80.js",
+      "_md_layout-a3da939d.js",
       "_fmt-158ed921.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js"
+      "_meta-78e42577.js",
+      "_stores-88e3b49f.js"
     ]
   },
   "src/routes/news/activities.md": {
-    "file": "pages/news/activities.md-eaf743d5.js",
+    "file": "pages/news/activities.md-eabf15ef.js",
     "src": "src/routes/news/activities.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_md_layout-b6f7a259.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js",
+      "_vendor-01ce2e80.js",
+      "_md_layout-a3da939d.js",
+      "_meta-78e42577.js",
+      "_stores-88e3b49f.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/news/[slug].svelte": {
-    "file": "pages/news/_slug_.svelte-3e18c3d8.js",
+    "file": "pages/news/_slug_.svelte-433294d1.js",
     "src": "src/routes/news/[slug].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_md_layout-b6f7a259.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js",
+      "_vendor-01ce2e80.js",
+      "_md_layout-a3da939d.js",
+      "_meta-78e42577.js",
+      "_stores-88e3b49f.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/404.svelte": {
-    "file": "pages/404.svelte-56afa1f4.js",
+    "file": "pages/404.svelte-d5715cba.js",
     "src": "src/routes/404.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
+      "_vendor-01ce2e80.js",
       "src/routes/__error.svelte",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js"
+      "_stores-88e3b49f.js",
+      "_meta-78e42577.js"
     ]
   },
   "src/routes/dev/index.md": {
-    "file": "pages/dev/index.md-ea40fae0.js",
+    "file": "pages/dev/index.md-958223da.js",
     "src": "src/routes/dev/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_md_layout-b6f7a259.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js",
+      "_vendor-01ce2e80.js",
+      "_md_layout-a3da939d.js",
+      "_meta-78e42577.js",
+      "_stores-88e3b49f.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/dev/computer/index.md": {
-    "file": "pages/dev/computer/index.md-06c26c45.js",
+    "file": "pages/dev/computer/index.md-f8780325.js",
     "src": "src/routes/dev/computer/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_md_layout-b6f7a259.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js",
+      "_vendor-01ce2e80.js",
+      "_md_layout-a3da939d.js",
+      "_meta-78e42577.js",
+      "_stores-88e3b49f.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/dev/computer/cpu/index.md": {
-    "file": "pages/dev/computer/cpu/index.md-53292777.js",
+    "file": "pages/dev/computer/cpu/index.md-c221388f.js",
     "src": "src/routes/dev/computer/cpu/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_md_layout-b6f7a259.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js",
+      "_vendor-01ce2e80.js",
+      "_md_layout-a3da939d.js",
+      "_meta-78e42577.js",
+      "_stores-88e3b49f.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/dev/computer/os/index.md": {
-    "file": "pages/dev/computer/os/index.md-a466f61a.js",
+    "file": "pages/dev/computer/os/index.md-746f33c4.js",
     "src": "src/routes/dev/computer/os/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_md_layout-b6f7a259.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js",
+      "_vendor-01ce2e80.js",
+      "_md_layout-a3da939d.js",
+      "_meta-78e42577.js",
+      "_stores-88e3b49f.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/dev/cluster/index.md": {
-    "file": "pages/dev/cluster/index.md-beabc4bb.js",
+    "file": "pages/dev/cluster/index.md-0b58bb32.js",
     "src": "src/routes/dev/cluster/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_md_layout-b6f7a259.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js",
+      "_vendor-01ce2e80.js",
+      "_md_layout-a3da939d.js",
+      "_meta-78e42577.js",
+      "_stores-88e3b49f.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/dev/cluster/ghcr-ci.md": {
-    "file": "pages/dev/cluster/ghcr-ci.md-61dc42ff.js",
+    "file": "pages/dev/cluster/ghcr-ci.md-8e1f592a.js",
     "src": "src/routes/dev/cluster/ghcr-ci.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_md_layout-b6f7a259.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js",
+      "_vendor-01ce2e80.js",
+      "_md_layout-a3da939d.js",
+      "_meta-78e42577.js",
+      "_stores-88e3b49f.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/dev/cluster/k0s.md": {
-    "file": "pages/dev/cluster/k0s.md-f6f3335f.js",
+    "file": "pages/dev/cluster/k0s.md-7befa6ab.js",
     "src": "src/routes/dev/cluster/k0s.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_md_layout-b6f7a259.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js",
+      "_vendor-01ce2e80.js",
+      "_md_layout-a3da939d.js",
+      "_meta-78e42577.js",
+      "_stores-88e3b49f.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/dev/denkou/index.md": {
-    "file": "pages/dev/denkou/index.md-4a8dc3a6.js",
+    "file": "pages/dev/denkou/index.md-a1828969.js",
     "src": "src/routes/dev/denkou/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_md_layout-b6f7a259.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js",
+      "_vendor-01ce2e80.js",
+      "_md_layout-a3da939d.js",
+      "_meta-78e42577.js",
+      "_stores-88e3b49f.js",
       "_fmt-158ed921.js"
     ]
   },
   "src/routes/dev/denkou/ne555synth/index.md": {
-    "file": "pages/dev/denkou/ne555synth/index.md-8d3ecb61.js",
+    "file": "pages/dev/denkou/ne555synth/index.md-3ff39b8e.js",
     "src": "src/routes/dev/denkou/ne555synth/index.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-9e78a147.js",
-      "_md_layout-b6f7a259.js",
-      "_meta-5e902eb1.js",
-      "_stores-7295e635.js",
+      "_vendor-01ce2e80.js",
+      "_md_layout-a3da939d.js",
+      "_meta-78e42577.js",
+      "_stores-88e3b49f.js",
       "_fmt-158ed921.js"
     ]
   },
-  "_vendor-9e78a147.js": {
-    "file": "chunks/vendor-9e78a147.js",
+  "_vendor-01ce2e80.js": {
+    "file": "chunks/vendor-01ce2e80.js",
     "css": [
       "assets/vendor-b00f1465.css"
     ]
   },
-  "_stores-7295e635.js": {
-    "file": "chunks/stores-7295e635.js",
+  "_stores-88e3b49f.js": {
+    "file": "chunks/stores-88e3b49f.js",
     "imports": [
-      "_vendor-9e78a147.js"
+      "_vendor-01ce2e80.js"
     ]
   },
-  "_meta-5e902eb1.js": {
-    "file": "chunks/meta-5e902eb1.js",
+  "_meta-78e42577.js": {
+    "file": "chunks/meta-78e42577.js",
     "imports": [
-      "_vendor-9e78a147.js",
-      "_stores-7295e635.js"
+      "_vendor-01ce2e80.js",
+      "_stores-88e3b49f.js"
     ]
   },
   "_fmt-158ed921.js": {
     "file": "chunks/fmt-158ed921.js"
   },
-  "_md_layout-b6f7a259.js": {
-    "file": "chunks/md_layout-b6f7a259.js",
+  "_md_layout-a3da939d.js": {
+    "file": "chunks/md_layout-a3da939d.js",
     "imports": [
-      "_vendor-9e78a147.js",
-      "_meta-5e902eb1.js",
+      "_vendor-01ce2e80.js",
+      "_meta-78e42577.js",
       "_fmt-158ed921.js"
     ]
   }
