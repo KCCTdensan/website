@@ -48,10 +48,10 @@ noRobots: true
 
 - [HP (2007)](http://www.kobe-kosen.ac.jp/densan/2007/)
 - [HP (2010)](http://www.kobe-kosen.ac.jp/densan/2010/)
-- [HP (2017)](http://www.kobe-kosen.ac.jp/densan/2012/)
+- [HP (2012)](http://www.kobe-kosen.ac.jp/densan/2012/)
 
 ### 部サーバー
 
 - [HP (2007)](https://www2.d3bu.net/2007/)
 - [HP (2010)](https://www2.d3bu.net/2010/)
-- [HP (2017)](https://www2.d3bu.net/2012/)
+- [HP (2012)](https://www2.d3bu.net/2012/)
