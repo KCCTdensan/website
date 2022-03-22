@@ -81,6 +81,11 @@
     @extend .flex-col;
     background-color: $c-headerBg;
     color: $c-headerText;
+    border-radius: 8px 8px 0 0;
+
+    @include mqUp(md) {
+      border-radius: 0;
+    }
   }
 
   .headerLogo {
@@ -90,12 +95,20 @@
     justify-content: space-between;
     user-select: none;
 
+    @include mqUp(md) {
+      height: 3.5rem;
+    }
+
     .logo {
       @extend .flex-row;
       height: 100%;
       padding: .25em;
       position: relative;
       align-items: center;
+
+      @include mqUp(md) {
+        padding: 0;
+      }
 
       .icon {
         height: 100%;
@@ -118,6 +131,10 @@
       align-items: end;
       color: $c-headerDimText;
       font-weight: bolder;
+
+      @include mqUp(md) {
+        display: none;
+      }
     }
   }
 

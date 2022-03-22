@@ -72,6 +72,7 @@
   @import "../styles/variables.scss";
 
   $section-margin: 1.5rem;
+  $section-margin-small: 1rem;
 
   .app {
     @extend .flex-row;
@@ -81,22 +82,37 @@
 
   .container {
     @extend .flex-col;
-    width: 768px;
+    width: bpVal(md);
     height: 100%;
     margin: 48px auto;
     border-radius: 8px;
     background-color: $c-bg;
     color: $c-text;
+
+    @include mqUp(md) {
+      width: 100%;
+      min-height: 100vh;
+      margin: 0;
+      border-radius: 0;
+    }
   }
 
   .main {
     margin: $section-margin;
+
+    @include mqUp(md) {
+      margin: $section-margin-small;
+    }
   }
 
   .footer {
     @extend .flex-row;
     margin: $section-margin;
     justify-content: space-between;
+
+    @include mqUp(md) {
+      margin-top: auto;
+    }
 
     .iconLinks {
       @extend .flex-row;

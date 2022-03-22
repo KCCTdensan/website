@@ -62,6 +62,7 @@
 {/if}
 
 <style lang="scss">
+  @import "../styles/helpers.scss";
   @import "../styles/variables.scss";
 
   h1 pre {
@@ -71,6 +72,10 @@
     font-size: 2rem;
     line-height: 1;
     white-space: pre-wrap;
+
+    @include mqUp(md) {
+      font-size: 1.6rem;
+    }
 
     code {
       margin: 0;
