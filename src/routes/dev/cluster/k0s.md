@@ -126,6 +126,8 @@ PCからぶっこ抜く．
 
 ### 2. 設定する
 
+ここからはラズパイ(マスターノードを含む)ではなく，作業用の環境で実行する．
+
 実際にやるときは[docs.k0sproject.io](https://docs.k0sproject.io/v1.23.3+k0s.1/k0sctl-install/)を参照．
 
 ```
