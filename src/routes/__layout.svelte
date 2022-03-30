@@ -57,7 +57,11 @@
             <Icon type={"brands"} name={"twitter"} scale={1.2} />
           </a>
         </div>
-        <small class="copyright">&copy; 1974-{ new Date().getFullYear() } KCCTdensan 神戸高専電算部</small>
+        <small class="copyright">
+          <span class="inline-block">&copy; 1974-{ new Date().getFullYear() }</span>
+          <span class="inline-block">KCCTdensan</span>
+          <span class="inline-block">神戸高専電算部</span>
+        </small>
       </div>
       <!-- right -->
       <div>
@@ -126,9 +130,17 @@
   }
 
   .copyright {
+    @extend .flex-row;
     margin: 0 auto;
+    justify-content: center;
+    align-items: center;
     color: $c-dimText;
+    flex-wrap: wrap;
     font-size: .9rem;
     font-weight: bold;
+
+    & > * {
+      margin: 0 .25rem;
+    }
   }
 </style>

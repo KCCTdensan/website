@@ -34,7 +34,8 @@
     <a class="logo" href="/">
       <img class="icon" src="/icon.png" alt="Logo" /><!-- SVGアニメーションにしたい -->
       <span class="text"
-        ><span class="inline-block">神戸高専</span
+        ><span class="inline-block">神戸</span
+        ><span class="inline-block">高専</span
         ><span class="inline-block">電算部</span></span
       >
     </a>
@@ -81,10 +82,9 @@
     @extend .flex-col;
     background-color: $c-headerBg;
     color: $c-headerText;
-    border-radius: 8px 8px 0 0;
 
-    @include mqUp(md) {
-      border-radius: 0;
+    @include mqDown(md) {
+      border-radius: 8px 8px 0 0;
     }
   }
 
@@ -98,21 +98,23 @@
     @include mqUp(md) {
       height: 3.5rem;
     }
+    @include mqUp(xs) {
+      height: 100%;
+    }
 
     .logo {
       @extend .flex-row;
       height: 100%;
-      padding: .25em;
       position: relative;
       align-items: center;
 
-      @include mqUp(md) {
-        padding: 0;
+      @include mqDown(md) {
+        margin-left: .25rem;
       }
 
       .icon {
-        height: 100%;
-        margin: .5em;
+        height: 3.5rem; // .headerLogo's height
+        margin: 0 .5rem;
       }
 
       .text {
@@ -120,6 +122,7 @@
         color: $c-logoText;
         font-size: 2em;
         font-weight: 900;
+        line-height: 1.1;
       }
     }
 
