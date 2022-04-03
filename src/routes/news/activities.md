@@ -2,7 +2,7 @@
 title: Activities
 description: 電算部の活動
 date: 2021-05-09
-dateUpd: 2021-07-31
+dateUpd: 2022-04-03
 ---
 
 # 電算部の活動
@@ -10,6 +10,14 @@ dateUpd: 2021-07-31
 ## コンテスト等の主な実績
 
 <ul class="contests">
+  <li>
+    <details>
+      <summary class="contestYear">2021年</summary>
+      <ul>
+        <li>日本ゲーム大賞2021 U18部門 参加</li>
+      </ul>
+    </details>
+  </li>
   <li>
     <details>
       <summary class="contestYear">2020年</summary>
