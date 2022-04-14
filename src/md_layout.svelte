@@ -12,6 +12,7 @@
 
   const articleMetaVisible = author || date || dateUpd
   let authors = []
+  // @ts-ignore
   if(author) authors = Array.isArray(author) ? author : author.split(/, |,/)
 </script>
 

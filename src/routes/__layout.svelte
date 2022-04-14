@@ -13,7 +13,7 @@
   import Header from "$lib/header.svelte"
   import "../app.scss"
 
-  export let pkg // Header用，要改修
+  export let pkg: object // Header用，要改修
   let konami = false
 
   // Konami Code

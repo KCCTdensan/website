@@ -1,5 +1,5 @@
 <script context="module" lang="ts">
-  export async function load({ fetch, params }) {
+  export async function load({ fetch }) {
     const { data } = await fetch("/api/articles/blog.json").then(r => r.json())
     return { props: { entries: data } }
   }

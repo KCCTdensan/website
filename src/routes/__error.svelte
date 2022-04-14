@@ -1,7 +1,11 @@
 <script context="module" lang="ts">
-  export async function load(props) {
-    return { props }
-  }
+  import type { ErrorLoad } from "@sveltejs/kit"
+  export const load: ErrorLoad = ({ status, error }) => ({
+    props: {
+      status,
+      error: error.message,
+    },
+  })
 </script>
 
 <script lang="ts">
@@ -9,8 +13,8 @@
   import { browser } from "$app/env"
   import Meta from "$lib/meta.svelte"
 
-  export let status: number = undefined
-  export let error = undefined
+  export let status: number
+  export let error: string
 
   interface Recommend {
     link: string
@@ -42,7 +46,7 @@
 <Meta title="Error_{status}" description="エラーが発生しました．" />
 
 <h1>
-<pre><code><span class="red">error:</span> {error.message}
+<pre><code><span class="red">error:</span> {error}
   x | static_assert(<span class="red">status != {status}</span>);
     |               <span class="red">~~~~~~~^~~~~~</span></code></pre>
 </h1>
