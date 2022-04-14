@@ -43,7 +43,7 @@
     "build:pretty": "prettier -w 'build/**/*.html'",
     "build:sitemap": "svelte-sitemap --trailing-slashes -d https://d3bu.net -i '404.html' -i 'inner/**'",
     "check": "svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+    "check-watch": "svelte-check --tsconfig ./tsconfig.json --watch",
     "dev": "DEV='true' svelte-kit dev",
     "dev-host": "DEV='true' svelte-kit dev --host",
     "preview": "svelte-kit preview",
