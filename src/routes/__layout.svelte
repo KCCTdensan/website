@@ -79,16 +79,17 @@
   $section-margin-small: 1rem;
 
   .app {
-    @extend .flex-row;
+    display: flex;
     min-height: 100vh;
     background: radial-gradient(at 50% 0%, $c-groundShadow, $c-ground);
   }
 
   .container {
-    @extend .flex-col;
+    display: flex;
     width: bpVal(md);
     height: 100%;
     margin: 48px auto;
+    flex-direction: column;
     border-radius: 8px;
     background-color: $c-bg;
     color: $c-text;
@@ -110,7 +111,7 @@
   }
 
   .footer {
-    @extend .flex-row;
+    display: flex;
     margin: $section-margin;
     justify-content: space-between;
 
@@ -119,7 +120,7 @@
     }
 
     .iconLinks {
-      @extend .flex-row;
+      display: flex;
       justify-content: center;
     }
   }
@@ -130,7 +131,7 @@
   }
 
   .copyright {
-    @extend .flex-row;
+    display: flex;
     margin: 0 auto;
     justify-content: center;
     align-items: center;

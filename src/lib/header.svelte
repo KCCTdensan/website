@@ -79,7 +79,8 @@
   @import "../styles/variables.scss";
 
   .header {
-    @extend .flex-col;
+    display: flex;
+    flex-direction: column;
     background-color: $c-headerBg;
     color: $c-headerText;
 
@@ -89,7 +90,7 @@
   }
 
   .headerLogo {
-    @extend .flex-row;
+    display: flex;
     height: 4rem;
     margin: .5rem 0;
     justify-content: space-between;
@@ -103,7 +104,7 @@
     }
 
     .logo {
-      @extend .flex-row;
+      display: flex;
       height: 100%;
       position: relative;
       align-items: center;
@@ -127,9 +128,10 @@
     }
 
     .pkgInfo {
-      @extend .flex-col;
+      display: flex;
       height: 100%;
       margin: 0 .5rem;
+      flex-direction: column;
       justify-content: end;
       align-items: end;
       color: $c-headerDimText;
@@ -142,8 +144,9 @@
   }
 
   .headerNav {
-    @extend .flex-col;
+    display: flex;
     padding: .5em;
+    flex-direction: column;
     background-color: $c-headerNavBg;
     color: $c-headerNavText;
     font: 1rem/1.8 $f-mono;
@@ -158,7 +161,7 @@
     }
 
     .navLinks {
-      @extend .flex-row;
+      display: flex;
       margin: 0;
 
       li:not(:last-child)::after { // 隣接セレクタだと折り返しが厳しい
@@ -173,7 +176,7 @@
     }
 
     .breadcrumbs {
-      @extend .flex-row;
+      display: flex;
       margin: 0;
 
       li:not(:first-child) {
