@@ -53,8 +53,10 @@ pre {
   display: inline-block;
 }
 
-.red {
+.WARN {
   color: #f00;
+  font-size: 2.5em;
+  font-weight: 900;
 }
 
 // MD // md_layout.svelte内でscssが使えない為

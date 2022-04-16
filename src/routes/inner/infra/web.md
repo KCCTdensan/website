@@ -6,7 +6,7 @@ author: 山D
 noRobots: true
 ---
 
-<span class="AAAAAAAAA">警告 : ここに書かれている内容は古い</span>
+<span class="WARN">警告 : ここに書かれている内容は古い</span>
 
 # 運用メモ
 
