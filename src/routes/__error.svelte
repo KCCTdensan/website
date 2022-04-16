@@ -45,11 +45,11 @@
 
 <Meta title="Error_{status}" description="エラーが発生しました．" />
 
-<h1>
-<pre><code><span class="red">error:</span> {error}
+<main class="main">
+  <h1><pre><code><span class="red">error:</span> {error}
   x | static_assert(<span class="red">status != {status}</span>);
-    |               <span class="red">~~~~~~~^~~~~~</span></code></pre>
-</h1>
+    |               <span class="red">~~~~~~~^~~~~~</span></code></pre></h1>
+</main>
 
 {#if status === 404}
   <p>お探しのページは見つかりませんでした……ごめんなさい………</p>
@@ -68,6 +68,14 @@
 <style lang="scss">
   @import "../styles/helpers.scss";
   @import "../styles/variables.scss";
+
+  .main {
+    margin: $l-section-margin;
+
+    @include mqUp(md) {
+      margin: $l-section-margin-small;
+    }
+  }
 
   h1 pre {
     margin: 0;

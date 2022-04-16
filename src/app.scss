@@ -18,9 +18,11 @@ a {
   color: $c-link;
   font-weight: bolder;
   text-decoration: none;
+
   &:hover {
     text-decoration: underline;
   }
+
   &:active {
     color: $c-linkLight;
   }
@@ -47,6 +49,41 @@ pre {
   }
 }
 
+hr {
+  display: block;
+  position: relative;
+  height: 2px;
+  margin: 7px 0;
+  border: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba($c-shadow, 1);
+    // background: linear-gradient(to right,
+    //   rgba($c-shadow, 0) 0%,
+    //   rgba($c-shadow, 1) 20% 80%,
+    //   rgba($c-shadow, 0) 100%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba($c-shadow, .5);
+    // background: linear-gradient(to right,
+    //   rgba($c-shadow, 0) 0%,
+    //   rgba($c-shadow, .5) 20% 80%,
+    //   rgba($c-shadow, 0) 100%);
+  }
+}
+
 // Components
 
 .inline-block {
@@ -62,13 +99,19 @@ pre {
 // MD // md_layout.svelte内でscssが使えない為
 
 .md {
+  .meta {
+    font: 1rem $f-mono;
 
-.meta {
-  font: 1rem $f-mono;
-
-  .iter > *:not(:last-child)::after {
-    content: ",";
+    .iter > *:not(:last-child)::after {
+      content: ",";
+    }
   }
-}
 
+  .main {
+    margin: $l-section-margin;
+
+    @include mqUp(md) {
+      margin: $l-section-margin-small;
+    }
+  }
 }

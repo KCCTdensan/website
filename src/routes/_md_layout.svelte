@@ -51,10 +51,13 @@
   <hr>
 {/if}
 
-<slot>Hello from MarkDown!</slot>
+<main class="main">
+  <slot>Hello from MarkDown!</slot>
+</main>
 
 </div>
 
 <style lang="scss">
   /* SCSS NOT WORKING */
+  /* moved to /src/app.scss */
 </style>

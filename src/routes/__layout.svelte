@@ -41,9 +41,9 @@
     {#if konami}
       <audio autoplay controls src="/nyan.ogg" />
     {/if}
-    <main class="main">
+    <div>
       <slot>Hello!</slot>
-    </main>
+    </div>
     <footer class="footer">
       <!-- left -->
       <div></div>
@@ -75,9 +75,6 @@
   @import "../styles/helpers.scss";
   @import "../styles/variables.scss";
 
-  $section-margin: 1.5rem;
-  $section-margin-small: 1rem;
-
   .app {
     display: flex;
     min-height: 100vh;
@@ -102,17 +99,9 @@
     }
   }
 
-  .main {
-    margin: $section-margin;
-
-    @include mqUp(md) {
-      margin: $section-margin-small;
-    }
-  }
-
   .footer {
     display: flex;
-    margin: $section-margin;
+    margin: $l-section-margin;
     justify-content: space-between;
 
     @include mqUp(md) {
