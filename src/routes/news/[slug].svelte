@@ -13,7 +13,7 @@
 </script>
 
 <script lang="ts">
-  import MDLayout from "../../md_layout.svelte"
+  import MDLayout from "../_md_layout.svelte"
 
   export let data
 

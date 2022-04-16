@@ -8,7 +8,7 @@ export default defineConfig({
     dashes: "oldschool",
   },
   layout: {
-    _: "./src/md_layout.svelte",
+    _: "./src/routes/_md_layout.svelte",
   },
   remarkPlugins: [remarkMath],
   rehypePlugins: [rehypeKatex],
