@@ -132,8 +132,8 @@
       height: 100%;
       margin: 0 .5rem;
       flex-direction: column;
-      justify-content: end;
-      align-items: end;
+      justify-content: flex-end;
+      align-items: flex-end;
       color: $c-headerDimText;
       font-weight: bolder;
 
