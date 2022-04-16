@@ -8,6 +8,7 @@
   // import Icon from "$lib/icon.svelte"
 
   export let pkg
+  export let gaming
 
   // pathAの2個分まで対応
   // それ以上にの場合はnavLinksのロジックを変更する必要有
@@ -29,7 +30,7 @@
   }))
 </script>
 
-<header class="header">
+<header class:gaming class="header">
   <div class="headerLogo">
     <a class="logo" href="/">
       <img class="icon" src="/icon.png" alt="Logo" /><!-- SVGアニメーションにしたい -->
@@ -83,6 +84,10 @@
     flex-direction: column;
     background-color: $c-headerBg;
     color: $c-headerText;
+
+    &.gaming {
+      @include gaming;
+    }
 
     @include mqDown(md) {
       border-radius: 8px 8px 0 0;
@@ -151,6 +156,12 @@
     color: $c-headerNavText;
     font: 1rem/1.8 $f-mono;
     cursor: text;
+
+    .gaming > & * {
+      @include gaming;
+      color: transparent;
+      background-clip: text;
+    }
 
     * {
       flex-wrap: wrap;

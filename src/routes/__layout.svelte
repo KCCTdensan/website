@@ -37,9 +37,9 @@
 
 <div class="app">
   <div class="container">
-    <Header {pkg} />
+    <Header {pkg} gaming={konami} />
     {#if konami}
-      <audio autoplay controls src="/nyan.ogg" />
+      <audio autoplay controls src="/nyan.ogg" class="play" />
     {/if}
     <div>
       <slot>Hello!</slot>
@@ -58,7 +58,7 @@
           </a>
         </div>
         <small class="copyright">
-          <span class="inline-block">&copy; 1974-{ new Date().getFullYear() }</span>
+          <span class="inline-block">&copy; 1974-{new Date().getFullYear()}</span>
           <span class="inline-block">KCCTdensan</span>
           <span class="inline-block">神戸高専電算部</span>
         </small>
@@ -99,8 +99,13 @@
     }
   }
 
+  .play {
+    width: 100%;
+  }
+
   .footer {
     display: flex;
+    position: relative;
     margin: $l-section-margin;
     justify-content: space-between;
 

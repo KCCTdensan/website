@@ -27,3 +27,17 @@ $breakpoints: (
     @content;
   }
 }
+
+// Gaming
+@mixin gaming {
+  background: linear-gradient(to right, cyan, yellow, magenta, cyan) center/200%;
+  animation: slide 4s linear infinite;
+  @keyframes slide {
+    from {
+      background-position-x: 0%;
+    }
+    to {
+      background-position-x: 200%;
+    }
+  }
+}
