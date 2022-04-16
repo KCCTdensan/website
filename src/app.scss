@@ -53,7 +53,6 @@ hr {
   display: block;
   position: relative;
   height: 2px;
-  margin: 7px 0;
   border: none;
 
   &::before {
@@ -84,7 +83,17 @@ hr {
   }
 }
 
-// Components
+// Layout
+
+.main-normal {
+  margin: $l-section-margin;
+
+  @include mqUp(md) {
+    margin: $l-section-margin-small;
+  }
+}
+
+// Component
 
 .inline-block {
   display: inline-block;
@@ -94,24 +103,4 @@ hr {
   color: #f00;
   font-size: 2.5em;
   font-weight: 900;
-}
-
-// MD // md_layout.svelte内でscssが使えない為
-
-.md {
-  .meta {
-    font: 1rem $f-mono;
-
-    .iter > *:not(:last-child)::after {
-      content: ",";
-    }
-  }
-
-  .main {
-    margin: $l-section-margin;
-
-    @include mqUp(md) {
-      margin: $l-section-margin-small;
-    }
-  }
 }

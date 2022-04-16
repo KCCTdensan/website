@@ -45,7 +45,7 @@
 
 <Meta title="Error_{status}" description="エラーが発生しました．" />
 
-<main class="main">
+<main class="main-normal">
   <h1><pre><code><span class="red">error:</span> {error}
   x | static_assert(<span class="red">status != {status}</span>);
     |               <span class="red">~~~~~~~^~~~~~</span></code></pre></h1>
@@ -68,14 +68,6 @@
 <style lang="scss">
   @import "../styles/helpers.scss";
   @import "../styles/variables.scss";
-
-  .main {
-    margin: $l-section-margin;
-
-    @include mqUp(md) {
-      margin: $l-section-margin-small;
-    }
-  }
 
   h1 pre {
     margin: 0;
