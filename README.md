@@ -7,5 +7,5 @@
 
 ## 解説
 
-- [ソース](src/routes/inner/inner/infra/web.md)
+- [ソース](src/routes/inner/infra/web.md)
 - [フル](https://d3bu.net/inner/infra/web/)
