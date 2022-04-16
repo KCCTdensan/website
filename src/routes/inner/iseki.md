@@ -46,12 +46,12 @@ noRobots: true
 
 ### 学校サーバー
 
-- [HP (2007)](http://www.kobe-kosen.ac.jp/densan/2007/)
-- [HP (2010)](http://www.kobe-kosen.ac.jp/densan/2010/)
-- [HP (2012)](http://www.kobe-kosen.ac.jp/densan/2012/)
+- [HP (2007)](http://www.kobe-kosen.ac.jp/groups/densan/2007/index.htm)
+- [HP (2010)](http://www.kobe-kosen.ac.jp/groups/densan/2010/index.shtml)
+- [HP (2012)](http://www.kobe-kosen.ac.jp/groups/densan/2012/index.html)
 
 ### 部サーバー
 
-- [HP (2007)](https://www2.d3bu.net/2007/)
-- [HP (2010)](https://www2.d3bu.net/2010/)
-- [HP (2012)](https://www2.d3bu.net/2012/)
+- [HP (2007)](https://www2.d3bu.net/2007/index.htm)
+- [HP (2010)](https://www2.d3bu.net/2010/index.shtml)
+- [HP (2012)](https://www2.d3bu.net/2012/index.html)
