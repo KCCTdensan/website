@@ -49,21 +49,21 @@
   <h1><pre><code><span class="red">error:</span> {error}
   x | static_assert(<span class="red">status != {status}</span>);
     |               <span class="red">~~~~~~~^~~~~~</span></code></pre></h1>
-</main>
 
-{#if status === 404}
-  <p>お探しのページは見つかりませんでした……ごめんなさい………</p>
-  {#if recommends.length > 0}
-    <h2>もしかして :</h2>
-    <ul>
-      {#each recommends as { link, text }}
-        <li><article><a href={link}>{text}</a></article></li>
-      {/each}
-    </ul>
+  {#if status === 404}
+    <p>お探しのページは見つかりませんでした……ごめんなさい………</p>
+    {#if recommends.length > 0}
+      <h2>もしかして :</h2>
+      <ul>
+        {#each recommends as { link, text }}
+          <li><article><a href={link}>{text}</a></article></li>
+        {/each}
+      </ul>
+    {/if}
+  {:else}
+    <p>エラーが発生しました．</p>
   {/if}
-{:else}
-  <p>エラーが発生しました．</p>
-{/if}
+</main>
 
 <style lang="scss">
   @import "../styles/helpers.scss";
@@ -86,5 +86,9 @@
       padding: 0;
       background-color: $c-bg;
     }
+  }
+
+  .red {
+    color: red;
   }
 </style>
