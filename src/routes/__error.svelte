@@ -43,7 +43,7 @@
   }
 </script>
 
-<Meta title="Error_{status}" description="エラーが発生しました．" />
+<Meta title={"Error_{status}"} description={"エラーが発生しました．"} showMeta={false} />
 
 <main class="main-normal">
   <h1><pre><code><span class="red">error:</span> {error}

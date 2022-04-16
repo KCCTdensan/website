@@ -44,4 +44,4 @@ noRobots: true
 
 ## 遺跡
 
-特設ページ作りました → [iseki/](iseki/)
+特設ページ作りました → [/iseki/](/iseki/)

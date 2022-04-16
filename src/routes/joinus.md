@@ -1,6 +1,7 @@
 ---
 title: JoinUs
 description: 電算部について
+showMeta: false
 ---
 
 # 入部希望の方へ

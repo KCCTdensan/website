@@ -1,6 +1,7 @@
 ---
 title: About
 description: 電算部について
+showMeta: false
 ---
 
 # 電算部について
