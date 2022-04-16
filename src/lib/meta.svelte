@@ -69,7 +69,7 @@
   @import "../styles/variables.scss";
 
   .meta {
-    margin: 1rem;
+    margin: .8rem 1rem;
     font: 1rem $f-mono;
 
     .iter > *:not(:last-child)::after {

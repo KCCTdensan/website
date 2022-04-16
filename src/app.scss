@@ -53,6 +53,7 @@ hr {
   display: block;
   position: relative;
   height: 2px;
+  margin: -1px 0;
   border: none;
 
   &::before {
@@ -84,6 +85,14 @@ hr {
 }
 
 // Layout
+
+.container {
+  img:not(.unlimited) {
+    display: block;
+    max-height: 360px;
+    margin: auto;
+  }
+}
 
 .main-normal {
   margin: $l-section-margin;
