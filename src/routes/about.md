@@ -19,15 +19,18 @@ showMeta: false
 
 ## やっていること
 
+- イラスト・音楽・ゲーム等の制作 (詳細 : [/works/](/works/))
+- 競技プログラミング
+
+
 - 低レベルプログラミング・CPU開発 (詳細 : [/dev/computer/](/dev/computer/))
 - ラズパイクラスタの構築 (詳細 : [/dev/cluster/](/dev/cluster/))
 - Webサイトの制作
-- 競技プログラミング
 - 電子工作 (詳細 : [/dev/denkou/](/dev/denkou/))
 
 ## 実績
 
-コンテスト等の実績は[ここ](/news/activities/)に掲載しています．
+コンテスト等の実績は[/news/activities/](/news/activities/)に掲載しています．
 
 ## 設備
 

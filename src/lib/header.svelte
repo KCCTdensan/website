@@ -17,6 +17,7 @@
     { path: "/about/",  name: "About"   },
     { path: "/news/",   name: "News"    },
     { path: "/blog/",   name: "Blog"    },
+    { path: "/works/",  name: "Works"   },
     { path: "/dev/",    name: "Dev"     },
     { path: "/inner/",  name: "Inner"   },
     { path: "/joinus/", name: "JoinUs"  },
