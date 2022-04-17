@@ -5,8 +5,10 @@ import { mdsvex } from "mdsvex"
 import mdsvexConfig from "./mdsvex.config.js"
 import { isoImport } from "vite-plugin-iso-import"
 
-const ssr = process.env.SSR === "true" // $lib/_env.ts
 const out = "build"
+
+const dev = process.env.NODE_ENV === "development"
+const ssr = process.env.SSR === "true"
 
 export default {
   extensions: [".svelte", ...mdsvexConfig.extensions],
@@ -24,7 +26,12 @@ export default {
     vite: {
       plugins: [isoImport()],
       define: {
-        "process.env": process.env,
+        ...(dev ? {
+          "process.env": process.env,
+        } : {
+          "process.env.NODE_ENV": `"${process.env.NODE_ENV}"`,
+          "process.env.SSR": `"${process.env.SSR}"`,
+        }),
       },
     },
   },

@@ -44,12 +44,12 @@
     "build:sitemap": "svelte-sitemap --trailing-slashes -d https://d3bu.net -i '404.html' -i 'inner/**'",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "check-watch": "svelte-check --tsconfig ./tsconfig.json --watch",
-    "dev": "DEV='true' svelte-kit dev",
-    "dev-host": "DEV='true' svelte-kit dev --host",
+    "dev": "svelte-kit dev",
+    "dev-host": "svelte-kit dev --host",
     "preview": "svelte-kit preview",
     "preview-host": "svelte-kit preview --host",
     "ssr:build": "SSR='true' run-s build:kit",
-    "ssr:start": "SSR='true' node build"
+    "ssr:start": "node build"
   },
   "type": "module",
   "workspaces": [

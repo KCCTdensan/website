@@ -3,12 +3,11 @@
 </script>
 
 <script lang="ts">
-  import { PLATFORM } from "$lib/_env"
-  import { page } from "$app/stores"
+  import { page, session } from "$app/stores"
   // import Icon from "$lib/icon.svelte"
 
-  export let pkg
-  export let gaming
+  export let pkg: object
+  export let gaming: boolean
 
   // pathAの2個分まで対応
   // それ以上にの場合はnavLinksのロジックを変更する必要有
@@ -71,7 +70,7 @@
       {/each}
     </ul>
     <span>&gt; echo $PLATFORM</span>
-    <span>{`${PLATFORM}`}</span>
+    <span>{`${$session.PLATFORM}`}</span>
     <span>&gt; _</span>
   </nav>
 </header>
