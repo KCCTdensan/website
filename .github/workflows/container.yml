@@ -8,7 +8,6 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: kcctdensan/densan-web
-  API_BASE: ${{ secrets.ENV_API_BASE }}
 
 jobs:
   build:
@@ -35,14 +34,14 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           flavor: latest=true
 
-  deploy:
-    runs-on: takoyaki-deploy-pod
-    steps:
-      - uses: docker/login-action@v1
-        with:
-          registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Deploy to takoyaki
-        run: 
+#  deploy:
+#    runs-on: takoyaki-deploy-pod
+#    steps:
+#      - uses: docker/login-action@v1
+#        with:
+#          registry: ${{ env.REGISTRY }}
+#          username: ${{ github.actor }}
+#          password: ${{ secrets.GITHUB_TOKEN }}
+#
+#      - name: Deploy to takoyaki
+#        run: 
