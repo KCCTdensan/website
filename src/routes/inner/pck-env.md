@@ -16,7 +16,7 @@ noRobots: true
 まず、コードを保存したフォルダを表示する。
 そしてShiftキーを押しながら何も無い所を右クリックして
 
-![](https://i.imgur.com/WsHKMJy.png)
+![open cmd here](https://i.imgur.com/WsHKMJy.png)
 
 コマンドウィンドウをここで開いてください。
 
@@ -48,7 +48,7 @@ InternetExplorer(eの水色のロゴ)でchromeと検索
 
 https://sourceforge.net/projects/mingw/files/Installer/mingw-get-setup.exe/download
 
-![](https://i.imgur.com/Mo8RuG9.png)
+![mingw-get](https://i.imgur.com/Mo8RuG9.png)
 
 適当に"次へ"的なやつを連打する。
 そうするとインストールが完了する。
@@ -59,9 +59,9 @@ https://sourceforge.net/projects/mingw/files/Installer/mingw-get-setup.exe/downl
 
 (勝手に開かれるウィンドウを閉じた人は)先ほどインストールしたソフトのショートカットがデスクトップに表示されてるはずなので，それをクリック。
 
-![](https://i.imgur.com/zKldKQB.png)
+![mingw-install](https://i.imgur.com/zKldKQB.png)
 
-![](https://i.imgur.com/jkJruSk.png)
+![mingw-install-mark](https://i.imgur.com/jkJruSk.png)
 
 こんな感じで，
 
@@ -73,11 +73,11 @@ https://sourceforge.net/projects/mingw/files/Installer/mingw-get-setup.exe/downl
 にチェックする。
 (何個かは勝手にチェックされるはず。)
 
-![](https://i.imgur.com/Lymfn3x.png)
+![mingw-install-checked](https://i.imgur.com/Lymfn3x.png)
 
 それが終わったら、その変更を適用する。
 
-![](https://i.imgur.com/hlDQsl4.png)
+![mingw-install-apply](https://i.imgur.com/hlDQsl4.png)
 
 左上のメニューから，`Apply Changes`をクリック。
 ほんで出てきたウィンドウの`Apply`ボタンを押す。
@@ -90,36 +90,36 @@ https://sourceforge.net/projects/mingw/files/Installer/mingw-get-setup.exe/downl
 
 ということで`Windown + R`で"ファイル名を指定して実行"というものを開いて，`control`と入力する。
 
-![](https://i.imgur.com/k9ltNv4.png)
+![win-r-control](https://i.imgur.com/k9ltNv4.png)
 
 Enterでコンパネが開くと思うので，検索欄に`path`と入力して，出てきた"環境変数を編集"をクリックする。
 
-![](https://i.imgur.com/UL5PksP.png)
+![control](https://i.imgur.com/UL5PksP.png)
 
 Pathというやつを選択して"編集"をクリックする。
 
-![](https://i.imgur.com/ruKIcDd.png)
+![path-overview](https://i.imgur.com/ruKIcDd.png)
 
 こんな感じの画面が表示されるはず。
 今後これを"タイプA"とする。
 (内容は人によって変わるかも。)
 
-![](https://i.imgur.com/WWTl4jS.png)
+![path-details](https://i.imgur.com/WWTl4jS.png)
 
 場合によってはこんな感じかも。(これは"タイプB"とする。)
 
-![](https://i.imgur.com/zB6klhi.png)
+![path-details-2](https://i.imgur.com/zB6klhi.png)
 
 ### タイプAの人
 
 "新規"を押して，`C:\MinGW\bin`を入力して，OKを連打してウィンドウを閉じる。
 それだけ。
 
-![](https://i.imgur.com/BCCazFI.png)
+![path-config](https://i.imgur.com/BCCazFI.png)
 
 ### タイプBの人
 
-![](https://i.imgur.com/gimgeX0.png)
+![path-config-2](https://i.imgur.com/gimgeX0.png)
 
 こんな感じ。
 最後に`C:\MinGW\bin;`を入力する。
@@ -131,14 +131,14 @@ Pathというやつを選択して"編集"をクリックする。
 
 さて，忘れていたかもしれませんがそろそろコンパイラのインストールが終わっているはずです。
 
-![](https://i.imgur.com/G14Ts4A.png)
+![mingw-installed-log](https://i.imgur.com/G14Ts4A.png)
 
 こんなふうに，"All changes were applied successfully;"と出ていたら成功です。
 失敗してたら先輩に聞きましょう。
 
 そこで一旦サインアウトします。(**これは儀式に必要な手順**)
 
-![](https://i.imgur.com/VV88QkY.png)
+![sign out](https://i.imgur.com/VV88QkY.png)
 
 そしてもっかいログインします。
 
@@ -146,11 +146,11 @@ Pathというやつを選択して"編集"をクリックする。
 
 正常にインストールできているか試します。
 
-![](https://i.imgur.com/RYXnq5Q.png)
+![win-r-cmd](https://i.imgur.com/RYXnq5Q.png)
 
 これでコマンドプロンプトが起動します。
 
-![](https://i.imgur.com/ksHbv6G.png)
+![cmd-gcc](https://i.imgur.com/ksHbv6G.png)
 
 `gcc`とだけ打って，こんな感じのエラーが出てたら正解。
 出てなかったら手を挙げてください。
