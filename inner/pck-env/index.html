@@ -19,15 +19,15 @@
     <meta property="og:image" content="https://d3bu.net/icon.png" data-svelte="svelte-1tp2pzo" />
     <meta property="og:description" content="神戸高専電算部のウェブサイト" data-svelte="svelte-1tp2pzo" />
     <meta property="og:site_name" content="電算部.net" data-svelte="svelte-1tp2pzo" />
-    <link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-fad03230.css" />
-    <link rel="stylesheet" href="/_app/assets/meta-4f1e9be8.css" />
-    <link rel="modulepreload" href="/_app/start-67bd681f.js" />
+    <link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-11b698a2.css" />
+    <link rel="stylesheet" href="/_app/assets/meta-451dd010.css" />
+    <link rel="modulepreload" href="/_app/start-5a04f8b6.js" />
     <link rel="modulepreload" href="/_app/chunks/index-0daf26e0.js" />
-    <link rel="modulepreload" href="/_app/pages/__layout.svelte-f1c96f8c.js" />
-    <link rel="modulepreload" href="/_app/chunks/stores-6f336de3.js" />
-    <link rel="modulepreload" href="/_app/pages/inner/pck-env.md-928ff939.js" />
-    <link rel="modulepreload" href="/_app/chunks/_md_layout-d288c7a4.js" />
-    <link rel="modulepreload" href="/_app/chunks/meta-b0d28380.js" />
+    <link rel="modulepreload" href="/_app/pages/__layout.svelte-5fd90eb5.js" />
+    <link rel="modulepreload" href="/_app/chunks/stores-e84f0049.js" />
+    <link rel="modulepreload" href="/_app/pages/inner/pck-env.md-875ddb34.js" />
+    <link rel="modulepreload" href="/_app/chunks/_md_layout-e8a85f72.js" />
+    <link rel="modulepreload" href="/_app/chunks/meta-207f953c.js" />
     <script>
       function setViewportProperty(doc) {
         var prevClientHeight
@@ -67,6 +67,7 @@
               <li class="svelte-1ge6w0r"><a sveltekit:prefetch href="/about/" class="svelte-1ge6w0r">About</a></li>
               <li class="svelte-1ge6w0r"><a sveltekit:prefetch href="/news/" class="svelte-1ge6w0r">News</a></li>
               <li class="svelte-1ge6w0r"><a sveltekit:prefetch href="/blog/" class="svelte-1ge6w0r">Blog</a></li>
+              <li class="svelte-1ge6w0r"><a sveltekit:prefetch href="/works/" class="svelte-1ge6w0r">Works</a></li>
               <li class="svelte-1ge6w0r"><a sveltekit:prefetch href="/dev/" class="svelte-1ge6w0r">Dev</a></li>
               <li class="svelte-1ge6w0r active"><a sveltekit:prefetch href="/inner/" class="svelte-1ge6w0r">Inner</a></li>
               <li class="svelte-1ge6w0r"><a sveltekit:prefetch href="/joinus/" class="svelte-1ge6w0r">JoinUs</a></li>
@@ -85,11 +86,11 @@
         </header>
 
         <div>
-          <div class="meta svelte-cnujdl">
+          <div class="meta svelte-y63w9z">
             <span>meta = {</span>
-            <span class="iter svelte-cnujdl"
-              ><span class="svelte-cnujdl">post: &quot;2021/09/11&quot;</span>
-              <span class="svelte-cnujdl">updated: &quot;<time datetime="2021-12-28T08:18:16.220Z">2021/12/28</time>&quot;</span>
+            <span class="iter svelte-y63w9z"
+              ><span class="svelte-y63w9z">post: &quot;2021/09/11&quot;</span>
+              <span class="svelte-y63w9z">updated: &quot;<time datetime="2021-12-28T08:18:16.220Z">2021/12/28</time>&quot;</span>
             </span>
             <span>};</span>
           </div>
@@ -104,7 +105,7 @@
             </p>
             <h2>コンパイラの使い方</h2>
             <p>まず、コードを保存したフォルダを表示する。 そしてShiftキーを押しながら何も無い所を右クリックして</p>
-            <p><img src="https://i.imgur.com/WsHKMJy.png" /></p>
+            <p><img src="https://i.imgur.com/WsHKMJy.png" alt="open cmd here" /></p>
             <p>コマンドウィンドウをここで開いてください。</p>
             <pre
               class="language-bash"
@@ -131,13 +132,13 @@ C:<span class="token punctuation"></span>Users<span class="token punctuation"></
                 >https://sourceforge.net/projects/mingw/files/Installer/mingw-get-setup.exe/download</a
               >
             </p>
-            <p><img src="https://i.imgur.com/Mo8RuG9.png" /></p>
+            <p><img src="https://i.imgur.com/Mo8RuG9.png" alt="mingw-get" /></p>
             <p>適当に”次へ”的なやつを連打する。 そうするとインストールが完了する。</p>
             <p>しかし実はこれはコンパイラをインストールするためのソフトのインストーラで，まだコンパイラ本体はインストールできていない。</p>
             <p>なので次こそはコンパイラをインストール。</p>
             <p>(勝手に開かれるウィンドウを閉じた人は)先ほどインストールしたソフトのショートカットがデスクトップに表示されてるはずなので，それをクリック。</p>
-            <p><img src="https://i.imgur.com/zKldKQB.png" /></p>
-            <p><img src="https://i.imgur.com/jkJruSk.png" /></p>
+            <p><img src="https://i.imgur.com/zKldKQB.png" alt="mingw-install" /></p>
+            <p><img src="https://i.imgur.com/jkJruSk.png" alt="mingw-install-mark" /></p>
             <p>こんな感じで，</p>
             <ul>
               <li><code>mingw-developer-toolkit</code></li>
@@ -146,41 +147,41 @@ C:<span class="token punctuation"></span>Users<span class="token punctuation"></
               <li><code>msys-base</code></li>
             </ul>
             <p>にチェックする。 (何個かは勝手にチェックされるはず。)</p>
-            <p><img src="https://i.imgur.com/Lymfn3x.png" /></p>
+            <p><img src="https://i.imgur.com/Lymfn3x.png" alt="mingw-install-checked" /></p>
             <p>それが終わったら、その変更を適用する。</p>
-            <p><img src="https://i.imgur.com/hlDQsl4.png" /></p>
+            <p><img src="https://i.imgur.com/hlDQsl4.png" alt="mingw-install-apply" /></p>
             <p>左上のメニューから，<code>Apply Changes</code>をクリック。 ほんで出てきたウィンドウの<code>Apply</code>ボタンを押す。 するとインストールが始まります。</p>
             <h3>PATH通す</h3>
             <p>これでコンパイラをインストールできました。 しかしこれをコマンドとして使用するためには<em>PATHを通す</em>という儀式を行わなければいけません。</p>
             <p>ということで<code>Windown + R</code>で”ファイル名を指定して実行”というものを開いて，<code>control</code>と入力する。</p>
-            <p><img src="https://i.imgur.com/k9ltNv4.png" /></p>
+            <p><img src="https://i.imgur.com/k9ltNv4.png" alt="win-r-control" /></p>
             <p>Enterでコンパネが開くと思うので，検索欄に<code>path</code>と入力して，出てきた”環境変数を編集”をクリックする。</p>
-            <p><img src="https://i.imgur.com/UL5PksP.png" /></p>
+            <p><img src="https://i.imgur.com/UL5PksP.png" alt="control" /></p>
             <p>Pathというやつを選択して”編集”をクリックする。</p>
-            <p><img src="https://i.imgur.com/ruKIcDd.png" /></p>
+            <p><img src="https://i.imgur.com/ruKIcDd.png" alt="path-overview" /></p>
             <p>こんな感じの画面が表示されるはず。 今後これを”タイプA”とする。 (内容は人によって変わるかも。)</p>
-            <p><img src="https://i.imgur.com/WWTl4jS.png" /></p>
+            <p><img src="https://i.imgur.com/WWTl4jS.png" alt="path-details" /></p>
             <p>場合によってはこんな感じかも。(これは”タイプB”とする。)</p>
-            <p><img src="https://i.imgur.com/zB6klhi.png" /></p>
+            <p><img src="https://i.imgur.com/zB6klhi.png" alt="path-details-2" /></p>
             <h3>タイプAの人</h3>
             <p>“新規”を押して，<code>C:\MinGW\bin</code>を入力して，OKを連打してウィンドウを閉じる。 それだけ。</p>
-            <p><img src="https://i.imgur.com/BCCazFI.png" /></p>
+            <p><img src="https://i.imgur.com/BCCazFI.png" alt="path-config" /></p>
             <h3>タイプBの人</h3>
-            <p><img src="https://i.imgur.com/gimgeX0.png" /></p>
+            <p><img src="https://i.imgur.com/gimgeX0.png" alt="path-config-2" /></p>
             <p>こんな感じ。 最後に<code>C:\MinGW\bin;</code>を入力する。 それで終わり。</p>
             <h3>その後</h3>
             <p>タイプAもタイプBも一旦集合。てか今後手順が分かれることはないのでこれからは普通に読み進めてください。</p>
             <p>さて，忘れていたかもしれませんがそろそろコンパイラのインストールが終わっているはずです。</p>
-            <p><img src="https://i.imgur.com/G14Ts4A.png" /></p>
+            <p><img src="https://i.imgur.com/G14Ts4A.png" alt="mingw-installed-log" /></p>
             <p>こんなふうに，“All changes were applied successfully;“と出ていたら成功です。 失敗してたら先輩に聞きましょう。</p>
             <p>そこで一旦サインアウトします。(<strong>これは儀式に必要な手順</strong>)</p>
-            <p><img src="https://i.imgur.com/VV88QkY.png" /></p>
+            <p><img src="https://i.imgur.com/VV88QkY.png" alt="sign out" /></p>
             <p>そしてもっかいログインします。</p>
             <h2>コンパイラ検証編</h2>
             <p>正常にインストールできているか試します。</p>
-            <p><img src="https://i.imgur.com/RYXnq5Q.png" /></p>
+            <p><img src="https://i.imgur.com/RYXnq5Q.png" alt="win-r-cmd" /></p>
             <p>これでコマンドプロンプトが起動します。</p>
-            <p><img src="https://i.imgur.com/ksHbv6G.png" /></p>
+            <p><img src="https://i.imgur.com/ksHbv6G.png" alt="cmd-gcc" /></p>
             <p><code>gcc</code>とだけ打って，こんな感じのエラーが出てたら正解。 出てなかったら手を挙げてください。</p>
             <h2>エディタ</h2>
             <p>VSCode入れましょう: <a href="https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user" rel="nofollow">URL</a></p>
@@ -219,19 +220,19 @@ C:<span class="token punctuation"></span>Users<span class="token punctuation"></
       </div>
     </div>
 
-    <script type="module" data-hydrate="naeibk">
-      import { start } from "/_app/start-67bd681f.js"
+    <script type="module" data-hydrate="1esb36s">
+      import { start } from "/_app/start-5a04f8b6.js"
       start({
-        target: document.querySelector('[data-hydrate="naeibk"]').parentNode,
+        target: document.querySelector('[data-hydrate="1esb36s"]').parentNode,
         paths: { base: "", assets: "" },
-        session: {},
+        session: { PLATFORM: "gh-pages" },
         route: true,
         spa: false,
         trailing_slash: "always",
         hydrate: {
           status: 200,
           error: null,
-          nodes: [import("/_app/pages/__layout.svelte-f1c96f8c.js"), import("/_app/pages/inner/pck-env.md-928ff939.js")],
+          nodes: [import("/_app/pages/__layout.svelte-5fd90eb5.js"), import("/_app/pages/inner/pck-env.md-875ddb34.js")],
           params: {},
           routeId: "inner/pck-env",
         },
