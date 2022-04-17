@@ -41,7 +41,7 @@
     "build:old:v0": "cp -r old/v0 static/old/v0 && cp -r old/v0-blog static/old/v0/Blog",
     "build:old:v1": "npm run -w old/v1 build && cp -r old/v1/public static/old/v1",
     "build:pretty": "prettier -w 'build/**/*.html'",
-    "build:sitemap": "svelte-sitemap --trailing-slashes -d https://d3bu.net -i '404.html' -i 'inner/**'",
+    "build:sitemap": "svelte-sitemap -d https://d3bu.net -i '404.html' -i 'inner/**'",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "check-watch": "svelte-check --tsconfig ./tsconfig.json --watch",
     "dev": "svelte-kit dev",
