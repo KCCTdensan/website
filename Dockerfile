@@ -11,11 +11,13 @@ RUN pnpm install
 RUN pnpm ssr:build
 RUN pnpm prune --prod
 
-FROM gcr.io/distroless/nodejs:16 as runner
+#FROM gcr.io/distroless/nodejs:16 as runner # not supported in ARMv7
+FROM node:lts-alpine as runner
 ARG WORKDIR
 WORKDIR $WORKDIR
 COPY --from=builder $WORKDIR/build ./build
 COPY --from=builder $WORKDIR/node_modules ./node_modules
 ENV API_BASE=""
 ENV PLATFORM="container-ssr"
+ENTRYPOINT ["node"]
 CMD ["build"]
