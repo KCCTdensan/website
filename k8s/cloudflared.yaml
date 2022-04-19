@@ -22,7 +22,8 @@ spec:
     spec:
       containers:
       - name: cloudflared
-        image: cloudflare/cloudflared:2022.4.1
+        # image: cloudflare/cloudflared:2022.4.1
+        image: ghcr.io/kcctdensan/cloudflared-arm:2022.4.1
         args: ["tunnel", "--config", "/etc/cloudflared/config.yaml", "run"]
         volumeMounts:
         - name: config
