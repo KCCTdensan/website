@@ -21,7 +21,7 @@
     <meta property="og:site_name" content="電算部.net" data-svelte="svelte-1tp2pzo" />
     <link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-21c94e6c.css" />
     <link rel="stylesheet" href="/_app/assets/meta-451dd010.css" />
-    <link rel="modulepreload" href="/_app/start-98f772ab.js" />
+    <link rel="modulepreload" href="/_app/start-b2f34863.js" />
     <link rel="modulepreload" href="/_app/chunks/index-0daf26e0.js" />
     <link rel="modulepreload" href="/_app/pages/__layout.svelte-5fd90eb5.js" />
     <link rel="modulepreload" href="/_app/chunks/stores-e84f0049.js" />
@@ -90,12 +90,12 @@
             <article>
               2018/12/02 -
               <a href="/blog/hexo">Hexoで爆速ブログ開設</a>
-              <span class="inline-block">by KCCTdensan</span>
+              <span class="inline-block">by ポッチャマ</span>
             </article>
             <article>
               2018/12/02 -
               <a href="/blog/first-post">ブログをリニューアルしました！</a>
-              <span class="inline-block">by KCCTdensan</span>
+              <span class="inline-block">by ポッチャマ</span>
             </article>
           </main>
         </div>
@@ -131,10 +131,10 @@
       </div>
     </div>
 
-    <script type="module" data-hydrate="a9wm7l">
-      import { start } from "/_app/start-98f772ab.js"
+    <script type="module" data-hydrate="hmwasx">
+      import { start } from "/_app/start-b2f34863.js"
       start({
-        target: document.querySelector('[data-hydrate="a9wm7l"]').parentNode,
+        target: document.querySelector('[data-hydrate="hmwasx"]').parentNode,
         paths: { base: "", assets: "" },
         session: { PLATFORM: "gh-pages" },
         route: true,
@@ -157,7 +157,7 @@
         "status": 200,
         "statusText": "",
         "headers": { "content-type": "application/json; charset=utf-8" },
-        "body": "{\"data\":[{\"slug\":\"hexo\",\"title\":\"Hexoで爆速ブログ開設\",\"date\":\"2018-12-02T16:02:08.000Z\",\"body\":\"\u003Ch6 id=\\\"writer-ポッチャマ\\\">\u003Cu>Writer: ポッチャマ\u003C/u>\u003C/h6>\\n\u003Cp>電算部のブログがかなり管理しづらかったので、&quot;Hexo&quot;というサイトジェネレータを使ってリニューアルしてみました。\u003C/p>\\n\u003Ch2 id=\\\"hexoとは\\\">Hexoとは?\u003C/h2>\\n\u003Cp>node.js(サーバーサイドで動作するJavaScript)で作られたパッケージ。これを使うと、静的サイトを簡単に作ることができる。\u003C/p>\\n\u003Ch2 id=\\\"とにかくブログ作ってみる\\\">とにかくブログ作ってみる\u003C/h2>\\n\u003Cul>\\n\u003Cli>\u003Ch3 id=\\\"環境構築\\\">環境構築\u003C/h3>\\n\u003Cp>  部員はWindowsユーザーがほとんどなので、ここではWindowsでの手順のみ記述する。\u003C/p>\\n\u003Col>\\n\u003Cli>\u003Ch4 id=\\\"npmをインストール\\\">npmをインストール\u003C/h4>\\n\u003Cp> Hexoなどのnodeパッケージの管理に必要なnpm(node package manager)をインストールする。\\n 下記の公式サイトからNode.js/npmのインストーラがダウンロードできる。\\n LTSとLatestがあるが、LTSで良いと思う。\\n \u003Ca href=\\\"https://nodejs.org/ja/\\\" title=\\\"node.js公式\\\">node.js公式\u003C/a>\\n ダウンロードしたインストーラーを起動し、インストール。インストール中色々聞かれるけど基本的にデフォルトでOK。\\n コマンドプロンプトでNode.js、npmが使えるか確認。\u003C/p>\\n\u003Cpre>\u003Ccode>node --version\\nnpm --version\\n\u003C/code>\u003C/pre>\\n\u003Cp> バージョン情報が表示されればインストールに成功している。\u003C/p>\\n\u003C/li>\\n\u003Cli>\u003Ch4 id=\\\"hexo-cliのインストール\\\">Hexo-cliのインストール\u003C/h4>\\n\u003Cp> npmを使ってHexo-cliをインストールする。\u003C/p>\\n\u003Cpre>\u003Ccode>npm install hexo-cli -g\\n\u003C/code>\u003C/pre>\\n\u003C/li>\\n\u003C/ol>\\n\u003C/li>\\n\u003Cli>\u003Ch3 id=\\\"サイト作成\\\">サイト作成\u003C/h3>\\n\u003Col>\\n\u003Cli>\u003Ch4 id=\\\"プロジェクト作成\\\">プロジェクト作成\u003C/h4>\\n\u003Cp> コマンドプロンプトでプロジェクトのディレクトリを作成したい場所に移動し、下記のコマンドを実行する。\u003C/p>\\n\u003Cpre>\u003Ccode>hexo init プロジェクト名\\n\u003C/code>\u003C/pre>\\n\u003Cp> 大量の文字列が表示され、プロジェクト名と同名のディレクトリが作成される。\u003C/p>\\n\u003C/li>\\n\u003Cli>\u003Ch4 id=\\\"表示させてみる\\\">表示させてみる\u003C/h4>\\n\u003Cp> 作成したディレクトリに移動し、コマンドを実行するとリンクが表示されるのでアクセスしてみよう。\u003C/p>\\n\u003Cpre>\u003Ccode>cd プロジェクト名\\nhexo server\\n\u003C/code>\u003C/pre>\\n\u003Cp> こんな感じのページが見れるはず。\\n \u003Cimg src=\\\"/api/assets/img/hexopage.png\\\" alt=\\\"hexopage\\\">\u003C/p>\\n\u003C/li>\\n\u003C/ol>\\n\u003C/li>\\n\u003Cli>\u003Ch3 id=\\\"使い方\\\">使い方\u003C/h3>\\n\u003Col>\\n\u003Cli>\u003Cp>記事の追加\u003C/p>\\n\u003Cpre>\u003Ccode>hexo new &quot;ページタイトル&quot;\\n\u003C/code>\u003C/pre>\\n\u003Cp> このコマンドでsource/_posts/の中にマークダウン形式のファイルが作成されるので、それを編集する。\u003C/p>\\n\u003C/li>\\n\u003Cli>\u003Cp>github pagesに公開\\n _config.ymlを編集\u003C/p>\\n\u003Cpre>\u003Ccode>url: http://githubのユーザー名.github.io/リポジトリ名/\\n\\n...\\n\\ndeploy:\\n  type: git\\n  repo: git@github.com:ユーザー名/リポジトリ名.git #clone時のurl\\n  branch: gh-pages\\n\u003C/code>\u003C/pre>\\n\u003Cp> 必要なnodeパッケージを追加でインストール\u003C/p>\\n\u003Cpre>\u003Ccode>npm install hexo-deployer-git --save\\nnpm install hexo-renderer-ejs --save\\n\u003C/code>\u003C/pre>\\n\u003Cp> hexoコマンドを実行\u003C/p>\\n\u003Cpre>\u003Ccode>hexo deploy -g\\n\u003C/code>\u003C/pre>\\n\u003Cp> githubのリポジトリにgh-pagesブランチが追加され、そこでデプロイされる。\u003C/p>\\n\u003C/li>\\n\u003C/ol>\\n\u003C/li>\\n\u003C/ul>\\n\u003Cp>ARCHIVESが404になったりHOMEのアクセス先がおかしかったりとエラーもあるが、\\nとりあえずこれで最低限のブログの運用ができるはず...\\nマークダウン形式で記事が書けるようになった。\u003C/p>\\n\"},{\"slug\":\"first-post\",\"title\":\"ブログをリニューアルしました！\",\"date\":\"2018-12-02T15:26:30.000Z\",\"body\":\"\u003Ch6 id=\\\"writer-ポッチャマ\\\">\u003Cu>Writer: ポッチャマ\u003C/u>\u003C/h6>\\n\u003Cp>神戸高専電算部のブログをリニューアルしました！\\nこれからどしどし記事を投稿していきます！\u003C/p>\\n\"}]}"
+        "body": "{\"data\":[{\"slug\":\"hexo\",\"title\":\"Hexoで爆速ブログ開設\",\"author\":\"ポッチャマ\",\"date\":\"2018-12-02T16:02:08.000Z\",\"body\":\"\u003Cp>電算部のブログがかなり管理しづらかったので、&quot;Hexo&quot;というサイトジェネレータを使ってリニューアルしてみました。\u003C/p>\\n\u003Ch2 id=\\\"hexoとは\\\">Hexoとは?\u003C/h2>\\n\u003Cp>node.js(サーバーサイドで動作するJavaScript)で作られたパッケージ。これを使うと、静的サイトを簡単に作ることができる。\u003C/p>\\n\u003Ch2 id=\\\"とにかくブログ作ってみる\\\">とにかくブログ作ってみる\u003C/h2>\\n\u003Cul>\\n\u003Cli>\u003Ch3 id=\\\"環境構築\\\">環境構築\u003C/h3>\\n\u003Cp>  部員はWindowsユーザーがほとんどなので、ここではWindowsでの手順のみ記述する。\u003C/p>\\n\u003Col>\\n\u003Cli>\u003Ch4 id=\\\"npmをインストール\\\">npmをインストール\u003C/h4>\\n\u003Cp> Hexoなどのnodeパッケージの管理に必要なnpm(node package manager)をインストールする。\\n 下記の公式サイトからNode.js/npmのインストーラがダウンロードできる。\\n LTSとLatestがあるが、LTSで良いと思う。\\n \u003Ca href=\\\"https://nodejs.org/ja/\\\" title=\\\"node.js公式\\\">node.js公式\u003C/a>\\n ダウンロードしたインストーラーを起動し、インストール。インストール中色々聞かれるけど基本的にデフォルトでOK。\\n コマンドプロンプトでNode.js、npmが使えるか確認。\u003C/p>\\n\u003Cpre>\u003Ccode>node --version\\nnpm --version\\n\u003C/code>\u003C/pre>\\n\u003Cp> バージョン情報が表示されればインストールに成功している。\u003C/p>\\n\u003C/li>\\n\u003Cli>\u003Ch4 id=\\\"hexo-cliのインストール\\\">Hexo-cliのインストール\u003C/h4>\\n\u003Cp> npmを使ってHexo-cliをインストールする。\u003C/p>\\n\u003Cpre>\u003Ccode>npm install hexo-cli -g\\n\u003C/code>\u003C/pre>\\n\u003C/li>\\n\u003C/ol>\\n\u003C/li>\\n\u003Cli>\u003Ch3 id=\\\"サイト作成\\\">サイト作成\u003C/h3>\\n\u003Col>\\n\u003Cli>\u003Ch4 id=\\\"プロジェクト作成\\\">プロジェクト作成\u003C/h4>\\n\u003Cp> コマンドプロンプトでプロジェクトのディレクトリを作成したい場所に移動し、下記のコマンドを実行する。\u003C/p>\\n\u003Cpre>\u003Ccode>hexo init プロジェクト名\\n\u003C/code>\u003C/pre>\\n\u003Cp> 大量の文字列が表示され、プロジェクト名と同名のディレクトリが作成される。\u003C/p>\\n\u003C/li>\\n\u003Cli>\u003Ch4 id=\\\"表示させてみる\\\">表示させてみる\u003C/h4>\\n\u003Cp> 作成したディレクトリに移動し、コマンドを実行するとリンクが表示されるのでアクセスしてみよう。\u003C/p>\\n\u003Cpre>\u003Ccode>cd プロジェクト名\\nhexo server\\n\u003C/code>\u003C/pre>\\n\u003Cp> こんな感じのページが見れるはず。\\n \u003Cimg src=\\\"/api/assets/img/hexopage.png\\\" alt=\\\"hexopage\\\">\u003C/p>\\n\u003C/li>\\n\u003C/ol>\\n\u003C/li>\\n\u003Cli>\u003Ch3 id=\\\"使い方\\\">使い方\u003C/h3>\\n\u003Col>\\n\u003Cli>\u003Cp>記事の追加\u003C/p>\\n\u003Cpre>\u003Ccode>hexo new &quot;ページタイトル&quot;\\n\u003C/code>\u003C/pre>\\n\u003Cp> このコマンドでsource/_posts/の中にマークダウン形式のファイルが作成されるので、それを編集する。\u003C/p>\\n\u003C/li>\\n\u003Cli>\u003Cp>github pagesに公開\\n _config.ymlを編集\u003C/p>\\n\u003Cpre>\u003Ccode>url: http://githubのユーザー名.github.io/リポジトリ名/\\n\\n...\\n\\ndeploy:\\n  type: git\\n  repo: git@github.com:ユーザー名/リポジトリ名.git #clone時のurl\\n  branch: gh-pages\\n\u003C/code>\u003C/pre>\\n\u003Cp> 必要なnodeパッケージを追加でインストール\u003C/p>\\n\u003Cpre>\u003Ccode>npm install hexo-deployer-git --save\\nnpm install hexo-renderer-ejs --save\\n\u003C/code>\u003C/pre>\\n\u003Cp> hexoコマンドを実行\u003C/p>\\n\u003Cpre>\u003Ccode>hexo deploy -g\\n\u003C/code>\u003C/pre>\\n\u003Cp> githubのリポジトリにgh-pagesブランチが追加され、そこでデプロイされる。\u003C/p>\\n\u003C/li>\\n\u003C/ol>\\n\u003C/li>\\n\u003C/ul>\\n\u003Cp>ARCHIVESが404になったりHOMEのアクセス先がおかしかったりとエラーもあるが、\\nとりあえずこれで最低限のブログの運用ができるはず...\\nマークダウン形式で記事が書けるようになった。\u003C/p>\\n\"},{\"slug\":\"first-post\",\"title\":\"ブログをリニューアルしました！\",\"author\":\"ポッチャマ\",\"date\":\"2018-12-02T15:26:30.000Z\",\"body\":\"\u003Cp>神戸高専電算部のブログをリニューアルしました！\\nこれからどしどし記事を投稿していきます！\u003C/p>\\n\"}]}"
       }
     </script>
   </body>
