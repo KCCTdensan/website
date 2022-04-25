@@ -21,11 +21,11 @@
     <meta property="og:site_name" content="電算部.net" data-svelte="svelte-1tp2pzo" />
     <link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-21c94e6c.css" />
     <link rel="stylesheet" href="/_app/assets/meta-451dd010.css" />
-    <link rel="modulepreload" href="/_app/start-12c49205.js" />
+    <link rel="modulepreload" href="/_app/start-74817e3c.js" />
     <link rel="modulepreload" href="/_app/chunks/index-0daf26e0.js" />
     <link rel="modulepreload" href="/_app/pages/__layout.svelte-5fd90eb5.js" />
     <link rel="modulepreload" href="/_app/chunks/stores-e84f0049.js" />
-    <link rel="modulepreload" href="/_app/pages/docs/wsl2-setup.md-3ffc7985.js" />
+    <link rel="modulepreload" href="/_app/pages/docs/wsl2-setup.md-9945707c.js" />
     <link rel="modulepreload" href="/_app/chunks/_md_layout-e8a85f72.js" />
     <link rel="modulepreload" href="/_app/chunks/meta-207f953c.js" />
     <script>
@@ -90,7 +90,7 @@
             <span>meta = {</span>
             <span class="iter svelte-y63w9z"
               ><span class="svelte-y63w9z">post: &quot;2021/05/19&quot;</span>
-              <span class="svelte-y63w9z">updated: &quot;<time datetime="2021-06-05T00:00:00.000Z">2021/06/05</time>&quot;</span>
+              <span class="svelte-y63w9z">updated: &quot;<time datetime="2022-04-26T00:00:00.000Z">2022/04/26</time>&quot;</span>
               <span class="svelte-y63w9z"
                 >authors: [<span class="iter svelte-y63w9z"><span class="svelte-y63w9z">&quot;山D&quot;</span></span
                 >]</span
@@ -103,12 +103,18 @@
 
           <main class="main-normal">
             <h1>WSL爆速セットアップガイド</h1>
-            <p>2021年5月19日時点での最新情報です。 最新のバージョンのWindowsで使えるかは保証しません。</p>
+            <p>2022年4月時点での最新情報です。 最新のバージョンのWindowsで使えるかは保証しません。</p>
             <p>
-              元気がある人は<a href="https://docs.microsoft.com/ja-jp/windows/wsl/install-win10" rel="nofollow">本家の記事(日本語)</a>を読んで自分でセットアップしちゃうのもアリです。<br />
+              元気がある人は<a href="https://docs.microsoft.com/ja-jp/windows/wsl/install" rel="nofollow">本家の記事(日本語)</a>を読んで自分でセットアップしちゃいましょう。<br />
               読んでて専門用語わからないよ〜〜となってしまった人もこのページを参考にするとよいかもしれません。
             </p>
-            <h2>前提条件</h2>
+            <h2>まずはこれを試そう</h2>
+            <p>最近のWindowsならこれだけで完了します．</p>
+            <p>管理者権限のPowerShellまたはコマンドプロンプト(<code>Win + X</code>で開くメニューにある)を開いて，以下のコマンドを実行してください．</p>
+            <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">wsl --install</code><!-- HTML_TAG_END --></pre>
+            <p>これで完了した人はWSLのインストールは完了です． 再起動するとUbuntuという名前のアプリケーションが存在するはずなので，起動しましょう．</p>
+            <p>起動したら <em>Ubuntuの初期設定</em> の項目まで読み飛ばしてください．(下の方にある)</p>
+            <h2>前提条件(old)</h2>
             <ul>
               <li>
                 Windows10のバージョンが1903以降<br />
@@ -201,6 +207,7 @@ sudo apt autoremove -y</code><!-- HTML_TAG_END --></pre>
             <h2>終わりに</h2>
             <p>いかがでしたでしょうか。</p>
             <p>Ubuntuは有名な割にけっこうクセが強いディストロなので，暇があるなら他のディストロも触ってみることをおすすめします。</p>
+            <p>(Archとかを空いてる実機に入れてみるのも良いかもしれません．</p>
           </main>
         </div>
         <footer class="footer svelte-muqni6">
@@ -235,10 +242,10 @@ sudo apt autoremove -y</code><!-- HTML_TAG_END --></pre>
       </div>
     </div>
 
-    <script type="module" data-hydrate="1i0ptfh">
-      import { start } from "/_app/start-12c49205.js"
+    <script type="module" data-hydrate="kphz3q">
+      import { start } from "/_app/start-74817e3c.js"
       start({
-        target: document.querySelector('[data-hydrate="1i0ptfh"]').parentNode,
+        target: document.querySelector('[data-hydrate="kphz3q"]').parentNode,
         paths: { base: "", assets: "" },
         session: { PLATFORM: "gh-pages" },
         route: true,
@@ -247,7 +254,7 @@ sudo apt autoremove -y</code><!-- HTML_TAG_END --></pre>
         hydrate: {
           status: 200,
           error: null,
-          nodes: [import("/_app/pages/__layout.svelte-5fd90eb5.js"), import("/_app/pages/docs/wsl2-setup.md-3ffc7985.js")],
+          nodes: [import("/_app/pages/__layout.svelte-5fd90eb5.js"), import("/_app/pages/docs/wsl2-setup.md-9945707c.js")],
           params: {},
           routeId: "docs/wsl2-setup",
         },
