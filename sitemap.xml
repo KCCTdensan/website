@@ -29,10 +29,13 @@
     <loc>https://d3bu.net/works</loc>
   </url>
   <url>
-    <loc>https://d3bu.net/blog/first-post</loc>
+    <loc>https://d3bu.net/blog/2018-12-first-post</loc>
   </url>
   <url>
-    <loc>https://d3bu.net/blog/hexo</loc>
+    <loc>https://d3bu.net/blog/2018-12-hexo</loc>
+  </url>
+  <url>
+    <loc>https://d3bu.net/blog/2022-05-synth</loc>
   </url>
   <url>
     <loc>https://d3bu.net/dev/cluster</loc>
@@ -42,9 +45,6 @@
   </url>
   <url>
     <loc>https://d3bu.net/dev/denkou</loc>
-  </url>
-  <url>
-    <loc>https://d3bu.net/docs/github</loc>
   </url>
   <url>
     <loc>https://d3bu.net/docs/pepper</loc>
