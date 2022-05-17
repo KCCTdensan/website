@@ -23,7 +23,7 @@ mDNSは未設定．
 - `192.168.100.128(tako0)` : rpi 2B (armhf/4C4T/1GB)，32GB microSDカード
 - `192.168.100.129(tako1)` : rpi 2B (armhf/4C4T/1GB)，32GB microSDカード
 - `192.168.100.130(tako2)` : rpi 2B (armhf/4C4T/1GB)，32GB microSDカード
-- `192.168.100.131(tako3)` : rpi 2B (armhf/4C4T/1GB)，32GB microSDカード(死にかけ？)
-- `192.168.100.132(tako4)` : rpi 2B (armhf/4C4T/1GB)，32GB microSDカード
-- `192.168.100.133(tako5)` : rpi 2B (armhf/4C4T/1GB)，32GB microSDカード
+- `192.168.100.131(tako3)` : rpi 2B (armhf/4C4T/1GB)，32GB microSDカード
+- `192.168.100.132(tako4)` : rpi 2B (armhf/4C4T/1GB)，32GB microSDカード(死にかけ)
+- `192.168.100.133(tako5)` : rpi 2B (armhf/4C4T/1GB)，32GB microSDカード(死亡)
 - `192.168.100.134(tako6)` : rpi 2B (armhf/4C4T/1GB)，16GB microSDカード(スロット破損)
