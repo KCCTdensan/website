@@ -10,7 +10,7 @@ export async function get({ params }) {
   const body = await res.json()
   body.data = body.data.map(article => {
     //article.body = article.body.replace(/\$assets\//g, "/api/assets/")
-    article.body = article.body.replace(/\$assets\//g, `${API_BASE}/api/assets/`)
+    article.body = article.body.replace(/\$assets\//g, `${API_BASE}/assets/`)
     return article
   })
   return { body, }
