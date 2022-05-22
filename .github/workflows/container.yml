@@ -38,6 +38,8 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
 #  deploy:
 #    runs-on: takoyaki-deploy-pod
@@ -49,4 +51,4 @@ jobs:
 #          password: ${{ secrets.GITHUB_TOKEN }}
 #
 #      - name: Deploy to takoyaki
-#        run: 
+#        run:
