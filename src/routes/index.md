@@ -7,8 +7,9 @@ showMeta: false
 
 <script context="module">
   export async function load({ fetch }) {
-    const newsData = await fetch("/api/articles/news.json").then(r => r.json())
-    return { props: { newsData } }
+    const blogData = await fetch("/api/articles/blog.json").then(r => r.json())
+    blogData.data = blogData.data.slice(0, 8)
+    return { props: { blogData } }
   }
 </script>
 
@@ -16,7 +17,7 @@ showMeta: false
   import Meta from "$lib/meta.svelte"
   import { dateFmt } from "$lib/fmt"
 
-  export let newsData
+  export let blogData
 </script>
 
 <h1>
@@ -37,15 +38,16 @@ showMeta: false
 - 開発 -> [/dev/](/dev/)
 - 入部の案内 -> [/joinus/](/joinus/)
 
-## 新着情報
+## 新着記事
 
-{#each newsData.data as article}
+{#each blogData.data as article}
   <article>
     {article.date ? `${dateFmt(new Date(article.date))} - ` : ""}
-    <a href={`/news/${article.slug}`}>{article.title}</a>
+    <a href={`/blog/${article.slug}`}>{article.title}</a>
     <span class="inline-block">by {article.author || "KCCTdensan"}</span>
   </article>
 {/each}
+...
 
 ## 旧バージョン
 

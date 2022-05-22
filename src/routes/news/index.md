@@ -23,6 +23,7 @@ description: 電算部の情報
 
 - [電算部の活動](activities/) : コンテスト等の出場記録など
 
+<!--
 ## 新着情報
 
 {#each entries as article}
@@ -32,3 +33,4 @@ description: 電算部の情報
     <span class="inline-block">by {article.author || "KCCTdensan"}</span>
   </article>
 {/each}
+-->
