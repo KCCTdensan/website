@@ -21,8 +21,8 @@ noRobots: true
 コマンドウィンドウをここで開いてください。
 
 ```bash
-C:\Users\densanbu\Desktop>g++ hoge.cpp
-C:\Users\densanbu\Desktop>.\a.exe
+C:\\Users\\densanbu\\Desktop>g++ hoge.cpp
+C:\\Users\\densanbu\\Desktop>.\\a.exe
 ```
 
 こんな感じで使える。細かいところは先輩に聞いてください。
