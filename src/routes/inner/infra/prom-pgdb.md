@@ -97,6 +97,27 @@ promscaleも開始前に一応migrate用のSQL走らせてくれるのだが，c
 
 いけた
 
+## Extensionの更新
+
+たまに怒られる．
+
+```
+% doas -u postgres psql -x -d prometheus
+> ALTER EXTENSION timescaledb UPDATE;
+```
+
+これでヨシ!
+
+## サービスが何故か起動しない
+
+引数も環境変数もユーザーも問題無いのに何故かsystemdのサービスでは起動できない場合がある(かもしれない)．
+
+```
+% PROMSCALE_DB_HOST="localhost" PROM... promscale & 
+```
+
+とすると起動できる．
+
 <!--
 ### いけなかった: promscaleのmigrate
 
