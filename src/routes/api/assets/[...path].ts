@@ -1,6 +1,7 @@
-import { API_BASE } from "$lib/_env"
+import { API_BASE } from "$lib/env"
+import type { RequestHandler } from "@sveltejs/kit"
 
-export async function get({ params }) {
+export const get: RequestHandler = async ({ params }) => {
   const res = await fetch(`${API_BASE}/assets/${params.path}`)
   return {
     status: res.status,

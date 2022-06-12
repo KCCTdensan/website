@@ -1,17 +1,19 @@
-import { API_BASE } from "$lib/_env"
+import { API_BASE } from "$lib/env"
+import type { RequestHandler } from "@sveltejs/kit"
+import type { _ExtArticleApi, ArticleApi } from "$lib/api"
 
-export async function get({ params }) {
-  const res = await fetch(`${API_BASE}/api/${params.entrypoint}.json`)
+export const get: RequestHandler = async ({ params }) => {
+  const api = await fetch(`${API_BASE}/api/${params.entrypoint}.json`)
+  if (!api.ok) return { status: api.status }
 
-  if(!res.ok) return {
-    status: res.status,
+  const res: _ExtArticleApi = await api.json()
+  const body: ArticleApi = {
+    data: res.data.map((i) => ({
+      ...i,
+      authors: i.author?.split(/, |,/) || [],
+      //body: i.body.replace(/\$assets\//g, "/api/assets/"),
+      body: i.body.replace(/\$assets\//g, `${API_BASE}/assets/`),
+    })),
   }
-
-  const body = await res.json()
-  body.data = body.data.map(article => {
-    //article.body = article.body.replace(/\$assets\//g, "/api/assets/")
-    article.body = article.body.replace(/\$assets\//g, `${API_BASE}/assets/`)
-    return article
-  })
-  return { body, }
+  return { body }
 }

@@ -1,7 +1,10 @@
 <script context="module" lang="ts">
-  export async function load({ fetch, params }) {
-    const { data } = await fetch("/api/articles/news.json").then(r => r.json())
-    const article = data.find(i => i.slug === params.slug)
+  import type { Load } from "@sveltejs/kit"
+  import type { ArticleApi } from "$lib/api"
+
+  export const load: Load = async ({ fetch, params }) => {
+    const res: ArticleApi = await fetch("/api/articles/news.json").then(r => r.json())
+    const article = res.data.find(i => i.slug === params.slug)
     if(article === undefined) {
       return {
         status: 404,
@@ -13,14 +16,13 @@
 </script>
 
 <script lang="ts">
-  import MDLayout from "../_md_layout.svelte"
+  import MDLayout from "../../md_layout.svelte"
+  import type { Article } from "$lib/api"
 
-  export let data
-
-  const { title, description, author, noRobots, date, dateUpd } = data
+  export let data: Article
   const bodyHtml = data.body
 </script>
 
-<MDLayout { ...{ title, description, author, noRobots, date, dateUpd } }>
+<MDLayout { ...data }>
   {@html bodyHtml}
 </MDLayout>

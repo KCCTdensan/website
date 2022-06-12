@@ -1,7 +1,10 @@
 <script context="module" lang="ts">
+  import type { Load } from "@sveltejs/kit"
+  import type { PackageJson } from "$lib/api"
+
   // Header用
-  export async function load({ fetch }) {
-    const pkg = await fetch("/api/package.json").then(r => r.json())
+  export const load: Load = async ({ fetch }) => {
+    const pkg: PackageJson = await fetch("/api/package.json").then(r => r.json())
     return { props: { pkg } }
   }
   //
@@ -13,7 +16,7 @@
   import Header from "$lib/header.svelte"
   import "../app.scss"
 
-  export let pkg: object // Header用，要改修
+  export let pkg: PackageJson // Header用，要改修
   let konami = false
 
   // Konami Code

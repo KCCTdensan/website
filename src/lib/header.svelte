@@ -4,9 +4,10 @@
 
 <script lang="ts">
   import { page, session } from "$app/stores"
+  import type { PackageJson } from "$lib/api"
   // import Icon from "$lib/icon.svelte"
 
-  export let pkg: object
+  export let pkg: PackageJson
   export let gaming: boolean
 
   // pathAの2個分まで対応

@@ -3,17 +3,21 @@
 
   export let title         = "\"hello, world\""
   export let description   = "神戸高専電算部のウェブサイト"
-  export let author        = undefined
+  /// @ts-ignore クソ
+  export let authors       = []
   export let noRobots      = false
   export let noTitleFormat = false
-  export let date          = undefined // これはしゃーない
-  export let dateUpd       = undefined // Updated
-  export let showMeta      = author || date || dateUpd
+  export let date          = ""
+  export let dateUpd       = ""
+  export let showMeta      = (authors.length || date || dateUpd) ? true : false
 </script>
 
 <Meta { ...{
-  title, description, author, noRobots, noTitleFormat,
-  date, dateUpd, showMeta,
+  /// @ts-ignore
+  title, description, authors, noRobots, noTitleFormat,
+  date: date ? new Date(date) : undefined,
+  dateUpd: dateUpd ? new Date(dateUpd) : undefined,
+  showMeta,
 } } />
 
 {#if showMeta}

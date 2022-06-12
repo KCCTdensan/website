@@ -1,7 +1,9 @@
-import pkg from "$lib/../../package.json"
+import pkg from "../../../package.json"
+import type { RequestHandler } from "@sveltejs/kit"
 
-export async function get() {
-  const { name, version } = pkg
-  const body = { name, version }
-  return { body }
-}
+export const get: RequestHandler = () => ({
+  body: {
+    name: pkg.name,
+    version: pkg.version,
+  },
+})
