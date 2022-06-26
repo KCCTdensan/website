@@ -1,13 +1,16 @@
-FROM node:lts as builder
+FROM node:lts-alpine as builder
 WORKDIR /work
-RUN npm i -g pnpm
+RUN apk add --no-cache git
+# for cache
 COPY pnpm-lock.yaml ./
-RUN pnpm fetch
+RUN npm i -g pnpm && \
+    pnpm fetch
+#
 COPY . .
-RUN git submodule update --init
-RUN pnpm install --offline
-RUN pnpm ssr:build
-RUN pnpm prune --prod
+RUN git submodule update --init && \
+    pnpm install --offline && \
+    pnpm ssr:build && \
+    pnpm prune --prod
 
 # distroless is not supported in ARMv7
 #FROM gcr.io/distroless/nodejs:16 as runner
