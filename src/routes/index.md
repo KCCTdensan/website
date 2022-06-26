@@ -6,8 +6,10 @@ showMeta: false
 ---
 
 <script context="module">
+  import { api } from "$lib/articles"
+
   export async function load({ fetch }) {
-    const blogData = await fetch("/api/articles/blog.json").then(r => r.json())
+    const blogData = await api(fetch, "blog")
     blogData.data = blogData.data.slice(0, 8)
     return { props: { blogData } }
   }

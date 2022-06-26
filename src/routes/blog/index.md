@@ -5,10 +5,11 @@ noTitleFormat: true
 ---
 
 <script context="module">
-  export async function load({ fetch }) {
-    const { data } = await fetch("/api/articles/blog.json").then(r => r.json())
-    return { props: { entries: data } }
-  }
+  import { api } from "$lib/articles"
+
+  export const load = async ({ fetch }) => ({
+    props: { entries: await api(fetch, "blog") },
+  })
 </script>
 
 <script>
@@ -20,7 +21,7 @@ noTitleFormat: true
 
 # 電算「部」log
 
-{#each entries as article}
+{#each entries.data as article}
   <article>
     {article.date ? `${dateFmt(new Date(article.date))} - ` : ""}
     <a href={`/blog/${article.slug}`}>{article.title}</a>

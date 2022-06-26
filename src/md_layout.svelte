@@ -1,3 +1,17 @@
+<script context="module">
+  /// @ts-ignore ts対応はよ
+  export const MDProps = a => ({
+    title: a.title,
+    description: a.description,
+    authors: a.authors,
+    noRobots: a.noRobots,
+    noTitleFormat: a.noTitleFormat,
+    date: a.date,
+    dateUpd: a.dateUpd,
+    showMeta: a.showMeta,
+  })
+</script>
+
 <script>
   import Meta from "$lib/meta.svelte"
 

@@ -8,35 +8,29 @@ on:
 env:
   API_BASE: ${{ secrets.ENV_API_BASE }}
   PLATFORM: gh-pages
+  CNAME: gh.d3bu.net
 
 jobs:
   gh-pages:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         # with:
         #   submodules: recursive
         #   fetch-depth: 0
-
       - uses: pnpm/action-setup@v2
         with:
           version: latest
-
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           node-version: lts/*
           cache: "pnpm"
-
-      - name: Deps
-        run: pnpm install --frozen-lockfile
-
-      - name: Build
-        run: pnpm run build
-
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./build
-          cname: gh.d3bu.net
+          cname: ${{ env.CNAME }}

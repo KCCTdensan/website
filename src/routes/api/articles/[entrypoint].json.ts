@@ -1,9 +1,12 @@
-import { API_BASE } from "$lib/env"
+import { API_BASE, DEV } from "$lib/env"
+import { validUrl } from "$lib/fmt"
 import type { RequestHandler } from "@sveltejs/kit"
 import type { _ExtArticleApi, ArticleApi } from "$lib/api"
 
 export const get: RequestHandler = async ({ params }) => {
-  const api = await fetch(`${API_BASE}/api/${params.entrypoint}.json`)
+  const url = `${API_BASE}/api/${params.entrypoint}.json`
+  if (DEV && !validUrl(url)) return { status: 404 }
+  const api = await fetch(url)
   if (!api.ok) return { status: api.status }
 
   const res: _ExtArticleApi = await api.json()
@@ -11,8 +14,8 @@ export const get: RequestHandler = async ({ params }) => {
     data: res.data.map((i) => ({
       ...i,
       authors: i.author?.split(/, |,/) || [],
-      //body: i.body.replace(/\$assets\//g, "/api/assets/"),
-      body: i.body.replace(/\$assets\//g, `${API_BASE}/assets/`),
+      body: i.body.replace(/\$assets\//g, "/api/assets/"),
+      // body: i.body.replace(/\$assets\//g, `${API_BASE}/assets/`),
     })),
   }
   return { body }
