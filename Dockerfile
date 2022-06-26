@@ -1,11 +1,9 @@
 FROM node:lts-alpine as builder
+RUN apk add --no-cache git && \
+    npm i -g pnpm
 WORKDIR /work
-RUN apk add --no-cache git
-# for cache
 COPY pnpm-lock.yaml ./
-RUN npm i -g pnpm && \
-    pnpm fetch
-#
+RUN pnpm fetch
 COPY . .
 RUN git submodule update --init && \
     pnpm install --offline && \
