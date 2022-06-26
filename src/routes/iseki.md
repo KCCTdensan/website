@@ -14,7 +14,7 @@ noRobots: true
 
 ### 2007年頃
 
-- [電子計算機部のページ](http://www.kobe-kosen.ac.jp/groups/densan/) (2007-)
+- [電子計算機部のページ (更新)](http://www.kobe-kosen.ac.jp/groups/densan/) (2007-)
 - [電算「部」log](http://kcctdensan.blog118.fc2.com/) (2007-2014)
 
 ### 2010年頃
@@ -52,6 +52,6 @@ noRobots: true
 
 ### 部サーバー
 
-- [HP (2007)](https://www2.d3bu.net/2007/index.htm)
-- [HP (2010)](https://www2.d3bu.net/2010/index.shtml)
-- [HP (2012)](https://www2.d3bu.net/2012/index.html)
+- [HP (2007)](https://www2.d3bu.net/2007/)
+- [HP (2010)](https://www2.d3bu.net/2010/)
+- [HP (2012)](https://www2.d3bu.net/2012/)
