@@ -1,0 +1,17 @@
+@import "firacode";
+
+// M PLUS 2
+
+@font-face {
+  font-family: "M PLUS 2";
+  font-display: swap;
+  src: url(/assets/font/mplus2.ttf) format("truetype-variations");
+}
+
+// Source Han Sans : Subset Variable Traditional Chinese — Taiwan
+
+@font-face {
+  font-family: "Source Han Sans";
+  font-display: swap;
+  src: url(/assets/font/sourcehansans.otf.woff2) format("woff2");
+}

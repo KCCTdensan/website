@@ -1,13 +1,14 @@
 @import "styles/sanitize.scss";
 @import "styles/helpers.scss";
 @import "styles/variables.scss";
-@import "firacode";
+@import "styles/fonts.scss";
 @import "katex/dist/katex.min.css";
 
 // Global
 
 body {
   font-size: 1.2rem;
+  font-family: $f-normal;
 
   *:focus-visible {
     outline: auto;
