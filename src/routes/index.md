@@ -6,7 +6,7 @@ showMeta: false
 ---
 
 <script context="module">
-  import { api } from "$lib/articles"
+  import { api } from "$lib/articles.svelte"
 
   export async function load({ fetch }) {
     const blogData = await api(fetch, "blog")

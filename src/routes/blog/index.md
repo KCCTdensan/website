@@ -5,7 +5,7 @@ noTitleFormat: true
 ---
 
 <script context="module">
-  import { api } from "$lib/articles"
+  import { api } from "$lib/articles.svelte"
 
   export const load = async ({ fetch }) => ({
     props: { entries: await api(fetch, "blog") },
