@@ -34,6 +34,7 @@ code {
   padding: .25em .5em;
   border-radius: .25em;
   background-color: $c-dimBg;
+  cursor: text;
   font: .8em $f-mono;
 }
 
@@ -43,11 +44,11 @@ pre {
   background-color: $c-dimBg;
   font-size: 1.2rem;
   line-height: 1.2;
-  cursor: text;
 
   code {
     margin: 0;
     padding: 0;
+    border-radius: 0;
   }
 }
 

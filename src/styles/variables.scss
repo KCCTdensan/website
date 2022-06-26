@@ -6,7 +6,7 @@ $l-section-margin-small: 1rem;
 // Color
 
 $c-bg: #fff !default;
-$c-dimBg: #eee !default;
+$c-dimBg: #ddd !default;
 $c-text: #000 !default;
 $c-dimText: #444 !default;
 $c-link: #0827f5 !default;
@@ -26,5 +26,5 @@ $c-headerNavStrong: #ff0 !default;
 
 // Font
 
-$f-normal: "M PLUS 2", system-ui, "Source Han Sans" !default;
+$f-normal: "M PLUS 2", system-ui, sans-serif, "Source Han Sans" !default;
 $f-mono: "Fira Code", ui-monospace, monospace !default;
