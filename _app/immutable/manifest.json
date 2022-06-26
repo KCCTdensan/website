@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-6f4837fc.js",
+    "file": "start-a34a2bca.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -148,7 +148,7 @@
     ]
   },
   "src/routes/about.md": {
-    "file": "pages/about.md-cebbf613.js",
+    "file": "pages/about.md-319bef76.js",
     "src": "src/routes/about.md",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -346,7 +346,7 @@
     ]
   },
   "src/routes/iseki.md": {
-    "file": "pages/iseki.md-38928d3b.js",
+    "file": "pages/iseki.md-eaa91434.js",
     "src": "src/routes/iseki.md",
     "isEntry": true,
     "isDynamicEntry": true,
