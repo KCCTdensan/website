@@ -1,5 +1,5 @@
 <script context="module" lang="ts">
-  import Article, { loader } from "$lib/articles.svelte"
+  import Articles, { loader } from "$lib/articles.svelte"
   export const load = loader("docs")
 </script>
 
@@ -8,4 +8,4 @@
   export let data: Article
 </script>
 
-<Article {data} />
+<Articles {data} />
