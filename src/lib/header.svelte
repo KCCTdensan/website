@@ -1,14 +1,11 @@
-<script context="module" lang="ts">
-  // 何故か呼ばれない
-</script>
-
 <script lang="ts">
   import { page, session } from "$app/stores"
-  import type { PackageJson } from "$lib/api"
   // import Icon from "$lib/icon.svelte"
+  import type { PackageJson } from "$lib/api"
+  import type { State } from "../routes/__layout.svelte"
 
   export let pkg: PackageJson
-  export let gaming: boolean
+  export let state: State
 
   // pathAの2個分まで対応
   // それ以上にの場合はnavLinksのロジックを変更する必要有
@@ -30,7 +27,7 @@
   }))
 </script>
 
-<header class:gaming class="header">
+<header class:gaming={state.konami} class:z={state.z}>
   <div class="headerLogo">
     <a class="logo" href="/">
       <img class="icon" src="/icon.png" alt="Logo" /><!-- SVGアニメーションにしたい -->
@@ -79,7 +76,7 @@
   @import "../styles/helpers.scss";
   @import "../styles/variables.scss";
 
-  .header {
+  header {
     display: flex;
     flex-direction: column;
     background-color: $c-headerBg;
@@ -87,6 +84,10 @@
 
     &.gaming {
       @include gaming;
+    }
+
+    &.z {
+      background-color: $c-headerBgZ;
     }
 
     @include mqDown(md) {
@@ -129,6 +130,10 @@
         font-size: 2em;
         font-weight: 900;
         line-height: 1.1;
+
+        .z & *:first-child {
+          color: $c-logoStar;
+        }
       }
     }
 
@@ -161,6 +166,10 @@
       @include gaming;
       color: transparent;
       background-clip: text;
+    }
+
+    .z & {
+      font-family: $f-correct;
     }
 
     * {

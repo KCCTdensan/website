@@ -2,6 +2,11 @@
   import type { Load } from "@sveltejs/kit"
   import type { PackageJson } from "$lib/api"
 
+  export type State = {
+    konami: boolean,
+    z: boolean,
+  }
+
   // Header用
   export const load: Load = async ({ fetch }) => {
     const pkg: PackageJson = await fetch("/api/package.json").then(r => r.json())
@@ -17,31 +22,54 @@
   import "../app.scss"
 
   export let pkg: PackageJson // Header用，要改修
-  let konami = false
+  export let state: State = {
+    konami: false,
+    z: false,
+  }
 
-  // Konami Code
   if(browser) {
-    const command = [
-      "ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a",
+    const cmds = [
+      {
+        cur: 0,
+        cmd: ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"],
+        f: () => {
+          state.konami = true
+          console.log("nyan!")
+        },
+      },
+      {
+        cur: 0,
+        cmd: [...Array(30)].map(_ => "ArrowLeft"),
+        f: () => {
+          state.z = true
+          console.log("失なわれた30年でした")
+        },
+      },
+      {
+        cur: 0,
+        cmd: [...Array(30)].map(_ => "ArrowRight"),
+        f: () => {
+          state.z = false
+        },
+      },
     ]
-    let cur = 0
-    addEventListener("keydown", e => {
-      if(e.key == command[cur++]) {
-        if(cur == command.length) {
-          konami = true
-          console.log("!!")
+
+    addEventListener("keydown", e =>
+      cmds.forEach(c => {
+        if (e.key === c.cmd[c.cur++]) {
+          if (c.cur == c.cmd.length) c.f()
+        } else {
+          c.cur = 0
         }
-      } else {
-        cur = 0
-      }
-    })
+      })
+    )
   }
 </script>
 
-<div class="app">
+<div class="app" class:z={state.z}>
   <div class="container">
-    <Header {pkg} gaming={konami} />
-    {#if konami}
+    <Header {pkg} {state} />
+    {#if state.konami}
       <audio autoplay controls src="/nyan.ogg" class="play" />
     {/if}
     <div>
@@ -77,6 +105,14 @@
 <style lang="scss">
   @import "../styles/helpers.scss";
   @import "../styles/variables.scss";
+
+  .app.z {
+    background: radial-gradient(at 0% 0%, $c-groundShadowZ, $c-groundZ);
+    font-family: $f-correct;
+    .container {
+      margin-left: 0;
+    }
+  }
 
   .app {
     display: flex;

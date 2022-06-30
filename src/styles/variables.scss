@@ -24,7 +24,13 @@ $c-headerNavBg: #2b3030 !default;
 $c-headerNavText: #fff !default;
 $c-headerNavStrong: #ff0 !default;
 
+$c-logoStar: #ff0;
+$c-groundZ: #400;
+$c-groundShadowZ: #f00;
+$c-headerBgZ: #d00;
+
 // Font
 
 $f-normal: "M PLUS 2", system-ui, sans-serif, "Source Han Sans" !default;
 $f-mono: "Fira Code", ui-monospace, monospace !default;
+$f-correct: "Source Han Sans Without ASCII", serif;
