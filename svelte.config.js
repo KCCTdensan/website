@@ -3,12 +3,9 @@ import adapterNode from "@sveltejs/adapter-node"
 import preprocess from "svelte-preprocess"
 import { mdsvex } from "mdsvex"
 import mdsvexConfig from "./mdsvex.config.js"
-import { isoImport } from "vite-plugin-iso-import"
 
-const out = "build"
-
-const dev = process.env.NODE_ENV === "development"
 const ssr = process.env.SSR === "true"
+const out = "build"
 
 export default {
   extensions: [".svelte", ...mdsvexConfig.extensions],
@@ -23,16 +20,5 @@ export default {
       onError: "continue",
     },
     trailingSlash: "always",
-    vite: {
-      plugins: [isoImport()],
-      define: {
-        ...(dev ? {
-          "process.env": process.env,
-        } : {
-          "process.env.NODE_ENV": `"${process.env.NODE_ENV}"`,
-          "process.env.SSR": `"${process.env.SSR}"`,
-        }),
-      },
-    },
   },
 }
