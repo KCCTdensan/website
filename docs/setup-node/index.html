@@ -1,205 +1,208 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="../../favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="content-security-policy" content="" />
-    <title>Nodejs環境構築 :: d3bu.net</title>
-    <meta name="description" content="神戸高専電算部のウェブサイト" data-svelte="svelte-9jvxrg" />
-    <meta name="author" content="山D,山T" data-svelte="svelte-9jvxrg" />
-    <meta name="keywords" content="電算部,電子計算機部,神戸高専,KCCT,高専" data-svelte="svelte-9jvxrg" />
-    <meta name="robots" content="all" data-svelte="svelte-9jvxrg" />
-    <meta name="twitter:card" content="summary" data-svelte="svelte-9jvxrg" />
-    <meta name="twitter:site" content="@kcct_densan" data-svelte="svelte-9jvxrg" />
-    <meta name="twitter:creator" content="@kcct_densan" data-svelte="svelte-9jvxrg" />
-    <meta property="og:title" content="Nodejs環境構築 :: d3bu.net" data-svelte="svelte-9jvxrg" />
-    <meta property="og:type" content="website" data-svelte="svelte-9jvxrg" />
-    <meta property="og:url" content="https://d3bu.net/docs/setup-node/" data-svelte="svelte-9jvxrg" />
-    <meta property="og:image" content="https://d3bu.net/icon.png" data-svelte="svelte-9jvxrg" />
-    <meta property="og:description" content="神戸高専電算部のウェブサイト" data-svelte="svelte-9jvxrg" />
-    <meta property="og:site_name" content="電算部.net" data-svelte="svelte-9jvxrg" />
-    <link rel="stylesheet" href="/_app/immutable/assets/pages/__layout.svelte-43a7f8d1.css" />
-    <link rel="stylesheet" href="/_app/immutable/assets/meta-451dd010.css" />
-    <link rel="modulepreload" href="/_app/immutable/start-a523ad2c.js" />
-    <link rel="modulepreload" href="/_app/immutable/chunks/index-ee3c2835.js" />
-    <link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-71c59666.js" />
-    <link rel="modulepreload" href="/_app/immutable/chunks/stores-939f4b6a.js" />
-    <link rel="modulepreload" href="/_app/immutable/pages/docs/_...slug_.svelte-a7f4e03a.js" />
-    <link rel="modulepreload" href="/_app/immutable/chunks/articles-6663f4d8.js" />
-    <link rel="modulepreload" href="/_app/immutable/chunks/md_layout-bf771c19.js" />
-    <link rel="modulepreload" href="/_app/immutable/chunks/meta-2e624d54.js" />
-    <script>
-      function setViewportProperty(doc) {
-        var prevClientHeight
-        function handleResize() {
-          var clientHeight = doc.clientHeight
-          if (clientHeight === prevClientHeight) return
-          requestAnimationFrame(function updateViewportHeight() {
-            doc.style.setProperty("--vh", clientHeight * 0.01 + "px")
-            prevClientHeight = clientHeight
-          })
-        }
-        handleResize()
-        return handleResize
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="../../favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="content-security-policy" content="">
+  <title>Nodejs環境構築 :: d3bu.net</title>
+  <meta name="description" content="神戸高専電算部のウェブサイト" data-svelte="svelte-9jvxrg">
+  <meta name="author" content="山D,山T" data-svelte="svelte-9jvxrg">
+  <meta name="keywords" content="電算部,電子計算機部,神戸高専,KCCT,高専" data-svelte="svelte-9jvxrg">
+  <meta name="robots" content="all" data-svelte="svelte-9jvxrg">
+  <meta name="twitter:card" content="summary" data-svelte="svelte-9jvxrg">
+  <meta name="twitter:site" content="@kcct_densan" data-svelte="svelte-9jvxrg">
+  <meta name="twitter:creator" content="@kcct_densan" data-svelte="svelte-9jvxrg">
+  <meta property="og:title" content="Nodejs環境構築 :: d3bu.net" data-svelte="svelte-9jvxrg">
+  <meta property="og:type" content="website" data-svelte="svelte-9jvxrg">
+  <meta property="og:url" content="https://d3bu.net/docs/setup-node/" data-svelte="svelte-9jvxrg">
+  <meta property="og:image" content="https://d3bu.net/icon.png" data-svelte="svelte-9jvxrg">
+  <meta property="og:description" content="神戸高専電算部のウェブサイト" data-svelte="svelte-9jvxrg">
+  <meta property="og:site_name" content="電算部.net" data-svelte="svelte-9jvxrg">
+  <link rel="stylesheet" href="/_app/immutable/assets/__layout-105738d6.css">
+  <link rel="stylesheet" href="/_app/immutable/assets/meta-92c45751.css">
+  <link rel="modulepreload" href="/_app/immutable/start-20236ed9.js">
+  <link rel="modulepreload" href="/_app/immutable/chunks/index-8e7dcfba.js">
+  <link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-901d6e87.js">
+  <link rel="modulepreload" href="/_app/immutable/chunks/stores-dfd80be3.js">
+  <link rel="modulepreload" href="/_app/immutable/pages/docs/_...slug_.svelte-e4408526.js">
+  <link rel="modulepreload" href="/_app/immutable/chunks/articles-7219e850.js">
+  <link rel="modulepreload" href="/_app/immutable/chunks/md_layout-9c007c22.js">
+  <link rel="modulepreload" href="/_app/immutable/chunks/meta-9eb00fb9.js">
+  <script>
+    function setViewportProperty(doc) {
+      var prevClientHeight
+
+      function handleResize() {
+        var clientHeight = doc.clientHeight
+        if (clientHeight === prevClientHeight) return
+        requestAnimationFrame(function updateViewportHeight() {
+          doc.style.setProperty("--vh", clientHeight * 0.01 + "px")
+          prevClientHeight = clientHeight
+        })
       }
-      window.addEventListener("resize", setViewportProperty(document.documentElement))
-    </script>
-  </head>
-  <body>
-    <div class="app svelte-itltgt">
-      <div class="container svelte-itltgt">
-        <header class="svelte-1fp1qny">
-          <div class="headerLogo svelte-1fp1qny">
-            <a class="logo svelte-1fp1qny" href="/"
-              ><img class="icon svelte-1fp1qny" src="/icon.png" alt="Logo" />
-              <span class="text svelte-1fp1qny"
-                ><span class="inline-block svelte-1fp1qny">神戸</span><span class="inline-block svelte-1fp1qny">高専</span><span class="inline-block svelte-1fp1qny">電算部</span></span
-              ></a
-            >
-            <div class="pkgInfo svelte-1fp1qny">
-              <span class="svelte-1fp1qny">/api/package.json</span> <span class="svelte-1fp1qny">{&quot;name&quot;:&quot;d3bu.net&quot;,&quot;version&quot;:&quot;2.1.1&quot;}</span>
-            </div>
+      handleResize()
+      return handleResize
+    }
+    window.addEventListener("resize", setViewportProperty(document.documentElement))
+  </script>
+</head>
+
+<body>
+  <div class="app svelte-itltgt">
+    <div class="container svelte-itltgt">
+      <header class="svelte-427e5c">
+        <div class="headerLogo svelte-427e5c"><a class="logo svelte-427e5c" href="/"><img class="icon svelte-427e5c" src="/icon.png" alt="Logo">
+            <span class="text svelte-427e5c"><span class="inline-block svelte-427e5c">神戸</span><span class="inline-block svelte-427e5c">高専</span><span class="inline-block svelte-427e5c">電算部</span></span></a>
+          <div class="pkgInfo svelte-427e5c"><span class="svelte-427e5c">/api/package.json</span>
+            <span class="svelte-427e5c">{"name":"d3bu.net","version":"2.1.1"}</span>
           </div>
-          <nav class="headerNav svelte-1fp1qny">
-            <span class="svelte-1fp1qny">&gt; ls /</span>
-            <ul class="navLinks svelte-1fp1qny">
-              <li class="svelte-1fp1qny"><a sveltekit:prefetch href="/" class="svelte-1fp1qny">Top</a></li>
-              <li class="svelte-1fp1qny"><a sveltekit:prefetch href="/about/" class="svelte-1fp1qny">About</a></li>
-              <li class="svelte-1fp1qny"><a sveltekit:prefetch href="/blog/" class="svelte-1fp1qny">Blog</a></li>
-              <li class="svelte-1fp1qny"><a sveltekit:prefetch href="/works/" class="svelte-1fp1qny">Works</a></li>
-              <li class="svelte-1fp1qny"><a sveltekit:prefetch href="/dev/" class="svelte-1fp1qny">Dev</a></li>
-              <li class="svelte-1fp1qny"><a sveltekit:prefetch href="/inner/" class="svelte-1fp1qny">Inner</a></li>
-              <li class="svelte-1fp1qny"><a sveltekit:prefetch href="/joinus/" class="svelte-1fp1qny">JoinUs</a></li>
-              <li class="svelte-1fp1qny"><a href="http://www.kobe-kosen.ac.jp" target="_blank" rel="external" class="svelte-1fp1qny">KCCT</a></li>
-            </ul>
-            <span class="svelte-1fp1qny">&gt; pwd</span>
-            <ul class="breadcrumbs svelte-1fp1qny">
-              <li class="svelte-1fp1qny"><a href="/" class="svelte-1fp1qny">/</a></li>
-              <li class="svelte-1fp1qny"><a href="/docs/" class="svelte-1fp1qny">docs/</a></li>
-              <li class="svelte-1fp1qny"><a href="/docs/setup-node/" class="svelte-1fp1qny">setup-node/</a></li>
-            </ul>
-            <span class="svelte-1fp1qny">&gt; echo $PLATFORM</span>
-            <span class="svelte-1fp1qny">gh-pages</span>
-            <span class="svelte-1fp1qny">&gt; _</span>
-          </nav>
-        </header>
-
-        <div>
-          <div class="meta svelte-y63w9z">
-            <span>meta = {</span>
-            <span class="iter svelte-y63w9z"
-              ><span class="svelte-y63w9z">post: &quot;2021/06/03&quot;</span>
-              <span class="svelte-y63w9z">updated: &quot;<time datetime="2021-07-15T00:00:00.000Z">2021/07/15</time>&quot;</span>
-              <span class="svelte-y63w9z"
-                >authors: [<span class="iter svelte-y63w9z"><span class="svelte-y63w9z">&quot;山D&quot;</span><span class="svelte-y63w9z">&quot;山T&quot;</span></span
-                >]</span
-              ></span
-            >
-            <span>};</span>
-          </div>
-
-          <hr />
-
-          <main class="main-normal">
-            <!-- HTML_TAG_START -->
-            <h1 id="nodejs環境構築">Nodejs環境構築</h1>
-            <p>どうしても動かなかったら山Tまで</p>
-            <p>まず，<a href="/docs/wsl2-setup">WSLのセットアップ</a>を完了させておいてください。</p>
-            <h2 id="必須パッケージのインストール">必須パッケージのインストール</h2>
-            <pre><code>sudo apt-get update
+        </div>
+        <nav class="headerNav svelte-427e5c"><span class="svelte-427e5c">&gt; ls /</span>
+          <ul class="navLinks svelte-427e5c">
+            <li class="svelte-427e5c"><a sveltekit:prefetch href="/" class="svelte-427e5c">Top</a>
+            </li>
+            <li class="svelte-427e5c"><a sveltekit:prefetch href="/about/" class="svelte-427e5c">About</a>
+            </li>
+            <li class="svelte-427e5c"><a sveltekit:prefetch href="/blog/" class="svelte-427e5c">Blog</a>
+            </li>
+            <li class="svelte-427e5c"><a sveltekit:prefetch href="/works/" class="svelte-427e5c">Works</a>
+            </li>
+            <li class="svelte-427e5c"><a sveltekit:prefetch href="/dev/" class="svelte-427e5c">Dev</a>
+            </li>
+            <li class="svelte-427e5c"><a sveltekit:prefetch href="/inner/" class="svelte-427e5c">Inner</a>
+            </li>
+            <li class="svelte-427e5c"><a sveltekit:prefetch href="/joinus/" class="svelte-427e5c">JoinUs</a>
+            </li>
+            <li class="svelte-427e5c"><a href="http://www.kobe-kosen.ac.jp" target="_blank" rel="external" class="svelte-427e5c">KCCT</a></li>
+          </ul>
+          <span class="svelte-427e5c">&gt; pwd</span>
+          <ul class="breadcrumbs svelte-427e5c">
+            <li class="svelte-427e5c"><a href="/" class="svelte-427e5c">/</a>
+            </li>
+            <li class="svelte-427e5c"><a href="/docs/" class="svelte-427e5c">docs/</a>
+            </li>
+            <li class="svelte-427e5c"><a href="/docs/setup-node/" class="svelte-427e5c">setup-node/</a>
+            </li>
+          </ul>
+          <span class="svelte-427e5c">&gt; echo $PLATFORM</span>
+          <span class="svelte-427e5c">gh-pages</span>
+          <span class="svelte-427e5c">&gt; _</span>
+        </nav>
+      </header>
+      <div>
+        <div class="meta svelte-y63w9z"><span>meta = {</span>
+          <span class="iter svelte-y63w9z"><span class="svelte-y63w9z">post: &quot;2021/06/03&quot;</span>
+            <span class="svelte-y63w9z">updated: &quot;<time datetime="2021-07-15T00:00:00.000Z">2021/07/15</time>&quot;</span>
+            <span class="svelte-y63w9z">authors: [<span class="iter svelte-y63w9z"><span class="svelte-y63w9z">&quot;山D&quot;</span><span class="svelte-y63w9z">&quot;山T&quot;</span></span>]</span></span>
+          <span>};</span>
+        </div>
+        <hr>
+        <main class="main-normal">
+          <!-- HTML_TAG_START -->
+          <h1 id="nodejs環境構築">Nodejs環境構築</h1>
+          <p>どうしても動かなかったら山Tまで</p>
+          <p>まず，<a href="/docs/wsl2-setup">WSLのセットアップ</a>を完了させておいてください。</p>
+          <h2 id="必須パッケージのインストール">必須パッケージのインストール</h2>
+          <pre><code>sudo apt-get update
 sudo apt-get install -y nodejs npm
 </code></pre>
-            <p>ここで入るものはバージョンが古すぎるのでバージョンを上げる。</p>
-            <h2 id="安定版のインストール">安定版のインストール</h2>
-            <pre><code>sudo npm install n -g
+          <p>ここで入るものはバージョンが古すぎるのでバージョンを上げる。</p>
+          <h2 id="安定版のインストール">安定版のインストール</h2>
+          <pre><code>sudo npm install n -g
 sudo n stable
 </code></pre>
-            <h2 id="古いnodeを消す">古いnodeを消す</h2>
-            <p>ややこしいし、使わないので消しましょう！</p>
-            <pre><code>sudo apt purge -y nodejs npm
+          <h2 id="古いnodeを消す">古いnodeを消す</h2>
+          <p>ややこしいし、使わないので消しましょう！</p>
+          <pre><code>sudo apt purge -y nodejs npm
 </code></pre>
-            <h2 id="シェルへの再ログインとバージョン確認">シェルへの再ログインとバージョン確認</h2>
-            <pre><code>exec $SHELL -l
+          <h2 id="シェルへの再ログインとバージョン確認">シェルへの再ログインとバージョン確認</h2>
+          <pre><code>exec $SHELL -l
 node -v
 </code></pre>
-            <p>これでバージョンが14以降なら大丈夫です！</p>
-            <h2 id="最新版にしたかったら">最新版にしたかったら</h2>
-            <pre><code>sudo n latest
+          <p>これでバージョンが14以降なら大丈夫です！</p>
+          <h2 id="最新版にしたかったら">最新版にしたかったら</h2>
+          <pre><code>sudo n latest
 </code></pre>
-            <p>で最新版にできます。</p>
-            <h2 id="バージョンの切り替え">バージョンの切り替え</h2>
-            <pre><code>sudo n
+          <p>で最新版にできます。</p>
+          <h2 id="バージョンの切り替え">バージョンの切り替え</h2>
+          <pre><code>sudo n
 </code></pre>
-            <pre><code>ο node/14.17.0
+          <pre><code>ο node/14.17.0
     node/16.2.0
 
 Use up/down arrow keys to select a version, return key to install, d to delete, q to quit
 </code></pre>
-            <p>と打って出てくる上の画面の左端のoを矢印キーで移動させて&#39;enter&#39;で決定、&#39;q&#39;キャンセルできる。ちなみに&#39;d&#39;で選択したバージョンを消せる。</p>
-            <!-- HTML_TAG_END -->
-          </main>
-        </div>
-        <footer class="footer svelte-itltgt">
-          <div></div>
-
-          <div class="flex-col">
-            <div class="iconLinks svelte-itltgt">
-              <a class="smallIcon svelte-itltgt" href="https://github.com/KCCTdensan" alt="GitHub" target="_blank" rel="external"
-                ><svg version="1.1" class="fa-icon svelte-1b2zbdf" width="18.599999999999998" height="19.2" role="presentation" viewBox="0 0 496 512" style="font-size: 1.2em">
-                  <path
-                    id="path-0"
-                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                  ></path></svg
-              ></a>
-              <a class="smallIcon svelte-itltgt" href="https://twitter.com/intent/user?user_id=444436310" alt="Twitter" target="_blank" rel="external"
-                ><svg version="1.1" class="fa-icon svelte-1b2zbdf" width="19.2" height="19.2" role="presentation" viewBox="0 0 512 512" style="font-size: 1.2em">
-                  <path
-                    id="path-0"
-                    d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
-                  ></path></svg
-              ></a>
-            </div>
-            <small class="copyright svelte-itltgt"
-              ><span class="inline-block svelte-itltgt">© 1974-2022</span>
-              <span class="inline-block svelte-itltgt">KCCTdensan</span>
-              <span class="inline-block svelte-itltgt">神戸高専電算部</span></small
-            >
-          </div>
-
-          <div></div>
-        </footer>
+          <p>と打って出てくる上の画面の左端のoを矢印キーで移動させて&#39;enter&#39;で決定、&#39;q&#39;キャンセルできる。ちなみに&#39;d&#39;で選択したバージョンを消せる。</p>
+          <!-- HTML_TAG_END -->
+        </main>
       </div>
+      <footer class="footer svelte-itltgt">
+        <div></div>
+        <div class="flex-col">
+          <div class="iconLinks svelte-itltgt"><a class="smallIcon svelte-itltgt" href="https://github.com/KCCTdensan" alt="GitHub" target="_blank" rel="external"><svg version="1.1" class="fa-icon  svelte-1k81qp5" width="18.599999999999998" height="19.2" role="presentation" viewBox="0 0 496 512" style="font-size: 1.2em">
+                <path id="path-0" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
+              </svg></a>
+            <a class="smallIcon svelte-itltgt" href="https://twitter.com/intent/user?user_id=444436310" alt="Twitter" target="_blank" rel="external"><svg version="1.1" class="fa-icon  svelte-1k81qp5" width="19.2" height="19.2" role="presentation" viewBox="0 0 512 512" style="font-size: 1.2em">
+                <path id="path-0" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+              </svg></a>
+          </div>
+          <small class="copyright svelte-itltgt"><span class="inline-block svelte-itltgt">© 1974-2022</span>
+            <span class="inline-block svelte-itltgt">KCCTdensan</span>
+            <span class="inline-block svelte-itltgt">神戸高専電算部</span></small>
+        </div>
+        <div></div>
+      </footer>
     </div>
-
-    <script type="module" data-sveltekit-hydrate="1vy7kpx">
-      import { start } from "/_app/immutable/start-a523ad2c.js"
-      start({
-        target: document.querySelector('[data-sveltekit-hydrate="1vy7kpx"]').parentNode,
-        paths: { base: "", assets: "" },
-        session: { PLATFORM: "gh-pages" },
-        route: true,
-        spa: false,
-        trailing_slash: "always",
-        hydrate: {
-          status: 200,
-          error: null,
-          nodes: [0, 15],
-          params: { slug: "setup-node\u002F" },
-          routeId: "docs/[...slug]",
+  </div>
+  <script type="module" data-sveltekit-hydrate="1a7217b">
+    import {
+      start
+    } from "/_app/immutable/start-20236ed9.js";
+    start({
+      target: document.querySelector('[data-sveltekit-hydrate="1a7217b"]').parentNode,
+      paths: {
+        "base": "",
+        "assets": ""
+      },
+      session: {
+        PLATFORM: "gh-pages"
+      },
+      route: true,
+      spa: false,
+      trailing_slash: "always",
+      hydrate: {
+        status: 200,
+        error: null,
+        nodes: [0, 15],
+        params: {
+          slug: "setup-node\u002F"
         },
-      })
-    </script>
-    <script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/api/package.json">
-      { "status": 200, "statusText": "", "headers": { "content-type": "application/json; charset=utf-8" }, "body": "{\"name\":\"d3bu.net\",\"version\":\"2.1.1\"}" }
-    </script>
-    <script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/api/articles/docs.json">
-      {
-        "status": 200,
-        "statusText": "",
-        "headers": { "content-type": "application/json; charset=utf-8" },
-        "body": "{\"data\":[{\"slug\":\"github\",\"title\":\"githubセットアップガイド\",\"author\":\"山T\",\"date\":\"2021-06-15T00:00:00.000Z\",\"body\":\"\u003Ch1 id=\\\"githubセットアップガイド\\\">githubセットアップガイド\u003C/h1>\\n\u003Cp>2021年7月10日時点の情報です。\\nどうしても動かなかったら山Tまで。\u003C/p>\\n\u003Ch2 id=\\\"用語解説\\\">用語解説\u003C/h2>\\n\u003Cp>リポジトリ：gitではコードを保存する場所を指す。\\nローカル：主に自分や他の開発者のコンピュータ。\\nリモート：ローカルからのの情報を管理するコンピュータ。\\nローカルリポジトリ：ローカルにあるリポジトリ。開発者の端末の分だけある。\\nリモートリポジトリ：リモートにあるリポジトリ。一つしかない。\u003C/p>\\n\u003Ch3 id=\\\"git\\\">git\u003C/h3>\\n\u003Cp>gitとはよく使われている分散型バージョン管理ツールです。\\nまた、リモートサーバーを使う事で複数人での開発も可能です。\u003C/p>\\n\u003Ch3 id=\\\"github\\\">github\u003C/h3>\\n\u003Cp>githubは先ほど紹介したgitのリモートサーバーで無料で使うことができるツールです。\\n自分でリモートサーバを建てるのはめんどくさいですがgithubを利用することで簡単にリモートリポジトリが作れ、\\n他の人との共同開発も簡単にできるようになります。\u003C/p>\\n\u003Cp>この記事ではgithubを使った方法について書きます。\u003C/p>\\n\u003Ch2 id=\\\"実行環境\\\">実行環境\u003C/h2>\\n\u003Cp>OS: debian 11.0\\nシェル: bash\u003C/p>\\n\u003Ch2 id=\\\"gitのインストール\\\">gitのインストール\u003C/h2>\\n\u003Cp>gitをインストールします。\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">sudo apt-get update\\nsudo apt-get install -y git\\n\u003C/code>\u003C/pre>\\n\u003Cp>gitに管理させるディレクトリを作ります。\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">mkdir ~/dhirekutori\\n\u003C/code>\u003C/pre>\\n\u003Cp>これでとりあえずパソコン側の準備が終わったのでgithubに移動します。\u003C/p>\\n\u003Ch2 id=\\\"githubのセットアップと使い方\\\">githubのセットアップと使い方\u003C/h2>\\n\u003Cp>まずgithubのアカウントを作ります。\\n&quot;sign up&quot;のボタンから作ります。\\nその後、画面にある&quot;Repositories&quot;のところにある&quot;New&quot;を押してリポジトリを作ります。\\nリポジトリを作る画面では&quot;Repository name&quot;というところにはリポジトリの名前を、&quot;Description&quot;のところには説明を入れますが説明はなくても大丈夫です。\\nその下の&quot;Public&quot;か&quot;Private&quot;を選ぶところでリポジトリを公開するか(Public)、非公開(Private)にするかを選びます。\\nその他は何もさわらなくても大丈夫です。\u003C/p>\\n\u003Cp>入力ができたら&quot;Create repository&quot;を押してリポジトリを作ってください。\u003C/p>\\n\u003Cp>今回は&quot;ripojitori&quot;というリポジトリを作って進めることにします。\u003C/p>\\n\u003Cp>リポジトリができたらQuick setupの画面になると思います。そこのHTTPSのボタンを押してその右側のリンクをコピーしておいてください。\u003C/p>\\n\u003Ch2 id=\\\"ローカルリポジトリのセットアップclone-init\\\">ローカルリポジトリのセットアップ(clone, init)\u003C/h2>\\n\u003Cp>&quot;git clone&quot;コマンドでリモートリポジトリをローカルに落とせます。\\n試しにやってみると君がクローンしようとしたリポジトリは空だよと怒られます。\\nその通りですね（笑）\\nただ、共同開発などをする際は元々リモートリポジトリに何か入っていることが多いのでこのコマンドも覚えておいてください。\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">git clone &quot;さっきコピーしたリンク&quot;\\n&gt; warning: You appear to have cloned an empty repository.\\n\u003C/code>\u003C/pre>\\n\u003Cp>まず何かファイルを作ってみましょう。\\nとりあえず&quot;# リポジトリ名&quot;という文字が入ったテキストファイルを作ってみます。\\nこれでREADME.mdには&quot;# リポジトリ名&quot;という文字が入っている状態です。(※ちなみにリポジトリ名やディレクトリ名は自分のでつけて良いですが、&quot;README.md&quot;の名前は変えないでください)\u003C/p>\\n\u003Cp>このままではgithubに追加できないのでまず現在のディレクトリ(この解説どうりならさっき作った~/ripojitori)を&quot;git init&quot;コマンドで初期化します。\u003C/p>\\n\u003Cp>下の文では/home/densan/.gitに空のgitリポジトリを初期化したよ〜と言っています。\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">echo &quot;# リポジトリ名&quot; &gt; README.md\\ngit init\\n&gt; Initialized empty Git repository in /home/densan/dhirekutori/.git/\\n\u003C/code>\u003C/pre>\\n\u003Ch2 id=\\\"ローカルリポジトリのセットアップadd-commit-push\\\">ローカルリポジトリのセットアップ(add, commit ,push)\u003C/h2>\\n\u003Cp>まず&quot;git add&quot;コマンドでにさっき書いたREADME.mdをgitに管理してもらいます。\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">git add README.md\\n\u003C/code>\u003C/pre>\\n\u003Cp>次にgitではコミットということをしなければいけません。\\nコミットとはでバックアップをつくるようなものでコミットするとその時点でのファイルの内容が記録されます。\\nまた、何度かコミットしている場合過去のコミットに戻ることもできます。\\nこれによりバージョン管理ができるのです。\u003C/p>\\n\u003Cp>ターミナルでは&quot;git commit&quot;コマンドとオプションの&quot;-m&quot;を基本的につけます。\\n&quot;-m&quot;はコメントをつけるという意味で実際にコミットするときは下のようにしてください。\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">git commit -m &quot;コミット名&quot;\\n\u003C/code>\u003C/pre>\\n\u003Cp>すると長い文章がでてくると思いますがおそらくこのように書かれているはずです。\\nおまえはだれやねんと...\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">&gt; Author identity unknown\\n\\n*** Please tell me who you are.\\n\u003C/code>\u003C/pre>\\n\u003Cp>なので教えてあげましょう\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">git config --global user.name &quot;最初に作ったユーザー名&quot;\\ngit config --global user.email &quot;最初に作ったアカウントのメールアドレス&quot;\\n\u003C/code>\u003C/pre>\\n\u003Cp>するとこのような文章が返ってきます。\\nコミット成功です！\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">&gt; 1 file changed, 1 insertion(+)\\n\u003C/code>\u003C/pre>\\n\u003Cp>では最後にこのコミットをプッシュしましょう。\\nプッシュとはリモートリポジトリにコミットを送ることです。\\nまずリモートリポジトリを登録しなければなりません。\\n&quot;git remote add origin&quot;コマンドでリモートリポジトリを設定します。\\n&quot;git push origin master&quot;コマンドオプションの&quot;-u&quot;を初回プッシュのみつけてください。\\nこの時にユーザー名とパスワードを聞かれると思うので入力してください。\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">git remote add origin https://github.com/&quot;ユーザー名&quot;/&quot;リポジトリ名&quot;.git\\ngit push -u origin master\\n\u003C/code>\u003C/pre>\\n\u003Cp>このように返ってくればプッシュは成功です。\\ngithub.comでもREADME.mdがあることが確認できると思います。\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">&gt; * [new branch]      master -&gt; master\\nBranch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39;origin&#39;.\\n\u003C/code>\u003C/pre>\\n\u003Ch2 id=\\\"プッシュ2回目以降の使い方\\\">プッシュ2回目以降の使い方\u003C/h2>\\n\u003Cp>これだけで大丈夫です。\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">git add &quot;新しいファイルもしくは変更したファイル&quot;\\ngit commit -m &quot;コミット名&quot;\\ngit push\\n\u003C/code>\u003C/pre>\\n\u003Ch2 id=\\\"ローカルリポジトリを更新したいとき\\\">ローカルリポジトリを更新したいとき\u003C/h2>\\n\u003Cp>他の人と共同開発している場合はリモートリポジトリが更新されているかもしれません。\\nその更新をとってくるには&quot;git pull&quot;を使ってください\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">git pull https://github.com/&quot;ユーザー名&quot;/&quot;リポジトリ名&quot;.git\\n\u003C/code>\u003C/pre>\\n\u003Ch2 id=\\\"なぜかうまくいかないとき\\\">なぜかうまくいかないとき\u003C/h2>\\n\u003Cp>上の文に書いている&quot;&quot;は不要です！実際は入力しないでください。\u003C/p>\\n\",\"authors\":[\"山T\"]},{\"slug\":\"setup-node\",\"title\":\"Nodejs環境構築\",\"author\":\"山D, 山T\",\"date\":\"2021-06-03T00:00:00.000Z\",\"dateUpd\":\"2021-07-15T00:00:00.000Z\",\"body\":\"\u003Ch1 id=\\\"nodejs環境構築\\\">Nodejs環境構築\u003C/h1>\\n\u003Cp>どうしても動かなかったら山Tまで\u003C/p>\\n\u003Cp>まず，\u003Ca href=\\\"/docs/wsl2-setup\\\">WSLのセットアップ\u003C/a>を完了させておいてください。\u003C/p>\\n\u003Ch2 id=\\\"必須パッケージのインストール\\\">必須パッケージのインストール\u003C/h2>\\n\u003Cpre>\u003Ccode>sudo apt-get update\\nsudo apt-get install -y nodejs npm\\n\u003C/code>\u003C/pre>\\n\u003Cp>ここで入るものはバージョンが古すぎるのでバージョンを上げる。\u003C/p>\\n\u003Ch2 id=\\\"安定版のインストール\\\">安定版のインストール\u003C/h2>\\n\u003Cpre>\u003Ccode>sudo npm install n -g\\nsudo n stable\\n\u003C/code>\u003C/pre>\\n\u003Ch2 id=\\\"古いnodeを消す\\\">古いnodeを消す\u003C/h2>\\n\u003Cp>ややこしいし、使わないので消しましょう！\u003C/p>\\n\u003Cpre>\u003Ccode>sudo apt purge -y nodejs npm\\n\u003C/code>\u003C/pre>\\n\u003Ch2 id=\\\"シェルへの再ログインとバージョン確認\\\">シェルへの再ログインとバージョン確認\u003C/h2>\\n\u003Cpre>\u003Ccode>exec $SHELL -l\\nnode -v\\n\u003C/code>\u003C/pre>\\n\u003Cp>これでバージョンが14以降なら大丈夫です！\u003C/p>\\n\u003Ch2 id=\\\"最新版にしたかったら\\\">最新版にしたかったら\u003C/h2>\\n\u003Cpre>\u003Ccode>sudo n latest\\n\u003C/code>\u003C/pre>\\n\u003Cp>で最新版にできます。\u003C/p>\\n\u003Ch2 id=\\\"バージョンの切り替え\\\">バージョンの切り替え\u003C/h2>\\n\u003Cpre>\u003Ccode>sudo n\\n\u003C/code>\u003C/pre>\\n\u003Cpre>\u003Ccode>ο node/14.17.0\\n    node/16.2.0\\n\\nUse up/down arrow keys to select a version, return key to install, d to delete, q to quit\\n\u003C/code>\u003C/pre>\\n\u003Cp>と打って出てくる上の画面の左端のoを矢印キーで移動させて&#39;enter&#39;で決定、&#39;q&#39;キャンセルできる。ちなみに&#39;d&#39;で選択したバージョンを消せる。\u003C/p>\\n\",\"authors\":[\"山D\",\"山T\"]},{\"slug\":\"wsl2-setup\",\"title\":\"WSL爆速セットアップガイド\",\"author\":\"山D\",\"date\":\"2021-05-19T00:00:00.000Z\",\"dateUpd\":\"2022-04-26T00:00:00.000Z\",\"body\":\"\u003Ch1 id=\\\"wsl爆速セットアップガイド\\\">WSL爆速セットアップガイド\u003C/h1>\\n\u003Cp>2022年4月時点での最新情報です。\\n最新のバージョンのWindowsで使えるかは保証しません。\u003C/p>\\n\u003Cp>元気がある人は\u003Ca href=\\\"https://docs.microsoft.com/ja-jp/windows/wsl/install\\\">本家の記事(日本語)\u003C/a>を読んで自分でセットアップしちゃいましょう。\u003Cbr>読んでて専門用語わからないよ〜〜となってしまった人もこのページを参考にするとよいかもしれません。\u003C/p>\\n\u003Ch2 id=\\\"まずはこれを試そう\\\">まずはこれを試そう\u003C/h2>\\n\u003Cp>最近のWindowsならこれだけで完了します．\u003C/p>\\n\u003Cp>管理者権限のPowerShellまたはコマンドプロンプト(\u003Ccode>Win + X\u003C/code>で開くメニューにある)を開いて，以下のコマンドを実行してください．\u003C/p>\\n\u003Cpre>\u003Ccode>wsl --install\\n\u003C/code>\u003C/pre>\\n\u003Cp>これで完了した人はWSLのインストールは完了です．\\n再起動するとUbuntuという名前のアプリケーションが存在するはずなので，起動しましょう．\u003C/p>\\n\u003Cp>起動したら \u003Cem>Ubuntuの初期設定\u003C/em> の項目まで読み飛ばしてください．(下の方にある)\u003C/p>\\n\u003Ch2 id=\\\"前提条件old\\\">前提条件(old)\u003C/h2>\\n\u003Cul>\\n\u003Cli>Windows10のバージョンが1903以降\u003Cbr>→ 最近のPCなら大丈夫ですが，もし不安なら\u003Ccode>Win\u003C/code>キー+\u003Ccode>Pause\u003C/code>キーでWindowsのバージョンを確認できます\u003C/li>\\n\u003Cli>PCの管理者権限を持っている or 管理者のパスワードを知っている\u003Cbr>→ 自分用のPCであればまず心配しないで良いです\u003C/li>\\n\u003C/ul>\\n\u003Ch2 id=\\\"windowsのセットアップ\\\">Windowsのセットアップ\u003C/h2>\\n\u003Cp>一般的なPCであれば，画面左下に4つ窓マークのスタートメニューがあります。\\nこれは普段は左クリックして使うものですが，今回は右クリックします。\\nそうすると何かのメニューが出てきて，その中に\u003Ccode>Windows PowerShell (管理者)\u003C/code>という項目が見つかるかと思います。これをクリックしてやりましょう。\u003C/p>\\n\u003Cp>そうするとなにやら青いウィンドウが立ち上がります。\\nこれを使って，Windowsに必要な機能の設定をコマンド経由でやっちゃいます。\\nしかしコマンド操作とは言っても，やることはコピペだけです。ご安心ください。\u003C/p>\\n\u003Cp>まず，以下のコマンドをコピーします。\\nPowerShellのウィンドウではどこでも右クリックでコピーしたテキストを貼り付けることができます。\u003C/p>\\n\u003Cpre>\u003Ccode>dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart\\n\u003C/code>\u003C/pre>\\n\u003Cp>貼り付け終えたらEnterを押してコマンドを実行してください。エラーが出ずに終了すれば成功です。\u003C/p>\\n\u003Cp>次に，もう一度コマンドをコピペします。\u003C/p>\\n\u003Cpre>\u003Ccode>dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart\\n\u003C/code>\u003C/pre>\\n\u003Cp>ではEnterを押して実行しましょう。エラーは出ませんでしたか?\u003C/p>\\n\u003Cp>正常にコマンドが終了した場合はPowerShellのウィンドウを閉じてもらって結構です。\\n青い画面というものは精神衛生上あまりよろしくありませんね……。\u003C/p>\\n\u003Cp>では，ここまでいい感じに出来たのであれば\u003Cstrong>必ず\u003C/strong>PCを一旦再起動させてください。\\nこの再起動は\u003Cstrong>必須\u003C/strong>の手順です。忘れてはいけません。\u003C/p>\\n\u003Ch2 id=\\\"windowsのセットアップその2\\\">Windowsのセットアップ(その2)\u003C/h2>\\n\u003Cp>無事再起動を終えたPCは，この先の手順に進みます。\u003C/p>\\n\u003Cp>まず，「Linux カーネル更新プログラム パッケージ」をインストールします。\\nPCで\u003Ca href=\\\"https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi\\\">wsl_update_x64.msi\u003C/a>をダウンロードし，インストールしてください。\\nこれは比較的すぐ終わります。\u003C/p>\\n\u003Cp>次に，もう一度PowerShellを開きます。(今回は管理者権限無くても大丈夫，スタートを右クリックして開くのが早い)\\nそこに，これをコピペ・実行します。\u003C/p>\\n\u003Cpre>\u003Ccode>wsl --set-default-version 2\\n\u003C/code>\u003C/pre>\\n\u003Cp>正常に実行できましたか?\u003C/p>\\n\u003Ch2 id=\\\"ディストロを選択・ダウンロード\\\">ディストロを選択・ダウンロード\u003C/h2>\\n\u003Cp>何もわからないのであれば\u003Ca href=\\\"https://www.microsoft.com/store/productid/9NBLGGH4MSV6\\\">Ubuntu\u003C/a>が良いでしょう。\u003Cbr>MicrosoftStoreで検索・ダウンロードします。\u003C/p>\\n\u003Ch2 id=\\\"ubuntuの初期設定\\\">Ubuntuの初期設定\u003C/h2>\\n\u003Cp>さっきの手順でUbuntu以外を選んだ人は雰囲気で頑張ってください。\u003C/p>\\n\u003Ch3 id=\\\"起動\\\">起動\u003C/h3>\\n\u003Cp>アプリ一覧のとこからUbuntuってやつを探して起動してください。\u003C/p>\\n\u003Cp>なにやら初期設定のような画面が出てくるのですが，\u003C/p>\\n\u003Cul>\\n\u003Cli>ユーザー名は半角の英小文字or数字しか使えない\u003C/li>\\n\u003Cli>パスワードは入力欄に反映されないが，しっかり入力されている\u003C/li>\\n\u003C/ul>\\n\u003Cp>ということに留意して完了してください。\u003C/p>\\n\u003Ch3 id=\\\"sudoersの編集\\\">sudoersの編集\u003C/h3>\\n\u003Cp>\u003Ccode>sudo\u003C/code>というコマンドはセキュリティ云々のアレで使う時にいちいちパスワードを聞いてくるのですが，これは自分だけが使用するシステムなのでパスワード入力を省略する設定にしちゃいます。  \u003C/p>\\n\u003Cp>ではまずUbuntuのウィンドウに次のコマンドを入力して実行します。\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">sudo visudo\\n\u003C/code>\u003C/pre>\\n\u003Cp>ここでUbuntuの初回起動時に設定したパスワードを聞かれるのですが，いくら入力しても文字が入力されたような気配はありません。\\nしかしこれは正常で，実はちゃんと入力できているので普通に入力してEnterを押してください。\u003C/p>\\n\u003Cp>成功するとなにやらテキストエディタのようなものが立ち上がるのですが，\u003C/p>\\n\u003Cpre>\u003Ccode>%sudo   ALL=(ALL:ALL) ALL\\n\u003C/code>\u003C/pre>\\n\u003Cp>の行を\u003C/p>\\n\u003Cpre>\u003Ccode>%sudo   ALL=(ALL:ALL) NOPASSWD: ALL\\n\u003C/code>\u003C/pre>\\n\u003Cp>と書き変えてやってください。\u003C/p>\\n\u003Col>\\n\u003Cli>\u003Ccode>Ctrl\u003C/code>+\u003Ccode>x\u003C/code>\u003C/li>\\n\u003Cli>\u003Ccode>y\u003C/code>\u003C/li>\\n\u003Cli>\u003Ccode>Enter\u003C/code>\\nと順に入力していくと，ここでの変更を保存して終了できます。\u003C/li>\\n\u003C/ol>\\n\u003Ch2 id=\\\"システムの更新\\\">システムの更新\u003C/h2>\\n\u003Cp>これで一応使い物になるUbuntuのシステムが出来上がったのですが，最後にシステムの更新だけやっておきます。\\n次のコマンドを実行してください。\u003C/p>\\n\u003Cpre>\u003Ccode>sudo apt update\\nsudo apt full-upgrade -y\\nsudo apt autoremove -y\\n\u003C/code>\u003C/pre>\\n\u003Ch2 id=\\\"お便利設定\\\">お便利設定\u003C/h2>\\n\u003Cp>Ubuntuで以下のコマンドを実行してください。\\n\u003Ccode>ll\u003C/code>と\u003Ccode>la\u003C/code>コマンドの追加と，UbuntuのホームディレクトリにWindowsのホームディレクトリのsymlinkを貼ります。\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">ln -sf /mnt/c/Users/$(cmd.exe /c &quot;SET /P X=%USERNAME%&lt;NUL&quot; 2&gt;/dev/null) WinHome\\necho &#39;alias ll=&quot;ls -l&quot;; alias la=&quot;ls -Al&quot;&#39; &gt;&gt; ~/.bashrc\\n. ~/{.bashrc,.profile}\\n\u003C/code>\u003C/pre>\\n\u003Ch2 id=\\\"終わりに\\\">終わりに\u003C/h2>\\n\u003Cp>いかがでしたでしょうか。\u003C/p>\\n\u003Cp>Ubuntuは有名な割にけっこうクセが強いディストロなので，暇があるなら他のディストロも触ってみることをおすすめします。\u003C/p>\\n\u003Cp>(Archとかを空いてる実機に入れてみるのも良いかもしれません．\u003C/p>\\n\",\"authors\":[\"山D\"]},{\"slug\":\"pepper\",\"title\":\"Pepper開発環境構築\",\"author\":\"山D\",\"date\":\"2021-05-13T00:00:00.000Z\",\"dateUpd\":\"2021-07-03T00:00:00.000Z\",\"body\":\"\u003Ch1 id=\\\"pepper開発環境構築\\\">Pepper開発環境構築\u003C/h1>\\n\u003Cp>どうしても動かなかったら山Dまで\u003C/p>\\n\u003Cp>まず，\u003Ca href=\\\"/wsl2-setup\\\">WSLのセットアップ\u003C/a>を完了させておいてください。\u003C/p>\\n\u003Ch3 id=\\\"必須パッケージのインストール\\\">必須パッケージのインストール\u003C/h3>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">sudo apt update\\nsudo apt install -y curl python2 libpython2.7\\n\u003C/code>\u003C/pre>\\n\u003Ch2 id=\\\"実際に環境を構築する\\\">実際に環境を構築する\u003C/h2>\\n\u003Ch3 id=\\\"sdkのダウンロードと展開\\\">SDKのダウンロードと展開\u003C/h3>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">sudo curl -fsSL https://community-static.aldebaran.com/resources/2.5.10/Python%20SDK/pynaoqi-python2.7-2.5.7.1-linux64.tar.gz | sudo tar xz --no-same-owner -C/opt\\nsudo ln -s pynaoqi-python2.7-2.5.7.1-linux64 /opt/pynaoqi\\nsudo chmod 755 -R /opt/pynaoqi/lib/python2.7/site-packages\\n\u003C/code>\u003C/pre>\\n\u003Ch3 id=\\\"path通したりその他諸々\\\">PATH通したりその他諸々\u003C/h3>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">echo &#39;export PYTHONPATH=/opt/pynaoqi/lib/python2.7/site-packages:${PYTHONPATH}&#39; &gt;&gt; ~/.profile\\n. ~/{.bashrc,.profile}\\n\u003C/code>\u003C/pre>\\n\u003Ch2 id=\\\"動作確認\\\">動作確認\u003C/h2>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">python2\\n\u003C/code>\u003C/pre>\\n\u003Cp>Pythonのrepl(対話型のインターフェース)が起動します。\u003C/p>\\n\u003Cp>以下を打ってみてください。\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-python\\\">import qi\\n\u003C/code>\u003C/pre>\\n\u003Cp>エラーが出ずにプロンプトが戻ってきましたか？\u003Cbr>戻ってきたなら成功です！\\nエラーを吐いたのなら失敗です！\u003C/p>\\n\u003Ch2 id=\\\"動作確認おまけ\\\">動作確認(おまけ)\u003C/h2>\\n\u003Cpre>\u003Ccode class=\\\"language-python2\\\">import qi\\ns = qi.Session()\\ns.connect(&quot;tcp://192.168.x.x:9559&quot;)\\ntts = s.service(&quot;ALTextToSpeech&quot;)\\ntts.say(&quot;布団が吹っ飛んだ&quot;)\\n\u003C/code>\u003C/pre>\\n\",\"authors\":[\"山D\"]}]}"
+        routeId: "docs/[...slug]"
       }
-    </script>
-  </body>
+    });
+  </script>
+  <script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/api/package.json">
+    {
+      "status": 200,
+      "statusText": "",
+      "headers": {
+        "content-type": "application/json; charset=utf-8"
+      },
+      "body": "{\"name\":\"d3bu.net\",\"version\":\"2.1.1\"}"
+    }
+  </script>
+  <script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/api/articles/docs.json">
+    {
+      "status": 200,
+      "statusText": "",
+      "headers": {
+        "content-type": "application/json; charset=utf-8"
+      },
+      "body": "{\"data\":[{\"slug\":\"github\",\"title\":\"githubセットアップガイド\",\"author\":\"山T\",\"date\":\"2021-06-15T00:00:00.000Z\",\"body\":\"\u003Ch1 id=\\\"githubセットアップガイド\\\">githubセットアップガイド\u003C/h1>\\n\u003Cp>2021年7月10日時点の情報です。\\nどうしても動かなかったら山Tまで。\u003C/p>\\n\u003Ch2 id=\\\"用語解説\\\">用語解説\u003C/h2>\\n\u003Cp>リポジトリ：gitではコードを保存する場所を指す。\\nローカル：主に自分や他の開発者のコンピュータ。\\nリモート：ローカルからのの情報を管理するコンピュータ。\\nローカルリポジトリ：ローカルにあるリポジトリ。開発者の端末の分だけある。\\nリモートリポジトリ：リモートにあるリポジトリ。一つしかない。\u003C/p>\\n\u003Ch3 id=\\\"git\\\">git\u003C/h3>\\n\u003Cp>gitとはよく使われている分散型バージョン管理ツールです。\\nまた、リモートサーバーを使う事で複数人での開発も可能です。\u003C/p>\\n\u003Ch3 id=\\\"github\\\">github\u003C/h3>\\n\u003Cp>githubは先ほど紹介したgitのリモートサーバーで無料で使うことができるツールです。\\n自分でリモートサーバを建てるのはめんどくさいですがgithubを利用することで簡単にリモートリポジトリが作れ、\\n他の人との共同開発も簡単にできるようになります。\u003C/p>\\n\u003Cp>この記事ではgithubを使った方法について書きます。\u003C/p>\\n\u003Ch2 id=\\\"実行環境\\\">実行環境\u003C/h2>\\n\u003Cp>OS: debian 11.0\\nシェル: bash\u003C/p>\\n\u003Ch2 id=\\\"gitのインストール\\\">gitのインストール\u003C/h2>\\n\u003Cp>gitをインストールします。\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">sudo apt-get update\\nsudo apt-get install -y git\\n\u003C/code>\u003C/pre>\\n\u003Cp>gitに管理させるディレクトリを作ります。\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">mkdir ~/dhirekutori\\n\u003C/code>\u003C/pre>\\n\u003Cp>これでとりあえずパソコン側の準備が終わったのでgithubに移動します。\u003C/p>\\n\u003Ch2 id=\\\"githubのセットアップと使い方\\\">githubのセットアップと使い方\u003C/h2>\\n\u003Cp>まずgithubのアカウントを作ります。\\n&quot;sign up&quot;のボタンから作ります。\\nその後、画面にある&quot;Repositories&quot;のところにある&quot;New&quot;を押してリポジトリを作ります。\\nリポジトリを作る画面では&quot;Repository name&quot;というところにはリポジトリの名前を、&quot;Description&quot;のところには説明を入れますが説明はなくても大丈夫です。\\nその下の&quot;Public&quot;か&quot;Private&quot;を選ぶところでリポジトリを公開するか(Public)、非公開(Private)にするかを選びます。\\nその他は何もさわらなくても大丈夫です。\u003C/p>\\n\u003Cp>入力ができたら&quot;Create repository&quot;を押してリポジトリを作ってください。\u003C/p>\\n\u003Cp>今回は&quot;ripojitori&quot;というリポジトリを作って進めることにします。\u003C/p>\\n\u003Cp>リポジトリができたらQuick setupの画面になると思います。そこのHTTPSのボタンを押してその右側のリンクをコピーしておいてください。\u003C/p>\\n\u003Ch2 id=\\\"ローカルリポジトリのセットアップclone-init\\\">ローカルリポジトリのセットアップ(clone, init)\u003C/h2>\\n\u003Cp>&quot;git clone&quot;コマンドでリモートリポジトリをローカルに落とせます。\\n試しにやってみると君がクローンしようとしたリポジトリは空だよと怒られます。\\nその通りですね（笑）\\nただ、共同開発などをする際は元々リモートリポジトリに何か入っていることが多いのでこのコマンドも覚えておいてください。\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">git clone &quot;さっきコピーしたリンク&quot;\\n&gt; warning: You appear to have cloned an empty repository.\\n\u003C/code>\u003C/pre>\\n\u003Cp>まず何かファイルを作ってみましょう。\\nとりあえず&quot;# リポジトリ名&quot;という文字が入ったテキストファイルを作ってみます。\\nこれでREADME.mdには&quot;# リポジトリ名&quot;という文字が入っている状態です。(※ちなみにリポジトリ名やディレクトリ名は自分のでつけて良いですが、&quot;README.md&quot;の名前は変えないでください)\u003C/p>\\n\u003Cp>このままではgithubに追加できないのでまず現在のディレクトリ(この解説どうりならさっき作った~/ripojitori)を&quot;git init&quot;コマンドで初期化します。\u003C/p>\\n\u003Cp>下の文では/home/densan/.gitに空のgitリポジトリを初期化したよ〜と言っています。\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">echo &quot;# リポジトリ名&quot; &gt; README.md\\ngit init\\n&gt; Initialized empty Git repository in /home/densan/dhirekutori/.git/\\n\u003C/code>\u003C/pre>\\n\u003Ch2 id=\\\"ローカルリポジトリのセットアップadd-commit-push\\\">ローカルリポジトリのセットアップ(add, commit ,push)\u003C/h2>\\n\u003Cp>まず&quot;git add&quot;コマンドでにさっき書いたREADME.mdをgitに管理してもらいます。\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">git add README.md\\n\u003C/code>\u003C/pre>\\n\u003Cp>次にgitではコミットということをしなければいけません。\\nコミットとはでバックアップをつくるようなものでコミットするとその時点でのファイルの内容が記録されます。\\nまた、何度かコミットしている場合過去のコミットに戻ることもできます。\\nこれによりバージョン管理ができるのです。\u003C/p>\\n\u003Cp>ターミナルでは&quot;git commit&quot;コマンドとオプションの&quot;-m&quot;を基本的につけます。\\n&quot;-m&quot;はコメントをつけるという意味で実際にコミットするときは下のようにしてください。\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">git commit -m &quot;コミット名&quot;\\n\u003C/code>\u003C/pre>\\n\u003Cp>すると長い文章がでてくると思いますがおそらくこのように書かれているはずです。\\nおまえはだれやねんと...\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">&gt; Author identity unknown\\n\\n*** Please tell me who you are.\\n\u003C/code>\u003C/pre>\\n\u003Cp>なので教えてあげましょう\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">git config --global user.name &quot;最初に作ったユーザー名&quot;\\ngit config --global user.email &quot;最初に作ったアカウントのメールアドレス&quot;\\n\u003C/code>\u003C/pre>\\n\u003Cp>するとこのような文章が返ってきます。\\nコミット成功です！\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">&gt; 1 file changed, 1 insertion(+)\\n\u003C/code>\u003C/pre>\\n\u003Cp>では最後にこのコミットをプッシュしましょう。\\nプッシュとはリモートリポジトリにコミットを送ることです。\\nまずリモートリポジトリを登録しなければなりません。\\n&quot;git remote add origin&quot;コマンドでリモートリポジトリを設定します。\\n&quot;git push origin master&quot;コマンドオプションの&quot;-u&quot;を初回プッシュのみつけてください。\\nこの時にユーザー名とパスワードを聞かれると思うので入力してください。\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">git remote add origin https://github.com/&quot;ユーザー名&quot;/&quot;リポジトリ名&quot;.git\\ngit push -u origin master\\n\u003C/code>\u003C/pre>\\n\u003Cp>このように返ってくればプッシュは成功です。\\ngithub.comでもREADME.mdがあることが確認できると思います。\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">&gt; * [new branch]      master -&gt; master\\nBranch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39;origin&#39;.\\n\u003C/code>\u003C/pre>\\n\u003Ch2 id=\\\"プッシュ2回目以降の使い方\\\">プッシュ2回目以降の使い方\u003C/h2>\\n\u003Cp>これだけで大丈夫です。\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">git add &quot;新しいファイルもしくは変更したファイル&quot;\\ngit commit -m &quot;コミット名&quot;\\ngit push\\n\u003C/code>\u003C/pre>\\n\u003Ch2 id=\\\"ローカルリポジトリを更新したいとき\\\">ローカルリポジトリを更新したいとき\u003C/h2>\\n\u003Cp>他の人と共同開発している場合はリモートリポジトリが更新されているかもしれません。\\nその更新をとってくるには&quot;git pull&quot;を使ってください\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">git pull https://github.com/&quot;ユーザー名&quot;/&quot;リポジトリ名&quot;.git\\n\u003C/code>\u003C/pre>\\n\u003Ch2 id=\\\"なぜかうまくいかないとき\\\">なぜかうまくいかないとき\u003C/h2>\\n\u003Cp>上の文に書いている&quot;&quot;は不要です！実際は入力しないでください。\u003C/p>\\n\",\"authors\":[\"山T\"]},{\"slug\":\"setup-node\",\"title\":\"Nodejs環境構築\",\"author\":\"山D, 山T\",\"date\":\"2021-06-03T00:00:00.000Z\",\"dateUpd\":\"2021-07-15T00:00:00.000Z\",\"body\":\"\u003Ch1 id=\\\"nodejs環境構築\\\">Nodejs環境構築\u003C/h1>\\n\u003Cp>どうしても動かなかったら山Tまで\u003C/p>\\n\u003Cp>まず，\u003Ca href=\\\"/docs/wsl2-setup\\\">WSLのセットアップ\u003C/a>を完了させておいてください。\u003C/p>\\n\u003Ch2 id=\\\"必須パッケージのインストール\\\">必須パッケージのインストール\u003C/h2>\\n\u003Cpre>\u003Ccode>sudo apt-get update\\nsudo apt-get install -y nodejs npm\\n\u003C/code>\u003C/pre>\\n\u003Cp>ここで入るものはバージョンが古すぎるのでバージョンを上げる。\u003C/p>\\n\u003Ch2 id=\\\"安定版のインストール\\\">安定版のインストール\u003C/h2>\\n\u003Cpre>\u003Ccode>sudo npm install n -g\\nsudo n stable\\n\u003C/code>\u003C/pre>\\n\u003Ch2 id=\\\"古いnodeを消す\\\">古いnodeを消す\u003C/h2>\\n\u003Cp>ややこしいし、使わないので消しましょう！\u003C/p>\\n\u003Cpre>\u003Ccode>sudo apt purge -y nodejs npm\\n\u003C/code>\u003C/pre>\\n\u003Ch2 id=\\\"シェルへの再ログインとバージョン確認\\\">シェルへの再ログインとバージョン確認\u003C/h2>\\n\u003Cpre>\u003Ccode>exec $SHELL -l\\nnode -v\\n\u003C/code>\u003C/pre>\\n\u003Cp>これでバージョンが14以降なら大丈夫です！\u003C/p>\\n\u003Ch2 id=\\\"最新版にしたかったら\\\">最新版にしたかったら\u003C/h2>\\n\u003Cpre>\u003Ccode>sudo n latest\\n\u003C/code>\u003C/pre>\\n\u003Cp>で最新版にできます。\u003C/p>\\n\u003Ch2 id=\\\"バージョンの切り替え\\\">バージョンの切り替え\u003C/h2>\\n\u003Cpre>\u003Ccode>sudo n\\n\u003C/code>\u003C/pre>\\n\u003Cpre>\u003Ccode>ο node/14.17.0\\n    node/16.2.0\\n\\nUse up/down arrow keys to select a version, return key to install, d to delete, q to quit\\n\u003C/code>\u003C/pre>\\n\u003Cp>と打って出てくる上の画面の左端のoを矢印キーで移動させて&#39;enter&#39;で決定、&#39;q&#39;キャンセルできる。ちなみに&#39;d&#39;で選択したバージョンを消せる。\u003C/p>\\n\",\"authors\":[\"山D\",\"山T\"]},{\"slug\":\"wsl2-setup\",\"title\":\"WSL爆速セットアップガイド\",\"author\":\"山D\",\"date\":\"2021-05-19T00:00:00.000Z\",\"dateUpd\":\"2022-04-26T00:00:00.000Z\",\"body\":\"\u003Ch1 id=\\\"wsl爆速セットアップガイド\\\">WSL爆速セットアップガイド\u003C/h1>\\n\u003Cp>2022年4月時点での最新情報です。\\n最新のバージョンのWindowsで使えるかは保証しません。\u003C/p>\\n\u003Cp>元気がある人は\u003Ca href=\\\"https://docs.microsoft.com/ja-jp/windows/wsl/install\\\">本家の記事(日本語)\u003C/a>を読んで自分でセットアップしちゃいましょう。\u003Cbr>読んでて専門用語わからないよ〜〜となってしまった人もこのページを参考にするとよいかもしれません。\u003C/p>\\n\u003Ch2 id=\\\"まずはこれを試そう\\\">まずはこれを試そう\u003C/h2>\\n\u003Cp>最近のWindowsならこれだけで完了します．\u003C/p>\\n\u003Cp>管理者権限のPowerShellまたはコマンドプロンプト(\u003Ccode>Win + X\u003C/code>で開くメニューにある)を開いて，以下のコマンドを実行してください．\u003C/p>\\n\u003Cpre>\u003Ccode>wsl --install\\n\u003C/code>\u003C/pre>\\n\u003Cp>これで完了した人はWSLのインストールは完了です．\\n再起動するとUbuntuという名前のアプリケーションが存在するはずなので，起動しましょう．\u003C/p>\\n\u003Cp>起動したら \u003Cem>Ubuntuの初期設定\u003C/em> の項目まで読み飛ばしてください．(下の方にある)\u003C/p>\\n\u003Ch2 id=\\\"前提条件old\\\">前提条件(old)\u003C/h2>\\n\u003Cul>\\n\u003Cli>Windows10のバージョンが1903以降\u003Cbr>→ 最近のPCなら大丈夫ですが，もし不安なら\u003Ccode>Win\u003C/code>キー+\u003Ccode>Pause\u003C/code>キーでWindowsのバージョンを確認できます\u003C/li>\\n\u003Cli>PCの管理者権限を持っている or 管理者のパスワードを知っている\u003Cbr>→ 自分用のPCであればまず心配しないで良いです\u003C/li>\\n\u003C/ul>\\n\u003Ch2 id=\\\"windowsのセットアップ\\\">Windowsのセットアップ\u003C/h2>\\n\u003Cp>一般的なPCであれば，画面左下に4つ窓マークのスタートメニューがあります。\\nこれは普段は左クリックして使うものですが，今回は右クリックします。\\nそうすると何かのメニューが出てきて，その中に\u003Ccode>Windows PowerShell (管理者)\u003C/code>という項目が見つかるかと思います。これをクリックしてやりましょう。\u003C/p>\\n\u003Cp>そうするとなにやら青いウィンドウが立ち上がります。\\nこれを使って，Windowsに必要な機能の設定をコマンド経由でやっちゃいます。\\nしかしコマンド操作とは言っても，やることはコピペだけです。ご安心ください。\u003C/p>\\n\u003Cp>まず，以下のコマンドをコピーします。\\nPowerShellのウィンドウではどこでも右クリックでコピーしたテキストを貼り付けることができます。\u003C/p>\\n\u003Cpre>\u003Ccode>dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart\\n\u003C/code>\u003C/pre>\\n\u003Cp>貼り付け終えたらEnterを押してコマンドを実行してください。エラーが出ずに終了すれば成功です。\u003C/p>\\n\u003Cp>次に，もう一度コマンドをコピペします。\u003C/p>\\n\u003Cpre>\u003Ccode>dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart\\n\u003C/code>\u003C/pre>\\n\u003Cp>ではEnterを押して実行しましょう。エラーは出ませんでしたか?\u003C/p>\\n\u003Cp>正常にコマンドが終了した場合はPowerShellのウィンドウを閉じてもらって結構です。\\n青い画面というものは精神衛生上あまりよろしくありませんね……。\u003C/p>\\n\u003Cp>では，ここまでいい感じに出来たのであれば\u003Cstrong>必ず\u003C/strong>PCを一旦再起動させてください。\\nこの再起動は\u003Cstrong>必須\u003C/strong>の手順です。忘れてはいけません。\u003C/p>\\n\u003Ch2 id=\\\"windowsのセットアップその2\\\">Windowsのセットアップ(その2)\u003C/h2>\\n\u003Cp>無事再起動を終えたPCは，この先の手順に進みます。\u003C/p>\\n\u003Cp>まず，「Linux カーネル更新プログラム パッケージ」をインストールします。\\nPCで\u003Ca href=\\\"https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi\\\">wsl_update_x64.msi\u003C/a>をダウンロードし，インストールしてください。\\nこれは比較的すぐ終わります。\u003C/p>\\n\u003Cp>次に，もう一度PowerShellを開きます。(今回は管理者権限無くても大丈夫，スタートを右クリックして開くのが早い)\\nそこに，これをコピペ・実行します。\u003C/p>\\n\u003Cpre>\u003Ccode>wsl --set-default-version 2\\n\u003C/code>\u003C/pre>\\n\u003Cp>正常に実行できましたか?\u003C/p>\\n\u003Ch2 id=\\\"ディストロを選択・ダウンロード\\\">ディストロを選択・ダウンロード\u003C/h2>\\n\u003Cp>何もわからないのであれば\u003Ca href=\\\"https://www.microsoft.com/store/productid/9NBLGGH4MSV6\\\">Ubuntu\u003C/a>が良いでしょう。\u003Cbr>MicrosoftStoreで検索・ダウンロードします。\u003C/p>\\n\u003Ch2 id=\\\"ubuntuの初期設定\\\">Ubuntuの初期設定\u003C/h2>\\n\u003Cp>さっきの手順でUbuntu以外を選んだ人は雰囲気で頑張ってください。\u003C/p>\\n\u003Ch3 id=\\\"起動\\\">起動\u003C/h3>\\n\u003Cp>アプリ一覧のとこからUbuntuってやつを探して起動してください。\u003C/p>\\n\u003Cp>なにやら初期設定のような画面が出てくるのですが，\u003C/p>\\n\u003Cul>\\n\u003Cli>ユーザー名は半角の英小文字or数字しか使えない\u003C/li>\\n\u003Cli>パスワードは入力欄に反映されないが，しっかり入力されている\u003C/li>\\n\u003C/ul>\\n\u003Cp>ということに留意して完了してください。\u003C/p>\\n\u003Ch3 id=\\\"sudoersの編集\\\">sudoersの編集\u003C/h3>\\n\u003Cp>\u003Ccode>sudo\u003C/code>というコマンドはセキュリティ云々のアレで使う時にいちいちパスワードを聞いてくるのですが，これは自分だけが使用するシステムなのでパスワード入力を省略する設定にしちゃいます。  \u003C/p>\\n\u003Cp>ではまずUbuntuのウィンドウに次のコマンドを入力して実行します。\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">sudo visudo\\n\u003C/code>\u003C/pre>\\n\u003Cp>ここでUbuntuの初回起動時に設定したパスワードを聞かれるのですが，いくら入力しても文字が入力されたような気配はありません。\\nしかしこれは正常で，実はちゃんと入力できているので普通に入力してEnterを押してください。\u003C/p>\\n\u003Cp>成功するとなにやらテキストエディタのようなものが立ち上がるのですが，\u003C/p>\\n\u003Cpre>\u003Ccode>%sudo   ALL=(ALL:ALL) ALL\\n\u003C/code>\u003C/pre>\\n\u003Cp>の行を\u003C/p>\\n\u003Cpre>\u003Ccode>%sudo   ALL=(ALL:ALL) NOPASSWD: ALL\\n\u003C/code>\u003C/pre>\\n\u003Cp>と書き変えてやってください。\u003C/p>\\n\u003Col>\\n\u003Cli>\u003Ccode>Ctrl\u003C/code>+\u003Ccode>x\u003C/code>\u003C/li>\\n\u003Cli>\u003Ccode>y\u003C/code>\u003C/li>\\n\u003Cli>\u003Ccode>Enter\u003C/code>\\nと順に入力していくと，ここでの変更を保存して終了できます。\u003C/li>\\n\u003C/ol>\\n\u003Ch2 id=\\\"システムの更新\\\">システムの更新\u003C/h2>\\n\u003Cp>これで一応使い物になるUbuntuのシステムが出来上がったのですが，最後にシステムの更新だけやっておきます。\\n次のコマンドを実行してください。\u003C/p>\\n\u003Cpre>\u003Ccode>sudo apt update\\nsudo apt full-upgrade -y\\nsudo apt autoremove -y\\n\u003C/code>\u003C/pre>\\n\u003Ch2 id=\\\"お便利設定\\\">お便利設定\u003C/h2>\\n\u003Cp>Ubuntuで以下のコマンドを実行してください。\\n\u003Ccode>ll\u003C/code>と\u003Ccode>la\u003C/code>コマンドの追加と，UbuntuのホームディレクトリにWindowsのホームディレクトリのsymlinkを貼ります。\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">ln -sf /mnt/c/Users/$(cmd.exe /c &quot;SET /P X=%USERNAME%&lt;NUL&quot; 2&gt;/dev/null) WinHome\\necho &#39;alias ll=&quot;ls -l&quot;; alias la=&quot;ls -Al&quot;&#39; &gt;&gt; ~/.bashrc\\n. ~/{.bashrc,.profile}\\n\u003C/code>\u003C/pre>\\n\u003Ch2 id=\\\"終わりに\\\">終わりに\u003C/h2>\\n\u003Cp>いかがでしたでしょうか。\u003C/p>\\n\u003Cp>Ubuntuは有名な割にけっこうクセが強いディストロなので，暇があるなら他のディストロも触ってみることをおすすめします。\u003C/p>\\n\u003Cp>(Archとかを空いてる実機に入れてみるのも良いかもしれません．\u003C/p>\\n\",\"authors\":[\"山D\"]},{\"slug\":\"pepper\",\"title\":\"Pepper開発環境構築\",\"author\":\"山D\",\"date\":\"2021-05-13T00:00:00.000Z\",\"dateUpd\":\"2021-07-03T00:00:00.000Z\",\"body\":\"\u003Ch1 id=\\\"pepper開発環境構築\\\">Pepper開発環境構築\u003C/h1>\\n\u003Cp>どうしても動かなかったら山Dまで\u003C/p>\\n\u003Cp>まず，\u003Ca href=\\\"/wsl2-setup\\\">WSLのセットアップ\u003C/a>を完了させておいてください。\u003C/p>\\n\u003Ch3 id=\\\"必須パッケージのインストール\\\">必須パッケージのインストール\u003C/h3>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">sudo apt update\\nsudo apt install -y curl python2 libpython2.7\\n\u003C/code>\u003C/pre>\\n\u003Ch2 id=\\\"実際に環境を構築する\\\">実際に環境を構築する\u003C/h2>\\n\u003Ch3 id=\\\"sdkのダウンロードと展開\\\">SDKのダウンロードと展開\u003C/h3>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">sudo curl -fsSL https://community-static.aldebaran.com/resources/2.5.10/Python%20SDK/pynaoqi-python2.7-2.5.7.1-linux64.tar.gz | sudo tar xz --no-same-owner -C/opt\\nsudo ln -s pynaoqi-python2.7-2.5.7.1-linux64 /opt/pynaoqi\\nsudo chmod 755 -R /opt/pynaoqi/lib/python2.7/site-packages\\n\u003C/code>\u003C/pre>\\n\u003Ch3 id=\\\"path通したりその他諸々\\\">PATH通したりその他諸々\u003C/h3>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">echo &#39;export PYTHONPATH=/opt/pynaoqi/lib/python2.7/site-packages:${PYTHONPATH}&#39; &gt;&gt; ~/.profile\\n. ~/{.bashrc,.profile}\\n\u003C/code>\u003C/pre>\\n\u003Ch2 id=\\\"動作確認\\\">動作確認\u003C/h2>\\n\u003Cpre>\u003Ccode class=\\\"language-bash\\\">python2\\n\u003C/code>\u003C/pre>\\n\u003Cp>Pythonのrepl(対話型のインターフェース)が起動します。\u003C/p>\\n\u003Cp>以下を打ってみてください。\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-python\\\">import qi\\n\u003C/code>\u003C/pre>\\n\u003Cp>エラーが出ずにプロンプトが戻ってきましたか？\u003Cbr>戻ってきたなら成功です！\\nエラーを吐いたのなら失敗です！\u003C/p>\\n\u003Ch2 id=\\\"動作確認おまけ\\\">動作確認(おまけ)\u003C/h2>\\n\u003Cpre>\u003Ccode class=\\\"language-python2\\\">import qi\\ns = qi.Session()\\ns.connect(&quot;tcp://192.168.x.x:9559&quot;)\\ntts = s.service(&quot;ALTextToSpeech&quot;)\\ntts.say(&quot;布団が吹っ飛んだ&quot;)\\n\u003C/code>\u003C/pre>\\n\",\"authors\":[\"山D\"]}]}"
+    }
+  </script>
+</body>
+
 </html>

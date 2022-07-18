@@ -1,77 +1,82 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="神戸高専電子計算機部のWebサイト">
-	<meta name="keywords" content="電子計算機部,電算部,パソコン,プログラミング,コンピューター,高専,KCCT,作曲,CG,電子回路,部活">
-	<meta name="generator" content="Vim">
 
-	<link rel="stylesheet" type="text/css" href="../style.css">
-	<title>5年間のおもひで</title>
-	<style>
-		#image{
-			width: 200px;
-		}
-		#bakuha{
-			width: 400px;
-		}
-	</style>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/riot/2.5.0/riot+compiler.min.js"></script>
-	<script src="../riot_tag/header.tag" type="riot/tag"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="神戸高専電子計算機部のWebサイト">
+  <meta name="keywords" content="電子計算機部,電算部,パソコン,プログラミング,コンピューター,高専,KCCT,作曲,CG,電子回路,部活">
+  <meta name="generator" content="Vim">
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <title>5年間のおもひで</title>
+  <style>
+    #image {
+      width: 200px;
+    }
+
+    #bakuha {
+      width: 400px;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/2.5.0/riot+compiler.min.js"></script>
+  <script src="../riot_tag/header.tag" type="riot/tag"></script>
 </head>
+
 <body>
-	<header></header>
-	<script>
-		riot.mount('header',{dir: '../'});
-    </script>
-    <h1>5年間のおもひで</h1>
-	<p>この記事は<a href="https://adventar.org/calendars/3555">KCCT-Densan Advent Calendar 2018</a>の1日目の記事です.</p>
-	<p>どうもポッチャマです。ピカチュウ、チコリータ、ポッチャマと進化(?)を遂げてきましたが、それも今年度で最後を迎え、この学校を卒業します。</p>
-	<figure>
-	<img src="images/bakuha.jpg" alt="爆破の写真" id="bakuha">
-	<figcaption>KCCT爆破</figcaption>
-	</figure>
-	<p>今回は、高専生活の思い出を勝手に振り返ります。</p>
-	<h2>1年生</h2>
-	<p>最初は教室の雰囲気が葬式で先が思いやられてた。今はめちゃくちゃ仲良し。なんかエモい。</p>
-    <p>当時の電算の活動はかなりしんどかった気がする(競技プログラミングばっかりしてたからかも)。</p>
-    <p>上級生のタイピングが速すぎて神に見えてた。</p>
-    <p>初めての高専祭、コスプレ大会で衝撃を受けた。</p>
-	<h2>2年生</h2>
-	<p>プログラミングの授業が始まった。言語はPascal。Pascal。今の2年生はCやってるらしい。</p>
-    <p>確かこの学年で同級生とゲーム作った。タイトルは「蚤」。達成感が凄かった記憶がある。</p>
-    <p>Unityとかも触ってオブジェクト指向とか理解できたのが2年の最初の方</p>
-    <p>この頃からギターに没頭し始めてめきめき上手くなった。高専生活で一番頑張ったこと聞かれたらギターって答えてる。</p>
-	<h2>3年生</h2>
-	<p>壊れ始めた年。初めてコスプレ大会に出て優勝できた。意外と楽しいよ。優勝できれば20000円分の券貰えるから気軽に参加しよう。</p>
-    <p>部員何人かでチーム作ってVR膝枕ゲーム作った。これがかなり好評で、作ったものを使ってもらえる喜びがわかった。</p>
-    <p>計測工学の単位まだ取れてない。</p>
-    </p>
-	<figure>
-	<img src="images/pikatyu.jpg" alt="ピカチュウの写真" id="image">
-	<figcaption>3年生コスプレ大会の写真</figcaption>
-	</figure>
-	<h2>4年生</h2>
-	<p>インターンでweb系の技術に触れてそっちに興味を持った。就職先もそっち系。低学年でインターンに興味ある人は早めに行くべし。</p>
-    <p>進路で悩んでる時が結構キツかった。12月くらいに就職に決めた。低学年でもっと行動起こしとけばもうちょっと楽に決めれたと思う。</p>
-    <p>「やりたいことが見つからない」と進路を決めあぐねている後輩をよく目にするが、やりたいことを見つけるためには行動が必要だで。</p>
-    <p>はじめてのプロコン。単純にしんどかった。面白かったけど。</p>
-    <p>コスプレ大会2連覇。</p>
-    <p>応用物理落とした(回収済み)。</p>
-	<figure>
-	<img src="images/tikori-ta400x400.jpg" alt="チコリータの写真" id="image">
-	<figcaption>4年生コスプレ大会の写真</figcaption>
-	</figure>
-	<h2>5年生</h2>
-	<p>推薦で受けた会社は落ちて、自由応募で受かったところで内定とった。結果的に良かった。就活に関しては落ちても全然気にすることないから数受けるべきだと思う。進学はがんばれ。</p>
-    <p>卒業研究でディープラーニングを勉強し始めたけど面白い。プロコンとかで活躍する分野だと思うからみんなやってほしい。卒業するまでに何かしら講座とかやろうと思ってる。</p>
-    <p>最後のコスプレ大会。やり切った。一切悔いはない。</p>
-	<figure>
-	<img src="images/pochama.jpg" alt="ポッチャマの写真" id="image">
-	<figcaption>5年生コスプレ大会直前の写真</figcaption>
-    </figure>
-    <h2>まとめ</h2>
-    <p>誰かKCCTポケモン図鑑引き継いでくれ</p>
+  <header></header>
+  <script>
+    riot.mount('header', {
+      dir: '../'
+    });
+  </script>
+  <h1>5年間のおもひで</h1>
+  <p>この記事は<a href="https://adventar.org/calendars/3555">KCCT-Densan Advent Calendar 2018</a>の1日目の記事です.</p>
+  <p>どうもポッチャマです。ピカチュウ、チコリータ、ポッチャマと進化(?)を遂げてきましたが、それも今年度で最後を迎え、この学校を卒業します。</p>
+  <figure>
+    <img src="images/bakuha.jpg" alt="爆破の写真" id="bakuha">
+    <figcaption>KCCT爆破</figcaption>
+  </figure>
+  <p>今回は、高専生活の思い出を勝手に振り返ります。</p>
+  <h2>1年生</h2>
+  <p>最初は教室の雰囲気が葬式で先が思いやられてた。今はめちゃくちゃ仲良し。なんかエモい。</p>
+  <p>当時の電算の活動はかなりしんどかった気がする(競技プログラミングばっかりしてたからかも)。</p>
+  <p>上級生のタイピングが速すぎて神に見えてた。</p>
+  <p>初めての高専祭、コスプレ大会で衝撃を受けた。</p>
+  <h2>2年生</h2>
+  <p>プログラミングの授業が始まった。言語はPascal。Pascal。今の2年生はCやってるらしい。</p>
+  <p>確かこの学年で同級生とゲーム作った。タイトルは「蚤」。達成感が凄かった記憶がある。</p>
+  <p>Unityとかも触ってオブジェクト指向とか理解できたのが2年の最初の方</p>
+  <p>この頃からギターに没頭し始めてめきめき上手くなった。高専生活で一番頑張ったこと聞かれたらギターって答えてる。</p>
+  <h2>3年生</h2>
+  <p>壊れ始めた年。初めてコスプレ大会に出て優勝できた。意外と楽しいよ。優勝できれば20000円分の券貰えるから気軽に参加しよう。</p>
+  <p>部員何人かでチーム作ってVR膝枕ゲーム作った。これがかなり好評で、作ったものを使ってもらえる喜びがわかった。</p>
+  <p>計測工学の単位まだ取れてない。</p>
+  </p>
+  <figure>
+    <img src="images/pikatyu.jpg" alt="ピカチュウの写真" id="image">
+    <figcaption>3年生コスプレ大会の写真</figcaption>
+  </figure>
+  <h2>4年生</h2>
+  <p>インターンでweb系の技術に触れてそっちに興味を持った。就職先もそっち系。低学年でインターンに興味ある人は早めに行くべし。</p>
+  <p>進路で悩んでる時が結構キツかった。12月くらいに就職に決めた。低学年でもっと行動起こしとけばもうちょっと楽に決めれたと思う。</p>
+  <p>「やりたいことが見つからない」と進路を決めあぐねている後輩をよく目にするが、やりたいことを見つけるためには行動が必要だで。</p>
+  <p>はじめてのプロコン。単純にしんどかった。面白かったけど。</p>
+  <p>コスプレ大会2連覇。</p>
+  <p>応用物理落とした(回収済み)。</p>
+  <figure>
+    <img src="images/tikori-ta400x400.jpg" alt="チコリータの写真" id="image">
+    <figcaption>4年生コスプレ大会の写真</figcaption>
+  </figure>
+  <h2>5年生</h2>
+  <p>推薦で受けた会社は落ちて、自由応募で受かったところで内定とった。結果的に良かった。就活に関しては落ちても全然気にすることないから数受けるべきだと思う。進学はがんばれ。</p>
+  <p>卒業研究でディープラーニングを勉強し始めたけど面白い。プロコンとかで活躍する分野だと思うからみんなやってほしい。卒業するまでに何かしら講座とかやろうと思ってる。</p>
+  <p>最後のコスプレ大会。やり切った。一切悔いはない。</p>
+  <figure>
+    <img src="images/pochama.jpg" alt="ポッチャマの写真" id="image">
+    <figcaption>5年生コスプレ大会直前の写真</figcaption>
+  </figure>
+  <h2>まとめ</h2>
+  <p>誰かKCCTポケモン図鑑引き継いでくれ</p>
 </body>
+
 </html>
