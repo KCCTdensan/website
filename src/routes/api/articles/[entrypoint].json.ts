@@ -3,7 +3,7 @@ import { validUrl } from "$lib/fmt"
 import type { RequestHandler } from "@sveltejs/kit"
 import type { _ExtArticleApi, ArticleApi } from "$lib/api"
 
-export const get: RequestHandler = async ({ params }) => {
+export const GET: RequestHandler = async ({ params }) => {
   const url = `${API_BASE}/api/${params.entrypoint}.json`
   if (DEV && !validUrl(url)) return { status: 404 }
   const api = await fetch(url)

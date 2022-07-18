@@ -2,7 +2,7 @@ import { API_BASE, DEV } from "$lib/env"
 import { validUrl } from "$lib/fmt"
 import type { RequestHandler } from "@sveltejs/kit"
 
-export const get: RequestHandler = async ({ params }) => {
+export const GET: RequestHandler = async ({ params }) => {
   const url = `${API_BASE}/assets/${params.path}`
   if (DEV && !validUrl(url)) return { status: 404 }
   const res = await fetch(url)
