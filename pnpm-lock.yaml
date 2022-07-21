@@ -29,7 +29,7 @@ specifiers:
   tiny-glob: 0.2.9
   tslib: 2.4.0
   typescript: 4.7.4
-  vite: 3.0.1
+  vite: 3.0.2
 
 dependencies:
   '@fortawesome/free-brands-svg-icons': 5.15.4
@@ -39,9 +39,9 @@ dependencies:
   sanitize.css: 13.0.0
 
 devDependencies:
-  '@sveltejs/adapter-node': 1.0.0-next.81
-  '@sveltejs/adapter-static': 1.0.0-next.37
-  '@sveltejs/kit': 1.0.0-next.377_svelte@3.49.0+vite@3.0.1
+  '@sveltejs/adapter-node': 1.0.0-next.82
+  '@sveltejs/adapter-static': 1.0.0-next.38
+  '@sveltejs/kit': 1.0.0-next.386_svelte@3.49.0+vite@3.0.2
   cssnano: 5.1.12_postcss@8.4.14
   cssnano-preset-advanced: 5.3.8_postcss@8.4.14
   dotenv-cli: 6.0.0
@@ -62,7 +62,7 @@ devDependencies:
   tiny-glob: 0.2.9
   tslib: 2.4.0
   typescript: 4.7.4
-  vite: 3.0.1_sass@1.53.0
+  vite: 3.0.2_sass@1.53.0
 
 packages:
 
@@ -170,37 +170,37 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@sveltejs/adapter-node/1.0.0-next.81:
-    resolution: {integrity: sha512-OCYteMK4iNRR+sHMtpMBkNvJoo7lpfMiGF1TsvtE8wv7IjBA5pHwTETrvwZL9nGoQzhpDiDuUWYt7w0cLKCukw==}
+  /@sveltejs/adapter-node/1.0.0-next.82:
+    resolution: {integrity: sha512-lWPH5jYu8SfiV+1/6oFG8Ow232Ty3L7ihH17xT5U2J66LvzyW6DzSN1jp9uw3fT3ATim4kVXOxX2e7QyK2JGzQ==}
     dependencies:
       tiny-glob: 0.2.9
     dev: true
 
-  /@sveltejs/adapter-static/1.0.0-next.37:
-    resolution: {integrity: sha512-BDFkx4CGAd6pG4e3+zYjy/eM9UDbhkRgXqavUzCO5oT8xXao5TeprY1AIbdzjMTmFjsWdeSXE9TbIsT0iikpyQ==}
+  /@sveltejs/adapter-static/1.0.0-next.38:
+    resolution: {integrity: sha512-O1b264K62E3OrUnsFxMjKn3CUJF50fxGcW0rWk8fa5kjzskPsSyTxS3jnWNryFaVJ3oSUtx57m4qFW43S1910Q==}
     dependencies:
       tiny-glob: 0.2.9
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.377_svelte@3.49.0+vite@3.0.1:
-    resolution: {integrity: sha512-DH2v2yUBUuDZ7vzjPXUd/yt1AMR3BIkZN0ubLAvS2C+q5Wbvk7ZvAJhfPZ3OYc3ZpQXe4ZGEcptOjvEYvd1lLA==}
+  /@sveltejs/kit/1.0.0-next.386_svelte@3.49.0+vite@3.0.2:
+    resolution: {integrity: sha512-7Olw/QoZ0lvcjRqMNnR8vM7FCy8NN6NwNEhWTO8/J39yR6li1Q0aV0vW4Fh/7LetoVtyZqEyrqaUypgmbeH9rQ==}
     engines: {node: '>=16.9'}
     hasBin: true
     peerDependencies:
       svelte: ^3.44.0
       vite: ^3.0.0
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 1.0.1_svelte@3.49.0+vite@3.0.1
+      '@sveltejs/vite-plugin-svelte': 1.0.1_svelte@3.49.0+vite@3.0.2
       chokidar: 3.5.3
       sade: 1.8.1
       svelte: 3.49.0
-      vite: 3.0.1_sass@1.53.0
+      vite: 3.0.2_sass@1.53.0
     transitivePeerDependencies:
       - diff-match-patch
       - supports-color
     dev: true
 
-  /@sveltejs/vite-plugin-svelte/1.0.1_svelte@3.49.0+vite@3.0.1:
+  /@sveltejs/vite-plugin-svelte/1.0.1_svelte@3.49.0+vite@3.0.2:
     resolution: {integrity: sha512-PorCgUounn0VXcpeJu+hOweZODKmGuLHsLomwqSj+p26IwjjGffmYQfVHtiTWq+NqaUuuHWWG7vPge6UFw4Aeg==}
     engines: {node: ^14.18.0 || >= 16}
     peerDependencies:
@@ -218,7 +218,7 @@ packages:
       magic-string: 0.26.2
       svelte: 3.49.0
       svelte-hmr: 0.14.12_svelte@3.49.0
-      vite: 3.0.1_sass@1.53.0
+      vite: 3.0.2_sass@1.53.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -330,9 +330,9 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001367
-      electron-to-chromium: 1.4.192
+      electron-to-chromium: 1.4.196
       node-releases: 2.0.6
-      update-browserslist-db: 1.0.4_browserslist@4.21.2
+      update-browserslist-db: 1.0.5_browserslist@4.21.2
     dev: true
 
   /buffer-crc32/0.2.13:
@@ -665,8 +665,8 @@ packages:
       sigmund: 1.0.1
     dev: true
 
-  /electron-to-chromium/1.4.192:
-    resolution: {integrity: sha512-8nCXyIQY9An88NXAp+PuPy5h3/w5ZY7Iu2lag65Q0XREprcat5F8gKhoHsBUnQcFuCRnmevpR8yEBYRU3d2HDw==}
+  /electron-to-chromium/1.4.196:
+    resolution: {integrity: sha512-uxMa/Dt7PQsLBVXwH+t6JvpHJnrsYBaxWKi/J6HE+/nBtoHENhwBoNkgkm226/Kfxeg0z1eMQLBRPPKcDH8xWA==}
     dev: true
 
   /entities/2.2.0:
@@ -2455,8 +2455,8 @@ packages:
       unist-util-visit-parents: 5.1.0
     dev: true
 
-  /update-browserslist-db/1.0.4_browserslist@4.21.2:
-    resolution: {integrity: sha512-jnmO2BEGUjsMOe/Fg9u0oczOe/ppIDZPebzccl1yDWGLFP16Pa1/RM5wEoKYPG2zstNcDuAStejyxsOuKINdGA==}
+  /update-browserslist-db/1.0.5_browserslist@4.21.2:
+    resolution: {integrity: sha512-dteFFpCyvuDdr9S/ff1ISkKt/9YZxKjI9WlRR99c180GaztJtRa/fn18FdxGVKVsnPY7/a/FDN68mcvUmP4U7Q==}
     hasBin: true
     peerDependencies:
       browserslist: '>= 4.21.0'
@@ -2484,8 +2484,8 @@ packages:
       unist-util-stringify-position: 2.0.3
     dev: true
 
-  /vite/3.0.1_sass@1.53.0:
-    resolution: {integrity: sha512-nefKSglkoEsDpYUkBuT2++L04ktcP8fz8dxLtmZdDdMyhubFSOLFw6BTh/46Fc6tIX/cibs/NVYWNrsqn0k6pQ==}
+  /vite/3.0.2_sass@1.53.0:
+    resolution: {integrity: sha512-TAqydxW/w0U5AoL5AsD9DApTvGb2iNbGs3sN4u2VdT1GFkQVUfgUldt+t08TZgi23uIauh1TUOQJALduo9GXqw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:

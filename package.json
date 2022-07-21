@@ -32,7 +32,7 @@
     "tiny-glob": "0.2.9",
     "tslib": "2.4.0",
     "typescript": "4.7.4",
-    "vite": "3.0.1"
+    "vite": "3.0.2"
   },
   "scripts": {
     "build": "dotenv run-s stage:kit stage:404 stage:sitemap stage:beautify",
@@ -40,6 +40,7 @@
     "check-watch": "svelte-check --tsconfig ./tsconfig.json --watch",
     "dev": "dotenv vite dev",
     "dev-host": "dotenv vite dev --host",
+    "prepare": "svelte-kit sync",
     "preview": "dotenv vite preview",
     "preview-host": "dotenv vite preview --host",
     "ssr:build": "SSR='true' run-s stage:kit",
