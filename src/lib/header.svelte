@@ -18,6 +18,10 @@
     { path: "/inner/",  name: "Inner"   },
     { path: "/joinus/", name: "JoinUs"  },
   ]
+  const navLinksExt = [
+    { url: "http://www.kobe-kosen.ac.jp", name: "KCCT" },
+    { url: "https://20s.d3bu.net", name: "20s" },
+  ]
 
   $: pathA = $page.url.pathname.split("/").map(s => s + "/")
     .slice(0, -1) // trailingSlash依存
@@ -50,12 +54,11 @@
           <a sveltekit:prefetch href={path}>{name}</a>
         </li>
       {/each}
-      <li>
-        <a href="https://20s.d3bu.net" target="_blank" rel="external">20s</a>
-      </li>
-      <li>
-        <a href="http://www.kobe-kosen.ac.jp" target="_blank" rel="external">KCCT</a>
-      </li>
+      {#each navLinksExt as { url, name }}
+        <li>
+          <a href={url} target="_blank" rel="external">{name}</a>
+        </li>
+      {/each}
     </ul>
     <span>&gt; pwd</span>
     <ul class="breadcrumbs">

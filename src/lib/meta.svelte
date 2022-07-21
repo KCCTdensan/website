@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { page } from "$app/stores"
   import { dateFmt } from "$lib/fmt"
 
   export let title:         string      = '"hello, world"'
@@ -19,18 +18,11 @@
   <meta name="description"  content="{description}" />
   <meta name="author"       content="{authors.join(",") || "KCCTdensan"}" />
   <meta name="keywords"     content="電算部,電子計算機部,神戸高専,KCCT,高専" />
-  <meta name="robots"       content="{noRobots ? "none" : "all"}" />
-
-  <meta name="twitter:card"     content="summary" />
-  <meta name="twitter:site"     content="@kcct_densan" />
-  <meta name="twitter:creator"  content="@kcct_densan" />
-
-  <meta property="og:title"       content="{destTitle}" />
-  <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://d3bu.net{$page.url.pathname}" />
-  <meta property="og:image"       content="https://d3bu.net/icon.png" />
-  <meta property="og:description" content="{description}" />
-  <meta property="og:site_name"   content="電算部.net" />
+  {#if noRobots}<meta name="robots" content="none" />{/if}
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@kcct_densan" />
+  <meta property="og:image" content="https://d3bu.net/icon.png" />
+  <meta property="og:title" content="{title}" />
 </svelte:head>
 
 {#if showMeta}
