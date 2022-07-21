@@ -8,7 +8,8 @@ COPY . .
 RUN git submodule update --init && \
     pnpm install --offline && \
     pnpm ssr:build && \
-    pnpm prune --prod
+    #pnpm prune --prod # f**k prepare
+    rm -r node_modules && pnpm i -P --ignore-scripts
 
 # distroless is not supported in ARMv7
 #FROM gcr.io/distroless/nodejs:16 as runner
