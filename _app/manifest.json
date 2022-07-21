@@ -236,7 +236,7 @@
     "src": "node_modules/.pnpm/katex@0.16.0/node_modules/katex/dist/fonts/KaTeX_Typewriter-Regular.ttf"
   },
   ".svelte-kit/runtime/client/start.js": {
-    "file": "immutable/start-20236ed9.js",
+    "file": "immutable/start-a62227f8.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -271,7 +271,7 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "immutable/pages/__layout.svelte-901d6e87.js",
+    "file": "immutable/pages/__layout.svelte-257ab07e.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,

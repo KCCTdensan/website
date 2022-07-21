@@ -62,15 +62,6 @@
     <loc>https://d3bu.net/blog/2022-06-procon</loc>
   </url>
   <url>
-    <loc>https://d3bu.net/docs/pepper</loc>
-  </url>
-  <url>
-    <loc>https://d3bu.net/docs/setup-node</loc>
-  </url>
-  <url>
-    <loc>https://d3bu.net/docs/wsl2-setup</loc>
-  </url>
-  <url>
     <loc>https://d3bu.net/dev/cluster</loc>
   </url>
   <url>
@@ -78,6 +69,15 @@
   </url>
   <url>
     <loc>https://d3bu.net/dev/denkou</loc>
+  </url>
+  <url>
+    <loc>https://d3bu.net/docs/pepper</loc>
+  </url>
+  <url>
+    <loc>https://d3bu.net/docs/setup-node</loc>
+  </url>
+  <url>
+    <loc>https://d3bu.net/docs/wsl2-setup</loc>
   </url>
   <url>
     <loc>https://d3bu.net/news/activities</loc>
