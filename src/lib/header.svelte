@@ -52,6 +52,8 @@
       {/each}
       <li>
         <a href="https://20s.d3bu.net" target="_blank" rel="external">20s</a>
+      </li>
+      <li>
         <a href="http://www.kobe-kosen.ac.jp" target="_blank" rel="external">KCCT</a>
       </li>
     </ul>
