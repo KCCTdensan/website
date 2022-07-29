@@ -15,11 +15,12 @@
   <meta property="og:title" content="OS開発" data-svelte="svelte-fypnb2">
   <link rel="stylesheet" href="/_app/immutable/assets/__layout-105738d6.css">
   <link rel="stylesheet" href="/_app/immutable/assets/meta-92c45751.css">
-  <link rel="modulepreload" href="/_app/immutable/start-e6567ade.js">
+  <link rel="modulepreload" href="/_app/immutable/start-ff0d88e9.js">
   <link rel="modulepreload" href="/_app/immutable/chunks/index-7a15afed.js">
   <link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-88bf3f5a.js">
   <link rel="modulepreload" href="/_app/immutable/chunks/stores-41d4a36c.js">
-  <link rel="modulepreload" href="/_app/immutable/pages/dev/computer/os/index.md-0b478be0.js">
+  <link rel="modulepreload" href="/_app/immutable/pages/dev/_...slug_.svelte-81fe536f.js">
+  <link rel="modulepreload" href="/_app/immutable/chunks/articles-35249201.js">
   <link rel="modulepreload" href="/_app/immutable/chunks/md_layout-d6cb56a6.js">
   <link rel="modulepreload" href="/_app/immutable/chunks/meta-36460b24.js">
   <script>
@@ -89,10 +90,12 @@
       </header>
       <div>
         <main class="main-normal">
-          <h1>OS開発</h1>
+          <!-- HTML_TAG_START -->
+          <h1 id="os開発">OS開発</h1>
           <p>高専生なら1度は必ず挑戦すると言われている自作OSを部活で制作しています。</p>
-          <h2>ハリボテック</h2>
+          <h2 id="ハリボテック">ハリボテック</h2>
           <p>まだ完成していません。</p>
+          <!-- HTML_TAG_END -->
         </main>
       </div>
       <footer class="footer svelte-itltgt">
@@ -113,12 +116,12 @@
       </footer>
     </div>
   </div>
-  <script type="module" data-sveltekit-hydrate="155s5ti">
+  <script type="module" data-sveltekit-hydrate="18ns05p">
     import {
       start
-    } from "/_app/immutable/start-e6567ade.js";
+    } from "/_app/immutable/start-ff0d88e9.js";
     start({
-      target: document.querySelector('[data-sveltekit-hydrate="155s5ti"]').parentNode,
+      target: document.querySelector('[data-sveltekit-hydrate="18ns05p"]').parentNode,
       paths: {
         "base": "",
         "assets": ""
@@ -132,9 +135,11 @@
       hydrate: {
         status: 200,
         error: null,
-        nodes: [0, 11],
-        params: {},
-        routeId: "dev/computer/os"
+        nodes: [0, 6],
+        params: {
+          slug: "computer\u002Fos\u002F"
+        },
+        routeId: "dev/[...slug]"
       }
     });
   </script>
@@ -146,6 +151,16 @@
         "content-type": "application/json; charset=utf-8"
       },
       "body": "{\"name\":\"d3bu.net\",\"version\":\"2.1.1\"}"
+    }
+  </script>
+  <script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/api/articles/dev.json">
+    {
+      "status": 200,
+      "statusText": "",
+      "headers": {
+        "content-type": "application/json; charset=utf-8"
+      },
+      "body": "{\"data\":[{\"slug\":\"computer/cpu/index\",\"title\":\"CPU開発\",\"description\":\"計算機制作::CPU\",\"body\":\"\u003Ch1 id=\\\"cpu開発\\\">CPU開発\u003C/h1>\\n\u003Cp>\u003Cimg src=\\\"/assets/img/cpu.jpg\\\" alt=\\\"CPU\\\">\u003C/p>\\n\u003Cp>高専生なら1度は必ず挑戦すると言われている自作CPUを部活で制作しています。\u003C/p>\\n\u003Ch2 id=\\\"ハリボテック\\\">ハリボテック\u003C/h2>\\n\u003Cp>まだ完成していません。\u003C/p>\\n\",\"authors\":[]},{\"slug\":\"cluster/ghcr-ci\",\"title\":\"GHCRでラズパイクラスタのCI\",\"author\":\"山D\",\"date\":\"2022-03-11T00:00:00.000Z\",\"dateUpd\":\"2022-03-11T00:00:00.000Z\",\"body\":\"\u003Ch1 id=\\\"ghcrでラズパイクラスタのci\\\">GHCRでラズパイクラスタのCI\u003C/h1>\\n\u003Cul>\\n\u003Cli>self-hosted runnerを用意してpush時にクラスタにデプロイ\u003C/li>\\n\u003Cli>クラスタでは，GHCRにあるprivateのnodeのイメージを使ってDeploymentを構成し，Serviceで公開する．\u003C/li>\\n\u003Cli>同じクラスタに別のDeploymentを用意して，cloudflaredを動かしてServiceを公開(tunnel)\u003C/li>\\n\u003C/ul>\\n\",\"authors\":[\"山D\"]},{\"slug\":\"cluster/k0s\",\"title\":\"ラズパイでk0sクラスタ構築\",\"author\":\"山D\",\"date\":\"2022-03-08T00:00:00.000Z\",\"dateUpd\":\"2022-03-10T00:00:00.000Z\",\"body\":\"\u003Ch1 id=\\\"ラズパイでk0sクラスタ構築\\\">ラズパイでk0sクラスタ構築\u003C/h1>\\n\u003Cp>やったのでメモ．\u003C/p>\\n\u003Ch2 id=\\\"ラズパイのセットアップ\\\">ラズパイのセットアップ\u003C/h2>\\n\u003Cp>自動化って何\u003C/p>\\n\u003Cp>まず，SDカードを用意し，\u003Ca href=\\\"https://raspi.debian.net/tested-images/\\\">raspi.debian.net\u003C/a>から適切なイメージのxzアーカイブをダウンロードする．\\nここでは11(bullseye)を使用する．\u003C/p>\\n\u003Ch3 id=\\\"1-イメージをsdカードdevsdxに焼く・dagmathrmrootfsdagのマウント\\\">1. イメージをSDカード(/dev/sd$x$)に焼く・$\\\\dag\\\\mathrm{rootfs}\\\\dag$のマウント\u003C/h3>\\n\u003Cpre>\u003Ccode># dd if=20220121_raspi_2_bullseye.img of=/dev/sdx status=progress\\n# mount /dev/sdx2 /mnt\\n\u003C/code>\u003C/pre>\\n\u003Ch3 id=\\\"2-ネットワークの設定\\\">2. ネットワークの設定\u003C/h3>\\n\u003Cp>注意して適宜読み替えること．\u003C/p>\\n\u003Cp>まず，IPを固定する．\u003C/p>\\n\u003Cp>\u003Ccode>/mnt/etc/network/interfadces.d/eth0\u003C/code>の\u003Ccode>inet\u003C/code>を\u003Ccode>auto\u003C/code>から\u003Ccode>static\u003C/code>に変更する :\u003C/p>\\n\u003Cpre>\u003Ccode>auto eth0\\niface eth0 inet static\\n  address 192.168.hoge.fuga/24\\n  gateway 192.168.hoge.1\\niface eth0 inet6 auto\\n\u003C/code>\u003C/pre>\\n\u003Cp>無線接続を考えているのであれば\u003Ccode>wpa_supplicant.conf\u003C/code>を用意すればよさげ．\u003C/p>\\n\u003Cp>次に，resolv.confを置く．\\nraspbianとかを使ってるなら必要無いかも．\u003C/p>\\n\u003Cp>\u003Ccode>/mnt/etc/resolv.conf\u003C/code>を次のようにする :\u003C/p>\\n\u003Cpre>\u003Ccode>nameserver 192.168.hoge.1\\nnameserver 1.1.1.1\\n\u003C/code>\u003C/pre>\\n\u003Cp>最後に，hostnameを設定する．\\nこれはシェルで操作する時にわかりやすくするため．\u003C/p>\\n\u003Cp>\u003Ccode>/mnt/etc/hostname\u003C/code>を編集する．\u003C/p>\\n\u003Ch3 id=\\\"3-sshの設定\\\">3. sshの設定\u003C/h3>\\n\u003Cp>今回はrootでもsshが使えるように設定していく．\u003C/p>\\n\u003Cp>まず，\u003Ccode>/mnt/etc/ssh/sshd_config\u003C/code>を編集する :\u003C/p>\\n\u003Cpre>\u003Ccode class=\\\"language-diff\\\">--- /mnt/etc/ssh/sshd_config\\n+++ new\\n@@ -15 +15 @@\\n-#Port 22\\n+Port 22\\n@@ -34 +34 @@\\n-#PermitRootLogin prohibit-password\\n+PermitRootLogin prohibit-password\\n\u003C/code>\u003C/pre>\\n\u003Cp>次に，公開鍵を登録する．\\n鍵の作成方法については各自ggること．\u003C/p>\\n\u003Cpre>\u003Ccode># mkdir -p /mnt/root/.ssh\\n# echo &quot;ssh-xxxx xxxxxxxxxxxxxxxx&quot; &gt;&gt; /mnt/root/.ssh/authorized_keys\\n\u003C/code>\u003C/pre>\\n\u003Ch3 id=\\\"4-sshdを有効化する\\\">4. sshdを有効化する\u003C/h3>\\n\u003Cp>最初に$\\\\dag\\\\mathrm{rootfs}\\\\dag$をアンマウントしている．\u003C/p>\\n\u003Cpre>\u003Ccode># umount /mnt\\n# mount /dev/sdx1 /mnt\\n# touch /mnt/ssh\\n# umount /mnt\\n\u003C/code>\u003C/pre>\\n\u003Cp>これで，もうこのSDカードにしがらみは存在しない．\\nPCからぶっこ抜く．\u003C/p>\\n\u003Ch3 id=\\\"5-起動・接続\\\">5. 起動・接続\u003C/h3>\\n\u003Cp>ラズパイのローカルIPを固定しsshdを有効化したので，(とくにトラブらない限り)完全にヘッドレス運用が可能．\\nということでSDカードとLANケーブルを刺して電源を投入．\u003C/p>\\n\u003Cp>しばらく待ってpingが通るようであれば，sshで接続する．\u003C/p>\\n\u003Cpre>\u003Ccode>% ssh -i /path/to/priv_key -p 22 root@192.168.hoge.fuga\\n\u003C/code>\u003C/pre>\\n\u003Ch2 id=\\\"クラスタの構築k0sctl\\\">クラスタの構築(k0sctl)\u003C/h2>\\n\u003Cp>これを使うと楽らしい．(実際楽だった)\u003C/p>\\n\u003Cp>まだ完全な理解に至っていないのでいろいろ不正確かも．\u003C/p>\\n\u003Ch3 id=\\\"1-作業用pcにk0sctlを入れる\\\">1. 作業用PCにk0sctlを入れる\u003C/h3>\\n\u003Cp>実際にやるときはgithub(\u003Ca href=\\\"https://github.com/k0sproject/k0sctl#installation\\\">k0sproject/k0sctl\u003C/a>)を参照のこと．\u003C/p>\\n\u003Cp>現状，goが動く環境で\u003C/p>\\n\u003Cpre>\u003Ccode>% go install github.com/k0sproject/k0sctl@latest\\n\u003C/code>\u003C/pre>\\n\u003Cp>とするとよい(らしい)．\u003C/p>\\n\u003Ch3 id=\\\"2-設定する\\\">2. 設定する\u003C/h3>\\n\u003Cp>ここからはラズパイ(マスターノードを含む)ではなく，作業用の環境で実行する．\u003C/p>\\n\u003Cp>実際にやるときは\u003Ca href=\\\"https://docs.k0sproject.io/v1.23.3+k0s.1/k0sctl-install/\\\">docs.k0sproject.io\u003C/a>を参照．\u003C/p>\\n\u003Cpre>\u003Ccode>% k0sctl init &gt; k0sctl.yaml\\n\u003C/code>\u003C/pre>\\n\u003Cp>でk0sctlの設定の雛形が吐かれるので，これを編集する．\\nこのファイルはk0sのノード毎の設定とは別物なので注意．\u003C/p>\\n\u003Cp>できたら実機にデプロイする．\u003C/p>\\n\u003Cpre>\u003Ccode>% k0sctl apply --config k0sctl.yaml\\n\u003C/code>\u003C/pre>\\n\u003Cp>しばらく(プロンプトが帰ってくるまで)待つ．\u003C/p>\\n\u003Cp>終わったらkubeconfigを吐かせる．\\nこれによって\u003Ccode>kubectl\u003C/code>が使えたりする．\u003C/p>\\n\u003Cpre>\u003Ccode>% k0sctl kubeconfig &gt; kubeconfig\\n\u003C/code>\u003C/pre>\\n\u003Ch2 id=\\\"蛇足\\\">蛇足\u003C/h2>\\n\u003Cp>ノードを全てラズパイで構築した場合，k0sctl applyでそこそこ時間がかかった．\u003C/p>\\n\",\"authors\":[\"山D\"]},{\"slug\":\"cluster/index\",\"title\":\"ラズパイクラスタ\",\"body\":\"\u003Ch1 id=\\\"ラズパイクラスタ\\\">ラズパイクラスタ\u003C/h1>\\n\u003Cp>\u003Cimg src=\\\"/assets/img/raspi.png\\\" alt=\\\"ラズパイクラスタ\\\">\u003C/p>\\n\u003Ch2 id=\\\"構築\\\">構築\u003C/h2>\\n\u003Cul>\\n\u003Cli>\u003Ca href=\\\"k0s/\\\">ラズパイでk0sクラスタ構築\u003C/a>\u003C/li>\\n\u003Cli>\u003Ca href=\\\"ghcr-ci/\\\">GHCRでラズパイクラスタのCI\u003C/a>\u003C/li>\\n\u003C/ul>\\n\u003Ch2 id=\\\"運用\\\">運用\u003C/h2>\\n\",\"authors\":[]},{\"slug\":\"computer/index\",\"title\":\"計算機制作\",\"description\":\"真の意味での自作コンピュータを目指します\",\"body\":\"\u003Ch1 id=\\\"自作コンピュータ\\\">自作コンピュータ\u003C/h1>\\n\u003Ch2 id=\\\"上の方のレイヤ\\\">上の方のレイヤ\u003C/h2>\\n\u003Cul>\\n\u003Cli>\u003Ca href=\\\"os/\\\">OS\u003C/a>\u003C/li>\\n\u003C/ul>\\n\u003Ch2 id=\\\"下の方のレイヤ\\\">下の方のレイヤ\u003C/h2>\\n\u003Cul>\\n\u003Cli>\u003Ca href=\\\"cpu/\\\">CPU\u003C/a>\u003C/li>\\n\u003C/ul>\\n\",\"authors\":[]},{\"slug\":\"denkou/ne555synth/index\",\"title\":\"NE555でシンセをつくりたい\",\"description\":\"NE555であそびま\",\"body\":\"\u003Ch1 id=\\\"ne555でシンセをつくるらしい\\\">NE555でシンセをつくるらしい\u003C/h1>\\n\u003Ch2 id=\\\"シンセって、なんだろう。\\\">シンセって、なんだろう。\u003C/h2>\\n\u003Cul>\\n\u003Cli>\u003Ca href=\\\"\\\">シンセとは\u003C/a>\u003C/li>\\n\u003Cli>\u003Ca href=\\\"\\\">各部位のご案内\u003C/a>\u003C/li>\\n\u003C/ul>\\n\u003Ch2 id=\\\"基礎を、作らせていただきます。\\\">基礎を、作らせていただきます。\u003C/h2>\\n\u003Cul>\\n\u003Cli>\u003Ca href=\\\"\\\">NE555って何\u003C/a>\u003C/li>\\n\u003C/ul>\\n\",\"authors\":[]},{\"slug\":\"denkou/index\",\"title\":\"電子工作\",\"description\":\"電子工作をします\",\"body\":\"\u003Ch1 id=\\\"電子工作\\\">電子工作\u003C/h1>\\n\u003Cp>電算部の電子工作活動についての記録です\u003C/p>\\n\u003Ch2 id=\\\"固定記事シリーズ\\\">固定記事(シリーズ)\u003C/h2>\\n\u003Cul>\\n\u003Cli>\u003Ca href=\\\"ne555synth/\\\">NE555でシンセをつくるらしい\u003C/a>\u003C/li>\\n\u003C/ul>\\n\u003Ch2 id=\\\"新着記事\\\">新着記事\u003C/h2>\\n\u003Cp>- \u003C/p>\\n\",\"authors\":[]},{\"slug\":\"computer/os/index\",\"title\":\"OS開発\",\"description\":\"計算機制作::OS\",\"body\":\"\u003Ch1 id=\\\"os開発\\\">OS開発\u003C/h1>\\n\u003Cp>高専生なら1度は必ず挑戦すると言われている自作OSを部活で制作しています。\u003C/p>\\n\u003Ch2 id=\\\"ハリボテック\\\">ハリボテック\u003C/h2>\\n\u003Cp>まだ完成していません。\u003C/p>\\n\",\"authors\":[]},{\"slug\":\"index\",\"title\":\"Dev\",\"description\":\"開発開発開発開発\",\"body\":\"\u003Ch1 id=\\\"開発\\\">開発\u003C/h1>\\n\u003Cp>開発やってます．\u003C/p>\\n\u003Ch2 id=\\\"低レイヤ\\\">低レイヤ\u003C/h2>\\n\u003Cp>真の意味での自作コンピュータを目指します．\u003C/p>\\n\u003Cul>\\n\u003Cli>\u003Ca href=\\\"computer/\\\">計算機制作\u003C/a> : OS，CPUなど\u003C/li>\\n\u003C/ul>\\n\u003Ch2 id=\\\"ラズパイクラスタ\\\">ラズパイクラスタ\u003C/h2>\\n\u003Cp>余らせているラズパイを有効活用しています．\u003C/p>\\n\u003Cul>\\n\u003Cli>\u003Ca href=\\\"cluster/\\\">ラズパイクラスタ\u003C/a>\u003C/li>\\n\u003C/ul>\\n\u003Ch2 id=\\\"web関連\\\">Web関連\u003C/h2>\\n\u003Cp>React，Vue，Svelteなどモダンなフレームワークを使用して遊んでいます．\u003C/p>\\n\u003Cul>\\n\u003Cli>\u003Ca href=\\\"https://github.com/KCCTdensan/d3bu.net\\\">d3bu.net\u003C/a> : このWebサイト\u003C/li>\\n\u003C/ul>\\n\u003Ch2 id=\\\"電子工作\\\">電子工作\u003C/h2>\\n\u003Cp>パソコン部といえど電子工作くらいはします．\u003C/p>\\n\u003Cul>\\n\u003Cli>\u003Ca href=\\\"denkou/\\\">電子工作\u003C/a> : ちょっとしたIoTなど\u003C/li>\\n\u003Cli>\u003Ca href=\\\"https://denko.d3bu.net\\\">電工部\u003C/a> : 電子工作に特化した部活\u003C/li>\\n\u003C/ul>\\n\u003Ch2 id=\\\"その他\\\">その他\u003C/h2>\\n\u003Cul>\\n\u003Cli>\u003Ca href=\\\"/tools/py/\\\">Python REPL\u003C/a>\u003C/li>\\n\u003C/ul>\\n\",\"authors\":[]}]}"
     }
   </script>
 </body>
