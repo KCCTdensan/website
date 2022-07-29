@@ -7,15 +7,18 @@
   export async function api(fetch: fetch, entrypoint: string): Promise<ArticleApi> {
     const api = await fetch(`/api/articles/${entrypoint}.json`)
     if (!api.ok) return { data: [] }
-    return await api.json()
+    return api.json()
   }
 
   export const loader =
     (entrypoint: string): Load =>
     async ({ fetch, params }) => {
-      const slug = params.slug.slice(0, -1) || "index"
+      const slug = params.slug.slice(0, -1)
       const res = await api(fetch, entrypoint)
-      const article = res.data.find((i) => i.slug === slug)
+      const article = res.data.find(i =>
+           i.slug === slug
+        || i.slug === `${slug}/index`
+        || !slug && i.slug === "index")
       if (article === undefined) {
         return {
           status: 404,
