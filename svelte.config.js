@@ -9,16 +9,17 @@ const out = "build"
 
 export default {
   extensions: [".svelte", ...mdsvexConfig.extensions],
-  preprocess: [
-    preprocess({ postcss: true }),
-    mdsvex(mdsvexConfig),
-  ],
   kit: {
     adapter: ssr ? adapterNode({ out }) : adapterStatic({ out }),
+    appDir: "app",
     prerender: {
       default: !ssr,
       onError: "continue",
     },
     trailingSlash: "always",
   },
+  preprocess: [
+    preprocess({ postcss: true }),
+    mdsvex(mdsvexConfig),
+  ],
 }
