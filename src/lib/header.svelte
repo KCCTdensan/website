@@ -1,10 +1,8 @@
 <script lang="ts">
-  import { page, session } from "$app/stores"
+  import { page } from "$app/stores"
   // import Icon from "$lib/icon.svelte"
-  import type { PackageJson } from "$lib/api"
-  import type { State } from "../routes/__layout.svelte"
+  import type { State } from "../routes/+layout.svelte"
 
-  export let pkg: PackageJson
   export let state: State
 
   // pathAの2個分まで対応
@@ -43,7 +41,7 @@
     </a>
     <div class="pkgInfo">
       <span>/api/package.json</span>
-      <span>{`{"name":"${pkg.name}","version":"${pkg.version}"}`}</span>
+      <span>{JSON.stringify($page.data.pkg)}</span>
     </div>
   </div>
   <nav class="headerNav">
@@ -73,7 +71,7 @@
       {/each}
     </ul>
     <span>&gt; echo $PLATFORM</span>
-    <span>{`${$session.PLATFORM}`}</span>
+    <span>{$page.data.PLATFORM}</span>
     <span>&gt; _</span>
   </nav>
 </header>

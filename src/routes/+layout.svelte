@@ -1,18 +1,8 @@
 <script context="module" lang="ts">
-  import type { Load } from "@sveltejs/kit"
-  import type { PackageJson } from "$lib/api"
-
   export type State = {
     konami: boolean,
     z: boolean,
   }
-
-  // Header用
-  export const load: Load = async ({ fetch }) => {
-    const pkg: PackageJson = await fetch("/api/package.json").then(r => r.json())
-    return { props: { pkg } }
-  }
-  //
 </script>
 
 <script lang="ts">
@@ -21,7 +11,6 @@
   import Header from "$lib/header.svelte"
   import "../app.scss"
 
-  export let pkg: PackageJson // Header用，要改修
   export let state: State = {
     konami: false,
     z: false,
@@ -68,7 +57,7 @@
 
 <div class="app" class:z={state.z}>
   <div class="container">
-    <Header {pkg} {state} />
+    <Header {state} />
     {#if state.konami}
       <audio autoplay controls src="/nyan.ogg" class="play" />
     {/if}

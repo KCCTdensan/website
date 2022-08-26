@@ -13,7 +13,7 @@
   export const loader =
     (entrypoint: string): Load =>
     async ({ fetch, params }) => {
-      const slug = params.slug.slice(0, -1)
+      const slug = params.slug!.slice(0, -1)
       const res = await api(fetch, entrypoint)
       const article = res.data.find(i =>
            i.slug === slug
