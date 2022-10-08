@@ -1,3 +1,6 @@
+const ssr = process.env.SSR === "true"
+export const prerender = !ssr
+
 //import type { LayoutServerLoad } from "@sveltejs/kit"
 import { PLATFORM } from "$lib/env"
 

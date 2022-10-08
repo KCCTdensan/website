@@ -10,7 +10,7 @@
 
 <script lang="ts">
   import { page } from "$app/stores"
-  import { browser } from "$app/env"
+  import { browser } from "$app/environment"
   import Meta from "$lib/meta.svelte"
 
   export let status: number

@@ -13,7 +13,6 @@ export default {
     adapter: ssr ? adapterNode({ out }) : adapterStatic({ out }),
     appDir: "app",
     prerender: {
-      default: !ssr,
       onError: "continue",
     },
     trailingSlash: "always",

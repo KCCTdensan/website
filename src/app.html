@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%sveltekit.assets%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    %sveltekit.head%
-    <script>
-      function setViewportProperty(doc) {
-        var prevClientHeight
-        function handleResize() {
-          var clientHeight = doc.clientHeight
-          if (clientHeight === prevClientHeight) return
-          requestAnimationFrame(function updateViewportHeight() {
-            doc.style.setProperty("--vh", clientHeight * 0.01 + "px")
-            prevClientHeight = clientHeight
-          })
-        }
-        handleResize()
-        return handleResize
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="%sveltekit.assets%/favicon.ico" />
+  <script>
+    function setVpProp(doc) {
+      var prev
+      function handler() {
+        var cur = doc.cur
+        if (cur === prev) return
+        requestAnimationFrame(() => {
+          doc.style.setProperty("--vh", cur * 0.01 + "px")
+          prev = cur
+        })
       }
-      window.addEventListener("resize", setViewportProperty(document.documentElement))
-    </script>
-  </head>
-  <body>
-    %sveltekit.body%
-  </body>
+      handler()
+      return handler
+    }
+    window.addEventListener("resize", setVpProp(document.documentElement))
+  </script>
+  %sveltekit.head%
+</head>
+<body>
+  %sveltekit.body%
+</body>
 </html>
