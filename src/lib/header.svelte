@@ -54,7 +54,7 @@
       {/each}
       {#each navLinksExt as { url, name }}
         <li>
-          <a href={url} target="_blank" rel="external">{name}</a>
+          <a href={url} target="_blank" rel="noreferrer">{name}</a>
         </li>
       {/each}
     </ul>

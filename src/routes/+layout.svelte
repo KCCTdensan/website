@@ -70,10 +70,18 @@
       <!-- center -->
       <div class="flex-col">
         <div class="iconLinks">
-          <a class="smallIcon" href="https://github.com/KCCTdensan" alt="GitHub" target="_blank" rel="external">
+          <a
+            class="smallIcon"
+            href="https://github.com/KCCTdensan"
+            alt="GitHub"
+            target="_blank" rel="noreferrer">
             <Icon type={"brands"} name={"github"} scale={1.2} />
           </a>
-          <a class="smallIcon" href="https://twitter.com/intent/user?user_id=444436310" alt="Twitter" target="_blank" rel="external">
+          <a
+            class="smallIcon"
+            href="https://twitter.com/intent/user?user_id=444436310"
+            alt="Twitter"
+            target="_blank" rel="noreferrer">
             <Icon type={"brands"} name={"twitter"} scale={1.2} />
           </a>
         </div>
