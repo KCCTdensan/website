@@ -7,12 +7,3 @@ export function dateFmt(d: Date): string {
     `0${d.getDate()}`.slice(-2)
   }`
 }
-
-export function validUrl(s: string): boolean {
-  try {
-    new URL(s)
-    return true
-  } catch {
-    return false
-  }
-}
