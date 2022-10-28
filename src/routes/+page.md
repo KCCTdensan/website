@@ -44,6 +44,6 @@ showMeta: false
 
 ## 旧バージョン
 
-- [2021年頃](/old/v1/) - Gatsby製
-- [2018年頃](/old/v0/) - Riot.js製
+- <a href="/old/v1/" rel="external">2021年頃</a> - Gatsby製
+- <a href="/old/v0/" rel="external">2018年頃</a> - Riot.js製
 - [それより前](/iseki/)

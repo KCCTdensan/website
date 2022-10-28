@@ -1,5 +1,5 @@
 import { json, error } from "@sveltejs/kit"
-import { API_BASE, DEV } from "$lib/env"
+import { API_BASE } from "$lib/env"
 import type { RequestHandler } from "@sveltejs/kit"
 import type { _ExtArticleApi, ArticleApi } from "$lib/api"
 

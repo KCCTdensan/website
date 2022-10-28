@@ -13,7 +13,4 @@ API_BASE=http://example.net
 ```
 みたいな感じでAPIのホスト書いてくれたらおｋ
 
-## 解説
-
-- [ソース](src/routes/inner/infra/web.md)
-- [フル](https://d3bu.net/inner/infra/web/)
+## [解説](https://d3bu.net/inner/infra/web/)
