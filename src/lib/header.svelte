@@ -49,7 +49,7 @@
     <ul class="navLinks">
       {#each navLinks as { path, name }}
         <li class:active={pathA.slice(0, 2).join("") === path}>
-          <a sveltekit:prefetch href={path}>{name}</a>
+          <a href={path}>{name}</a>
         </li>
       {/each}
       {#each navLinksExt as { url, name }}

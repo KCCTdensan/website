@@ -4,19 +4,12 @@ description: 神戸高専電算部の活動日誌（ブログ）です．
 noTitleFormat: true
 ---
 
-<script context="module">
-  import { api } from "$lib/articles.svelte"
-
-  export const load = async ({ fetch }) => ({
-    props: { entries: await api(fetch, "blog") },
-  })
-</script>
-
 <script>
   import Meta from "$lib/meta.svelte"
   import { dateFmt } from "$lib/fmt"
 
-  export let entries
+  export let data
+  const { entries } = data
 </script>
 
 # 電算「部」log

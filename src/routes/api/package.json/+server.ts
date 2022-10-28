@@ -1,9 +1,9 @@
-import pkg from "../../../../package.json"
+import { json } from "@sveltejs/kit"
 import type { RequestHandler } from "@sveltejs/kit"
 
-export const GET: RequestHandler = () => ({
-  body: {
-    name: pkg.name,
-    version: pkg.version,
-  },
+import pkg from "../../../../package.json"
+
+export const GET: RequestHandler = () => json({
+  name: pkg.name,
+  version: pkg.version,
 })

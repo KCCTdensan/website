@@ -1,3 +1,4 @@
+import { json } from "@sveltejs/kit"
 import { API_BASE, DEV } from "$lib/env"
 import { validUrl } from "$lib/fmt"
 import type { RequestHandler } from "@sveltejs/kit"
@@ -18,5 +19,5 @@ export const GET: RequestHandler = async ({ params }) => {
       // body: i.body.replace(/\$assets\//g, `${API_BASE}/assets/`),
     })),
   }
-  return { body }
+  return json(body)
 }

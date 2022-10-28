@@ -1,20 +1,7 @@
-<script context="module" lang="ts">
-  import type { Load } from "@sveltejs/kit"
-  export const load: Load = ({ status, error }) => ({
-    props: {
-      status,
-      error: error!.message,
-    },
-  })
-</script>
-
 <script lang="ts">
   import { page } from "$app/stores"
   import { browser } from "$app/environment"
   import Meta from "$lib/meta.svelte"
-
-  export let status: number
-  export let error: string
 
   interface Recommend {
     link: string
@@ -43,14 +30,14 @@
   }
 </script>
 
-<Meta title={`Error_${status}`} description={"エラーが発生しました．"} showMeta={false} />
+<Meta title={`Error_${$page.status}`} description={"エラーが発生しました．"} showMeta={false} />
 
 <main class="main-normal">
-  <h1><pre><code><span class="red">error:</span> {error}
-  x | static_assert(<span class="red">status != {status}</span>);
+  <h1><pre><code><span class="red">error:</span> {$page.error.message}
+  x | static_assert(<span class="red">status != {$page.status}</span>);
     |               <span class="red">~~~~~~~^~~~~~</span></code></pre></h1>
 
-  {#if status === 404}
+  {#if $page.status === 404}
     <p>お探しのページは見つかりませんでした……ごめんなさい………</p>
     {#if recommends.length > 0}
       <h2>もしかして :</h2>

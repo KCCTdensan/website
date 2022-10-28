@@ -5,21 +5,12 @@ noTitleFormat: true
 showMeta: false
 ---
 
-<script context="module">
-  import { api } from "$lib/articles.svelte"
-
-  export async function load({ fetch }) {
-    const blogData = await api(fetch, "blog")
-    blogData.data = blogData.data.slice(0, 8)
-    return { props: { blogData } }
-  }
-</script>
-
 <script>
   import Meta from "$lib/meta.svelte"
   import { dateFmt } from "$lib/fmt"
 
-  export let blogData
+  export let data
+  const { blogData } = data
 </script>
 
 <h1>

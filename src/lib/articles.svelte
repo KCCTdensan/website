@@ -25,7 +25,7 @@
           error: new Error(`Could not find entry`),
         }
       }
-      return { props: { data: article } }
+      return article
     }
 </script>
 
