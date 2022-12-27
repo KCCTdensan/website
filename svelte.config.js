@@ -13,9 +13,8 @@ export default {
     adapter: ssr ? adapterNode({ out }) : adapterStatic({ out }),
     appDir: "app",
     prerender: {
-      onError: "continue",
+      handleHttpError: "warn",
     },
-    trailingSlash: "always",
   },
   preprocess: [
     preprocess({ postcss: true }),

@@ -1,5 +1,6 @@
 const ssr = process.env.SSR === "true"
 export const prerender = !ssr
+export const trailingSlash = "always"
 
 //import type { LayoutServerLoad } from "@sveltejs/kit"
 import { PLATFORM } from "$lib/env"

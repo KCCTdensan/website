@@ -23,6 +23,11 @@ showMeta: false
 2022年に(再度)リニューアルした，電算部の新しいウェブサイトです!  
 [ソースコード(github)](https://github.com/KCCTdensan/d3bu.net)
 
+<details>
+  <summary>実は……</summary>
+  <p>技術的負債が溜まりまくっています。助けてください。</p>
+</details>
+
 ## サイトマップ
 
 - 電算部について -> [/about/](/about/)
