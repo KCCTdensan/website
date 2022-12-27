@@ -7,13 +7,21 @@
 
 <script lang="ts">
   import { browser } from "$app/environment"
+  import { pkgCtx, platformCtx } from "$lib/ctx.ts"
   import Icon from "$lib/icon.svelte"
   import Header from "$lib/header.svelte"
   import "../app.scss"
 
+  export let data
+
   export let state: State = {
     konami: false,
     z: false,
+  }
+
+  $: { //
+    pkgCtx.set(data.pkg)
+    platformCtx.set(data.platform)
   }
 
   if(browser) {

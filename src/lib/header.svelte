@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from "$app/stores"
+  import { pkgCtx, platformCtx } from "$lib/ctx"
   // import Icon from "$lib/icon.svelte"
   import type { State } from "../routes/+layout.svelte"
 
@@ -41,7 +42,7 @@
     </a>
     <div class="pkgInfo">
       <span>/api/package.json</span>
-      <span>{JSON.stringify($page.data.pkg)}</span>
+      <span>{JSON.stringify($pkgCtx)}</span>
     </div>
   </div>
   <nav class="headerNav">
@@ -71,7 +72,7 @@
       {/each}
     </ul>
     <span>&gt; echo $PLATFORM</span>
-    <span>{$page.data.PLATFORM}</span>
+    <span>{$platformCtx}</span>
     <span>&gt; _</span>
   </nav>
 </header>
