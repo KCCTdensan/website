@@ -50,5 +50,9 @@
     "undici": "5.22.0",
     "vite": "4.3.2",
     "vite-tsconfig-paths": "4.2.0"
+  },
+  "dependencies": {
+    "katex": "^0.16.6",
+    "sanitize.css": "^13.0.0"
   }
 }

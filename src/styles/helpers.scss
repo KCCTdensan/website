@@ -1,0 +1,43 @@
+// Responsive
+
+$breakpoints: (
+  min: 0,
+  xs: 384px,
+  sm: 512px,
+  md: 768px,
+  lg: 896px,
+  xl: 1280px,
+) !default;
+
+// breakpoint Value
+@function bpVal($bp: md) {
+  @return #{map-get($breakpoints, $bp)};
+}
+
+// breakpoint Media query Up
+@mixin mqUp($bp: md) {
+  @media (max-width: #{map-get($breakpoints, $bp)}) {
+    @content;
+  }
+}
+
+// breakpoint Media query Down
+@mixin mqDown($bp: md) {
+  @media (min-width: #{map-get($breakpoints, $bp)}) {
+    @content;
+  }
+}
+
+// Gaming
+@mixin gaming {
+  background: linear-gradient(to right, cyan, yellow, magenta, cyan) center/200%;
+  animation: slide 4s linear infinite;
+  @keyframes slide {
+    from {
+      background-position-x: 0%;
+    }
+    to {
+      background-position-x: 200%;
+    }
+  }
+}
