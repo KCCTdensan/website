@@ -7,6 +7,9 @@ dependencies:
   katex:
     specifier: ^0.16.7
     version: 0.16.7
+  lucide-qwik:
+    specifier: ^1.0.0
+    version: 1.0.0
   sanitize.css:
     specifier: ^13.0.0
     version: 13.0.0
@@ -3272,6 +3275,11 @@ packages:
     dependencies:
       yallist: 4.0.0
     dev: true
+
+  /lucide-qwik@1.0.0:
+    resolution: {integrity: sha512-AEcUfXOiXL4/MWf2kz/MPdjs2ydveetJ5szziFsb0kWhXQbJpXLg9xI9oOtuse0gxf0QiQswNhiAnm3Dv2PO6A==}
+    engines: {node: '>=15.0.0'}
+    dev: false
 
   /markdown-extensions@1.1.1:
     resolution: {integrity: sha512-WWC0ZuMzCyDHYCasEGs4IPvLyTGftYwh6wIEOULOF0HXcqZlhwRzrK0w2VUlxWA98xnvb/jszw4ZSkJ6ADpM6Q==}

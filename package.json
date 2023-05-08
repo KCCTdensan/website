@@ -6,6 +6,7 @@
     "node": ">=15.0.0"
   },
   "packageManager": "pnpm@8.4.0",
+  "version": "3.0.0-dev",
   "private": true,
   "scripts": {
     "build": "qwik build",
@@ -54,6 +55,7 @@
   "dependencies": {
     "@qwikest/icons": "^0.0.7",
     "katex": "^0.16.7",
+    "lucide-qwik": "^1.0.0",
     "sanitize.css": "^13.0.0"
   }
 }

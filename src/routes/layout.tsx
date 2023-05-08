@@ -1,14 +1,17 @@
-import { Slot, component$, createContextId, useContextProvider, useStore, useVisibleTask$ } from "@builder.io/qwik";
+import { Slot, component$, useContextProvider, useStore, useVisibleTask$ } from "@builder.io/qwik";
 
-import { RootLayout } from "~/components/RootLayout";
-import { Container, konamiContainerStyle, rootLayoutStyles } from "~/components/RootLayout/style.css";
+import type { KonamiState } from "~/contexts/konami";
 
-export interface KonamiState {
-  konami: boolean;
-  z: boolean;
-}
-
-export const KonamiContext = createContextId<KonamiState>("home.konami-context");
+import Footer from "~/components/layout/Footer";
+import Header from "~/components/layout/Header";
+import {
+  AppWrapper,
+  appStyles,
+  StyledContainer,
+  konamiContainerStyle,
+  FullWidthAudio,
+} from "~/components/layout/style.css";
+import { KonamiContext } from "~/contexts/konami";
 
 export default component$(() => {
   const konamiState = useStore<KonamiState>({
@@ -70,12 +73,16 @@ export default component$(() => {
   });
 
   return (
-    <>
-      <RootLayout class={konamiState.z ? rootLayoutStyles.konami : rootLayoutStyles.normal}>
-        <Container class={konamiState.z ? konamiContainerStyle : ""}>
-          <Slot />
-        </Container>
-      </RootLayout>
-    </>
+    <AppWrapper class={konamiState.z ? appStyles.konami : appStyles.normal}>
+      <StyledContainer class={konamiState.z ? konamiContainerStyle : ""}>
+        <Header />
+
+        {konamiState.konami ? <FullWidthAudio autoPlay={true} controls={true} src="/nyan.ogg" class="play" /> : ""}
+
+        <Slot />
+
+        <Footer />
+      </StyledContainer>
+    </AppWrapper>
   );
 });

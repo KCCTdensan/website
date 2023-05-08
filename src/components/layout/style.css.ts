@@ -1,12 +1,12 @@
 import { style, styleVariants } from "@vanilla-extract/css";
 import { styled } from "styled-vanilla-extract/qwik";
 
-export const RootLayout = styled.div`
+export const AppWrapper = styled.div`
   display: flex;
   min-height: 100vh;
 `;
 
-export const rootLayoutStyles = styleVariants({
+export const appStyles = styleVariants({
   normal: {
     background: "radial-gradient(at 50% 0%, $c-groundShadow, $c-ground)",
   },
@@ -16,7 +16,7 @@ export const rootLayoutStyles = styleVariants({
   },
 });
 
-export const Container = styled.div`
+export const StyledContainer = styled.div`
   display: flex;
   width: bpVal(md);
   height: 100%;
@@ -38,3 +38,7 @@ export const Container = styled.div`
 export const konamiContainerStyle = style({
   marginLeft: 0,
 });
+
+export const FullWidthAudio = styled.audio`
+  width: 100%;
+`;
