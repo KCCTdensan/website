@@ -3,7 +3,16 @@ import { QwikCityProvider, RouterOutlet, ServiceWorkerRegister } from "@builder.
 
 import { RouterHead } from "./components/router/RouterHead";
 
-import "./global.scss";
+//
+import "katex/dist/katex.min.css";
+import "sanitize.css";
+import "sanitize.css/assets.css";
+import "sanitize.css/typography.css";
+import "sanitize.css/system-ui.css";
+import "sanitize.css/ui-monospace.css";
+//
+
+import "~/styles/global.css";
 
 export default component$(() => {
   /**

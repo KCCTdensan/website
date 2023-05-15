@@ -6,8 +6,18 @@ import { vanillaExtractPlugin } from "styled-vanilla-extract/vite";
 
 import { name, version } from "./package.json";
 
-export default defineConfig(() => {
+export default defineConfig(({ command }) => {
+  const serverSettings =
+    command === "serve"
+      ? {
+          server: {
+            host: true,
+          },
+        }
+      : "";
+
   return {
+    ...serverSettings,
     plugins: [qwikCity(), qwikVite(), tsconfigPaths(), vanillaExtractPlugin()],
     define: {
       APP_NAME: `"${name}"`,

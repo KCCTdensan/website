@@ -2,6 +2,7 @@ import { Slot, component$, useContext } from "@builder.io/qwik";
 
 import { KonamiContext } from "../../../contexts/konami";
 
+import Navigation from "./components/Navigation";
 import {
   HeaderLogoLink,
   HeaderLogoArea,
@@ -10,6 +11,7 @@ import {
   HeaderTextItems,
   HeaderTextItem,
   PackageInfo,
+  headerBgZClass,
 } from "./style.css";
 
 import { gamingClass } from "~/styles/helpers.css";
@@ -18,7 +20,7 @@ export default component$(() => {
   const konamiState = useContext(KonamiContext);
 
   return (
-    <HeaderWrapper class={konamiState.konami ? gamingClass : ""}>
+    <HeaderWrapper class={{ [gamingClass]: konamiState.konami, [headerBgZClass]: konamiState.z }}>
       <HeaderLogoArea>
         <HeaderLogoLink href="/">
           <HeaderLogoIcon src="/icon.png" alt="Logo" />
@@ -39,6 +41,7 @@ export default component$(() => {
           </span>
         </PackageInfo>
       </HeaderLogoArea>
+      <Navigation />
       <Slot />
     </HeaderWrapper>
   );

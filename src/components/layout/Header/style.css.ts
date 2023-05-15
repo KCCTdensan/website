@@ -1,20 +1,22 @@
+import { style } from "@vanilla-extract/css";
 import { styled } from "styled-vanilla-extract/qwik";
+
+import { mqDownto, mqUpto } from "~/styles/responsive";
+import { vars } from "~/styles/variables.css";
+
+export const headerGamingClass = style({});
+
+export const headerBgZClass = style({
+  backgroundColor: vars.color.headerBgZ,
+});
 
 export const HeaderWrapper = styled.header`
   display: flex;
   flex-direction: column;
-  background-color: $c-headerBg;
-  color: $c-headerText;
+  background-color: ${vars.color.headerBg};
+  color: ${vars.color.headerText};
 
-  &.gaming {
-    @include gaming;
-  }
-
-  &.z {
-    background-color: $c-headerBgZ;
-  }
-
-  @include mqDown(md) {
+  @media ${mqDownto("md")} {
     border-radius: 8px 8px 0 0;
   }
 `;
@@ -26,10 +28,11 @@ export const HeaderLogoArea = styled.div`
   justify-content: space-between;
   user-select: none;
 
-  @include mqUp(md) {
+  @media ${mqUpto("md")} {
     height: 3.5rem;
   }
-  @include mqUp(xs) {
+
+  @media ${mqUpto("xs")} {
     height: 100%;
   }
 `;
@@ -40,7 +43,7 @@ export const HeaderLogoLink = styled.a`
   position: relative;
   align-items: center;
 
-  @include mqDown(md) {
+  @media ${mqDownto("md")} {
     margin-left: 0.25rem;
   }
 `;
@@ -52,7 +55,7 @@ export const HeaderLogoIcon = styled.img`
 
 export const HeaderTextItems = styled.span`
   display: inline-block;
-  color: $c-logoText;
+  color: ${vars.color.logoText};
   font-size: 2em;
   font-weight: 900;
   line-height: 1.1;
@@ -62,7 +65,7 @@ export const HeaderTextItem = styled.span`
   display: inline-block;
 
   ${HeaderTextItems} &.z:first-child {
-    color: red;
+    color: ${vars.color.logoStar};
   }
 `;
 
@@ -73,20 +76,10 @@ export const PackageInfo = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  color: $c-headerDimText;
+  color: ${vars.color.headerDimText};
   font-weight: bolder;
 
-  @include mqUp(md) {
+  @media ${mqUpto("md")} {
     display: none;
   }
-`;
-
-export const Navigation = styled.nav`
-  display: flex;
-  padding: 0.5em;
-  flex-direction: column;
-  background-color: $c-headerNavBg;
-  color: $c-headerNavText;
-  font: 1rem/1.8 $f-mono;
-  cursor: text;
 `;

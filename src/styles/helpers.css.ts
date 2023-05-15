@@ -9,6 +9,11 @@ const movingBackgroundKeyframe = keyframes({
   },
 });
 
+export const rawGamingCSS = `
+  background: linear-gradient(to right, cyan, yellow, magenta, cyan) center/200%;
+  animation: ${movingBackgroundKeyframe} 4s linear infinite;
+`;
+
 export const gamingClass = style({
   background: "linear-gradient(to right, cyan, yellow, magenta, cyan) center/200%",
   animation: `${movingBackgroundKeyframe} 4s linear infinite`,
