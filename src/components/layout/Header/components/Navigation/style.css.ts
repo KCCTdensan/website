@@ -18,17 +18,17 @@ export const NavigationWrapper = styled.nav`
   cursor: text;
 `;
 
-export const NavigationLinks = styled.ul`
-  display: flex;
-  margin: 0;
+export const InnerNavigationLink = styled.a`
+  color: ${vars.color.headerNavText};
+`;
+
+export const ActiveInnerNavigationLink = styled.span`
+  color: ${vars.color.headerNavStrong};
+  text-decoration: underline;
 `;
 
 export default `
 ${NavigationWrapper} * {
   flex-wrap: wrap;
-}
-
-${NavigationWrapper} a {
-  color: ${vars.color.headerNavText};
 }
 `;

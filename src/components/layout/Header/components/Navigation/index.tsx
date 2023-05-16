@@ -1,5 +1,7 @@
 import { component$, useContext, useStyles$ } from "@builder.io/qwik";
 
+import Breadcrumbs from "./components/Breadcrumbs";
+import NavigationLinks from "./components/NavigationLinks";
 import style, { NavigationWrapper, navigationZClass } from "./style.css";
 
 import { KonamiContext } from "~/contexts/konami";
@@ -12,7 +14,8 @@ export default component$(() => {
 
   return (
     <NavigationWrapper class={{ [gamingClass]: konamiState.konami, [navigationZClass]: konamiState.z }}>
-      <span>&gt; ls /</span>
+      <NavigationLinks />
+      <Breadcrumbs />
     </NavigationWrapper>
   );
 });

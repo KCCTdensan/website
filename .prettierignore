@@ -30,6 +30,7 @@ dist
 tsconfig.tsbuildinfo
 *.spec.tsx
 *.spec.ts
+*.mdx
 .netlify
 pnpm-lock.yaml
 package-lock.json

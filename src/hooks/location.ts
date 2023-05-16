@@ -1,12 +1,13 @@
 import { useLocation } from "@builder.io/qwik-city";
 
-export const usePathnameList = () => {
+export const usePathnameList = (): [string, string[]] => {
   const loc = useLocation();
-  const pathname = loc.url.pathname.split("/").filter(p => p !== "");
+  const { pathname } = loc.url;
+  const pathnames = pathname.split("/").filter(p => p !== "");
 
-  if (pathname.length === 0) {
-    return;
+  if (pathnames.length === 0) {
+    return ["/", []];
   }
 
-  return pathname;
+  return [pathname, pathnames];
 };
