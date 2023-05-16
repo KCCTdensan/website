@@ -18,3 +18,7 @@ export const gamingClass = style({
   background: "linear-gradient(to right, cyan, yellow, magenta, cyan) center/200%",
   animation: `${movingBackgroundKeyframe} 4s linear infinite`,
 });
+
+export const inlineBlockClass = style({
+  display: "inline-block",
+});
