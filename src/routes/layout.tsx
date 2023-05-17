@@ -85,7 +85,7 @@ export default component$(() => {
 
   return (
     <AppWrapper class={konamiState.z ? appStyles.konami : appStyles.normal}>
-      <Container class={konamiState.z ? konamiContainerStyle : ""}>
+      <Container class={{ [konamiContainerStyle]: konamiState.z }}>
         <Header />
 
         {konamiState.konami ? <FullWidthAudio autoPlay={true} controls={true} src="/nyan.ogg" class="play" /> : ""}

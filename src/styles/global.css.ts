@@ -1,7 +1,28 @@
-import { globalStyle } from "@vanilla-extract/css";
+import { globalFontFace, globalStyle } from "@vanilla-extract/css";
 import { css } from "styled-vanilla-extract/qwik";
 
 import { vars } from "./variables.css";
+
+globalFontFace("M PLUS 2", {
+  src: "url('/assets/font/mplus2.ttf.woff2') format('woff2-variations')",
+  fontDisplay: "swap",
+});
+
+globalFontFace("Fira Code", {
+  src: "url('/assets/font/firacode.ttf.woff2') format('woff2-variations')",
+  fontDisplay: "swap",
+});
+
+globalFontFace("Source Han Sans", {
+  src: "url('/assets/font/sourcehansans.otf.woff2') format('woff2')",
+  fontDisplay: "swap",
+});
+
+globalFontFace("Source Han Sans Without ASCII", {
+  src: "url('/assets/font/sourcehansans.otf.woff2') format('woff2')",
+  unicodeRange: "U+00FF-10FFFF",
+  fontDisplay: "swap",
+});
 
 globalStyle(
   "html, body",

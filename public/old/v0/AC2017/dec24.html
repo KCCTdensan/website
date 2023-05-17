@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="VIM - Vi IMproved">
+<meta name="keywords" content="電子計算機部,電算部,パソコン,プログラミング,コンピューター,高専,KCCT,作曲,CG,電子回路,部活,Vim">
+<meta name="generator" content="Vim">
+
+<link rel="stylesheet" type="text/css" href="../style.css">
+<title>VIM - Vi IMproved</title>
+<style type="text/css">
+        strong{
+                font-size:150%;
+                font-weight:bold;
+                color:#666611;
+        }
+        pre{
+                background-color: #D9D9FF;
+                display:inline-block;
+                padding:5px;
+        }
+        .standsfor{
+                margin-left:5rem;
+                font-size:.75rem;
+                color:#AAAAAA;
+        }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/riot/2.5.0/riot+compiler.min.js"></script>
+<script src="../riot_tag/header.tag" type="riot/tag"></script>
+
+<header></header>
+<script>
+	riot.mount('header',{dir: '../'})
+</script>
+<div>
+<p>この記事は<a href="https://adventar.org/calendars/2485">KCCT-Densan Advent Calendar 2017</a>の24日目の記事です．
+<!-- pの終了タグは省略可だけどその方が見やすいのかなぁ? -->
+<h2>テキストエディター</h2>
+        <p>(おはようございます|こん(にち|ばん)は)．TateIsuKannaです．
+        <p>テキストエディターとはテキストファイルを編集するソフトウェアの事です．皆さんは何をお使いでしょうか?自分はVimを使っています．Vimは<a href="https://github.com/vim/vim">オープンソース</a>でViの改良版(IMproved)です．
+        <p>Vimの良さはなんといっても<strong>あらゆる操作全てをキーボードで出来る事</strong>です．タブやウィンドウの操作も．
+<h2>導入簡単</h2>
+        <p>Windowsなら<a href="https://vim.sourceforge.io/download.php">ここ</a>のself-installing executableから，Linuxなら
+        <pre>apt install vim</pre>
+        <p>とかすれば簡単に入ります．ソースコードを落としてビルドするのもあっという間です．導入も動作も軽快です．
+<h2>難しそう?</h2>
+        <p>Vimは親切で分かりやすく楽しいチュートリアルが付いてます．
+                <pre>vimtutor</pre>
+        <p>を実行してみましょう．(Windowsならスタートメニューの検索から)．実際に使いながらVimの使い方を習得出来ます．慣れて来たら<a href="http://vim-jp.org/vimdoc-ja/usr_toc.html">Vim日本語ドキュメント</a>を読んでみるのも良いですね．
+<h2>便利</h2>
+        <p>以下に操作の例を示します．後ろにコマンドの注釈を書きました．
+        <dl>
+                <dt>次の単語の頭へカーソルを飛ばしたい．
+                <dd><pre>w</pre><span class="standsfor">Word</span>
+
+                <dt>5単語先へカーソルを飛ばしたい．(<pre>w</pre>を5回繰り返したい)
+                <dd><pre>5w</pre><span class="standsfor">5 Word</span>
+
+                <dt>カーソルから次の単語までを消したい．
+                <dd><pre>dw</pre><span class="standsfor">Delete Word</span>
+
+                <dt>カーソルから次の単語までをコピーして，5回貼り付けたい．
+                <dd><pre>yw5p</pre><span class="standsfor">Yank Word 5 Paste</span>
+
+                <dt>次の,の手前までカーソルを飛ばしたい．
+                <dd><pre>t,</pre><span class="standsfor">To ,</span>
+
+                <dt>次の,の手前までを書き換えたい．
+                <dd><pre>ct,</pre><span class="standsfor">Change To ,</span>
+
+                <dt>括弧の中の文字を変えたい．
+                <dd><pre>cib</pre><span class="standsfor">Change Inner Bracket</span>
+
+                <dt>カーソルの文字をゆに変えたい．
+                <dd><pre>rゆ</pre><span class="standsfor">Replace ゆ</span>
+
+                <dt>対応する括弧へ移動したい．
+                <dd><pre>%</pre>
+
+                <dt>ソートしたい．
+                <dd><pre>:sort</pre>
+
+                <dt>辞書順じゃなくて数値順でしたい
+                <dd><pre>:sort n</pre>
+
+                <dt>6～10行目だけしたい
+                <dd><pre>:6,10sort n</pre>
+
+                <dt>カーソルの下の単語が入っている行を削除したい．
+                <dd><pre>*:g//d</pre><span class="standsfor">カーソルの下の単語を検索して，ファイル全体の中(Global)でそれを含む行をDelete</span>
+
+                <dt>数字の後に『数字』と書きたい．
+                <dd><pre>:%s/\d\+/&amp;数字</pre><span class="standsfor">数字の列は，その数字の列と『数字』に置換(Substitute)</span>
+
+                <dt>数字の入っていない行の，行末から二文字目の文字を『ゆ』に変えたい．
+                <dd><pre>:g!/\d/norm $2hrゆ</pre><span class="standsfor">数字の無い行で，行末にカーソルを飛ばした後，2文字分左へカーソルを動かしてReplace，を意味するnormalコマンドを実行</span>
+        </dl>
+        <p>などと訳の分からない要求にもVimは応えてくれます．そう，キーボードだけで．
+        <p>ただ単にソースコードを書く以外にも活用出来そうな事が分かって頂ければ嬉しいです．
+<h2>今日のまとめ</h2>
+        <p>Vimは<strong>まるで脳に直結している手足のように</strong>したい事が出来る!
+<h2>Visual Studioユーザーへ</h2>
+        <p>VsVimをインストールして快適なVim with Visual Studioライフを送りましょう!
+<h2>Androidユーザーへ</h2>
+        <p><a href="https://play.google.com/store/apps/details?id=com.termux">Termux</a>をインストールして快適なVim&amp;Pythonライフを送りましょう!
+</div>
