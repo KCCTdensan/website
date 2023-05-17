@@ -24,14 +24,20 @@ globalStyle(
     color: ${vars.color.link};
     font-weight: bolder;
     text-decoration: none;
+  `,
+);
 
-    /* &:hover {
-      text-decoration: underline;
-    }
+globalStyle(
+  "a:hover",
+  css`
+    text-decoration: underline;
+  `,
+);
 
-    &:active {
-      color: ${vars.color.linkLight};
-    } */
+globalStyle(
+  "a:active",
+  css`
+    color: ${vars.color.linkLight};
   `,
 );
 
@@ -56,12 +62,15 @@ globalStyle(
     background-color: ${vars.color.dimBg};
     font-size: 1.2rem;
     line-height: 1.2;
+  `,
+);
 
-    /* code {
-      margin: 0;
-      padding: 0;
-      border-radius: 0;
-    } */
+globalStyle(
+  "pre code",
+  css`
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
   `,
 );
 
@@ -100,20 +109,12 @@ globalStyle(
     background: rgba(${vars.color.shadow}, 0.5);
   `,
 );
-// // Layout
 
-// .main-normal {
-//   margin: $l-section-margin;
-
-//   @include mqUp(md) {
-//     margin: $l-section-margin-small;
-//   }
-// }
-
-// // Component
-
-// .WARN {
-//   color: #f00;
-//   font-size: 2.5em;
-//   font-weight: 900;
-// }
+globalStyle(
+  ".WARN",
+  css`
+    color: #f00;
+    font-size: 2.5em;
+    font-weight: 900;
+  `,
+);
