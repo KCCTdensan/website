@@ -13,7 +13,7 @@ export const NavigationWrapper = styled.nav`
   flex-direction: column;
   background-color: ${vars.color.headerNavBg};
   color: ${vars.color.headerNavText};
-  font-size: calc(1rem / 1.8);
+  font-size: 1rem;
   font-family: ${vars.font.mono};
   cursor: text;
 `;

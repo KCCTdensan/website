@@ -1,4 +1,5 @@
 import { $, Slot, component$, useContextProvider, useOnDocument, useStore } from "@builder.io/qwik";
+import { routeLoader$ } from "@builder.io/qwik-city";
 
 import type { KonamiState } from "~/contexts/konami";
 
@@ -13,6 +14,10 @@ import {
   Main,
 } from "~/components/layout/style.css";
 import { KonamiContext } from "~/contexts/konami";
+
+export const usePlatformData = routeLoader$(async e => {
+  return e.env.get("VITE_PLATFORM_NAME") ?? "unknown-deployment-none-none";
+});
 
 export default component$(() => {
   const konamiState = useStore<KonamiState>({
