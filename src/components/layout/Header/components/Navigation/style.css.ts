@@ -4,7 +4,7 @@ import { styled } from "styled-vanilla-extract/qwik";
 import { vars } from "~/styles/variables.css";
 
 export const navigationZClass = style({
-  fontFamily: "$f-correct",
+  fontFamily: vars.font.correct,
 });
 
 export const NavigationWrapper = styled.nav`
