@@ -7,7 +7,7 @@ export default component$(() => {
 
   return (
     <CopyrightWrapper>
-      <CopyrightItem>&copy; 1974-{year} - Todos os direitos reservados</CopyrightItem>
+      <CopyrightItem>&copy; 1974-{year}</CopyrightItem>
       <CopyrightItem>KCCTdensan</CopyrightItem>
       <CopyrightItem>神戸高専電算部</CopyrightItem>
     </CopyrightWrapper>

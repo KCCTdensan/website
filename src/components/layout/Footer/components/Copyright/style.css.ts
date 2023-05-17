@@ -4,6 +4,7 @@ import { vars } from "~/styles/variables.css";
 
 export const CopyrightWrapper = styled.small`
   display: flex;
+  margin: 0 auto;
   justify-content: center;
   align-items: center;
   color: ${vars.color.dimText};
@@ -13,6 +14,5 @@ export const CopyrightWrapper = styled.small`
 `;
 
 export const CopyrightItem = styled.span`
-  display: inline-block;
   margin: 0 0.25rem;
 `;
