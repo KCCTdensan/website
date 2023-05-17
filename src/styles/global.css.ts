@@ -6,7 +6,9 @@ import { vars } from "./variables.css";
 globalStyle(
   "html, body",
   css`
-    font-size: 1.2rem;
+    font-size: clamp(1rem, calc(1rem + ((1vw - 0.48rem) * 0.7692)), 1.4rem);
+    min-height: 0vw;
+
     font-family: ${vars.font.normal};
   `,
 );
