@@ -6,14 +6,16 @@
 
 ## Development
 
-To setup the develop environment, **use `corepack`** and install dependencies first:
+To setup the dev environment, **use `corepack`** and install dependencies first:
 
 ```bash
 $ corepack enable
 $ pnpm i
 ```
 
-Run `dev` to start the development environmnet:
+Please note that `pnpm` is installed automatically by `corepack`.
+
+Run `dev` to start the dev environmnet:
 
 ```bash
 $ pnpm dev
