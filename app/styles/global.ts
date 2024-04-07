@@ -24,7 +24,7 @@ export const globalCss = defineGlobalStyles({
     m: "revert",
     p: "revert",
   },
-  ":where(p, h1, h2, h3, h4, h5, h6, li, span)": {
+  ":where(p, h1, h2, h3, h4, h5, h6, li)": {
     cursor: "text",
   },
   "h1": {

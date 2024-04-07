@@ -76,6 +76,7 @@ export const Header = () => {
             fontSize: "2rem",
             fontWeight: "extrabold",
             lineHeight: 1.1,
+            cursor: "pointer",
           })}>
             <span
               className={cx(css({ display: "inline-block" }), z && star)}>神戸</span>
@@ -94,6 +95,7 @@ export const Header = () => {
           mx: ".5rem",
           color: "header.text.dim",
           fontWeight: "bolder",
+          cursor: "default",
         })}>
           <span>/api/package.json</span>
           <span>{JSON.stringify(data.pkg)}</span>
