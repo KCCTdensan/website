@@ -1,0 +1,5 @@
+@import "sanitize.css" layer(sanitize-css);
+@import "sanitize.css/assets.css" layer(sanitize-css);
+@import "sanitize.css/typography.css" layer(sanitize-css);
+@import "sanitize.css/system-ui.css" layer(sanitize-css);
+@import "sanitize.css/ui-monospace.css" layer(sanitize-css);

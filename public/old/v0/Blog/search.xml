@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title>Hexoで爆速ブログ開設</title>
+      <link href="/Blog/2018/12/02/hexo/"/>
+      <url>/Blog/2018/12/02/hexo/</url>
+      
+        <content type="html"><![CDATA[<h6 id="Writer-ポッチャマ"><a href="#Writer-ポッチャマ" class="headerlink" title="Writer: ポッチャマ"></a><u>Writer: ポッチャマ</u></h6><p>電算部のブログがかなり管理しづらかったので、”Hexo”というサイトジェネレータを使ってリニューアルしてみました。</p><h2 id="Hexoとは"><a href="#Hexoとは" class="headerlink" title="Hexoとは?"></a>Hexoとは?</h2><p>node.js(サーバーサイドで動作するJavaScript)で作られたパッケージ。これを使うと、静的サイトを簡単に作ることができる。</p><h2 id="とにかくブログ作ってみる"><a href="#とにかくブログ作ってみる" class="headerlink" title="とにかくブログ作ってみる"></a>とにかくブログ作ってみる</h2><ul><li><h3 id="環境構築"><a href="#環境構築" class="headerlink" title="環境構築"></a>環境構築</h3><p>  部員はWindowsユーザーがほとんどなので、ここではWindowsでの手順のみ記述する。</p><ol><li><h4 id="npmをインストール"><a href="#npmをインストール" class="headerlink" title="npmをインストール"></a>npmをインストール</h4><p> Hexoなどのnodeパッケージの管理に必要なnpm(node package manager)をインストールする。<br> 下記の公式サイトからNode.js/npmのインストーラがダウンロードできる。<br> LTSとLatestがあるが、LTSで良いと思う。<br> <a href="https://nodejs.org/ja/" title="node.js公式" target="_blank" rel="noopener">node.js公式</a><br> ダウンロードしたインストーラーを起動し、インストール。インストール中色々聞かれるけど基本的にデフォルトでOK。<br> コマンドプロンプトでNode.js、npmが使えるか確認。</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node --version</span><br><span class="line">npm --version</span><br></pre></td></tr></table></figure><p> バージョン情報が表示されればインストールに成功している。</p></li><li><h4 id="Hexo-cliのインストール"><a href="#Hexo-cliのインストール" class="headerlink" title="Hexo-cliのインストール"></a>Hexo-cliのインストール</h4><p> npmを使ってHexo-cliをインストールする。</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure></li></ol></li><li><h3 id="サイト作成"><a href="#サイト作成" class="headerlink" title="サイト作成"></a>サイト作成</h3><ol><li><h4 id="プロジェクト作成"><a href="#プロジェクト作成" class="headerlink" title="プロジェクト作成"></a>プロジェクト作成</h4><p> コマンドプロンプトでプロジェクトのディレクトリを作成したい場所に移動し、下記のコマンドを実行する。</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init プロジェクト名</span><br></pre></td></tr></table></figure><p> 大量の文字列が表示され、プロジェクト名と同名のディレクトリが作成される。</p></li><li><h4 id="表示させてみる"><a href="#表示させてみる" class="headerlink" title="表示させてみる"></a>表示させてみる</h4><p> 作成したディレクトリに移動し、コマンドを実行するとリンクが表示されるのでアクセスしてみよう。</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd プロジェクト名</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure><p> こんな感じのページが見れるはず。</p> <img src="/Blog/2018/12/02/hexo/hexopage.png"></li></ol></li><li><h3 id="使い方"><a href="#使い方" class="headerlink" title="使い方"></a>使い方</h3><ol><li><p>記事の追加</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;ページタイトル&quot;</span><br></pre></td></tr></table></figure><p> このコマンドでsource/_posts/の中にマークダウン形式のファイルが作成されるので、それを編集する。</p></li><li><p>github pagesに公開<br> _config.ymlを編集</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">url: http://githubのユーザー名.github.io/リポジトリ名/</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:ユーザー名/リポジトリ名.git #clone時のurl</span><br><span class="line">  branch: gh-pages</span><br></pre></td></tr></table></figure><p> 必要なnodeパッケージを追加でインストール</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">npm install hexo-renderer-ejs --save</span><br></pre></td></tr></table></figure><p> hexoコマンドを実行</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy -g</span><br></pre></td></tr></table></figure><p> githubのリポジトリにgh-pagesブランチが追加され、そこでデプロイされる。</p></li></ol></li></ul><p>ARCHIVESが404になったりHOMEのアクセス先がおかしかったりとエラーもあるが、<br>とりあえずこれで最低限のブログの運用ができるはず…<br>マークダウン形式で記事が書けるようになった。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    <entry>
+      <title>ブログをリニューアルしました！</title>
+      <link href="/Blog/2018/12/02/first-post/"/>
+      <url>/Blog/2018/12/02/first-post/</url>
+      
+        <content type="html"><![CDATA[<h6 id="Writer-ポッチャマ"><a href="#Writer-ポッチャマ" class="headerlink" title="Writer: ポッチャマ"></a><u>Writer: ポッチャマ</u></h6><p>神戸高専電算部のブログをリニューアルしました！<br>これからどしどし記事を投稿していきます！</p>]]></content>
+      
+      
+      
+    </entry>
+    
+  
+  
+</search>

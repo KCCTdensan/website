@@ -1,0 +1,32 @@
+/* M PLUS 2 */
+
+@font-face {
+  font-family: "M PLUS 2";
+  src: url("/assets/font/mplus2.ttf.woff2") format("woff2-variations");
+  font-display: swap;
+}
+
+/* Fira Code */
+
+@font-face {
+  font-family: "Fira code";
+  src: local("Fira Code"), url("/assets/font/firacode.ttf.woff2") format("woff2-variations");
+  font-display: swap;
+}
+
+/* Source Han Sans : Subset Variable Traditional Chinese (Taiwan) */
+
+@font-face {
+  font-family: "Source Han Sans";
+  src: url("/assets/font/sourcehansans.otf.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* Source Han Sans : Without ASCII */
+
+@font-face {
+  font-family: "Source Han Sans Without ASCII";
+  src: url("/assets/font/sourcehansans.otf.woff2") format("woff2");
+  unicode-range: U+00FF-10FFFF;
+  font-display: swap;
+}
