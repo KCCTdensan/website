@@ -5,6 +5,7 @@ import type { RootLoaderData } from "@/root";
 import { Link } from "@remix-run/react";
 import { css, cx } from "@styles/css";
 import { flex } from "@styles/patterns";
+import { token } from "@styles/tokens";
 import { useAtomValue } from "jotai";
 import icon from "@/assets/img/icon.png";
 import { useRouteLoaderData } from "react-router";
@@ -29,27 +30,27 @@ export const Header = () => {
   const konami = useAtomValue(konamiAtom);
   const z = useAtomValue(zAtom);
 
-  const bgZ = css({ bg: "header.bg.z" });
-  const bgGaming = css({
-    bg: "linear-gradient(to right, cyan, yellow, magenta, cyan) center/200%",
-    animation: "bgSlide 4s linear infinite",
-  })
   const star = css({ color: "logoStar" });
 
   return (
-    <header className={cx(
-      flex({
+    <header
+      className={flex({
         direction: "column",
         bg: "header.bg",
         color: "header.text",
+        animation: "bgSlide 4s linear infinite",
 
         md: {
           rounded: "md",
         }
-      }),
-      z && bgZ,
-      konami && bgGaming,
-    )}>
+      })}
+      style={{
+        ...(konami ? {
+          background: "linear-gradient(to right, cyan, yellow, magenta, cyan) center/200%",
+        } : {}),
+        ...(z ? { background: token("colors.header.bg.z") } : {}),
+      }}
+    >
       <section className={flex({
         justify: "space-between",
         h: { base: "full", md: "3.5rem", xl: "4rem" },

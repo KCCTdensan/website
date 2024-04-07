@@ -61,11 +61,9 @@ export default function App() {
       <AppWrapper z={z}>
         <Container z={z}>
           <Header/>
-          <NyanAudio/>
-          <main className={css({
-            m: "1.5rem"
-          })}>
-            <article>
+          <main>
+            <NyanAudio/>
+            <article style={{ marginInline: "1.5rem" /* Panda CSS won't work properly here??? */ }}>
               <Outlet/>
             </article>
           </main>
