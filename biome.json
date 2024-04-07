@@ -2,24 +2,14 @@
   "$schema": "https://biomejs.dev/schemas/1.6.1/schema.json",
   "organizeImports": {
     "enabled": true,
-    "ignore": [
-      "build",
-      "styled-system"
-    ]
+    "ignore": ["build", "styled-system", "public"]
   },
   "linter": {
-    "ignore": [
-      "build",
-      "styled-system",
-      "**/*.d.ts"
-    ]
+    "ignore": ["build", "styled-system", "public", "**/*.d.ts"]
   },
   "formatter": {
     "indentStyle": "space",
-    "ignore": [
-      "build",
-      "styled-system"
-    ]
+    "ignore": ["build", "styled-system", "public"]
   },
   "vcs": {
     "clientKind": "git",

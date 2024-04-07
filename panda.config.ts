@@ -11,7 +11,11 @@ export default defineConfig({
   outExtension: "js",
 
   // Where to look for your css declarations
-  include: ["./app/routes/**/*.{ts,tsx,js,jsx,mdx}", "./app/components/**/*.{ts,tsx,js,jsx}", "./app/styles/**/*.{ts,js}"],
+  include: [
+    "./app/routes/**/*.{ts,tsx,js,jsx,mdx}",
+    "./app/components/**/*.{ts,tsx,js,jsx}",
+    "./app/styles/**/*.{ts,js}",
+  ],
 
   // Files to exclude
   exclude: [],

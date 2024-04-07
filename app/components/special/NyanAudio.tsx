@@ -8,11 +8,17 @@ export const NyanAudio = () => {
 
   return (
     <>
-      {konami &&
-        <audio className={css({
-          w: "full",
-        })} autoPlay controls src={nyan}/>
-      }
+      {konami && (
+        // biome-ignore lint/a11y/useMediaCaption: This is a decorative audio element
+        <audio
+          className={css({
+            w: "full",
+          })}
+          autoPlay
+          controls
+          src={nyan}
+        />
+      )}
     </>
   );
-}
+};

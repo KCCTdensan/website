@@ -1,1 +1,1 @@
-export type PropsWithClassName<T extends unknown> = T & { className?: string };
+export type PropsWithClassName<T> = T & { className?: string };

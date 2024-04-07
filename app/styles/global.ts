@@ -27,11 +27,11 @@ export const globalCss = defineGlobalStyles({
   ":where(p, h1, h2, h3, h4, h5, h6, li)": {
     cursor: "text",
   },
-  "h1": {
+  h1: {
     fontSize: "2rem",
-    my: ".67rem"
+    my: ".67rem",
   },
-  "article": {
+  article: {
     "& p": {
       m: "revert",
       p: "revert",

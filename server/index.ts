@@ -1,5 +1,5 @@
 import { serveStatic } from "@hono/node-server/serve-static";
-import { type AppLoadContext, type ServerBuild } from "@remix-run/node";
+import type { AppLoadContext, ServerBuild } from "@remix-run/node";
 import { Hono } from "hono";
 import { logger } from "hono/logger";
 import { remix } from "remix-hono/handler";
@@ -19,7 +19,7 @@ const app = new Hono();
 app.use(
   "/assets/*",
   cache(60 * 60 * 24 * 365), // 1 year
-  serveStatic({ root: "./build/client" })
+  serveStatic({ root: "./build/client" }),
 );
 
 /**
@@ -28,7 +28,7 @@ app.use(
 app.use(
   "*",
   cache(60 * 60),
-  serveStatic({ root: isProductionMode ? "./build/client" : "./public" })
+  serveStatic({ root: isProductionMode ? "./build/client" : "./public" }),
 ); // 1 hour
 
 /**

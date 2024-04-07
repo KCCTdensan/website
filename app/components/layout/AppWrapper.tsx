@@ -15,8 +15,8 @@ const recipe = cva({
         bgGradient: "z",
         fontFamily: "correct",
       },
-    }
+    },
   },
-})
+});
 
 export const AppWrapper = styled("div", recipe);

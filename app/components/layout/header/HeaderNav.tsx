@@ -14,7 +14,7 @@ const recipe = cva({
 
     "& *": {
       flexWrap: "wrap",
-    }
+    },
   },
   variants: {
     z: {
@@ -33,6 +33,6 @@ const recipe = cva({
       },
     },
   },
-})
+});
 
 export const HeaderNav = styled("nav", recipe);

@@ -1,6 +1,10 @@
 import { useEffect, useRef } from "react";
 
-export const useKeySequence = (sequence: string[], callback: () => void, oneshot = false) => {
+export const useKeySequence = (
+  sequence: string[],
+  callback: () => void,
+  oneshot = false,
+) => {
   const index = useRef(0);
 
   useEffect(() => {
@@ -23,5 +27,5 @@ export const useKeySequence = (sequence: string[], callback: () => void, oneshot
     return () => {
       window.removeEventListener("keydown", onKeyDown);
     };
-  }, [index, sequence]);
-}
+  }, [callback, oneshot, sequence]);
+};

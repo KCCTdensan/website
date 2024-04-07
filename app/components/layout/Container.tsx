@@ -30,6 +30,6 @@ const recipe = cva({
       },
     },
   },
-})
+});
 
 export const Container = styled("section", recipe);

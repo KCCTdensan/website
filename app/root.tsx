@@ -15,9 +15,9 @@ import {
 } from "@remix-run/react";
 import { css } from "@styles/css";
 import { useAtomValue } from "jotai";
+import { name, version } from "../package.json";
 import fonts from "./styles/fonts.css?url";
 import initPanda from "./styles/panda.css?url";
-import { name, version } from "../package.json";
 
 import type { LinksFunction } from "@remix-run/node";
 import type { PropsWithChildren } from "react";
@@ -25,7 +25,7 @@ import type { PropsWithChildren } from "react";
 export const loader = () => ({
   pkg: { name, version },
   platform: PLATFORM,
-})
+});
 
 export type RootLoaderData = ReturnType<typeof loader>;
 
@@ -38,17 +38,17 @@ export const links: LinksFunction = () => [
 export function Layout({ children }: PropsWithChildren) {
   return (
     <html lang="ja">
-    <head>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <Links />
-      <Meta />
-    </head>
-    <body>
-    {children}
-    <ScrollRestoration />
-    <Scripts />
-    </body>
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <Links />
+        <Meta />
+      </head>
+      <body>
+        {children}
+        <ScrollRestoration />
+        <Scripts />
+      </body>
     </html>
   );
 }
@@ -60,17 +60,22 @@ export default function App() {
     <>
       <AppWrapper z={z}>
         <Container z={z}>
-          <Header/>
+          <Header />
           <main>
-            <NyanAudio/>
-            <article style={{ marginInline: "1.5rem" /* Panda CSS won't work properly here??? */ }}>
-              <Outlet/>
+            <NyanAudio />
+            <article
+              style={{
+                marginInline:
+                  "1.5rem" /* Panda CSS won't work properly here??? */,
+              }}
+            >
+              <Outlet />
             </article>
           </main>
-          <Footer/>
+          <Footer />
         </Container>
       </AppWrapper>
-      <SpecialKeyHandlers/>
+      <SpecialKeyHandlers />
     </>
   );
 }

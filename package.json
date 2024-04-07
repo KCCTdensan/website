@@ -44,9 +44,7 @@
     "typescript": "^5.4.2",
     "vite": "^5.1.6"
   },
-  "trustedDependencies": [
-    "core-js"
-  ],
+  "trustedDependencies": ["core-js"],
   "engines": {
     "node": ">=20"
   }

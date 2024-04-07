@@ -6,7 +6,7 @@ const viteDevServer =
         vite.createServer({
           server: { middlewareMode: true },
           appType: "custom",
-        })
+        }),
       );
 
 /**

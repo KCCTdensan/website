@@ -24,7 +24,7 @@ export const tokens: Tokens = {
   },
 };
 
-export const semanticTokens: SemanticTokens= {
+export const semanticTokens: SemanticTokens = {
   colors: {
     bg: {
       DEFAULT: { value: "#fff" },
@@ -59,6 +59,6 @@ export const semanticTokens: SemanticTokens= {
         text: { value: "#fff" },
         strong: { value: "#ff0" },
       },
-    }
+    },
   },
 };

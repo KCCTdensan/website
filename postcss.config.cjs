@@ -5,4 +5,4 @@ module.exports = {
       browsers: [">= 0.25%", "not dead"],
     },
   },
-}
+};

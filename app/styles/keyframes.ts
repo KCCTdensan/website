@@ -8,5 +8,5 @@ export const keyframes: CssKeyframes = {
     to: {
       backgroundPositionX: "200%",
     },
-  }
+  },
 };

@@ -9,10 +9,19 @@ export type IconLinkProps = PropsWithClassName<{
 }>;
 
 export const IconLink = ({ className, href, icon, label }: IconLinkProps) => (
-  <a className={cx(className, css({
-    m: "0.4rem",
-    color: "text.dim",
-  }))} href={href} aria-label={label} target="_blank" rel="noopener noreferrer">
+  <a
+    className={cx(
+      className,
+      css({
+        m: "0.4rem",
+        color: "text.dim",
+      }),
+    )}
+    href={href}
+    aria-label={label}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     {icon}
   </a>
 );

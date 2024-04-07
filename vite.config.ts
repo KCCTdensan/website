@@ -1,12 +1,12 @@
+import path from "node:path";
 import mdx from "@mdx-js/rollup";
 import { vitePlugin as remix } from "@remix-run/dev";
-import path from "node:path";
+import esbuild from "esbuild";
 import rehypeKatex from "rehype-katex";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkMath from "remark-math";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 import { defineConfig } from "vite";
-import esbuild from "esbuild";
 
 // vite-tsconfig-paths is too late to resolve the alias
 const alias = {
@@ -36,14 +36,8 @@ export default defineConfig({
   },
   plugins: [
     mdx({
-      remarkPlugins: [
-        remarkFrontmatter,
-        remarkMdxFrontmatter,
-        remarkMath,
-      ],
-      rehypePlugins: [
-        rehypeKatex,
-      ],
+      remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter, remarkMath],
+      rehypePlugins: [rehypeKatex],
     }),
     remix({
       serverBuildFile: "remix.js",
