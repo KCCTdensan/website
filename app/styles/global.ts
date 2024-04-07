@@ -5,7 +5,7 @@ export const globalCss = defineGlobalStyles({
     h: "full",
   },
   html: {
-    fontSize: "1.2rem",
+    fontSize: "clamp(1rem, calc(1rem + ((1vw - 0.48rem) * 0.7692)), 1.2rem)",
     fontFamily: "normal",
     lineHeight: 1.8,
     MozOsxFontSmoothing: "grayscale",
