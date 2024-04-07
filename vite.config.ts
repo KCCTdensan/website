@@ -7,6 +7,7 @@ import remarkFrontmatter from "remark-frontmatter";
 import remarkMath from "remark-math";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 import { defineConfig } from "vite";
+import envOnly from "vite-env-only";
 
 // vite-tsconfig-paths is too late to resolve the alias
 const alias = {
@@ -35,6 +36,7 @@ export default defineConfig({
     alias,
   },
   plugins: [
+    envOnly(),
     mdx({
       remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter, remarkMath],
       rehypePlugins: [rehypeKatex],

@@ -3,9 +3,61 @@ title: 神戸高専 電算部
 description: 神戸高専電算部のウェブサイトです．
 ---
 
+import { useLoaderData } from "@remix-run/react";
+
 import { css } from "@styles/css";
+import { getArticle } from "@/lib/.server/articles";
+import { formatDateYMD } from "@/lib/date";
+import { extendMeta } from "@/lib/meta";
 
 import "@/styles/init-sanitize.css";
+
+export const loader = async () => {
+  const articles = await getArticle("blog");
+
+  return {
+    response: {
+      ...articles,
+      data: articles.data.slice(0, 8),
+    },
+  };
+};
+
+export const meta = extendMeta(() => [
+  {
+    title: frontmatter.title,
+  },
+  {
+    name: "description",
+    content: frontmatter.description,
+  },
+  {
+    property: "og:title",
+    content: frontmatter.title,
+  },
+  {
+    property: "og:description",
+    content: frontmatter.description,
+  }
+]);
+
+export const Blogs = () => {
+  const { response } = useLoaderData();
+
+  return (
+    <ul>
+      {response.data.map((article) => (
+        <li key={article.slug}>
+          <article>
+            {article.date ? `${formatDateYMD(new Date(article.date))} - ` : ""}
+            <a href={`/blog/${article.slug}`}>{article.title}</a>
+            <span>&nbsp;by {article.author || "KCCTdensan"}</span>
+          </article>
+        </li>
+      ))}
+    </ul>
+  );
+};
 
 <h1>
   <span className={css({
@@ -37,7 +89,7 @@ import "@/styles/init-sanitize.css";
 
 ## 新着記事
 
-TODO
+<Blogs />
 
 ## 旧バージョン
 

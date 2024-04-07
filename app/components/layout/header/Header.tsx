@@ -1,4 +1,3 @@
-import icon from "@/assets/img/icon.png";
 import { konamiAtom, zAtom } from "@/atoms/special";
 import { HeaderNav } from "@/components/layout/header/HeaderNav";
 import { HeaderNavLink } from "@/components/layout/header/HeaderNavLink";
@@ -80,7 +79,7 @@ export const Header = () => {
               w: "3.5rem",
               mx: ".5rem",
             })}
-            src={icon}
+            src="/icon.png"
             alt="Logo"
           />
           <p

@@ -110,6 +110,8 @@ export const globalCss = defineGlobalStyles({
     bg: "bg.dim",
     fontSize: "1.2rem",
     lineHeight: 1.2,
+    whiteSpace: "pre-wrap",
+
 
     "& code": {
       m: "0",
