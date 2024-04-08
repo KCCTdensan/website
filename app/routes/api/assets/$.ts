@@ -1,5 +1,5 @@
-import { serverOnly$ } from "vite-env-only";
 import type { LoaderFunctionArgs } from "@remix-run/router";
+import { serverOnly$ } from "vite-env-only";
 
 export const loader = serverOnly$(async ({ params }: LoaderFunctionArgs) => {
   const { API_BASE } = await import("@/lib/.server/env");
@@ -12,4 +12,4 @@ export const loader = serverOnly$(async ({ params }: LoaderFunctionArgs) => {
     status: response.status,
     statusText: response.statusText,
   });
-})
+});

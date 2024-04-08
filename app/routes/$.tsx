@@ -1,11 +1,38 @@
+import type { BreadcrumbsHandle } from "@/components/layout/header/Breadcrumbs";
 import { getArticle } from "@/lib/.server/articles";
 import { extendMeta } from "@/lib/meta";
 import {
+  Link,
   isRouteErrorResponse,
   useLoaderData,
   useRouteError,
 } from "@remix-run/react";
 import type { LoaderFunctionArgs } from "@remix-run/router";
+
+export const handle: BreadcrumbsHandle = {
+  breadcrumb: (matches, _active) => {
+    const paths = matches.pathname
+      .split("/")
+      .slice(1)
+      .filter((a) => a.length);
+
+    if (paths.length === 1) {
+      return <p>{paths[0]}/</p>;
+    }
+
+    return paths.map((path, index) => {
+      const active = index === paths.length - 1;
+
+      if (active) {
+        return <p>{path}</p>;
+      }
+
+      return (
+        <Link to={`/${paths.slice(0, index + 1).join("/")}/`}>{path}/</Link>
+      );
+    });
+  },
+};
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
   const [entrypoint, ...path] = (params["*"] || "/")

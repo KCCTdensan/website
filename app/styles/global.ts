@@ -112,7 +112,6 @@ export const globalCss = defineGlobalStyles({
     lineHeight: 1.2,
     whiteSpace: "pre-wrap",
 
-
     "& code": {
       m: "0",
       p: "0",

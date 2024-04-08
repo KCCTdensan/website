@@ -1,7 +1,13 @@
+import type { BreadcrumbsHandle } from "@/components/layout/header/Breadcrumbs";
 import { getArticle } from "@/lib/.server/articles";
 import { formatDateYMD } from "@/lib/date";
 import { extendMeta } from "@/lib/meta";
-import { useLoaderData } from "@remix-run/react";
+import { Link, useLoaderData } from "@remix-run/react";
+
+export const handle: BreadcrumbsHandle = {
+  breadcrumb: (_matches, active) =>
+    active ? <p>blog/</p> : <Link to={"/blog"}>blog/</Link>,
+};
 
 export const loader = async () => getArticle("blog");
 

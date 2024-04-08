@@ -1,4 +1,5 @@
 import { konamiAtom, zAtom } from "@/atoms/special";
+import { Breadcrumbs } from "@/components/layout/header/Breadcrumbs";
 import { HeaderNav } from "@/components/layout/header/HeaderNav";
 import { HeaderNavLink } from "@/components/layout/header/HeaderNavLink";
 import type { RootLoaderData } from "@/root";
@@ -141,7 +142,7 @@ export const Header = () => {
           ))}
         </ul>
         <p>&gt; pwd</p>
-        <ul>TODO: Add breadcrumbs</ul>
+        <Breadcrumbs />
         <p>&gt; echo $PLATFORM</p>
         <p>{data.platform}</p>
         <p>&gt; _</p>
