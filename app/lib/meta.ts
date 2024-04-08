@@ -1,5 +1,6 @@
 import type { MetaFunction } from "@remix-run/react";
 import type { LoaderFunction } from "@remix-run/router";
+import equal from "fast-deep-equal";
 
 export const extendMeta =
   <
@@ -22,5 +23,7 @@ export const extendMeta =
           ("property" in meta && meta.property !== "og:description"),
       );
 
-    return [...parentMeta, ...(fn(args) ?? [])];
+    return [...parentMeta, ...(fn(args) ?? [])].filter(
+      (value, index, self) => index === self.findIndex((t) => equal(t, value)),
+    );
   };
