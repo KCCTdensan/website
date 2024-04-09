@@ -11,8 +11,6 @@ import { formatDateYMD } from "@/lib/date";
 import { extendMeta } from "@/lib/meta";
 import { Result } from "@/lib/util/result";
 
-import "@/styles/init-sanitize.css";
-
 export const loader = async () => {
   const articles = Result.unwrap(await getArticle("blog"));
 

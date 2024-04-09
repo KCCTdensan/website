@@ -18,11 +18,7 @@ export const globalCss = defineGlobalStyles({
     },
   },
   ":where(h1, h2, h3, h4, h5, h6)": {
-    fontSize: "revert",
     fontWeight: "revert",
-    lineHeight: "revert",
-    m: "revert",
-    p: "revert",
   },
   ":where(p, h1, h2, h3, h4, h5, h6, li)": {
     cursor: "text",
@@ -57,8 +53,6 @@ export const globalCss = defineGlobalStyles({
     textDecorationSkipInk: "auto",
   },
   "img, picture, svg, video, canvas": {
-    maxW: "full",
-    h: "auto",
     verticalAlign: "middle",
     fontStyle: "italic",
     bgRepeat: "no-repeat",
@@ -101,6 +95,7 @@ export const globalCss = defineGlobalStyles({
     fontSize: "1.2rem",
     lineHeight: 1.2,
     whiteSpace: "pre-wrap",
+    fontFamily: "mono",
 
     "& code": {
       m: "0",

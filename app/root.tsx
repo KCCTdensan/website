@@ -27,6 +27,8 @@ import initPanda from "./styles/panda.css?url";
 import type { LinksFunction } from "@remix-run/node";
 import type { PropsWithChildren } from "react";
 
+import "@/styles/init-sanitize.css";
+
 export const loader = () => ({
   pkg: { name, version },
   platform: PLATFORM,
