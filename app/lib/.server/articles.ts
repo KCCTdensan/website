@@ -1,4 +1,5 @@
 import { API_BASE } from "@/lib/.server/env";
+import { type Result, err, ok } from "@/lib/util/result";
 
 export type ArticleData = {
   data: {
@@ -23,21 +24,21 @@ export type ArticlesResponse = ArticleData & {
 
 export const getArticle = async (
   entrypoint: string,
-): Promise<ArticlesResponse> => {
+): Promise<Result<ArticlesResponse, Response>> => {
   const url = `${API_BASE}/api/${entrypoint}.json`;
   const response = await fetch(url);
 
   if (!response.ok) {
-    throw new Error(`Failed to fetch articles: ${response.statusText}`);
+    return err(response);
   }
 
   const { data } = (await response.json()) as ArticlesResponse;
 
-  return {
+  return ok({
     data: data.map((article) => ({
       ...article,
       authors: article.author?.split(/, ?/) || [],
       body: article.body.replace(/\$assets\//g, "/api/assets/"),
     })),
-  };
+  });
 };

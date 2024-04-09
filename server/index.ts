@@ -1,6 +1,6 @@
-import { serveStatic } from "@hono/node-server/serve-static";
 import type { AppLoadContext, ServerBuild } from "@remix-run/node";
 import { Hono } from "hono";
+import { serveStatic } from "hono/bun";
 import { logger } from "hono/logger";
 import { remix } from "remix-hono/handler";
 import { cache } from "server/middlewares";
@@ -40,6 +40,10 @@ app.use("*", logger());
  * Add remix middleware to Hono server
  */
 app.use(async (c, next) => {
+  if (c.req.path.startsWith("/old")) {
+    return next();
+  }
+
   const build = (isProductionMode
     ? // @ts-ignore
       await import("../build/server/remix.js")

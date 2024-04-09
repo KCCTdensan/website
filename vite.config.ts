@@ -16,6 +16,7 @@ const alias = {
 } as const;
 
 export default defineConfig({
+  assetsInclude: [/\/old\//],
   build: {
     cssMinify: "lightningcss",
   },

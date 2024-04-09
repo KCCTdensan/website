@@ -9,11 +9,12 @@ import { css } from "@styles/css";
 import { getArticle } from "@/lib/.server/articles";
 import { formatDateYMD } from "@/lib/date";
 import { extendMeta } from "@/lib/meta";
+import { Result } from "@/lib/util/result";
 
 import "@/styles/init-sanitize.css";
 
 export const loader = async () => {
-  const articles = await getArticle("blog");
+  const articles = Result.unwrap(await getArticle("blog"));
 
   return {
     response: {

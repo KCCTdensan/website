@@ -13,7 +13,10 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  isRouteErrorResponse,
+  useRouteError,
 } from "@remix-run/react";
+import { css } from "@styles/css";
 import { useAtomValue } from "jotai";
 import katex from "katex/dist/katex.min.css?url";
 import { name, version } from "../package.json";
@@ -91,6 +94,33 @@ export function Layout({ children }: PropsWithChildren) {
         <Scripts />
       </body>
     </html>
+  );
+}
+
+export function ErrorBoundary() {
+  const error = useRouteError();
+  const routeError = isRouteErrorResponse(error) ? error : null;
+
+  return (
+    <main
+      className={css({
+        m: "4",
+      })}
+    >
+      {routeError === null ? (
+        <div>
+          <h1>エラー</h1>
+          <p>よくわからないエラーが発生しました。</p>
+        </div>
+      ) : (
+        <div>
+          <h1>
+            {routeError.status} {routeError.statusText}
+          </h1>
+          <p>サーバーエラーが発生しました。</p>
+        </div>
+      )}
+    </main>
   );
 }
 

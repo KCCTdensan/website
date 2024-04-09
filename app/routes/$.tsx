@@ -1,6 +1,10 @@
+import { Recommends } from "@/components/Recommends";
 import type { BreadcrumbsHandle } from "@/components/layout/header/Breadcrumbs";
 import { getArticle } from "@/lib/.server/articles";
 import { extendMeta } from "@/lib/meta";
+import { getRecommends } from "@/lib/recommends";
+import { Result } from "@/lib/util/result";
+import { json } from "@remix-run/node";
 import {
   Link,
   isRouteErrorResponse,
@@ -8,6 +12,7 @@ import {
   useRouteError,
 } from "@remix-run/react";
 import type { LoaderFunctionArgs } from "@remix-run/router";
+import { css } from "@styles/css";
 
 export const handle: BreadcrumbsHandle = {
   breadcrumb: (matches, _active) => {
@@ -34,28 +39,45 @@ export const handle: BreadcrumbsHandle = {
   },
 };
 
-export const loader = async ({ params }: LoaderFunctionArgs) => {
-  const [entrypoint, ...path] = (params["*"] || "/")
-    .split("/")
-    .filter((a) => a.length);
+export const loader = async ({ request, params }: LoaderFunctionArgs) => {
+  const pathname = "*" in params ? `/${params["*"]}` : "/";
+  const [entrypoint, ...path] = pathname.split("/").filter((a) => a.length);
+
   const slug = path.join("/");
+  const baseUrl = new URL(request.url).origin;
 
-  const response = await getArticle(entrypoint);
+  return Result.unwrapAsync(
+    Result.mapBoth(
+      await getArticle(entrypoint),
+      ({ data }) =>
+        data.find(
+          (article) =>
+            article.slug === slug ||
+            article.slug === `${slug}/index` ||
+            (!slug && article.slug === "index"),
+        ),
+      async (response) => {
+        if (response.status === 404) {
+          /* /old/** middleware doesn't work in Vite dev server */
+          const recommends = import.meta.env.DEV
+            ? []
+            : await getRecommends(baseUrl, pathname);
 
-  const article = response.data.find(
-    (article) =>
-      article.slug === slug ||
-      article.slug === `${slug}/index` ||
-      (!slug && article.slug === "index"),
+          return json(
+            {
+              recommends,
+            },
+            {
+              status: 404,
+              statusText: "Could not find entry",
+            },
+          );
+        }
+
+        return response;
+      },
+    ),
   );
-
-  if (article === undefined)
-    throw new Response(null, {
-      status: 404,
-      statusText: "Could not find entry",
-    });
-
-  return article;
 };
 
 export const meta = extendMeta<typeof loader>(({ data }) => {
@@ -90,7 +112,6 @@ export const meta = extendMeta<typeof loader>(({ data }) => {
   ];
 });
 
-/*
 export function ErrorBoundary() {
   const error = useRouteError();
   const routeError = isRouteErrorResponse(error) ? error : null;
@@ -98,7 +119,21 @@ export function ErrorBoundary() {
   if (routeError === null)
     return (
       <>
-        <h1>Error</h1>
+        <h1>
+          {/* biome-ignore format: The pre tag should not be formatted */}
+          <pre className={css({
+            bg: "transparent",
+            fontWeight: "normal"
+          })}>
+            <span
+              className={css({
+                color: "red",
+              })}
+            >
+              error:
+            </span> {error instanceof Error ? error.name : "unknown error"}
+          </pre>
+        </h1>
         <p>
           {error instanceof Error
             ? error.message
@@ -107,24 +142,38 @@ export function ErrorBoundary() {
       </>
     );
 
-  return (
-    <>
-      <h1>
-        <pre>
-          <code>
-            <span className="red">error:</span> {routeError.statusText}x |
-            static_assert(
-            <span className="red">status != {routeError.status}</span>
-            ); | <span className="red">~~~~~~~^~~~~~</span>
-          </code>
-        </pre>
-      </h1>
-      <h1>Error</h1>
-      <p>{JSON.stringify(error)}</p>
-    </>
-  );
+  if (routeError.status === 404) {
+    return (
+      <>
+        <h1>
+          {/* biome-ignore format: The pre tag should not be formatted */}
+          <pre className={css({
+            bg: "transparent",
+            fontWeight: "normal"
+          })}>
+            <span
+              className={css({
+                color: "red",
+              })}
+            >
+              error:
+            </span> {routeError.statusText}{"\n"}
+              {"  "}x | static_assert(<span className={css({ color: "red" })}>
+              status != {routeError.status}
+            </span>);{"\n"}
+              {"    "}|               <span className={css({ color: "red" })}>
+              ~~~~~~~^~~~~~
+            </span>
+          </pre>
+        </h1>
+        <p>お探しのページは見つかりませんでした……ごめんなさい………</p>
+        <Recommends recommends={routeError.data.recommends} />
+      </>
+    );
+  }
+
+  return null;
 }
- */
 
 export default function Page() {
   const { body } = useLoaderData<typeof loader>();
