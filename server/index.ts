@@ -23,6 +23,13 @@ app.use(
 );
 
 /**
+ * Proxy API requests to the API server
+ */
+app.get("/api/*", async (c) =>
+  fetch(`${process.env.API_BASE}${c.req.path.replace("/api", "")}`),
+);
+
+/**
  * Serve public files
  */
 app.use(
@@ -40,7 +47,7 @@ app.use("*", logger());
  * Add remix middleware to Hono server
  */
 app.use(async (c, next) => {
-  if (c.req.path.startsWith("/old")) {
+  if (c.req.path.startsWith("/old") || c.req.path.startsWith("/api/assets")) {
     return next();
   }
 
