@@ -12,7 +12,7 @@ import {
   useRouteError,
 } from "@remix-run/react";
 import type { LoaderFunctionArgs } from "@remix-run/router";
-import { css } from "@styles/css";
+import { css, cx } from "@styles/css";
 import parseHtml, {
   attributesToProps,
   type DOMNode,
@@ -206,19 +206,30 @@ export default function Page() {
     <article>
       {parseHtml(body, {
         replace: (domNode) => {
-          if (
-            domNode instanceof Element &&
-            domNode.name === "a" &&
-            !domNode.attribs.href.startsWith("http") &&
-            !domNode.attribs.href.includes("/old/")
-          ) {
-            const props = attributesToProps(domNode.attribs);
+          if (domNode instanceof Element) {
+            if (
+              domNode.name === "a" &&
+              !domNode.attribs.href.startsWith("http") &&
+              !domNode.attribs.href.includes("/old/")
+            ) {
+              const props = attributesToProps(domNode.attribs);
 
-            return (
-              <Link {...props} to={domNode.attribs.href}>
-                {domToReact(domNode.children as DOMNode[])}
-              </Link>
-            );
+              return (
+                <Link {...props} to={domNode.attribs.href}>
+                  {domToReact(domNode.children as DOMNode[])}
+                </Link>
+              );
+            }
+
+            if (domNode.name === "img") {
+              domNode.attribs.class = cx(
+                domNode.attribs.class,
+                css({
+                  maxH: "360px",
+                  mx: "auto",
+                }),
+              );
+            }
           }
 
           return domNode;
