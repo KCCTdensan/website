@@ -2,6 +2,7 @@ import { zAtom } from "@/atoms/special";
 import { AppWrapper } from "@/components/layout/AppWrapper";
 import { Container } from "@/components/layout/Container";
 import { Footer } from "@/components/layout/Footer";
+import { Metadata } from "@/components/layout/Metadata";
 import { Header } from "@/components/layout/header/Header";
 import { NyanAudio } from "@/components/special/NyanAudio";
 import { SpecialKeyHandlers } from "@/components/special/SpecialKeyHandlers";
@@ -133,6 +134,7 @@ export default function App() {
         <Container z={z}>
           <Header />
           <NyanAudio />
+          <Metadata />
           <main
             style={{
               marginInline:

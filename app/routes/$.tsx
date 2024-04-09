@@ -32,14 +32,18 @@ export const handle: BreadcrumbsHandle = {
     }
 
     return paths.map((path, index) => {
+      const basePaths = paths.slice(0, index);
+      const fullPath = `${basePaths.join("/")}/${path}`;
       const active = index === paths.length - 1;
 
       if (active) {
-        return <p>{path}</p>;
+        return <p key={fullPath}>{path}</p>;
       }
 
       return (
-        <Link to={`/${paths.slice(0, index + 1).join("/")}/`}>{path}/</Link>
+        <Link key={fullPath} to={`/${paths.slice(0, index + 1).join("/")}/`}>
+          {path}/
+        </Link>
       );
     });
   },
@@ -74,10 +78,15 @@ export const loader = async ({ request, params }: LoaderFunctionArgs) => {
             },
           );
         }
+        const meta = {
+          authors: data.author,
+          date: data.date,
+          dateUpd: data.dateUpd,
+        };
 
         return json({
-          ...data,
-          body: data.body,
+          data,
+          meta,
         });
       },
       async (response) => {
@@ -107,15 +116,17 @@ export const loader = async ({ request, params }: LoaderFunctionArgs) => {
 export const meta = extendMeta<typeof loader>(({ data }) => {
   if (!data) return [{ title: "d3bu.net" }];
 
-  const description = data.description || `${data.body.slice(0, 100)}...`;
+  const article = data.data;
+
+  const description = article.description || `${article.body.slice(0, 100)}...`;
 
   return [
     {
-      title: data.title ? `${data.title} :: d3bu.net` : "d3bu.net",
+      title: article.title ? `${article.title} :: d3bu.net` : "d3bu.net",
     },
     {
       property: "og:title",
-      content: data.title || "d3bu.net",
+      content: article.title || "d3bu.net",
     },
     {
       property: "og:description",
@@ -127,11 +138,11 @@ export const meta = extendMeta<typeof loader>(({ data }) => {
     },
     {
       name: "robots",
-      content: data.noRobots ? "noindex, nofollow" : "index, follow",
+      content: article.noRobots ? "noindex, nofollow" : "index, follow",
     },
     {
       name: "author",
-      content: data.author || "KCCTdensan",
+      content: article.author || "KCCTdensan",
     },
   ];
 });
@@ -200,11 +211,11 @@ export function ErrorBoundary() {
 }
 
 export default function Page() {
-  const { body } = useLoaderData<typeof loader>();
+  const { data: article } = useLoaderData<typeof loader>();
 
   return (
     <article>
-      {parseHtml(body, {
+      {parseHtml(article.body, {
         replace: (domNode) => {
           if (domNode instanceof Element) {
             if (
