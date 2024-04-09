@@ -2,7 +2,6 @@ import { IconLink } from "@/components/icon/IconLink";
 import { SiGithub, SiTwitter } from "@icons-pack/react-simple-icons";
 import { Flex, GridItem } from "@styles/jsx";
 import { flex, grid } from "@styles/patterns";
-import { token } from "@styles/tokens";
 
 export const Footer = () => {
   const copyrightYear = new Date().getFullYear(); // !?
