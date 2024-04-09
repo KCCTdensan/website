@@ -1,7 +1,14 @@
 ---
 title: Monster
 ---
+import { Link } from "@remix-run/react";
+
 import { extendMeta } from "@/lib/meta";
+
+export const handle = {
+  breadcrumb: (_matches, active) =>
+    active ? <p>monster</p> : <Link to="/monster">monster</Link>,
+};
 
 export const meta = extendMeta(() => [
   {
