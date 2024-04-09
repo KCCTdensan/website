@@ -13,6 +13,12 @@ import {
 } from "@remix-run/react";
 import type { LoaderFunctionArgs } from "@remix-run/router";
 import { css } from "@styles/css";
+import parseHtml, {
+  attributesToProps,
+  type DOMNode,
+  domToReact,
+  Element,
+} from "html-react-parser";
 
 export const handle: BreadcrumbsHandle = {
   breadcrumb: (matches, _active) => {
@@ -49,13 +55,31 @@ export const loader = async ({ request, params }: LoaderFunctionArgs) => {
   return Result.unwrapAsync(
     Result.mapBoth(
       await getArticle(entrypoint),
-      ({ data }) =>
-        data.find(
+      ({ data: dataArray }) => {
+        const data = dataArray.find(
           (article) =>
             article.slug === slug ||
             article.slug === `${slug}/index` ||
             (!slug && article.slug === "index"),
-        ),
+        );
+
+        if (!data) {
+          throw json(
+            {
+              recommends: [],
+            },
+            {
+              status: 404,
+              statusText: "Could not find entry",
+            },
+          );
+        }
+
+        return json({
+          ...data,
+          body: data.body,
+        });
+      },
       async (response) => {
         if (response.status === 404) {
           /* /old/** middleware doesn't work in Vite dev server */
@@ -179,11 +203,27 @@ export default function Page() {
   const { body } = useLoaderData<typeof loader>();
 
   return (
-    <article
-      // biome-ignore lint/security/noDangerouslySetInnerHtml: This is a remote content by trusted API endpoint
-      dangerouslySetInnerHTML={{
-        __html: body,
-      }}
-    />
+    <article>
+      {parseHtml(body, {
+        replace: (domNode) => {
+          if (
+            domNode instanceof Element &&
+            domNode.name === "a" &&
+            !domNode.attribs.href.startsWith("http") &&
+            !domNode.attribs.href.includes("/old/")
+          ) {
+            const props = attributesToProps(domNode.attribs);
+
+            return (
+              <Link {...props} to={domNode.attribs.href}>
+                {domToReact(domNode.children as DOMNode[])}
+              </Link>
+            );
+          }
+
+          return domNode;
+        },
+      })}
+    </article>
   );
 }

@@ -3,7 +3,7 @@ title: 神戸高専 電算部
 description: 神戸高専電算部のウェブサイトです．
 ---
 
-import { useLoaderData } from "@remix-run/react";
+import { Link, useLoaderData } from "@remix-run/react";
 
 import { css } from "@styles/css";
 import { getArticle } from "@/lib/.server/articles";
@@ -82,11 +82,11 @@ export const Blogs = () => {
 
 ## サイトマップ
 
-- 電算部について -> [/about/](/about/)
-- ブログ -> [/blog/](/blog/)
-- 成果物 -> [/works/](/works/)
-- 開発 -> [/dev/](/dev/)
-- 入部の案内 -> [/joinus/](/joinus/)
+- 電算部について -> <Link to="/about/">/about/</Link>
+- ブログ -> <Link to="/blog/">/blog/</Link>
+- 成果物 -> <Link to="/works/">/works/</Link>
+- 開発 -> <Link to="/dev/">/dev/</Link>
+- 入部の案内 -> <Link to="/joinus/">/joinus/</Link>
 
 ## 新着記事
 

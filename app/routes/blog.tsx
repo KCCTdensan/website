@@ -40,7 +40,7 @@ export default function Page() {
       {data.map((article) => (
         <article key={article.slug}>
           {article.date ? `${formatDateYMD(new Date(article.date))} - ` : ""}
-          <a href={`/blog/${article.slug}`}>{article.title}</a>
+          <Link to={`/blog/${article.slug}`}>{article.title}</Link>
           <span className="inline-block">
             by {article.author || "KCCTdensan"}
           </span>
