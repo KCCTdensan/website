@@ -50,5 +50,5 @@ export const getRecommends = async (baseUrl: string, pathname: string) => {
 
       return getRecommend(baseUrl, recommend as SingleRecommend);
     }),
-  ).then((recommends) => recommends.filter(Boolean) as Recommend[]);
+  ).then((recommends) => recommends.filter(Boolean) as SingleRecommend[]);
 };

@@ -1,7 +1,7 @@
-import type { Recommend } from "@/lib/recommends";
+import type { SingleRecommend } from "@/lib/recommends";
 
 type RecommendsProps = {
-  recommends: Recommend[];
+  recommends: SingleRecommend[];
 };
 
 export const Recommends = ({ recommends }: RecommendsProps) =>

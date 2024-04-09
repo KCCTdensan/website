@@ -2,7 +2,7 @@ import { Recommends } from "@/components/Recommends";
 import type { BreadcrumbsHandle } from "@/components/layout/header/Breadcrumbs";
 import { getArticle } from "@/lib/.server/articles";
 import { extendMeta } from "@/lib/meta";
-import { getRecommends } from "@/lib/recommends";
+import { type SingleRecommend, getRecommends } from "@/lib/recommends";
 import { Result } from "@/lib/util/result";
 import { json } from "@remix-run/node";
 import {
@@ -49,6 +49,10 @@ export const handle: BreadcrumbsHandle = {
   },
 };
 
+export type ErrorData = {
+  recommends: SingleRecommend[];
+};
+
 export const loader = async ({ request, params }: LoaderFunctionArgs) => {
   const pathname = "*" in params ? `/${params["*"]}` : "/";
   const [entrypoint, ...path] = pathname.split("/").filter((a) => a.length);
@@ -71,7 +75,7 @@ export const loader = async ({ request, params }: LoaderFunctionArgs) => {
           throw json(
             {
               recommends: [],
-            },
+            } satisfies ErrorData,
             {
               status: 404,
               statusText: "Could not find entry",
@@ -99,7 +103,7 @@ export const loader = async ({ request, params }: LoaderFunctionArgs) => {
           return json(
             {
               recommends,
-            },
+            } satisfies ErrorData,
             {
               status: 404,
               statusText: "Could not find entry",
@@ -177,6 +181,8 @@ export function ErrorBoundary() {
       </>
     );
 
+  const { recommends } = routeError.data as ErrorData;
+
   if (routeError.status === 404) {
     return (
       <>
@@ -202,7 +208,7 @@ export function ErrorBoundary() {
           </pre>
         </h1>
         <p>お探しのページは見つかりませんでした……ごめんなさい………</p>
-        <Recommends recommends={routeError.data.recommends} />
+        <Recommends recommends={recommends} />
       </>
     );
   }
