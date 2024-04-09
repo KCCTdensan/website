@@ -1,3 +1,4 @@
+import { InternalLink } from "@/components/InternalLink";
 import { Recommends } from "@/components/Recommends";
 import type { BreadcrumbsHandle } from "@/components/layout/header/Breadcrumbs";
 import { getArticle } from "@/lib/.server/articles";
@@ -232,9 +233,9 @@ export default function Page() {
               const props = attributesToProps(domNode.attribs);
 
               return (
-                <Link {...props} to={domNode.attribs.href}>
+                <InternalLink {...props} to={domNode.attribs.href}>
                   {domToReact(domNode.children as DOMNode[])}
-                </Link>
+                </InternalLink>
               );
             }
 
