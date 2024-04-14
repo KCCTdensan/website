@@ -1,11 +1,11 @@
 FROM node:lts-alpine as builder
 RUN apk add --no-cache git && \
-    npm i -g pnpm
+    corepack enable pnpm
 WORKDIR /work
 COPY pnpm-lock.yaml ./
 RUN pnpm fetch
 COPY . .
-RUN git submodule update --init && \
+RUN git submodule update --init; \
     pnpm install --offline && \
     pnpm ssr:build && \
     pnpm prune --prod

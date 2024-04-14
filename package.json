@@ -36,6 +36,7 @@
     "typescript": "4.9.4",
     "vite": "4.0.3"
   },
+  "packageManager": "pnpm@8.15.7",
   "scripts": {
     "build": "dotenv run-s stage:kit stage:404 stage:sitemap stage:beautify",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
