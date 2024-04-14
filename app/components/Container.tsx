@@ -19,15 +19,16 @@ const recipe = cva({
     },
   },
   variants: {
-    z: {
-      false: {
+    axis: {
+      mid: {
         md: {
           mx: "auto",
         },
       },
-      true: {
+      left: {
         ml: "0",
       },
+      right: {},
     },
   },
 });

@@ -1,7 +1,8 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { HeaderNav } from "@/components/HeaderNav";
 import { HeaderNavLink } from "@/components/HeaderNavLink";
-import { konamiAtom, zAtom } from "@/features/easteregg/atoms";
+import { konamiAtom } from "@/features/easteregg/atoms";
+import { useAxisLabel } from "@/features/easteregg/hooks";
 import type { RootLoaderData } from "@/root";
 import { Link } from "@remix-run/react";
 import { css, cx } from "@styles/css";
@@ -28,7 +29,7 @@ const navLinksExt = [
 export const Header = () => {
   const data = useRouteLoaderData("root") as RootLoaderData;
   const konami = useAtomValue(konamiAtom);
-  const z = useAtomValue(zAtom);
+  const axis = useAxisLabel();
 
   const star = css({ color: "logoStar" });
 
@@ -45,13 +46,11 @@ export const Header = () => {
         },
       })}
       style={{
-        ...(konami
-          ? {
-              background:
-                "linear-gradient(to right, cyan, yellow, magenta, cyan) center/200%",
-            }
-          : {}),
-        ...(z ? { background: token("colors.header.bg.z") } : {}),
+        ...(konami && {
+          background:
+            "linear-gradient(to right, cyan, yellow, magenta, cyan) center/200%",
+        }),
+        ...(axis == "left" && { background: token("colors.header.bg.z") }),
       }}
     >
       <section
@@ -92,7 +91,12 @@ export const Header = () => {
               cursor: "pointer",
             })}
           >
-            <span className={cx(css({ display: "inline-block" }), z && star)}>
+            <span
+              className={cx(
+                css({ display: "inline-block" }),
+                axis == "left" && star,
+              )}
+            >
               神戸
             </span>
             <span className={css({ display: "inline-block" })}>高専</span>
@@ -116,7 +120,7 @@ export const Header = () => {
           <span>{JSON.stringify(data.pkg)}</span>
         </p>
       </section>
-      <HeaderNav z={z} gaming={konami}>
+      <HeaderNav axis={axis} gaming={konami}>
         <p>&gt; ls /</p>
         <ul
           className={flex({

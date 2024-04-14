@@ -3,7 +3,7 @@ import { Container } from "@/components/Container";
 import { Footer } from "@/components/Footer";
 import { Metadata } from "@/components/Metadata";
 import { Header } from "@/components/Header";
-import { zAtom } from "@/features/easteregg/atoms";
+import { useAxisLabel } from "@/features/easteregg/hooks";
 import { NyanAudio } from "@/features/easteregg/NyanAudio";
 import { SpecialKeyHandlers } from "@/features/easteregg/SpecialKeyHandlers";
 import { PLATFORM } from "@/lib/env.server";
@@ -128,12 +128,12 @@ export function ErrorBoundary() {
 }
 
 export default function App() {
-  const z = useAtomValue(zAtom);
+  const axis = useAxisLabel();
 
   return (
     <>
-      <AppWrapper z={z}>
-        <Container z={z}>
+      <AppWrapper axis={axis}>
+        <Container axis={axis}>
           <Header />
           <NyanAudio />
           <Metadata />

@@ -1,15 +1,15 @@
 import {
   KEY_SEQUENCE_KONAMI,
-  KEY_SEQUENCE_Z_DISABLE,
-  KEY_SEQUENCE_Z_ENABLE,
+  KEY_SEQUENCE_LEFTWARD,
+  KEY_SEQUENCE_RIGHTWARD,
 } from ".";
-import { konamiAtom, zAtom } from "./atoms";
+import { konamiAtom, axisAtom } from "./atoms";
 import { useKeySequence } from "./hooks";
 import { useSetAtom } from "jotai";
 
 export const SpecialKeyHandlers = () => {
   const setKonami = useSetAtom(konamiAtom);
-  const setZ = useSetAtom(zAtom);
+  const setAxis = useSetAtom(axisAtom);
 
   useKeySequence(KEY_SEQUENCE_KONAMI, () => {
     setKonami(true);
@@ -17,14 +17,14 @@ export const SpecialKeyHandlers = () => {
     console.log("nyan!");
   });
 
-  useKeySequence(KEY_SEQUENCE_Z_ENABLE, () => {
-    setZ(true);
+  useKeySequence(KEY_SEQUENCE_LEFTWARD, () => {
+    setAxis((v) => (v > 0 ? 0 : -1));
 
     console.log("失なわれた30年でした");
   });
 
-  useKeySequence(KEY_SEQUENCE_Z_DISABLE, () => {
-    setZ(false);
+  useKeySequence(KEY_SEQUENCE_RIGHTWARD, () => {
+    setAxis((v) => (v < 0 ? 0 : 1));
 
     console.log("30年が返ってきました");
   });

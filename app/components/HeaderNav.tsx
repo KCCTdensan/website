@@ -17,10 +17,12 @@ const recipe = cva({
     },
   },
   variants: {
-    z: {
-      true: {
+    axis: {
+      mid: {},
+      left: {
         fontFamily: "correct",
       },
+      right: {},
     },
     gaming: {
       true: {

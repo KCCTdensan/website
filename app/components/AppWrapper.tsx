@@ -7,14 +7,15 @@ const recipe = cva({
     minH: "dvh",
   },
   variants: {
-    z: {
-      false: {
+    axis: {
+      mid: {
         bgGradient: "bg",
       },
-      true: {
+      left: {
         bgGradient: "z",
         fontFamily: "correct",
       },
+      right: {},
     },
   },
 });

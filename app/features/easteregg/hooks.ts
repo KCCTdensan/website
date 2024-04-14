@@ -1,3 +1,5 @@
+import { axisAtom } from "./atoms";
+import { useAtomValue } from "jotai";
 import { useEffect, useRef } from "react";
 
 export const useKeySequence = (
@@ -29,3 +31,8 @@ export const useKeySequence = (
     };
   }, [callback, oneshot, sequence]);
 };
+
+export function useAxisLabel() {
+  const axis = useAtomValue(axisAtom);
+  return axis < 0 ? "left" : axis > 0 ? "right" : "mid";
+}
