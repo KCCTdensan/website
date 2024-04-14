@@ -1,7 +1,7 @@
-import { konamiAtom, zAtom } from "@/atoms/special";
-import { Breadcrumbs } from "@/components/layout/header/Breadcrumbs";
-import { HeaderNav } from "@/components/layout/header/HeaderNav";
-import { HeaderNavLink } from "@/components/layout/header/HeaderNavLink";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { HeaderNav } from "@/components/HeaderNav";
+import { HeaderNavLink } from "@/components/HeaderNavLink";
+import { konamiAtom, zAtom } from "@/features/easteregg/atoms";
 import type { RootLoaderData } from "@/root";
 import { Link } from "@remix-run/react";
 import { css, cx } from "@styles/css";

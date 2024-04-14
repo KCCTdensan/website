@@ -1,4 +1,4 @@
-import { IconLink } from "@/components/icon/IconLink";
+import { IconLink } from "@/components/IconLink";
 import { SiGithub, SiTwitter } from "@icons-pack/react-simple-icons";
 import { Flex, GridItem } from "@styles/jsx";
 import { flex, grid } from "@styles/patterns";

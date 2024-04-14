@@ -1,4 +1,4 @@
-import type { SingleRecommend } from "@/lib/recommends";
+import type { SingleRecommend } from ".";
 
 type RecommendsProps = {
   recommends: SingleRecommend[];

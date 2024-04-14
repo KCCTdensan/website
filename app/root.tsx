@@ -1,12 +1,12 @@
-import { zAtom } from "@/atoms/special";
-import { AppWrapper } from "@/components/layout/AppWrapper";
-import { Container } from "@/components/layout/Container";
-import { Footer } from "@/components/layout/Footer";
-import { Metadata } from "@/components/layout/Metadata";
-import { Header } from "@/components/layout/header/Header";
-import { NyanAudio } from "@/components/special/NyanAudio";
-import { SpecialKeyHandlers } from "@/components/special/SpecialKeyHandlers";
-import { PLATFORM } from "@/lib/.server/env";
+import { AppWrapper } from "@/components/AppWrapper";
+import { Container } from "@/components/Container";
+import { Footer } from "@/components/Footer";
+import { Metadata } from "@/components/Metadata";
+import { Header } from "@/components/Header";
+import { zAtom } from "@/features/easteregg/atoms";
+import { NyanAudio } from "@/features/easteregg/NyanAudio";
+import { SpecialKeyHandlers } from "@/features/easteregg/SpecialKeyHandlers";
+import { PLATFORM } from "@/lib/env.server";
 import {
   Links,
   Meta,

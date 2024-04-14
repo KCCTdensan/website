@@ -1,4 +1,4 @@
-import { formatDateYMD } from "@/lib/date";
+import { formatDateYMD } from "@/lib/utils";
 import { type UIMatch, useMatches } from "@remix-run/react";
 import type { ReactNode } from "react";
 import { Fragment } from "react";

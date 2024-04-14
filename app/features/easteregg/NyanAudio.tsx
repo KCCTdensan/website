@@ -1,5 +1,5 @@
+import { konamiAtom } from "./atoms";
 import nyan from "@/assets/audio/nyan.ogg";
-import { konamiAtom } from "@/atoms/special";
 import { css } from "@styles/css";
 import { useAtomValue } from "jotai";
 

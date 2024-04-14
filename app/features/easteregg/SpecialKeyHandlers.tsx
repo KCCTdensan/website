@@ -1,10 +1,10 @@
-import { konamiAtom, zAtom } from "@/atoms/special";
 import {
   KEY_SEQUENCE_KONAMI,
   KEY_SEQUENCE_Z_DISABLE,
   KEY_SEQUENCE_Z_ENABLE,
-} from "@/lib/constants/keys";
-import { useKeySequence } from "@/lib/hooks/key-sequence";
+} from ".";
+import { konamiAtom, zAtom } from "./atoms";
+import { useKeySequence } from "./hooks";
 import { useSetAtom } from "jotai";
 
 export const SpecialKeyHandlers = () => {

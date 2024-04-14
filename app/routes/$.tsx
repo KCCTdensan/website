@@ -1,10 +1,10 @@
+import type { BreadcrumbsHandle } from "@/components/Breadcrumbs";
 import { InternalLink } from "@/components/InternalLink";
-import { Recommends } from "@/components/Recommends";
-import type { BreadcrumbsHandle } from "@/components/layout/header/Breadcrumbs";
-import { getArticle } from "@/lib/.server/articles";
-import { extendMeta } from "@/lib/meta";
-import { type SingleRecommend, getRecommends } from "@/lib/recommends";
-import { Result } from "@/lib/util/result";
+import { extendMeta } from "@/features/articles";
+import { getArticle } from "@/features/articles/articles.server";
+import { type SingleRecommend, getRecommends } from "@/features/recommends";
+import { Recommends } from "@/features/recommends/Recommends";
+import { Result } from "@/lib/result";
 import { json } from "@remix-run/node";
 import {
   Link,

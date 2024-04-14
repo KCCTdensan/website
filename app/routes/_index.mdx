@@ -3,13 +3,12 @@ title: 神戸高専 電算部
 description: 神戸高専電算部のウェブサイトです．
 ---
 
-import { Link, useLoaderData } from "@remix-run/react";
-
 import { css } from "@styles/css";
-import { getArticle } from "@/lib/.server/articles";
-import { formatDateYMD } from "@/lib/date";
-import { extendMeta } from "@/lib/meta";
-import { Result } from "@/lib/util/result";
+import { extendMeta } from "@/features/articles";
+import { getArticle } from "@/features/articles/articles.server";
+import { Result } from "@/lib/result";
+import { formatDateYMD } from "@/lib/utils";
+import { Link, useLoaderData } from "@remix-run/react";
 
 export const loader = async () => {
   const articles = Result.unwrap(await getArticle("blog"));

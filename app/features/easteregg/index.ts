@@ -10,5 +10,5 @@ export const KEY_SEQUENCE_KONAMI = [
   "b",
   "a",
 ];
-export const KEY_SEQUENCE_Z_ENABLE = [...Array(30)].map((_) => "ArrowLeft");
-export const KEY_SEQUENCE_Z_DISABLE = [...Array(30)].map((_) => "ArrowRight");
+export const KEY_SEQUENCE_Z_ENABLE = Array<string>(30).fill("ArrowLeft");
+export const KEY_SEQUENCE_Z_DISABLE = Array<string>(30).fill("ArrowRight");

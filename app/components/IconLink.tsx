@@ -1,4 +1,4 @@
-import type { PropsWithClassName } from "@/types/frontend";
+import type { PropsWithClassName } from "@/lib/utils";
 import { css, cx } from "@styles/css";
 import type { ReactNode } from "react";
 

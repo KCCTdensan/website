@@ -1,5 +1,3 @@
-import { createAvailableRecommends } from "@/lib/constants/recommends";
-
 export interface SingleRecommend {
   link: string;
   title: string;
@@ -34,7 +32,20 @@ const getRecommend = async (baseUrl: string, recommend: SingleRecommend) => {
 };
 
 export const getRecommends = async (baseUrl: string, pathname: string) => {
-  const recommends = createAvailableRecommends(pathname);
+  const pathnameWithoutSlash = pathname.replace(/\/$/, "");
+  const recommends = [
+    {
+      link: [
+        `/old/v0${pathnameWithoutSlash}.html`,
+        `/old/v0${pathnameWithoutSlash}/index.html`,
+      ],
+      title: "旧版(2018年頃)へのリンク",
+    },
+    {
+      link: `/old/v1${pathname}`,
+      title: "旧版(2021年頃)へのリンク",
+    },
+  ];
 
   return Promise.all(
     recommends.map(async (recommend) => {

@@ -1,5 +1,5 @@
-import { API_BASE } from "@/lib/.server/env";
-import { type Result, err, ok } from "@/lib/util/result";
+import { API_BASE } from "@/lib/env.server";
+import { type Result, err, ok } from "@/lib/result";
 
 export type ArticleData = {
   data: {

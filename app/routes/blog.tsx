@@ -1,8 +1,8 @@
-import type { BreadcrumbsHandle } from "@/components/layout/header/Breadcrumbs";
-import { getArticle } from "@/lib/.server/articles";
-import { formatDateYMD } from "@/lib/date";
-import { extendMeta } from "@/lib/meta";
-import { Result } from "@/lib/util/result";
+import type { BreadcrumbsHandle } from "@/components/Breadcrumbs";
+import { extendMeta } from "@/features/articles";
+import { getArticle } from "@/features/articles/articles.server";
+import { Result } from "@/lib/result";
+import { formatDateYMD } from "@/lib/utils";
 import { Link, useLoaderData } from "@remix-run/react";
 
 export const handle: BreadcrumbsHandle = {
