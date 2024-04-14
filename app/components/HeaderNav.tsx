@@ -22,7 +22,9 @@ const recipe = cva({
       left: {
         fontFamily: "correct",
       },
-      right: {},
+      right: {
+        fontFamily: "soul",
+      },
     },
     gaming: {
       true: {

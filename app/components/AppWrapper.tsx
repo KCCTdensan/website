@@ -15,7 +15,21 @@ const recipe = cva({
         bgGradient: "z",
         fontFamily: "correct",
       },
-      right: {},
+      right: {
+        bg: `
+          radial-gradient(
+            circle at 20em 15em,
+            #f00 10em,
+            #f00 0.001em,
+            transparent 0.001em),
+          repeating-conic-gradient(
+            from 0deg at 20em 15em,
+            #fff 0deg 11.25deg,
+            #f00 11.25deg 22.5deg),
+        `,
+        bgSize: "auto 100%",
+        fontFamily: "soul",
+      },
     },
   },
 });

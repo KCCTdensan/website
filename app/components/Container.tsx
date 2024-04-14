@@ -26,9 +26,15 @@ const recipe = cva({
         },
       },
       left: {
-        ml: "0",
+        md: {
+          mr: "auto",
+        },
       },
-      right: {},
+      right: {
+        md: {
+          ml: "auto",
+        },
+      },
     },
   },
 });

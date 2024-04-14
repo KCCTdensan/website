@@ -5,11 +5,11 @@ import {
 } from ".";
 import { konamiAtom, axisAtom } from "./atoms";
 import { useKeySequence } from "./hooks";
-import { useSetAtom } from "jotai";
+import { useAtom, useSetAtom } from "jotai";
 
 export const SpecialKeyHandlers = () => {
   const setKonami = useSetAtom(konamiAtom);
-  const setAxis = useSetAtom(axisAtom);
+  const [axis, setAxis] = useAtom(axisAtom);
 
   useKeySequence(KEY_SEQUENCE_KONAMI, () => {
     setKonami(true);
@@ -20,13 +20,17 @@ export const SpecialKeyHandlers = () => {
   useKeySequence(KEY_SEQUENCE_LEFTWARD, () => {
     setAxis((v) => (v > 0 ? 0 : -1));
 
-    console.log("失なわれた30年でした");
+    console.log(
+      axis ? "おかき屋さんは事業廃止しました" : "失なわれた30年でした",
+    );
   });
 
   useKeySequence(KEY_SEQUENCE_RIGHTWARD, () => {
     setAxis((v) => (v < 0 ? 0 : 1));
 
-    console.log("30年が返ってきました");
+    console.log(
+      axis ? "30年が返ってきました" : "おかき屋さんがオープンしました",
+    );
   });
 
   return null;

@@ -5,6 +5,7 @@ export const tokens: Tokens = {
     normal: { value: `"M PLUS 2", system-ui, sans-serif, "Source Han Sans"` },
     mono: { value: `"Fira Code", ui-monospace, monospace` },
     correct: { value: `"Source Han Sans Without ASCII", serif` },
+    soul: { value: `"Zen Old Mincho", serif` },
   },
   gradients: {
     bg: {
@@ -44,11 +45,13 @@ export const semanticTokens: SemanticTokens = {
 
     logoText: { value: "#fff" },
     logoStar: { value: "#ff0" },
+    logoYamato: { value: "#e6b422" }, // 金色(こんじき)
 
     header: {
       bg: {
         DEFAULT: { value: "#9bbab9" },
         z: { value: "#d00" },
+        soul: { value: "#c9171e" }, // 深緋(べにひ)
       },
       text: {
         DEFAULT: { value: "#fff" },

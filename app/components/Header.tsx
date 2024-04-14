@@ -31,8 +31,6 @@ export const Header = () => {
   const konami = useAtomValue(konamiAtom);
   const axis = useAxisLabel();
 
-  const star = css({ color: "logoStar" });
-
   return (
     <header
       className={flex({
@@ -51,6 +49,7 @@ export const Header = () => {
             "linear-gradient(to right, cyan, yellow, magenta, cyan) center/200%",
         }),
         ...(axis == "left" && { background: token("colors.header.bg.z") }),
+        ...(axis == "right" && { background: token("colors.header.bg.soul") }),
       }}
     >
       <section
@@ -94,7 +93,8 @@ export const Header = () => {
             <span
               className={cx(
                 css({ display: "inline-block" }),
-                axis == "left" && star,
+                axis == "left" && css({ color: "logoStar" }),
+                axis == "right" && css({ color: "logoYamato" }),
               )}
             >
               神戸
