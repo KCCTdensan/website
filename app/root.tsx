@@ -58,7 +58,7 @@ export const meta: MetaFunction = () => [
   },
   {
     name: "twitter:site",
-    content: "@KCCTdensan",
+    content: "@kcct_densan",
   },
   {
     name: "twitter:creator",
