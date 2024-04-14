@@ -1,11 +1,11 @@
+import { useAtom, useSetAtom } from "jotai";
 import {
   KEY_SEQUENCE_KONAMI,
   KEY_SEQUENCE_LEFTWARD,
   KEY_SEQUENCE_RIGHTWARD,
 } from ".";
-import { konamiAtom, axisAtom } from "./atoms";
+import { axisAtom, konamiAtom } from "./atoms";
 import { useKeySequence } from "./hooks";
-import { useAtom, useSetAtom } from "jotai";
 
 export const SpecialKeyHandlers = () => {
   const setKonami = useSetAtom(konamiAtom);

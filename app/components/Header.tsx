@@ -48,8 +48,8 @@ export const Header = () => {
           background:
             "linear-gradient(to right, cyan, yellow, magenta, cyan) center/200%",
         }),
-        ...(axis == "left" && { background: token("colors.header.bg.z") }),
-        ...(axis == "right" && { background: token("colors.header.bg.soul") }),
+        ...(axis === "left" && { background: token("colors.header.bg.z") }),
+        ...(axis === "right" && { background: token("colors.header.bg.soul") }),
       }}
     >
       <section
@@ -93,8 +93,8 @@ export const Header = () => {
             <span
               className={cx(
                 css({ display: "inline-block" }),
-                axis == "left" && css({ color: "logoStar" }),
-                axis == "right" && css({ color: "logoYamato" }),
+                axis === "left" && css({ color: "logoStar" }),
+                axis === "right" && css({ color: "logoYamato" }),
               )}
             >
               神戸

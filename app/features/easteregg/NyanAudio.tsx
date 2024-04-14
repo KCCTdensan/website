@@ -1,7 +1,7 @@
-import { konamiAtom } from "./atoms";
 import nyan from "@/assets/audio/nyan.ogg";
 import { css } from "@styles/css";
 import { useAtomValue } from "jotai";
+import { konamiAtom } from "./atoms";
 
 export const NyanAudio = () => {
   const konami = useAtomValue(konamiAtom);

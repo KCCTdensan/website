@@ -1,11 +1,11 @@
 import { AppWrapper } from "@/components/AppWrapper";
 import { Container } from "@/components/Container";
 import { Footer } from "@/components/Footer";
-import { Metadata } from "@/components/Metadata";
 import { Header } from "@/components/Header";
-import { useAxisLabel } from "@/features/easteregg/hooks";
+import { Metadata } from "@/components/Metadata";
 import { NyanAudio } from "@/features/easteregg/NyanAudio";
 import { SpecialKeyHandlers } from "@/features/easteregg/SpecialKeyHandlers";
+import { useAxisLabel } from "@/features/easteregg/hooks";
 import { PLATFORM } from "@/lib/env.server";
 import {
   Links,

@@ -1,6 +1,6 @@
-import { axisAtom } from "./atoms";
 import { useAtomValue } from "jotai";
 import { useEffect, useRef } from "react";
+import { axisAtom } from "./atoms";
 
 export const useKeySequence = (
   sequence: string[],
